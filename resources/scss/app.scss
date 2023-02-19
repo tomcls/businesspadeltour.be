@@ -1,0 +1,21 @@
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,*:focus,*:hover{
+    outline:none;
+}
+.color-light-blue {
+    color:#6fc3c3;
+}
+.color-dark-blue {
+    color:#24335e;
+}
+.bg-light-blue {
+    background-color:#6fc3c3;
+}
+.bg-dark-blue {
+    background-color:#24335e;
+}
