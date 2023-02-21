@@ -2,9 +2,22 @@
 
 APP_ROOT=/data/www/businesspadeltour.be
 
-mv ${APP_ROOT}/docker-compose.yml ${APP_ROOT}/docker-compose.back.yml 
-mv ${APP_ROOT}/docker-compose.prod.yml ${APP_ROOT}/docker-compose.yml 
-mv ${APP_ROOT}/.env ${APP_ROOT}/.env.back
-cp ${APP_ROOT}/.env.prod ${APP_ROOT}/.env
-docker compose up -d
+env=tcl
+port=8001
+name=padel-php
+docker rm -f ${name}
+docker build --file=${APP_ROOT}"/docker/php8.2/Dockerfile"  -t padel/php .
+docker run --name ${name} \
+  -v ${APP_ROOT}:/var/www/html \
+  -d padel/php 
+
+docker rm -f padel-nginx
+docker build --file=${APP_ROOT}"/docker/nginx/Dockerfile"   -t padel/nginx .
+
+docker run   --name padel-nginx \
+--link ${name} \
+-p  71:80 \
+-v  $APP_ROOT:/usr/share/nginx/html \
+-v  $APP_ROOT/docker/nginx/sites-available/default.prod:/etc/nginx/conf.d/default.conf \
+-d vw/nginx
 
