@@ -19,5 +19,5 @@ docker run   --name padel-nginx \
 -p  71:80 \
 -v  $APP_ROOT:/usr/share/nginx/html \
 -v  $APP_ROOT/docker/nginx/sites-available/default.prod:/etc/nginx/conf.d/default.conf \
--d vw/nginx
+-d padel/nginx
 
