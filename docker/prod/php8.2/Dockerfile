@@ -45,8 +45,8 @@ RUN apt-get update \
 
 RUN setcap "cap_net_bind_service=+ep" /usr/bin/php8.2
 
-RUN groupadd --force -g $WWWGROUP sail
-RUN useradd -ms /bin/bash --no-user-group -g $WWWGROUP -u 1337 sail
+#RUN groupadd --force -g sail sail
+#RUN useradd -ms /bin/bash --no-user-group -g $WWWGROUP -u 1337 sail
 
 COPY ./docker/prod/php8.2/start-container /usr/local/bin/start-container
 COPY ./docker/prod/php8.2/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
