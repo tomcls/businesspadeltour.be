@@ -4,7 +4,7 @@
         <div class="flex justify-start lg:w-0 lg:flex-1">
           <a href="{{url('/').'/'.App::currentLocale().''}}">
             <span class="sr-only">Business padel tour</span>
-            <img class="h-8 w-auto sm:h-14" src="{{url('/').'/images/logo/logo.png'}}" alt="Business padel tour">
+            <img class="h-8 w-auto sm:h-14" src="{{url('/').'/images/logo/logo.svg'}}" alt="Business padel tour">
           </a>
         </div>
         <div class="-my-2 -mr-2 md:hidden">
@@ -223,7 +223,7 @@
         <div class="px-5 pt-5 pb-6">
           <div class="flex items-center justify-between">
             <div>
-              <img class="h-8 w-auto" src="{{url('/').'/images/logo/logo.png'}}" alt="Your Company">
+              <img class="h-8 w-auto" src="{{url('/').'/images/logo/logo.svg'}}" alt="Your Company">
             </div>
             <div class="-mr-2">
               <button @click="isMobileNavOpen = !isMobileNavOpen" type="button" class="inline-flex items-center justify-center rounded-md p-2 color-dark-blue hover:bg-gray-100 hover:color-dark-blue focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -290,8 +290,8 @@
             </a>
           </div>
 
-          <div class="flow-root">
-            <a href="#" class="-m-3 flex items-center rounded-md p-3 text-base font-medium text-gray-900 hover:bg-gray-100">
+          <div class="flow-root ">
+            <a href="#" class="w-full -m-3 flex items-center rounded-md p-3 text-base font-medium text-gray-900 hover:bg-gray-100">
               <!-- Heroicon name: outline/phone -->
               <svg class="h-6 w-6 flex-shrink-0 color-dark-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
@@ -299,8 +299,11 @@
               <span class="ml-3">Contactez-nous</span>
             </a>
           </div>
+          <div class="flow-root text-center justify-center items-center w-full">
+            <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}" class=" inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-dark-blue px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700">Inscription</a>
+          </div>
         </div>
-       
+
       </div>
     </div>
   </div>
