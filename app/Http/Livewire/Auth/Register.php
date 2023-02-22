@@ -13,14 +13,14 @@ use Livewire\Component;
 
 class Register extends Component
 {
-    public $playerOneFirstname = 'Thomas';
-    public $playerOneLastname = 'Claessens';
-    public $playerOneEmail = 'tomclassius@gmail.com';
-    public $playerTwoFirstname = 'Jean';
-    public $playerTwoLastname = 'Louis';
-    public $playerTwoEmail = 'jean.loui@gmail.com';
-    public $companyName = 'Immovlan';
-    public $companyVAT = 'BE0567567567';
+    public $playerOneFirstname = '';
+    public $playerOneLastname = '';
+    public $playerOneEmail = '';
+    public $playerTwoFirstname = '';
+    public $playerTwoLastname = '';
+    public $playerTwoEmail = '';
+    public $companyName = '';
+    public $companyVAT = '';
     public $session = '';
     public $saved = false;
 
