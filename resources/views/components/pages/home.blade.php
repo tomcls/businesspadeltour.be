@@ -49,7 +49,7 @@
           </svg>
         </div>
       </div>
-      <div class="overflow-hidden bg-black py-24 sm:py-32">
+      <div class="overflow-hidden bg-black py-24 sm:py-32" id="summary">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
           <div class="mx-auto grid max-w-2xl grid-cols-1 gap-y-16 gap-x-8 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             <div class="lg:pr-8 lg:pt-4">
@@ -98,7 +98,7 @@
         </div>
       </div>
       
-      <div class="overflow-hidden bg-white py-24 sm:py-32">
+      <div class="overflow-hidden bg-white py-24 sm:py-32" id="program">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
           <div class="mx-auto grid max-w-2xl grid-cols-1 gap-y-16 gap-x-8 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             <img src="{{url('/').'/images/section/bg5.jpg'}}" alt="Product screenshot" class="hidden sm:block w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[30rem] md:-ml-4 lg:-ml-0" width="2432" height="1442">
@@ -146,7 +146,7 @@
           </div>
         </div>
       </div>
-      <div class="overflow-hidden bg-black py-24 sm:py-32">
+      <div class="overflow-hidden bg-black py-24 sm:py-32" id="club">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
           <div class="mx-auto grid max-w-2xl grid-cols-1 gap-y-16 gap-x-8 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             <div class="lg:pr-8 lg:pt-4">
@@ -216,7 +216,7 @@
           </div>
         </div>
       </div>
-      <div class="bg-white py-24 sm:py-32">
+      <div class="bg-white py-24 sm:py-32" id="agenda">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
           <div class="mx-auto max-w-2xl lg:text-center">
             <h2 class="text-lg font-semibold leading-8 tracking-tight color-light-blue">Agenda</h2>
@@ -336,7 +336,7 @@
         </div>
       </div>
       <!-- This example requires Tailwind CSS v3.0+ -->
-      <div class="bg-dark-blue py-24 sm:py-32">
+      <div class="bg-dark-blue py-24 sm:py-32" id="price">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
           <div class="mx-auto max-w-2xl sm:text-center">
             <h2 class="text-3xl font-bold tracking-tight text-gray-200 sm:text-4xl">Une tarification simple et sans artifice</h2>
@@ -401,7 +401,7 @@
         </div>
       </div>
       
-      <div class="bg-white py-24 sm:py-32">
+      <div class="bg-white py-24 sm:py-32" id="sponsor">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
           <div class="mx-auto max-w-2xl lg:mx-0">
             <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Nos sponsors</h2>
