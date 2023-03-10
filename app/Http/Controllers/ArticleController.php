@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Repositories\ArticleRepository;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Log;
 
 class ArticleController extends Controller
@@ -17,7 +18,7 @@ class ArticleController extends Controller
         $filters = [
             'page' => 0,
             'post_per_page' => 30,
-            'language_id' => 2
+            'language_id' => App::currentLocale()=='fr'?2:1
         ];
         $result = $articleRepository->list($filters);
         //return $result['result'];
@@ -35,10 +36,9 @@ class ArticleController extends Controller
     public function show($lang, $slug)
     {
 
-        Log::alert("zzzzz=" . json_encode($slug));
         $filters = [
             'intro_slug' => $slug,
-            'lang' => $lang == 'en' ? 'fr' : $lang
+            'lang' => $lang ?? 'fr'
         ];
         $articleRepository = new ArticleRepository();
         $result = $articleRepository->find($filters);
