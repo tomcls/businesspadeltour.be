@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Log;
 class ArticleRepository extends Repository
 {
 
-    public $url = 'https://blog.vacancesweb.be';
+    public $url = 'https://blog.businesspadeltour.be';
     public $uri = "/wp-json/vw/v2/";
     public $method = "list_articles";
 
@@ -22,7 +22,7 @@ class ArticleRepository extends Repository
      */
     public function list(array $filters)
     {
-        $response = $this->client->request('GET', $this->url . $this->uri . $this->method, [
+        $response = $this->client->request('GET', env('BLOG_URL') . $this->uri . $this->method, [
             'query' => $filters
         ]);
         return json_decode($response->getBody(), true);
@@ -37,7 +37,7 @@ class ArticleRepository extends Repository
     {
 
         $this->method = 'meta_query';
-        $response = $this->client->request('GET', $this->url . $this->uri . $this->method, [
+        $response = $this->client->request('GET', env('BLOG_URL') . $this->uri . $this->method, [
             'query' => $filters
         ]);
         return json_decode($response->getBody(), true);
