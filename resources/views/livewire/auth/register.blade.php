@@ -130,7 +130,7 @@
                             </div>
                           </div>
                           <div class="mt-5 sm:mt-6">
-                            <button type="button" class="inline-flex w-full justify-center rounded-md border border-transparent bg-dark-blue px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-dark-blue focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 sm:text-sm">Okay nice!</button>
+                            <a href="{{url('/').'/'.App::currentLocale().''}}" class="inline-flex w-full justify-center rounded-md border border-transparent bg-dark-blue px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-dark-blue focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 sm:text-sm">Okay!</a>
                           </div>
                         </div>
                       </div>
