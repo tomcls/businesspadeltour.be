@@ -78,10 +78,9 @@ class Register extends Component
             $userSessionPlayerTwo->session_id = $this->session;
             $userSessionPlayerTwo->save();
 
-        } catch (Exception $e) {}
+        } catch (Exception $e) { }
 
         try {
-            $sessionModel = new Session();
             $s = Session::find($this->session);
 
             require_once('/var/www/html/vendor/autoload.php');
@@ -203,13 +202,16 @@ class Register extends Component
                 "headers" => ["Reply-To" => "info@businesspadeltour.be"],
                 'global_merge_vars' => $template_content
             ];
-            $response = $mailchimp->messages->sendTemplate([
+            $response2 = $mailchimp->messages->sendTemplate([
                 "template_name" => "bpt_signup_admin",
                 "template_content" => $template_content,
                 "message" => $message,
             ]);
+            Log::alert("aaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+            Log::alert(json_encode($response).json_encode($response2));
         } catch (Exception $e) {
-            //Log::alert($e->getMessage());
+            Log::alert("bbbbbbbbbbbbbbbbbbbbbbbbb");
+            Log::alert($e->getMessage());
         }
 
 
