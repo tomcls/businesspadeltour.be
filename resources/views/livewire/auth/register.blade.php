@@ -213,7 +213,7 @@
           
                           focusAfter && focusAfter.focus()
                       },
-                      session: 'Sélectionnez une session'
+                      session: '{{__('signup.select')}}'
                   }"
                   x-on:keydown.escape.prevent.stop="close($refs.button)"
                   x-on:focusin.window="! $refs.panel.contains($event.target) && close()"
