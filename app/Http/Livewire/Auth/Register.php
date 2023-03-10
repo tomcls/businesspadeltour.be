@@ -211,7 +211,7 @@ class Register extends Component
             Log::alert(json_encode($response).json_encode($response2));
         } catch (Exception $e) {
             Log::alert("bbbbbbbbbbbbbbbbbbbbbbbbb");
-            Log::alert($e->getMessage());
+            Log::alert($e->getMessage().$e->getTraceAsString());
         }
 
 
