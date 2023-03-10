@@ -396,7 +396,7 @@
                     <span class="text-5xl font-bold tracking-tight text-gray-900">€250</span>
                     <span class="text-sm font-semibold leading-6 tracking-wide text-gray-600">EUR</span>
                   </p>
-                  <a href="#" class="mt-10 block w-full rounded-md bg-light-blue px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">{{__('home.priceImin')}}</a>
+                  <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}" class="mt-10 block w-full rounded-md bg-light-blue px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">{{__('home.priceImin')}}</a>
                   <p class="mt-6 text-xs leading-5 text-gray-600">{{__('home.priceInvoice')}}</p>
                 </div>
               </div>
@@ -424,9 +424,6 @@
           </div>
         </div>
       </div>
-      
-
-     
     </main>
   </div>
   
