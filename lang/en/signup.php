@@ -14,5 +14,5 @@ return [
     'signup' => 'register',
     'success'=> 'successful registration',
     'successTeaser'=> 'You will receive an email with more details about your session',
-    'successTeaser2'=> 'Keep in touch... and welcome to your new journey.',
+    'successTeaser2'=> 'Keep in touch... and welcome in this new adventure.',
 ];

@@ -14,5 +14,5 @@ return [
     "signup" => "register",
     "success" => "Inschrijving geslaagd",
     "succesTeaser" => "U ontvangt een e-mail met meer details over uw sessie",
-    "successTeaser2"=> "Houd contact... en welkom op uw nieuwe reis",
+    "successTeaser2"=> "Houd contact... en welkom bij dit nieuwe avontuur",
 ];
