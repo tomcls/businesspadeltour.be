@@ -20,8 +20,8 @@
             
             <div class="relative mx-auto max-w-7xl">
               <div class="text-center">
-                <h2 class="text-3xl font-bold tracking-tight color-dark-blue sm:text-4xl">L'actu</h2>
-                <p class="mx-auto mt-3 max-w-2xl text-xl text-gray-500 sm:mt-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed.</p>
+                <h2 class="text-3xl font-bold tracking-tight color-dark-blue sm:text-4xl">{{__('news.title')}}</h2>
+                <p class="mx-auto mt-3 max-w-2xl text-xl text-gray-500 sm:mt-4">{{__('news.teaser')}}</p>
               </div>
               <div class="mx-auto mt-12 grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-3">
                 @foreach ($articles as $a)
