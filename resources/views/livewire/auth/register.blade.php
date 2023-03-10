@@ -37,8 +37,8 @@
                 </defs>
               </svg>
             </div>
-            <h3 class="text-lg font-medium text-white">Inscription pour une session</h3>
-            <p class="mt-6 max-w-3xl text-base text-indigo-50">Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet. Sapien tortor lacus arcu.</p>
+            <h3 class="text-lg font-medium text-white">{{__('signup.title')}}</h3>
+            <p class="mt-6 max-w-3xl text-base text-indigo-50">{{__('signup.teaser')}}</p>
             <dl class="mt-8 space-y-6">
               <dt><span class="sr-only">Phone number</span></dt>
               <dd class="flex text-base text-indigo-50">
@@ -122,10 +122,10 @@
                               </svg>
                             </div>
                             <div class="mt-3 text-center sm:mt-5">
-                              <h3 class="text-lg font-medium leading-6 text-gray-900" id="modal-title">Successfully registered</h3>
+                              <h3 class="text-lg font-medium leading-6 text-gray-900" id="modal-title">{{__('signup.success')}}</h3>
                               <div class="mt-2">
-                                <p class="text-sm text-gray-500">You will received an email with more details about your session.</p>
-                                <p class="text-sm text-gray-500">Keep in touch... and Welcome to your new journey</p>
+                                <p class="text-sm text-gray-500">{{__('signup.successTeaser')}}</p>
+                                <p class="text-sm text-gray-500">{{__('signup.successTeaser2')}}</p>
                               </div>
                             </div>
                           </div>
@@ -140,54 +140,59 @@
                 @endif
               </div>
               <div class=" grid grid-cols-1 gap-y-4 sm:grid-cols-2 sm:gap-x-8">
-              <div>
-                <label class="block text-md font-medium text-gray-700 mb-2">Premier joueur {{$session}}</label>
-                <label for="playerOneFirstname" class="block text-sm font-medium text-gray-900">First name</label>
-                <div class="mt-1">
-                  <input wire:model="playerOneFirstname" type="text" name="playerOneFirstname" id="playerOneFirstname" autocomplete="given-name" class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500">
-                  @error('playerOneFirstname') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
+                <div>
+                  <div>
+                    <label class="block text-md font-medium text-gray-700 mb-2">{{__('signup.playerone')}} {{$session}}</label>
+                    <label for="playerOneFirstname" class="block text-sm font-medium text-gray-900">{{__('signup.firstname')}}</label>
+                    <div class="mt-1">
+                      <input wire:model="playerOneFirstname" type="text" name="playerOneFirstname" id="playerOneFirstname" autocomplete="given-name" class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                      @error('playerOneFirstname') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
+                    </div>
+                  </div>
+                  <div>
+                    <label for="playerOneLastname" class="block text-sm font-medium text-gray-900">{{__('signup.lastname')}}</label>
+                    <div class="mt-1">
+                      <input wire:model="playerOneLastname" id="playerOneLastname" name="playerOneLastname" type="text" autocomplete="family-name" class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                      @error('playerOneLastname') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
+                    </div>
+                  </div>
+                  <div>
+                    <label for="playerOneEmail" class="block text-sm font-medium text-gray-900">Email</label>
+                    <div class="mt-1">
+                      <input wire:model="playerOneEmail" id="playerOneEmail" name="playerOneEmail" type="email" autocomplete="email" class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                      @error('playerOneEmail') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
+                    </div>
+                  </div>
+
                 </div>
-              </div>
-              <div>
-                <label class="block text-md font-medium text-gray-700 mb-2">Second joueur </label>
-                <label for="playerTwoFirstname" class="block text-sm font-medium text-gray-900">Firstname</label>
-                <div class="mt-1">
-                  <input wire:model="playerTwoFirstname" type="text" name="playerTwoFirstname" id="playerTwoFirstname" autocomplete="given-name" class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500">
-                  @error('playerTwoFirstname') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
+                <div>
+                  <div>
+                    <label class="block text-md font-medium text-gray-700 mb-2">{{__('signup.playertwo')}} </label>
+                    <label for="playerTwoFirstname" class="block text-sm font-medium text-gray-900">{{__('signup.firstname')}}</label>
+                    <div class="mt-1">
+                      <input wire:model="playerTwoFirstname" type="text" name="playerTwoFirstname" id="playerTwoFirstname" autocomplete="given-name" class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                      @error('playerTwoFirstname') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
+                    </div>
+                  </div>
+                  <div>
+                    <div class="flex justify-between">
+                      <label for="playerTwoLastname" class="block text-sm font-medium text-gray-900">{{__('signup.lastname')}}</label>
+                    </div>
+                    <div class="mt-1">
+                      <input wire:model="playerTwoLastname" type="text" name="playerTwoLastname" id="playerTwoLastname" autocomplete="family-name" class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500" aria-describedby="phone-optional">
+                      @error('playerTwoLastname') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
+                    </div>
+                  </div>
+                  <div>
+                    <div class="flex justify-between">
+                      <label for="playerTwoEmail" class="block text-sm font-medium text-gray-900">Email</label>
+                    </div>
+                    <div class="mt-1">
+                      <input wire:model="playerTwoEmail" type="text" name="playerTwoEmail" id="playerTwoEmail" autocomplete="email" class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500" aria-describedby="phone-optional">
+                      @error('playerTwoEmail') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div>
-                <label for="playerOneLastname" class="block text-sm font-medium text-gray-900">Last name</label>
-                <div class="mt-1">
-                  <input wire:model="playerOneLastname" id="playerOneLastname" name="playerOneLastname" type="text" autocomplete="family-name" class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500">
-                  @error('playerOneLastname') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
-                </div>
-              </div>
-              <div>
-                <div class="flex justify-between">
-                  <label for="playerTwoLastname" class="block text-sm font-medium text-gray-900">Last name</label>
-                </div>
-                <div class="mt-1">
-                  <input wire:model="playerTwoLastname" type="text" name="playerTwoLastname" id="playerTwoLastname" autocomplete="family-name" class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500" aria-describedby="phone-optional">
-                  @error('playerTwoLastname') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
-                </div>
-              </div>
-              <div>
-                <label for="playerOneEmail" class="block text-sm font-medium text-gray-900">Email</label>
-                <div class="mt-1">
-                  <input wire:model="playerOneEmail" id="playerOneEmail" name="playerOneEmail" type="email" autocomplete="email" class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500">
-                  @error('playerOneEmail') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
-                </div>
-              </div>
-              <div>
-                <div class="flex justify-between">
-                  <label for="playerTwoEmail" class="block text-sm font-medium text-gray-900">Email</label>
-                </div>
-                <div class="mt-1">
-                  <input wire:model="playerTwoEmail" type="text" name="playerTwoEmail" id="playerTwoEmail" autocomplete="email" class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500" aria-describedby="phone-optional">
-                  @error('playerTwoEmail') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
-                </div>
-              </div>
               <!-- SELECT BOX -->
               <div 
               x-data="{
@@ -221,7 +226,7 @@
                       <div class="inline-flex items-center rounded-l-md border border-transparent bg-dark-blue py-2 pl-3 pr-4 text-white shadow-sm w-full">
                         <!-- Heroicon name: mini/check -->
                         
-                        <p class="ml-2.5 text-sm font-medium" x-html="session">Sélectionné une session</p>
+                        <p class="ml-2.5 text-sm font-medium" x-html="session">{{__('signup.select')}}</p>
                       </div>
                       <button 
                       x-ref="button"
@@ -268,7 +273,7 @@
                       <div class="flex flex-col">
                         <div class="flex justify-between"  >
                           <!-- Selected: "font-semibold", Not Selected: "font-normal" -->
-                          <p class="font-normal">Session 1: Vendredi 1 avril 2023</p>
+                          <p class="font-normal text-xs">Session 1: {{__('home.agendaWhen1')}}</p>
                           <!--
                             Checkmark, only display for selected option.
               
@@ -282,14 +287,14 @@
                           </span>
                         </div>
                         <!-- Highlighted: "text-indigo-200", Not Highlighted: "text-gray-500" -->
-                        <p class="text-gray-500 mt-2">Royal Leopol Club: rue edit Cavel 100, 1180 Uccle</p>
+                        <p class="text-gray-500 text-xs">{{__('home.agendaWhere1')}}</p>
                       </div>
                     </li>
                     <li wire:click="setSession(2)"  x-on:click.prevent="session = 'session 2';toggle()" class="text-gray-900 cursor-default select-none p-4 text-sm" id="listbox-option-0" role="option">
                       <div class="flex flex-col">
                         <div class="flex justify-between"  >
                           <!-- Selected: "font-semibold", Not Selected: "font-normal" -->
-                          <p class="font-normal">Session 2: Vendredi 1 mail 2023</p>
+                          <p class="font-normal text-xs">Session 2: {{__('home.agendaWhen2')}}</p>
                           <!--
                             Checkmark, only display for selected option.
               
@@ -303,7 +308,70 @@
                           </span>
                         </div>
                         <!-- Highlighted: "text-indigo-200", Not Highlighted: "text-gray-500" -->
-                        <p class="text-gray-500 mt-2">Primerose: rue edit Cavel 100, 1180 Anvers</p>
+                        <p class="text-gray-500 text-xs">{{__('home.agendaWhere2')}}</p>
+                      </div>
+                    </li>
+                    <li wire:click="setSession(3)"  x-on:click.prevent="session = 'session 3';toggle()" class="text-gray-900 cursor-default select-none p-4 text-sm" id="listbox-option-0" role="option">
+                      <div class="flex flex-col">
+                        <div class="flex justify-between"  >
+                          <!-- Selected: "font-semibold", Not Selected: "font-normal" -->
+                          <p class="font-normal text-xs">Session 3: {{__('home.agendaWhen3')}}</p>
+                          <!--
+                            Checkmark, only display for selected option.
+              
+                            Highlighted: "text-white", Not Highlighted: "text-indigo-500"
+                          -->
+                          <span class="text-blue-500">
+                            <!-- Heroicon name: mini/check -->
+                            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+                            </svg>
+                          </span>
+                        </div>
+                        <!-- Highlighted: "text-indigo-200", Not Highlighted: "text-gray-500" -->
+                        <p class="text-gray-500 text-xs">{{__('home.agendaWhere3')}}</p>
+                      </div>
+                    </li>
+                    <li wire:click="setSession(4)"  x-on:click.prevent="session = 'session 4';toggle()" class="text-gray-900 cursor-default select-none p-4 text-sm" id="listbox-option-0" role="option">
+                      <div class="flex flex-col">
+                        <div class="flex justify-between"  >
+                          <!-- Selected: "font-semibold", Not Selected: "font-normal" -->
+                          <p class="font-normal text-xs">Session 4: {{__('home.agendaWhen4')}}</p>
+                          <!--
+                            Checkmark, only display for selected option.
+              
+                            Highlighted: "text-white", Not Highlighted: "text-indigo-500"
+                          -->
+                          <span class="text-blue-500">
+                            <!-- Heroicon name: mini/check -->
+                            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+                            </svg>
+                          </span>
+                        </div>
+                        <!-- Highlighted: "text-indigo-200", Not Highlighted: "text-gray-500" -->
+                        <p class="text-gray-500 text-xs">{{__('home.agendaWhere4')}}</p>
+                      </div>
+                    </li>
+                    <li wire:click="setSession(5)"  x-on:click.prevent="session = 'session 5';toggle()" class="text-gray-900 cursor-default select-none p-4 text-sm" id="listbox-option-0" role="option">
+                      <div class="flex flex-col">
+                        <div class="flex justify-between"  >
+                          <!-- Selected: "font-semibold", Not Selected: "font-normal" -->
+                          <p class="font-normal text-xs">Session 5: {{__('home.agendaWhen5')}}</p>
+                          <!--
+                            Checkmark, only display for selected option.
+              
+                            Highlighted: "text-white", Not Highlighted: "text-indigo-500"
+                          -->
+                          <span class="text-blue-500">
+                            <!-- Heroicon name: mini/check -->
+                            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+                            </svg>
+                          </span>
+                        </div>
+                        <!-- Highlighted: "text-indigo-200", Not Highlighted: "text-gray-500" -->
+                        <p class="text-gray-500  text-xs">{{__('home.agendaWhere5')}}</p>
                       </div>
                     </li>
                     <!-- More items... -->
@@ -313,14 +381,14 @@
               </div>
               @error('session') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
               <div >
-                <label for="companyName" class="block text-sm font-medium text-gray-900">Company name</label>
+                <label for="companyName" class="block text-sm font-medium text-gray-900">{{__('signup.companyname')}}</label>
                 <div class="mt-1">
                   <input wire:model="companyName" type="text" name="companyName" id="companyName" class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500">
                   @error('companyName') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
                 </div>
               </div>
               <div >
-                <label for="companyVAT" class="block text-sm font-medium text-gray-900">Company VAT</label>
+                <label for="companyVAT" class="block text-sm font-medium text-gray-900">{{__('signup.companyvat')}}</label>
                 <div class="mt-1">
                   <input wire:model="companyVAT" type="text" name="companyVAT" id="companyVAT" class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500">
                   @error('companyVAT') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
