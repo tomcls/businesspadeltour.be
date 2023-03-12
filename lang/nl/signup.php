@@ -11,8 +11,9 @@ return [
     "companyname" => "Naam van uw bedrijf",
     "companyvat" => "BTW-nummer",
     "select" => "Selecteer een sessie",
-    "signup" => "register",
+    "signup" => "Registreer",
     "success" => "Inschrijving geslaagd",
     "succesTeaser" => "U ontvangt een e-mail met meer details over uw sessie",
     "successTeaser2"=> "Houd contact... en welkom bij dit nieuwe avontuur",
+    "signupCompleted"=> "Inschrijving voor de Business padel tour",
 ];

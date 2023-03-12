@@ -7,6 +7,7 @@ use App\Models\Session;
 use App\Models\User;
 use App\Models\UserSession;
 use Exception;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Log;
 use Livewire\Component;
@@ -108,13 +109,13 @@ class Register extends Component
             $message = [
                 "from_email" => "info@businesspadeltour.be",
                 'from_name'  => 'Business padel tour',
-                "subject" => "Registration Completed",
+                "subject" => __('signup.signupCompleted'),
                 "to" => $to,
                 "headers" => ["Reply-To" => "info@businesspadeltour.be"],
                 'global_merge_vars' => $template_content
             ];
             $response = $mailchimp->messages->sendTemplate([
-                "template_name" => "bpt_signup_fr",
+                "template_name" => "bpt_signup_".App::currentLocale(),
                 "template_content" => $template_content,
                 "message" => $message,
             ]);
@@ -140,13 +141,14 @@ class Register extends Component
             $message = [
                 "from_email" => "info@businesspadeltour.be",
                 'from_name'  => 'Business padel tour',
-                "subject" => "Registration Completed",
+                "subject" => __('signup.signupCompleted'),
                 "to" => $to,
-                "headers" => ["Reply-To" => "info@businesspadeltour.be"],
+                "headers" => ["Reply-To" => "katia@businesspadeltour.be"],
                 'global_merge_vars' => $template_content
             ];
+            Log::alert('register '.App::currentLocale());
             $response = $mailchimp->messages->sendTemplate([
-                "template_name" => "bpt_signup_fr",
+                "template_name" => "bpt_signup_".App::currentLocale(),
                 "template_content" => $template_content,
                 "message" => $message,
             ]);

@@ -402,7 +402,7 @@
                 </div>
               </div>             
               <div class="sm:col-span-2 sm:flex sm:justify-end">
-                <button type="submit" wire:type="submit" class="mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-light-blue px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-dark-blue focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 sm:w-auto">S'enregistrer</button>
+                <button type="submit" wire:type="submit" class="mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-light-blue px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-dark-blue focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 sm:w-auto">{{__('signup.signup')}}</button>
               </div>
               </div>
             </form>
