@@ -17,7 +17,7 @@
                 
     </x-layouts.menu>
     <main>
-      {{-- <div class="relative z-0">
+      <div class="relative z-0">
         <div class="mx-auto max-w-7xl ">
           <div class="relative z-10 pt-14 lg:w-full lg:max-w-2xl ">
             <svg class="absolute inset-y-0 right-8 hidden h-full w-80 translate-x-1/2 transform  lg:block fill-white" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
@@ -51,7 +51,7 @@
         <div class="bg-gray-50 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
           <img class="aspect-[3/2] object-cover lg:aspect-auto lg:h-full lg:w-full" src="{{url('/').'/images/section/bg8.jpg'}}" alt="">
         </div>
-      </div> --}}
+      </div>
       <div class="relative px-6 lg:px-8 z-0">
         <div class="mx-auto max-w-2xl py-24 sm:py-40 lg:py-24">
           
