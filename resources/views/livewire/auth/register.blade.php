@@ -276,7 +276,7 @@
               
                       Highlighted: "text-white bg-dark-blue", Not Highlighted: "text-gray-900"
                     -->
-                    <li wire:click="setSession(1)"  x-on:click.prevent="session = 'session 1';toggle()" class="text-gray-900 cursor-default select-none p-4 text-sm" id="listbox-option-0" role="option">
+                    <li wire:click="setSession(1)"  x-on:click.prevent="session = '{{__('home.agendaWhere1')}}';toggle()" class="text-gray-900 cursor-default select-none p-4 text-sm" id="listbox-option-0" role="option">
                       <div class="flex flex-col">
                         <div class="flex justify-between"  >
                           <!-- Selected: "font-semibold", Not Selected: "font-normal" -->
@@ -297,7 +297,7 @@
                         <p class="text-gray-500 text-xs">{{__('home.agendaWhere1')}}</p>
                       </div>
                     </li>
-                    <li wire:click="setSession(2)"  x-on:click.prevent="session = 'session 2';toggle()" class="text-gray-900 cursor-default select-none p-4 text-sm" id="listbox-option-0" role="option">
+                    <li wire:click="setSession(2)"  x-on:click.prevent="session = '{{__('home.agendaWhere2')}}';toggle()" class="text-gray-900 cursor-default select-none p-4 text-sm" id="listbox-option-0" role="option">
                       <div class="flex flex-col">
                         <div class="flex justify-between"  >
                           <!-- Selected: "font-semibold", Not Selected: "font-normal" -->
@@ -318,7 +318,7 @@
                         <p class="text-gray-500 text-xs">{{__('home.agendaWhere2')}}</p>
                       </div>
                     </li>
-                    <li wire:click="setSession(3)"  x-on:click.prevent="session = 'session 3';toggle()" class="text-gray-900 cursor-default select-none p-4 text-sm" id="listbox-option-0" role="option">
+                    <li wire:click="setSession(3)"  x-on:click.prevent="session = '{{__('home.agendaWhere3')}}';toggle()" class="text-gray-900 cursor-default select-none p-4 text-sm" id="listbox-option-0" role="option">
                       <div class="flex flex-col">
                         <div class="flex justify-between"  >
                           <!-- Selected: "font-semibold", Not Selected: "font-normal" -->
@@ -339,7 +339,7 @@
                         <p class="text-gray-500 text-xs">{{__('home.agendaWhere3')}}</p>
                       </div>
                     </li>
-                    <li wire:click="setSession(4)"  x-on:click.prevent="session = 'session 4';toggle()" class="text-gray-900 cursor-default select-none p-4 text-sm" id="listbox-option-0" role="option">
+                    <li wire:click="setSession(4)"  x-on:click.prevent="session = '{{__('home.agendaWhere4')}}';toggle()" class="text-gray-900 cursor-default select-none p-4 text-sm" id="listbox-option-0" role="option">
                       <div class="flex flex-col">
                         <div class="flex justify-between"  >
                           <!-- Selected: "font-semibold", Not Selected: "font-normal" -->
@@ -360,7 +360,7 @@
                         <p class="text-gray-500 text-xs">{{__('home.agendaWhere4')}}</p>
                       </div>
                     </li>
-                    <li wire:click="setSession(5)"  x-on:click.prevent="session = 'session 5';toggle()" class="text-gray-900 cursor-default select-none p-4 text-sm" id="listbox-option-0" role="option">
+                    <li wire:click="setSession(5)"  x-on:click.prevent="session = '{{__('home.agendaWhere5')}}';toggle()" class="text-gray-900 cursor-default select-none p-4 text-sm" id="listbox-option-0" role="option">
                       <div class="flex flex-col">
                         <div class="flex justify-between"  >
                           <!-- Selected: "font-semibold", Not Selected: "font-normal" -->
