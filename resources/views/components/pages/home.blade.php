@@ -414,7 +414,7 @@
           <div class="flex flex-1 items-center justify-center w-100 flex-row mt-10">
             <ul role="list" class="items-center justify-center inline-flex space-x-10">
               <li>
-                <img class="mx-auto w-50 items-center justify-center mt-7" src="{{url('/').'/images/sponsors/immovlan.png'}}" alt="">
+                <img class="mx-auto w-50 items-center justify-center mt-7" src="{{url('/').'/images/sponsors/immovlan_mauve.png'}}" alt="">
               </li>
               <li>
                 <img class="mx-auto w-50 " src="{{url('/').'/images/sponsors/b19.png'}}" alt="">
