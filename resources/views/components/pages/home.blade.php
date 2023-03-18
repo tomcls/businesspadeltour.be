@@ -3,7 +3,7 @@
 <!-- This example requires Tailwind CSS v3.0+ -->
 <div class="isolate bg-white">
     <div class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
-      <svg class="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]" viewBox="0 0 1155 678" xmlns="http://www.w3.org/2000/svg">
+      <svg class="relative left-[calc(80%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(20%-30rem)] sm:h-[42.375rem]" viewBox="0 0 1155 678" xmlns="http://www.w3.org/2000/svg">
         <path fill="url(#45de2b6b-92d5-4d68-a6a0-9b9b2abad533)" fill-opacity=".3" d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z" />
         <defs>
           <linearGradient id="45de2b6b-92d5-4d68-a6a0-9b9b2abad533" x1="1155.49" x2="-78.208" y1=".177" y2="474.645" gradientUnits="userSpaceOnUse">
@@ -17,35 +17,39 @@
                 
     </x-layouts.menu>
     <main>
-      <div class="relative px-6 lg:px-8 z-0">
-        <div class="mx-auto max-w-2xl py-24 sm:py-40 lg:py-24">
-          
-          <div class=" md:mb-8 sm:flex sm:justify-center ">
-            
-            {{-- <livewire:fetch-regions /> --}}
-          </div>
-          <div class="mt-10 flex items-center justify-center gap-x-6 mb-6">
-            <img class="h-28 " src="{{url('/').'/images/logo/logo.svg'}}" alt="Business padel tour">
-          </div>
-          <div class="text-center">
-            
-            <h1 class="text-4xl font-bold tracking-tight color-dark-blue sm:text-6xl"></h1>
-            <p class="mt-6 text-lg leading-8 text-gray-600">{{__('home.teaser')}}</p>
-            <div class="mt-10 flex items-center justify-center gap-x-6">
-              <a href="{{url('/').'/'.App::currentLocale().'#summary'}}" class="rounded-md bg-dark-blue px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">{{__('home.moreinfo')}}</a>
+      <div class="relative z-0">
+        <div class="mx-auto max-w-7xl ">
+          <div class="relative z-10 pt-14 lg:w-full lg:max-w-2xl ">
+            <svg class="absolute inset-y-0 right-8 hidden h-full w-80 translate-x-1/2 transform  lg:block fill-white" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+              
+              <polygon points="0,0 90,0 50,100 0,100" />
+            </svg>
+    
+            <div class="relative py-32 px-6 sm:py-40 lg:py-56 lg:px-8 lg:pr-0">
+              <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
+                <h1 class="color-dark-blue text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl text-center justify-center">Business Padel Tour</h1>
+                <p class="mt-6 text-lg leading-8 text-gray-600 text-center justify-center">{{__('home.teaser')}}</p>
+
+                <div class="flex flex-1  w-100 flex-row mt-10 items-center justify-center">
+                  <ul role="list" class="items-center justify-center inline-flex space-x-10">
+                    <li>
+                      <img class="mx-auto w-50 items-center justify-center mt-7" src="{{url('/').'/images/sponsors/immovlan_mauve.png'}}" alt="">
+                    </li>
+                    <li>
+                      <img class="mx-auto w-20 pt-5" src="{{url('/').'/images/sponsors/b19.png'}}" alt="">
+                    </li>
+                    <!-- More people... -->
+                  </ul>
+                </div> 
+                <div class="mt-10 flex items-center justify-center gap-x-6">
+                  <a href="{{url('/').'/'.App::currentLocale().'#summary'}}" class="rounded-md bg-dark-blue px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">{{__('home.moreinfo')}}</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
-          <svg class="relative left-[calc(50%+3rem)] h-[21.1875rem] max-w-none -translate-x-1/2 sm:left-[calc(50%+36rem)] sm:h-[42.375rem]" viewBox="0 0 1155 678" xmlns="http://www.w3.org/2000/svg">
-            <path fill="url(#ecb5b0c9-546c-4772-8c71-4d3f06d544bc)" fill-opacity=".3" d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z" />
-            <defs>
-              <linearGradient id="ecb5b0c9-546c-4772-8c71-4d3f06d544bc" x1="1155.49" x2="-78.208" y1=".177" y2="474.645" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#6fc3c3"></stop>
-                <stop offset="1" stop-color="#6fc3c3"></stop>
-              </linearGradient>
-            </defs>
-          </svg>
+        <div class="bg-gray-50 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+          <img class="aspect-[3/2] object-cover lg:aspect-auto lg:h-full lg:w-full" src="{{url('/').'/images/section/bg2.jpg'}}" alt="">
         </div>
       </div>
       <div class="overflow-hidden bg-black py-24 sm:py-32" id="summary">
