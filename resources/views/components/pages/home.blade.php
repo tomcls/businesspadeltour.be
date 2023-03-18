@@ -18,14 +18,14 @@
     </x-layouts.menu>
     <main>
       <div class="relative px-6 lg:px-8 z-0">
-        <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+        <div class="mx-auto max-w-2xl py-24 sm:py-40 lg:py-24">
           
           <div class=" md:mb-8 sm:flex sm:justify-center ">
             
             {{-- <livewire:fetch-regions /> --}}
           </div>
           <div class="mt-10 flex items-center justify-center gap-x-6 mb-6">
-            <img class=" " src="{{url('/').'/images/logo/logo.svg'}}" alt="Business padel tour">
+            <img class="h-28 " src="{{url('/').'/images/logo/logo.svg'}}" alt="Business padel tour">
           </div>
           <div class="text-center">
             
