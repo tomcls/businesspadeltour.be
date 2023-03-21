@@ -367,7 +367,7 @@
                           <p class="font-normal text-xs">Session 5: {{__('home.agendaWhen5')}}</p>
                           <!--
                             Checkmark, only display for selected option.
-              
+                 
                             Highlighted: "text-white", Not Highlighted: "text-indigo-500"
                           -->
                           <span class="text-blue-500">
