@@ -66,7 +66,7 @@ return [
     'agendaWhere2' => 'Garrincha Gent (Pauline van Pottelsberghelaan 25 - 9051 Gent)',
     'agendaWhere3' => 'Planet Padel (rue de la Vallée 10 4470 Saint-Georges sur Meuse Liège)',
     'agendaWhere4' => 'Eleven Padel (rue de l\'Industrie 11 - 1400 Nivelles)',
-    'agendaWhere5' => 'Ter Eiken Padel (Kattenbroek 33 - 2650 Edegen)',
+    'agendaWhere5' => 'Ter Eiken Padel (Kattenbroek 33 - 2650 Edegen Antwerp)',
     'agendaWhere6' => 'Royal Zoute Tennis & Padel Club (Astridlaan 7 8300 Knokke-Heist)',
     'session' => 'Session',
     'agenda' => 'Agenda',
