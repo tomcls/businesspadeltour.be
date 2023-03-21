@@ -209,15 +209,10 @@ class Register extends Component
                 "template_content" => $template_content,
                 "message" => $message,
             ]);
-          //  Log::alert("aaaaaaaaaaaaaaaaaaaaaaaaaaaa");
            // Log::alert(json_encode($response).json_encode($response2));
         } catch (Exception $e) {
-            //Log::alert("bbbbbbbbbbbbbbbbbbbbbbbbb");
             //Log::alert($e->getMessage().$e->getTraceAsString());
         }
-
-
-
         //auth()->login($user);
         $this->saved = true;
         // return redirect('/index');
@@ -228,7 +223,6 @@ class Register extends Component
     }
     public function updatedEmail()
     {
-
         $this->validate(['email' => 'unique:users']);
     }
 
