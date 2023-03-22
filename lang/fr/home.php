@@ -14,7 +14,7 @@ return [
     */
 
     'teaser' => 'Immovlan et B19 lancent le Business Padel Tour',
-    'moreinfo' => 'Plus \'infos',
+    'moreinfo' => 'Plus d\'infos',
     'summaryTitle' => 'Le Business padel tour',
     'summaryTitle2' => 'De quoi s’agit ?',
     'summaryTeaser' => 'Le Business Padel Tour est une compétition de Padel inter-entreprises qui se déroule en Belgique en 5 étapes ',
