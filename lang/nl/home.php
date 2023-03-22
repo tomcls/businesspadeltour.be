@@ -17,7 +17,7 @@ return [
     'moreinfo' => 'Meer info',
     'summaryTitle' => 'De Business Padel Tour',
     'summaryTitle2' => 'Waarover gaat het?',
-    'summaryTeaser' => 'The Business Padel Tour is an inter-company padel competition that takes place in Belgium in 5 stages',
+    'summaryTeaser' => 'De Business Padel Tour is een padel-competitie tussen bedrijven die in 5 voorrondes wordt gespeeld (in Brussel, Nijvel, Luik, Gent en Antwerpen). ',
     'summaryContentPrefix1' => 'Where? ',
     'summaryContentPrefix2' => 'Each session is followed by a drink - apéro ',
     'summaryContentPrefix3' => 'The objective',
