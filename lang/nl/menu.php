@@ -2,7 +2,7 @@
 
 return [
 
-    'programm' => 'Programma',
+    'program' => 'Programma',
     'programTeaser' => '5 sessies van 36 teams elke vrijdagmiddag',
     'club' => 'Clubs',
     'clubTeaser' => '5 clubs verspreid over heel België',
