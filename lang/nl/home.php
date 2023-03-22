@@ -31,7 +31,7 @@ return [
     'pgmContentPrefix2' => 'We hebben 2 categorieën gepland: « Fun » en « Expert »',
     'pgmContentPrefix3' => 'De teams',
     'pgmContent1' => 'can enter multiple teams, and a team can enter multiple sessions',
-    'pgmContent2' => 'Everyone is free to enter the category they prefer, but we expect everyone to play fairly and enter the category that suits them best',
+    'pgmContent2' => 'Je kan je inschrijven in de categorie ‘Fun’ of ‘Expert’. Welke categorie je kiest, mag je zelf kiezen, maar we rekenen op jullie eerlijkheid om te kiezen voor de competitie die het best bij jullie ervaring past.',
     'pgmContent3' => 'are composed of 2 players. The competition is mixed, open to all, and above all, based on conviviality and fair play',
     'clubTitle' => 'The clubs',
     'clubTitle2' => '5 clubs all over Belgium',
