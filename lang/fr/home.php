@@ -86,5 +86,5 @@ return [
     'priceInvoice'=>'Factures et reçus disponibles pour faciliter le remboursement de l\'entreprise',
     'priceImin'=>'Je m\'inscris',
     'sponsorTitle'=>'En partenariat avec',
-    'sponsorTeaser' => 'Immovlan et B19 lancent la première compétition de padel inter entreprise en Belgique',
+    'sponsorTeaser' => 'Immovlan et B19 lancent la première compétition de padel inter entreprises en Belgique',
 ];
