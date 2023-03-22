@@ -13,10 +13,10 @@ return [
     |
     */
 
-    'teaser' => 'Immovlan and B19 launch the Business Padel Tour',
-    'moreinfo' => 'More info',
-    'summaryTitle' => 'The Business Padel Tour',
-    'summaryTitle2' => 'What is it all about?',
+    'teaser' => 'Immovlan & B19 presenteren de Business Padel Tour',
+    'moreinfo' => 'Meer info',
+    'summaryTitle' => 'De Business Padel Tour',
+    'summaryTitle2' => 'Waarover gaat het?',
     'summaryTeaser' => 'The Business Padel Tour is an inter-company padel competition that takes place in Belgium in 5 stages',
     'summaryContentPrefix1' => 'Where? ',
     'summaryContentPrefix2' => 'Each session is followed by a drink - apéro ',
