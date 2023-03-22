@@ -48,7 +48,7 @@ return [
     'clubContent5' => 'Ter Eiken Padel (Kattenbroek 33 - 2650 Edegen)',
     'clubContent6' => 'Royal Zoute Tennis & Padel Club (Astridlaan 7 8300 Knokke-Heist)',
     'agendaTitle' => 'Clubs',
-    'agendaTitle2' => 'What are the dates and locations of the different sessions?',
+    'agendaTitle2' => 'Waar en wanneer vinden de wedstrijden plaats?',
     'agendaTeaser' => '5 clubs all over Belgium',
     'agendaContentPrefix1' => 'Brussels',
     'agendaContentPrefix2' => 'Gent',

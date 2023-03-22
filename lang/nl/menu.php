@@ -7,7 +7,7 @@ return [
     'club' => 'Clubs',
     'clubTeaser' => '5 clubs verspreid over heel België',
     'agenda' => 'Agenda',
-    'agendaTeaser' => 'Wat zijn de data en plaatsen van de verschillende sessies?',
+    'agendaTeaser' => 'Waar en wanneer vinden de wedstrijden plaats?',
     'sponsors' => 'Partners',
     'sponsorsTeaser' => 'Immovlan en B19',
     'ranking' => 'Ranglijst',
