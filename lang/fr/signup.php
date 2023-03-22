@@ -10,7 +10,7 @@ return [
     'lastname' => 'Nom',
     'companyname' => 'Nom de votre companie',
     'companyvat' => 'Numéro de TVA',
-    'select' => 'Selectionnez une session',
+    'select' => 'Sélectionnez une session',
     'signup' => 's\'enregister',
     'success'=>'Enregistrement réussi',
     'successTeaser'=>'Vous recevrez un e-mail avec plus de détails sur votre session.',
