@@ -16,4 +16,8 @@ return [
     'successTeaser'=>'Vous recevrez un e-mail avec plus de détails sur votre session.',
     'successTeaser2'=>'Keep in touch... et bienvenue dans cette nouvelle aventure',
     "signupCompleted"=> "Inscription au Business padel tour",
+    "category"=> "Catégorie",
+    'selectcategory' => 'Sélectionnez une catégorie',
+    'address' => 'Adresse de votre companie',
+    'addressPlaceholder' => 'Rue numéro, code postal ville',
 ];

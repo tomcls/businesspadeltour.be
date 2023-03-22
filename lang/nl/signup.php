@@ -16,4 +16,8 @@ return [
     "succesTeaser" => "U ontvangt een e-mail met meer details over uw sessie",
     "successTeaser2"=> "Houd contact... en welkom bij dit nieuwe avontuur",
     "signupCompleted"=> "Inschrijving voor de Business padel tour",
+    "category"=> "Categorie",
+    'selectcategory' => 'Select a categorie',
+    'address' => 'Adres van uw bedrijf',
+    'addressPlaceholder' => 'Straat nummer, postcode stad',
 ];

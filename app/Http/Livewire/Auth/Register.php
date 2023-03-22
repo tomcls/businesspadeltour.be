@@ -24,7 +24,9 @@ class Register extends Component
     public $companyVAT = '';
     public $session = '';
     public $saved = false;
-
+    public $category = null;
+    public $address = null;
+    
     public function register()
     {
 
@@ -37,7 +39,9 @@ class Register extends Component
             'playerTwoEmail' => 'required|email',
             'companyName' => 'required',
             'companyVAT' => 'required',
-            'session' => 'required'
+            'session' => 'required',
+            'category' => 'required',
+            'address' => 'required'
         ]);
         try {
             $playerOne = new User();
@@ -59,6 +63,7 @@ class Register extends Component
             $company = new Company();
             $company->name = $data['companyName'];
             $company->vat = $data['companyVAT'];
+            $company->address = $data['address'];
             $company->save();
         } catch (Exception $e) {}
         $c = Company::where('vat',$data['companyVAT'])->first();
@@ -77,6 +82,7 @@ class Register extends Component
             $userSessionPlayerTwo->user_id = $u['id'];//User::find($data['playerTwoEmail'])->id;
             $userSessionPlayerTwo->company_id = $c['id'];//User::find($data['playerTwoEmail'])->id;
             $userSessionPlayerTwo->session_id = $this->session;
+            $userSessionPlayerTwo->category = $this->category;
             $userSessionPlayerTwo->save();
 
         } catch (Exception $e) { }
@@ -185,7 +191,7 @@ class Register extends Component
                 ),
                 array(
                     'name' => 'companyVAT',
-                    'content' => $data["companyVAT"]
+                    'content' => $data["companyVAT"].'('.$data["address"].')'
                 ),
                 array(
                     'name' => 'session',
@@ -209,7 +215,7 @@ class Register extends Component
                 "template_content" => $template_content,
                 "message" => $message,
             ]);
-           // Log::alert(json_encode($response).json_encode($response2));
+            Log::alert(json_encode($response).json_encode($response2));
         } catch (Exception $e) {
             //Log::alert($e->getMessage().$e->getTraceAsString());
         }
@@ -220,6 +226,10 @@ class Register extends Component
     public function setSession($name = "session")
     {
         $this->session = $name;
+    }
+    public function setCategory($name = "fun")
+    {
+        $this->category = $name;
     }
     public function updatedEmail()
     {
