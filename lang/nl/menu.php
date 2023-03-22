@@ -6,7 +6,7 @@ return [
     'programTeaser' => '5 sessies van 36 teams elke vrijdagmiddag',
     'club' => 'Clubs',
     'clubTeaser' => '5 clubs verspreid over heel België',
-    'agenda' => 'Programma',
+    'agenda' => 'Agenda',
     'agendaTeaser' => 'Wat zijn de data en plaatsen van de verschillende sessies?',
     'sponsors' => 'Partners',
     'sponsorsTeaser' => 'Immovlan en B19',
