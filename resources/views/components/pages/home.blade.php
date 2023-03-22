@@ -247,7 +247,7 @@
                       <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                     </svg>
                   </div>
-                  {{__('home.session')}} 1
+                  {{__('home.clubContentPrefix1')}} 
                 </dt>
                 <dd class="mt-0 text-base leading-7 text-gray-600">
                   <b>{{__('home.when')}}: </b> {{__('home.agendaWhen1')}}<br/>
@@ -264,7 +264,7 @@
                       <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                     </svg>
                   </div>
-                  {{__('home.session')}} 2
+                  {{__('home.clubContentPrefix2')}} 
                 </dt>
                 
                 <dd class="mt-0 text-base leading-7 text-gray-600">
@@ -281,7 +281,7 @@
                       <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                     </svg>
                   </div>
-                  {{__('home.session')}} 3
+                  {{__('home.clubContentPrefix3')}} 
                 </dt>
                 
                 <dd class="mt-0 text-base leading-7 text-gray-600">
@@ -298,7 +298,7 @@
                       <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                     </svg>
                   </div>
-                  {{__('home.session')}} 4
+                  {{__('home.clubContentPrefix4')}} 
                 </dt>
                 
                 <dd class="mt-0 text-base leading-7 text-gray-600">
@@ -315,7 +315,7 @@
                       <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                     </svg>
                   </div>
-                  {{__('home.session')}} 5
+                  {{__('home.clubContentPrefix5')}} 
                 </dt>
                 
                 <dd class="mt-0 text-base leading-7 text-gray-600">
