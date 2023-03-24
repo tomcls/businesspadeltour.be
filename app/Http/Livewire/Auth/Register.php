@@ -234,22 +234,12 @@ class Register extends Component
                 "email" =>  "info@businesspadeltour.be",
                 "type" => "to"
             ]);
-            $message = [
-                "from_email" => "info@businesspadeltour.be",
-                'from_name'  => 'Business padel tour',
-                "subject" => "Registration Completed",
-                "to" => $to,
-                "headers" => ["Reply-To" => "info@businesspadeltour.be"],
-                'global_merge_vars' => $template_content
-            ];
-            //Log::alert('Admin email sent '.App::currentLocale());
-            $response2 = $mailchimp->messages->sendTemplate([
-                "template_name" => "bpt_signup_admin",
-                "template_content" => $template_content,
-                "message" => $message,
+            array_push($to,[
+                "email" =>  "katia@businesspadeltour.be",
+                "type" => "to"
             ]);
             $message = [
-                "from_email" => "katia@businesspadeltour.be",
+                "from_email" => "info@businesspadeltour.be",
                 'from_name'  => 'Business padel tour',
                 "subject" => "Registration Completed",
                 "to" => $to,
