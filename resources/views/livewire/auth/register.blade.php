@@ -572,10 +572,13 @@
                   <input wire:model="address" type="text" name="address" id="address" placeholder="{{__('signup.addressPlaceholder')}}" class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500">
                   @error('address') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
                 </div>
-              </div>             
-              <div class="sm:col-span-2 sm:flex sm:justify-end">
-                <button type="submit" wire:type="submit" class="mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-light-blue px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-dark-blue focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 sm:w-auto">{{__('signup.signup')}}</button>
               </div>
+            </div>
+              <div class="flex-1 w-full pt-3">
+                  <p class="text-red-700 text-sm">{{__('signup.customShirt')}}</p>
+              </div>
+              <div class="sm:col-span-2 sm:flex sm:justify-end pt-2">
+                <button type="submit" wire:type="submit" class="mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-light-blue px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-dark-blue focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 sm:w-auto">{{__('signup.signup')}}</button>
               </div>
             </form>
           </div>

@@ -23,4 +23,5 @@ return [
     'addressPlaceholder' => 'Rue numéro, code postal ville',
     'size' => 'Taille du T-shirt',
     'selectsize' => 'Sélectionner la taille',
+    'customShirt' => 'Pour la personnalisation de vos t-shirts, merci de nous envoyer votre logo en eps vectorisé ou jpeg HD à l’adresse mail katia@businesspadeltour.be',
 ];
