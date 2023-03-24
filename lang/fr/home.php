@@ -28,7 +28,7 @@ return [
     'pgmTitle2' => '2 catégories « Fun » et « Expert ».',
     'pgmTeaser' => 'Le Business Padel Tour est ouvert à tous, mais chaque équipe doit être inscrite au nom d’une entreprise.',
     'pgmContentPrefix1' => 'Une société',
-    'pgmContentPrefix2' => 'Nous avons prévu 2 catégories : « Fun » et « Expert ».',
+    'pgmContentPrefix2' => 'Nous avons prévu 2 catégories : « Fun » et « Expert »',
     'pgmContentPrefix3' => 'Les équipes ',
     'pgmContent1' => ' peut engager plusieurs équipes, et une équipe peut s’engager sur plusieurs sessions',
     'pgmContent2' => ' Chacun est libre de s’inscrire dans la catégorie qu’il préfère, mais nous comptons sur le fair-play de chacun pour s’inscrire dans celle qui lui convient le mieux.',
