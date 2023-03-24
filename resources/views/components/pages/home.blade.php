@@ -91,7 +91,7 @@
                       </svg>
                       {{__('home.summaryContentPrefix3')}}
                     </dt>
-                    <dd class="inline">{{__('home.summaryContent2')}}</dd>
+                    <dd class="inline">{{__('home.summaryContent3')}}</dd>
                   </div>
                 </dl>
               </div>
