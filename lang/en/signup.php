@@ -22,4 +22,5 @@ return [
     'address' => 'Company address',
     'addressPlaceholder' => 'Street number, zip city',
     'size' => 'T-shirt size',
+    'selectsize' => 'Select the size',
 ];
