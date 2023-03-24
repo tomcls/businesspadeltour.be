@@ -3,8 +3,8 @@
       <div class="flex items-center justify-between border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
         <div class="flex justify-start lg:w-0 lg:flex-1">
           <a href="{{url('/').'/'.App::currentLocale().''}}">
-            <span class="sr-only">Business padel tour</span>
-            <img class="h-8 w-auto sm:h-14" src="{{url('/').'/images/logo/logo.svg'}}" alt="Business padel tour">
+            <span class="sr-only">Business Padel Tour</span>
+            <img class="h-8 w-auto sm:h-14" src="{{url('/').'/images/logo/logo.svg'}}" alt="Business Padel Tour">
           </a>
         </div>
         <div class="-my-2 -mr-2 md:hidden">
@@ -20,7 +20,7 @@
           <div x-data="{ isOpen: false }" class="relative" >
             <!-- Item active: "text-gray-900", Item inactive: "color-dark-blue" -->
             <button @click="isOpen = !isOpen" type="button" class="color-dark-blue group inline-flex items-center rounded-md text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2" aria-expanded="false">
-              <span>Business padel tour</span>
+              <span>Business Padel Tour</span>
               <!--
                 Heroicon name: mini/chevron-down
   
