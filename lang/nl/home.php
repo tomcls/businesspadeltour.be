@@ -65,7 +65,7 @@ return [
     'agendaWhere1' => 'Tour & Taxis Padel Club (Havenlaan 86c - 1000 Brussel)',
     'agendaWhere2' => 'Garrincha Gent (Pauline van Pottelsberghelaan 25 - 9051 Gent)',
     'agendaWhere3' => 'Planet Padel (rue de la Vallée 10 4470 Saint-Georges sur Meuse Luik)',
-    'agendaWhere4' => 'Eleven Padel (rue de l\'Industrie 11 - 1400 Nijvel)',
+    'agendaWhere4' => 'Eleven Padel (Industriestraat 11 - 1400 Nijvel)',
     'agendaWhere5' => 'Ter Eiken Padel (Kattenbroek 33 - 2650 Edegem)',
     'agendaWhere6' => 'Royal Zoute Tennis & Padel Club (Astridlaan 7 8300 Knokke-Heist)',
     'session' => 'Sessie',
