@@ -8,7 +8,7 @@ return [
     'playertwo' => 'Second joueur',
     'firstname' => 'Prénom',
     'lastname' => 'Nom',
-    'companyname' => 'Nom de votre companie',
+    'companyname' => 'Nom de votre société',
     'companyvat' => 'Numéro de TVA',
     'select' => 'Sélectionnez une session',
     'signup' => 's\'enregister',
@@ -18,6 +18,6 @@ return [
     "signupCompleted"=> "Inscription au Business padel tour",
     "category"=> "Catégorie",
     'selectcategory' => 'Sélectionnez une catégorie',
-    'address' => 'Adresse de votre companie',
+    'address' => 'Adresse de votre société',
     'addressPlaceholder' => 'Rue numéro, code postal ville',
 ];

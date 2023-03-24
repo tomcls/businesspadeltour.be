@@ -61,6 +61,7 @@
                 <!-- Heroicon name: outline/phone -->
                 <div class="ml-9">Redflag Events</div>
                 <div class="ml-9">76 bvd Lambermont 1030 Bruxelles</div>
+                <div class="ml-9">BE 0898.069.649</div>
                 <div class="ml-9">BE 0 898.069.649</div>
               </dd>
             </dl>
