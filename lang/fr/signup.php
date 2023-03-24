@@ -3,7 +3,7 @@
 return [
 
     'title' => 'Inscription pour une session',
-    'teaser' => 'L’inscription revient à 250 Eur (htva) par équipe par session',
+    'teaser' => 'L’inscription revient à 250 Eur (HTVA 302,5 eur TTC) par équipe par session',
     'playerone' => 'Premier joueur',
     'playertwo' => 'Second joueur',
     'firstname' => 'Prénom',
