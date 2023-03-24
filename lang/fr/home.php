@@ -25,7 +25,7 @@ return [
     'summaryContent2' => ' et les mieux classés de chaque session se retrouveront pour la grande finale qui aura lieu à Knokke (en lever de rideau du World Padel Tour) le 18 aout.',
     'summaryContent3' => ' étant bien entendu de se rencontrer dans une ambiance sportive et conviviale.',
     'pgmTitle' => 'Qui peut s’inscrire ?',
-    'pgmTitle2' => '2 catégories « Fun » et « Expert ».',
+    'pgmTitle2' => '2 catégories « Fun » et « Expert »',
     'pgmTeaser' => 'Le Business Padel Tour est ouvert à tous, mais chaque équipe doit être inscrite au nom d’une entreprise.',
     'pgmContentPrefix1' => 'Une société',
     'pgmContentPrefix2' => 'Nous avons prévu 2 catégories : « Fun » et « Expert »',
