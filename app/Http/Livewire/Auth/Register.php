@@ -9,7 +9,6 @@ use App\Models\UserSession;
 use Exception;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Log;
 use Livewire\Component;
 
 class Register extends Component

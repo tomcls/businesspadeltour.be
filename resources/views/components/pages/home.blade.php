@@ -108,7 +108,7 @@
             <div class="lg:pr-8 lg:pt-4">
               <div class="lg:max-w-lg">
                 <h2 class="text-lg font-semibold leading-8 tracking-tight color-light-blue">{{__('home.pgmTitle')}}</h2>
-                <p class="mt-2 text-3xl font-bold tracking-tight text-gray-300 sm:text-4xl">{{__('home.pgmTitle2')}}</p>
+                <p class="mt-2 text-3xl font-bold tracking-tight text-gray-300 sm:text-3xl">{{__('home.pgmTitle2')}}</p>
                 <p class="mt-6 text-lg leading-8 text-gray-900">{{__('home.pgmTeaser')}}</p>
                 <dl class="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-900 lg:max-w-none">
                   <div class="relative pl-9">
