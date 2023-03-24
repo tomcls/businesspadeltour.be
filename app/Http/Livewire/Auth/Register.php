@@ -234,10 +234,6 @@ class Register extends Component
                 "email" =>  "info@businesspadeltour.be",
                 "type" => "to"
             ]);
-            array_push($to,[
-                "email" =>  "katia@businesspadeltour.be",
-                "type" => "to"
-            ]);
             $message = [
                 "from_email" => "info@businesspadeltour.be",
                 'from_name'  => 'Business padel tour',

@@ -41,7 +41,7 @@ return [
     'clubContentPrefix4' => 'Nijvel',
     'clubContentPrefix5' => 'Antwerp',
     'clubContentPrefix6' => 'Knokke-Heist',
-    'clubContent1' => 'Tour & Taxis Padel Club (Hvenlaan 86c - 1000 Brussel)',
+    'clubContent1' => 'Tour & Taxis Padel Club (Havenlaan 86c - 1000 Brussel)',
     'clubContent2' => 'Garrincha Gent (Pauline van Pottelsberghelaan 25 - 9051 Gent)',
     'clubContent3' => 'Planet Padel (rue de la Vallée 10 4470 Saint-Georges sur Meuse Luik)',
     'clubContent4' => 'Eleven Padel (Industriestraat 11 - 1400 Nijvel)',
