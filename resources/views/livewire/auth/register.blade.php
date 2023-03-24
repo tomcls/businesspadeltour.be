@@ -171,7 +171,15 @@
                       @error('playerOneEmail') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
                     </div>
                   </div>
-
+                  <div>
+                    <div class="flex justify-between">
+                      <label for="playerOnePhone" class="block text-sm font-medium text-gray-900">{{__('signup.phone')}}</label>
+                    </div>
+                    <div class="mt-1">
+                      <input wire:model="playerOnePhone" type="text" name="playerOnePhone" id="playerOnePhone"  class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500" aria-describedby="phone-optional">
+                      @error('playerOnePhone') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
+                    </div>
+                  </div>
                 </div>
                 <div>
                   <div>
@@ -198,6 +206,15 @@
                     <div class="mt-1">
                       <input wire:model="playerTwoEmail" type="text" name="playerTwoEmail" id="playerTwoEmail" autocomplete="email" class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500" aria-describedby="phone-optional">
                       @error('playerTwoEmail') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
+                    </div>
+                  </div>
+                  <div>
+                    <div class="flex justify-between">
+                      <label for="playerTwoPhone" class="block text-sm font-medium text-gray-900">{{__('signup.phone')}}</label>
+                    </div>
+                    <div class="mt-1">
+                      <input wire:model="playerTwoPhone" type="text" name="playerTwoPhone" id="playerTwoPhone"  class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500" aria-describedby="phone-optional">
+                      @error('playerTwoPhone') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
                     </div>
                   </div>
                 </div>
