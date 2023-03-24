@@ -18,10 +18,12 @@ class Register extends Component
     public $playerOneLastname = '';
     public $playerOneEmail = '';
     public $playerOnePhone = '';
+    public $playerOneSize = '';
     public $playerTwoFirstname = '';
     public $playerTwoLastname = '';
     public $playerTwoEmail = '';
     public $playerTwoPhone = '';
+    public $playerTwoSize = '';
     public $companyName = '';
     public $companyVAT = '';
     public $session = '';
@@ -37,10 +39,12 @@ class Register extends Component
             'playerOneLastname' => 'required',
             'playerOneEmail' => 'required|email',
             'playerOnePhone' => 'required',
+            'playerOneSize' => 'required',
             'playerTwoFirstname' => 'required',
             'playerTwoLastname' => 'required',
             'playerTwoEmail' => 'required|email',
             'playerTwoPhone' => 'required',
+            'playerTwoSize' => 'required',
             'companyName' => 'required',
             'companyVAT' => 'required',
             'session' => 'required',
@@ -53,6 +57,8 @@ class Register extends Component
             $playerOne->lastname = $data['playerOneLastname'];
             $playerOne->email = $data['playerOneEmail'];
             $playerOne->phone = $data['playerOnePhone'];
+            $playerOne->lang = App::currentLocale();
+            $playerOne->size = $data['playerOneSize'];
             $playerOne->password=Hash::make('PadelUser4ever$');
             $playerOne->save();
         } catch (Exception $e) {}
@@ -62,7 +68,9 @@ class Register extends Component
             $playerTwo->lastname = $data['playerTwoLastname'];
             $playerTwo->email = $data['playerTwoEmail'];
             $playerTwo->phone = $data['playerTwoPhone'];
-            $playerTwo->password=Hash::make('PadelUser4ever$');
+            $playerTwo->lang = App::currentLocale();
+            $playerOne->size = $data['playerTwoSize'];
+            $playerTwo->password = Hash::make('PadelUser4ever$');
             $playerTwo->save();
         } catch (Exception $e) {}
         try {
@@ -126,6 +134,7 @@ class Register extends Component
                 "headers" => ["Reply-To" => "info@businesspadeltour.be"],
                 'global_merge_vars' => $template_content
             ];
+           // Log::alert('Player 1 email sent '.App::currentLocale());
             $response = $mailchimp->messages->sendTemplate([
                 "template_name" => "bpt_signup_".App::currentLocale(),
                 "template_content" => $template_content,
@@ -158,7 +167,7 @@ class Register extends Component
                 "headers" => ["Reply-To" => "katia@businesspadeltour.be"],
                 'global_merge_vars' => $template_content
             ];
-            Log::alert('register '.App::currentLocale());
+           // Log::alert('Player 2 email sent '.App::currentLocale());
             $response = $mailchimp->messages->sendTemplate([
                 "template_name" => "bpt_signup_".App::currentLocale(),
                 "template_content" => $template_content,
@@ -180,11 +189,7 @@ class Register extends Component
                 ),
                 array(
                     'name' => 'playerOnePhone',
-                    'content' => $data["playerOnePhone"]
-                ),
-                array(
-                    'name' => 'playerTwoPhone',
-                    'content' => $data["playerTwoPhone"]
+                    'content' => $data["playerOnePhone"] . ', T-shirt: '.$data["playerOneSize"]. ', lang: '.App::currentLocale()
                 ),
 
                 array(
@@ -199,6 +204,11 @@ class Register extends Component
                     'name' => 'playerOneEmail',
                     'content' => $data["playerOneEmail"]
                 ),
+                array(
+                    'name' => 'playerTwoPhone',
+                    'content' => $data["playerTwoPhone"]. ', T-shirt: '.$data["playerTwoSize"]. ', lang: '.App::currentLocale()
+                ),
+
                 array(
                     'name' => 'companyName',
                     'content' => $data["companyName"]
@@ -224,12 +234,13 @@ class Register extends Component
                 "headers" => ["Reply-To" => "info@businesspadeltour.be"],
                 'global_merge_vars' => $template_content
             ];
+            //Log::alert('Admin email sent '.App::currentLocale());
             $response2 = $mailchimp->messages->sendTemplate([
                 "template_name" => "bpt_signup_admin",
                 "template_content" => $template_content,
                 "message" => $message,
             ]);
-            Log::alert(json_encode($response).json_encode($response2));
+           // Log::alert(json_encode($response).json_encode($response2));
         } catch (Exception $e) {
             //Log::alert($e->getMessage().$e->getTraceAsString());
         }

@@ -180,6 +180,18 @@
                       @error('playerOnePhone') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
                     </div>
                   </div>
+                  <div>
+                    <label for="playerOneSize" class="block text-sm font-medium leading-6 text-gray-900">T-shirt size</label>
+                    <select id="playerOneSize" name="playerOneSize" wire:model="playerOneSize" class="mt-2 block w-full rounded-md border-0 py-1.5 pl-3 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                      <option >select the size</option>
+                      <option value="S">S</option>
+                      <option value="M">M</option>
+                      <option value="L">L</option>
+                      <option value="XL">XL</option>
+                      <option value="XXL">XXL</option>
+                    </select>
+                    @error('playerOneSize') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
+                  </div>
                 </div>
                 <div>
                   <div>
@@ -216,6 +228,18 @@
                       <input wire:model="playerTwoPhone" type="text" name="playerTwoPhone" id="playerTwoPhone"  class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500" aria-describedby="phone-optional">
                       @error('playerTwoPhone') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
                     </div>
+                  </div>
+                  <div>
+                    <label for="playerTwoSize" class="block text-sm font-medium leading-6 text-gray-900">T-shirt size</label>
+                    <select id="playerTwoSize" name="playerTwoSize" wire:model="playerTwoSize" class="mt-2 block w-full rounded-md border-0 py-1.5 pl-3 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                      <option >select the size</option>
+                      <option value="S">S</option>
+                      <option value="M">M</option>
+                      <option value="L">L</option>
+                      <option value="XL">XL</option>
+                      <option value="XXL">XXL</option>
+                    </select>
+                    @error('playerTwoSize') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
                   </div>
                 </div>
               <!-- SELECT BOX -->
