@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\SitemapXmlController;
 use App\Http\Livewire\Price;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\App;
@@ -36,6 +37,8 @@ Route::get('/register', function () {
 Route::get('/', function () {
     return new Response((new HomeController)->index());
 });
+Route::get('/sitemap.xml', [SitemapXmlController::class, 'index']);
+
 Route::prefix('{locale}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('set.locale')->group(function ($r) {
 
     if (in_array(app('request')->segment(1), array_keys(config('app.locales')))) {
