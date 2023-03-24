@@ -21,4 +21,5 @@ return [
     'selectcategory' => 'Sélectionnez une catégorie',
     'address' => 'Adresse de votre société',
     'addressPlaceholder' => 'Rue numéro, code postal ville',
+    'size' => 'Taille du T-shirt',
 ];

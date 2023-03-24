@@ -21,4 +21,5 @@ return [
     'selectcategory' => 'Select a catégorie',
     'address' => 'Company address',
     'addressPlaceholder' => 'Street number, zip city',
+    'size' => 'T-shirt size',
 ];

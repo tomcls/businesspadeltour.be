@@ -21,4 +21,5 @@ return [
     'selectcategory' => 'Select a categorie',
     'address' => 'Adres van uw bedrijf',
     'addressPlaceholder' => 'Straat nummer, postcode stad',
+    'size' => 'T-shirt maat',
 ];
