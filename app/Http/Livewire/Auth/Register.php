@@ -61,7 +61,9 @@ class Register extends Component
             $playerOne->size = $data['playerOneSize'];
             $playerOne->password=Hash::make('PadelUser4ever$');
             $playerOne->save();
-        } catch (Exception $e) {}
+        } catch (Exception $e) {
+           // Log::alert('Exception playerOne '.$e->getMessage());
+        }
         try {
             $playerTwo = new User();
             $playerTwo->firstname = $data['playerTwoFirstname'];
@@ -69,7 +71,7 @@ class Register extends Component
             $playerTwo->email = $data['playerTwoEmail'];
             $playerTwo->phone = $data['playerTwoPhone'];
             $playerTwo->lang = App::currentLocale();
-            $playerOne->size = $data['playerTwoSize'];
+            $playerTwo->size = $data['playerTwoSize'];
             $playerTwo->password = Hash::make('PadelUser4ever$');
             $playerTwo->save();
         } catch (Exception $e) {}
@@ -79,16 +81,21 @@ class Register extends Component
             $company->vat = $data['companyVAT'];
             $company->address = $data['address'];
             $company->save();
-        } catch (Exception $e) {}
+        } catch (Exception $e) {
+           // Log::alert('Exception compny '.$e->getMessage());
+        }
         $c = Company::where('vat',$data['companyVAT'])->first();
         try {
             $userSessionPlayerOne = new UserSession();
             $u = User::where('email',$data['playerOneEmail'])->first();
             $userSessionPlayerOne->user_id = $u['id'] ;
-            $userSessionPlayerOne->user_id = $c['id'] ;
+            $userSessionPlayerOne->company_id = $c['id'] ;
             $userSessionPlayerOne->session_id = $this->session;
+            $userSessionPlayerOne->category = $this->category;
             $userSessionPlayerOne->save();
-        } catch (Exception $e) {}
+        } catch (Exception $e) {
+          //  Log::alert('Exception usersession '.$e->getMessage());
+        }
         try {
 
             $userSessionPlayerTwo = new UserSession();
@@ -99,7 +106,9 @@ class Register extends Component
             $userSessionPlayerTwo->category = $this->category;
             $userSessionPlayerTwo->save();
 
-        } catch (Exception $e) { }
+        } catch (Exception $e) { 
+           // Log::alert('Exception playerTwo '.$e->getMessage());
+        }
 
         try {
             $s = Session::find($this->session);
