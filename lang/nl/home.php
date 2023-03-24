@@ -76,7 +76,7 @@ return [
     'priceTitle'=> 'Hoeveel kost de inschrijving?',
     'priceTitle2'=> 'Hoe inschrijven?',
     'priceTeaser'=> 'Elke ronde start rond 13.30 en eindigt rond 18.30. Inschrijvingen zijn beperkt tot 48 ploegen per voorronde. First come, first served! De zes beste ploegen van elke voorronde worden geselecteerd voor de grote finale in Knokke (zonder bijkomende kosten).',
-    'priceTeaser2'=> 'Inschrijving kost 250 Eur (excl. BTW) per team per sessie en geeft recht op',
+    'priceTeaser2'=> 'Inschrijving kost 250 eur excl. BTW (302,5 eur met BTW) per team per sessie en geeft recht op',
     'priceInclude'=> 'Wat is inbegrepen',
     'priceInclude1'=> '3 wedstrijden in de namiddag',
     'priceInclude2'=> 'Een t-shirt van de Business Padel Tour op naam van je bedrijf',

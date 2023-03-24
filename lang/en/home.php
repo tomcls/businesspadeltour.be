@@ -76,7 +76,7 @@ return [
     'priceTitle'=> 'How much is the registration?',
     'priceTitle2'=> 'How to register?',
     'priceTeaser'=> 'Registration will be limited to 48 teams per session. First come first served! The top 6 teams from each session will be invited to the grand final at Le Zoute in August (at no extra cost)',
-    'priceTeaser2'=> 'Registration costs 250 Eur (excl. VAT) per team per session and entitles you to',
+    'priceTeaser2'=> 'Registration costs 250 Eur EXCL. VAT( 302,5 eur VAT included) per team per session and entitles you to',
     'priceInclude'=> 'What is included',
     'priceInclude1'=> '3 matches in the afternoon',
     'priceInclude2'=> 'a Business Padel Tour T-shirt with your company name',
