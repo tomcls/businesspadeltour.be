@@ -8,6 +8,7 @@ return [
     'playertwo' => 'Second player',
     'firstname' => 'First name',
     'lastname' => 'Name',
+    'phone' => 'Phone',
     'companyname' => 'Company name',
     'companyvat' => 'VAT number',
     'select' => 'Select a session',

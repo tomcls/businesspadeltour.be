@@ -8,6 +8,7 @@ return [
     "playertwo" => "Tweede speler",
     "firstname" => "Voornaam",
     "lastname" => "Naam",
+    'phone' => 'Telefoon',
     "companyname" => "Naam van uw bedrijf",
     "companyvat" => "BTW-nummer",
     "select" => "Selecteer een sessie",

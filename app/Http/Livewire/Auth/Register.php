@@ -17,9 +17,11 @@ class Register extends Component
     public $playerOneFirstname = '';
     public $playerOneLastname = '';
     public $playerOneEmail = '';
+    public $playerOnePhone = '';
     public $playerTwoFirstname = '';
     public $playerTwoLastname = '';
     public $playerTwoEmail = '';
+    public $playerTwoPhone = '';
     public $companyName = '';
     public $companyVAT = '';
     public $session = '';
@@ -34,9 +36,11 @@ class Register extends Component
             'playerOneFirstname' => 'required',
             'playerOneLastname' => 'required',
             'playerOneEmail' => 'required|email',
+            'playerOnePhone' => 'required',
             'playerTwoFirstname' => 'required',
             'playerTwoLastname' => 'required',
             'playerTwoEmail' => 'required|email',
+            'playerTwoPhone' => 'required',
             'companyName' => 'required',
             'companyVAT' => 'required',
             'session' => 'required',
@@ -48,6 +52,7 @@ class Register extends Component
             $playerOne->firstname = $data['playerOneFirstname'];
             $playerOne->lastname = $data['playerOneLastname'];
             $playerOne->email = $data['playerOneEmail'];
+            $playerOne->phone = $data['playerOnePhone'];
             $playerOne->password=Hash::make('PadelUser4ever$');
             $playerOne->save();
         } catch (Exception $e) {}
@@ -56,6 +61,7 @@ class Register extends Component
             $playerTwo->firstname = $data['playerTwoFirstname'];
             $playerTwo->lastname = $data['playerTwoLastname'];
             $playerTwo->email = $data['playerTwoEmail'];
+            $playerTwo->phone = $data['playerTwoPhone'];
             $playerTwo->password=Hash::make('PadelUser4ever$');
             $playerTwo->save();
         } catch (Exception $e) {}
@@ -172,6 +178,14 @@ class Register extends Component
                     'name' => 'playerTwoEmail',
                     'content' => $data["playerTwoEmail"]
                 ),
+                array(
+                    'name' => 'playerOnePhone',
+                    'content' => $data["playerOnePhone"]
+                ),
+                array(
+                    'name' => 'playerTwoPhone',
+                    'content' => $data["playerTwoPhone"]
+                ),
 
                 array(
                     'name' => 'playerOneFirstname',
@@ -191,7 +205,7 @@ class Register extends Component
                 ),
                 array(
                     'name' => 'companyVAT',
-                    'content' => $data["companyVAT"].'('.$data["address"].')'
+                    'content' => $data["companyVAT"].' ('.$data["address"].')'
                 ),
                 array(
                     'name' => 'session',

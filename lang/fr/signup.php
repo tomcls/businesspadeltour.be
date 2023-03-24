@@ -8,6 +8,7 @@ return [
     'playertwo' => 'Second joueur',
     'firstname' => 'Prénom',
     'lastname' => 'Nom',
+    'phone' => 'Téléphone',
     'companyname' => 'Nom de votre société',
     'companyvat' => 'Numéro de TVA',
     'select' => 'Sélectionnez une session',
