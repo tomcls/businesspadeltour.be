@@ -74,7 +74,7 @@ return [
     'when' => 'When',
     'where' => 'Location',
     'priceTitle'=> 'How much is the registration?',
-    'firstIn'=>'The first registered are entitled to 2 free entries ( value 80€ ) to the evening matches of the World Padel Tour which will take place on April 28 at Tour & Taxis Padel Club.',
+    'firstIn'=>'The first registered are entitled to 2 free places (worth 80€) for the matches 1/4 final of the Belgian leg of the World Championship of the World Padel Tour.',
     'priceTitle2'=> 'How to register?',
     'priceTeaser'=> 'Registration will be limited to 48 teams per session. First come first served! The top 6 teams from each session will be invited to the grand final at Le Zoute in August (at no extra cost)',
     'priceTeaser2'=> 'Registration costs 250 Eur EXCL. VAT( 302,5 eur VAT included) per team per session and entitles you to',

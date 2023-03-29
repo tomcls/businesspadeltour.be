@@ -76,7 +76,7 @@ return [
     'priceTitle'=>'Combien coûte l’inscription ?',
     'priceTitle2'=>'Comment s’inscrire ?',
     'priceTeaser'=>'Les inscriptions seront limitées à 48 équipes par session. Premier arrivé premier servi ! Les 6 premiers classés de chaque session seront conviés pour la grande finale au Zoute en août (sans frais supplémentaire)',
-    'firstIn'=>'Les premiers inscrits auront droit à 2 entrées gratuites ( valeurs 80€ ) pour l\'étape belge du World Padel Tour qui aura lieu le 28 avril en soirée à Tour & Taxis Padel Club',
+    'firstIn'=>'Les premiers inscrits auront droit à 2 places gratuites (valeur 80€) pour assister en soirée aux matches 1/4 finale de l’étape belge du championnat du monde du World Padel Tour',
     'priceTeaser2'=>'L’inscription revient à 250 eur HTVA( 302,5 eur TTC) par équipe par session et donne droit à',
     'priceInclude'=>'Ce qui est inclus',
     'priceInclude1'=>'3 matches sur l’après-midi',

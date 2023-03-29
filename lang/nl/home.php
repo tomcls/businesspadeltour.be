@@ -76,7 +76,7 @@ return [
     'priceTitle'=> 'Hoeveel kost de inschrijving?',
     'priceTitle2'=> 'Hoe inschrijven?',
     'priceTeaser'=> 'Elke ronde start rond 13.30 en eindigt rond 18.30. Inschrijvingen zijn beperkt tot 48 ploegen per voorronde. First come, first served! De zes beste ploegen van elke voorronde worden geselecteerd voor de grote finale in Knokke (zonder bijkomende kosten).',
-    'firstIn'=>'De eerste ingeschreven hebben recht op 2 gratis toegangen ( waarde 80€ ) voor de avondmatchen van de World Padel Tour die plaatst zullen vinden op 28 april in Tour & Taxis Padel Club',
+    'firstIn'=>'De eerste ingeschreven hebben recht op 2 gratis plaatsen (ter waarde 80€) voor de matchen 1/4 finale van de Belgische etappe van het wereldkampioenschap van de World Padel Tour.',
     'priceTeaser2'=> 'Inschrijving kost 250 eur excl. BTW (302,5 eur met BTW) per team per sessie en geeft recht op',
     'priceInclude'=> 'Wat is inbegrepen',
     'priceInclude1'=> '3 wedstrijden in de namiddag',
