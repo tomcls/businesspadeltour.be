@@ -168,16 +168,6 @@
                     <dd class="inline">{{__('home.clubContent1')}}</dd>
                   </div>
       
-                  <div class="relative pl-9">
-                    <dt class="inline font-semibold text-gray-400">
-                      <!-- Heroicon name: mini/lock-closed -->
-                      <svg class="absolute top-1 left-1 h-6 w-6 color-light-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
-                      </svg>
-                      {{__('home.clubContentPrefix2')}}:
-                    </dt>
-                    <dd class="inline">{{__('home.clubContent2')}}</dd>
-                  </div>
       
                   <div class="relative pl-9">
                     <dt class="inline font-semibold text-gray-400">
@@ -201,16 +191,6 @@
                     <dd class="inline">{{__('home.clubContent4')}}</dd>
                   </div>
 
-                  <div class="relative pl-9">
-                    <dt class="inline font-semibold text-gray-400">
-                      <!-- Heroicon name: mini/server -->
-                      <svg class="absolute top-1 left-1 h-6 w-6 color-light-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
-                      </svg>
-                      {{__('home.clubContentPrefix5')}}:
-                    </dt>
-                    <dd class="inline">{{__('home.clubContent5')}}</dd>
-                  </div>
 
                   <div class="relative pl-9">
                     <dt class="inline font-semibold text-gray-400">
@@ -256,22 +236,6 @@
                 </dd>
               </div>
       
-              <div class="relative pl-16">
-                <dt class="text-base font-semibold leading-7 text-gray-900">
-                  <div class="absolute top-0 left-0 flex h-10 w-10 items-center justify-center rounded-lg bg-light-blue">
-                    <!-- Heroicon name: outline/lock-closed -->
-                    <svg class=" h-6 w-6 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
-                    </svg>
-                  </div>
-                  {{__('home.clubContentPrefix2')}} 
-                </dt>
-                
-                <dd class="mt-0 text-base leading-7 text-gray-600">
-                  <b>{{__('home.when')}}: </b> {{__('home.agendaWhen2')}}<br/>
-                  <b>{{__('home.where')}}: </b> {{__('home.agendaWhere2')}}<br/><br/>
-                </dd>
-              </div>
       
               <div class="relative pl-16">
                 <dt class="text-base font-semibold leading-7 text-gray-900">
@@ -307,22 +271,6 @@
                 </dd>
               </div>
 
-              <div class="relative pl-16">
-                <dt class="text-base font-semibold leading-7 text-gray-900">
-                  <div class="absolute top-0 left-0 flex h-10 w-10 items-center justify-center rounded-lg bg-light-blue">
-                    <!-- Heroicon name: outline/finger-print -->
-                    <svg class=" h-6 w-6 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
-                    </svg>
-                  </div>
-                  {{__('home.clubContentPrefix5')}} 
-                </dt>
-                
-                <dd class="mt-0 text-base leading-7 text-gray-600">
-                  <b>{{__('home.when')}}: </b> {{__('home.agendaWhen5')}}<br/>
-                  <b>{{__('home.where')}}: </b> {{__('home.agendaWhere5')}}<br/><br/>
-                </dd>
-              </div>
 
               <div class="relative pl-16">
                 <dt class="text-base font-semibold leading-7 text-gray-900">
@@ -350,6 +298,7 @@
           <div class="mx-auto max-w-2xl sm:text-center">
             <h2 class="text-3xl font-bold tracking-tight text-gray-200 sm:text-4xl">{{__('home.priceTitle')}}</h2>
             <p class="mt-6 text-lg leading-8 text-gray-300">{{__('home.priceTeaser')}}</p>
+            <p class="mt-6 text-lg leading-8 text-gray-300 "><b>{{__('home.firstIn')}}</b></p>
           </div>
           <div class="mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
             <div class="p-8 sm:p-10 lg:flex-auto">
@@ -389,6 +338,13 @@
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                   </svg>
                   {{__('home.priceInclude4')}}
+                </li>
+                <li class="flex gap-x-3">
+                  <!-- Heroicon name: mini/check -->
+                  <svg class="h-6 w-5 flex-none color-light-blue" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+                  </svg>
+                  {{__('home.priceInclude5')}}
                 </li>
               </ul>
             </div>
