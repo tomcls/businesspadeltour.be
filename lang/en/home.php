@@ -49,7 +49,7 @@ return [
     'clubContent6' => 'Royal Zoute Tennis & Padel Club (Astridlaan 7 8300 Knokke-Heist)',
     'agendaTitle' => 'Clubs',
     'agendaTitle2' => 'What are the dates and locations of the different sessions?',
-    'agendaTeaser' => '5 clubs all over Belgium',
+    'agendaTeaser' => '3 clubs all over Belgium',
     'agendaContentPrefix1' => 'Brussels',
     'agendaContentPrefix2' => 'Gent',
     'agendaContentPrefix3' => 'Liège',
