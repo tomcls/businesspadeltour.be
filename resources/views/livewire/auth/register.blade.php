@@ -340,26 +340,6 @@
                           <p class="text-gray-500 text-xs">{{__('home.agendaWhere1')}}</p>
                         </div>
                       </li>
-                      <li wire:click="setSession(2)"  x-on:click.prevent="session = 'Gent 12/05';toggle()" class="text-gray-900 cursor-default select-none p-4 text-sm" id="listbox-option-0" role="option">
-                        <div class="flex flex-col">
-                          <div class="flex justify-between"  >
-                            <!-- Selected: "font-semibold", Not Selected: "font-normal" -->
-                            <p class="font-normal text-xs">{{__('home.agendaContentPrefix2')}}: {{__('home.agendaWhen2')}}</p>
-                            <!--
-                              Checkmark, only display for selected option.
-                
-                              Highlighted: "text-white", Not Highlighted: "text-indigo-500"
-                            -->
-                            <span class="text-blue-500">
-                              <!-- Heroicon name: mini/check -->
-                              <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-                              </svg>
-                            </span>
-                          </div>
-                          <!-- Highlighted: "text-indigo-200", Not Highlighted: "text-gray-500" -->
-                          <p class="text-gray-500 text-xs">{{__('home.agendaWhere2')}}</p>
-                        </div>
                       </li>
                       <li wire:click="setSession(3)"  x-on:click.prevent="session = 'Liège 26/05';toggle()" class="text-gray-900 cursor-default select-none p-4 text-sm" id="listbox-option-0" role="option">
                         <div class="flex flex-col">
@@ -401,27 +381,6 @@
                           </div>
                           <!-- Highlighted: "text-indigo-200", Not Highlighted: "text-gray-500" -->
                           <p class="text-gray-500 text-xs">{{__('home.agendaWhere4')}}</p>
-                        </div>
-                      </li>
-                      <li wire:click="setSession(5)"  x-on:click.prevent="session = 'Anvers 23/06';toggle()" class="text-gray-900 cursor-default select-none p-4 text-sm" id="listbox-option-0" role="option">
-                        <div class="flex flex-col">
-                          <div class="flex justify-between"  >
-                            <!-- Selected: "font-semibold", Not Selected: "font-normal" -->
-                            <p class="font-normal text-xs">{{__('home.agendaContentPrefix5')}}: {{__('home.agendaWhen5')}}</p>
-                            <!--
-                              Checkmark, only display for selected option.
-                   
-                              Highlighted: "text-white", Not Highlighted: "text-indigo-500"
-                            -->
-                            <span class="text-blue-500">
-                              <!-- Heroicon name: mini/check -->
-                              <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-                              </svg>
-                            </span>
-                          </div>
-                          <!-- Highlighted: "text-indigo-200", Not Highlighted: "text-gray-500" -->
-                          <p class="text-gray-500  text-xs">{{__('home.agendaWhere5')}}</p>
                         </div>
                       </li>
                       <!-- More items... -->
