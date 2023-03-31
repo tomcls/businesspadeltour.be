@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\Auth;
 
 use App\Models\Company;
+use App\Models\PlayerSession;
 use App\Models\Session;
 use App\Models\User;
 use App\Models\UserSession;
@@ -84,7 +85,7 @@ class Register extends Component
            // Log::alert('Exception compny '.$e->getMessage());
         }
         $c = Company::where('vat',$data['companyVAT'])->first();
-        try {
+       /* try {
             $userSessionPlayerOne = new UserSession();
             $u = User::where('email',$data['playerOneEmail'])->first();
             $userSessionPlayerOne->user_id = $u['id'] ;
@@ -107,6 +108,21 @@ class Register extends Component
 
         } catch (Exception $e) { 
            // Log::alert('Exception playerTwo '.$e->getMessage());
+        } */
+        try {
+
+            $playerSession = new PlayerSession();
+            $playerOne = User::where('email',$data['playerOneEmail'])->first();
+            $playerTwo = User::where('email',$data['playerTwoEmail'])->first();
+            $playerSession->player_one = $playerOne['id'];//User::find($data['playerTwoEmail'])->id;
+            $playerSession->player_two = $playerTwo['id'];
+            $playerSession->company_id = $c['id'];//User::find($data['playerTwoEmail'])->id;
+            $playerSession->session_id = $this->session;
+            $playerSession->category = $this->category;
+            $playerSession->save();
+
+        } catch (Exception $e) { 
+            logger('Exception playerTwo '.$e->getMessage());
         }
 
         try {
