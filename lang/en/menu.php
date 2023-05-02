@@ -17,4 +17,5 @@ return [
      'price' => 'Prices',
      'news' => 'News',
      'signup' => 'Register',
+     'session1' => 'Tour & Taxi',
 ];
