@@ -1,5 +1,5 @@
 
-<div>
+<div x-data="">
     
     <div class="container mx-auto px-5 py-2 lg:px-32 lg:pt-12">
         <h1 class="text-3xl font-bold tracking-tight color-dark-blue sm:text-4xl mb-10">{{ucFirst(__('route.sessions'))}} Tour & Taxi</h1>
@@ -52,7 +52,7 @@
                         @endif
                         data-te-carousel-item
                         style="backface-visibility: hidden">
-                        <div class=" w-full h-screen mx-auto" style="background-position: 50%; text-align: center">
+                        <div class=" w-full  sm:h-screen mx-auto" style="background-position: 50%; text-align: center">
                             <a href="" wire:click.prevent="$set('showEditModal', false)">
                                 <img src="{{url('/').'/images/sessions/session1_'.$i.'.jpg'}}" class="object-cover  h-full mx-auto" />
                             </a>
