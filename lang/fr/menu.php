@@ -16,7 +16,7 @@ return [
     'program' => 'Programme',
     'programTeaser' => '5 sessions de 36 équipes tous les vendredi apres-midi',
     'club' => 'Les clubs',
-    'clubTeaser' => '5 clubs répartis dans toute la Belgique',
+    'clubTeaser' => '3 clubs répartis dans toute la Belgique',
     'agenda' => 'Programme',
     'agendaTeaser' => 'Quelles sont les dates et lieux des différentes sessions ?',
     'sponsors' => 'Les partenaires',
@@ -28,4 +28,5 @@ return [
     'price' => 'Tarifs',
     'news' => 'Actu',
     'signup' => 'Inscription',
+    'session1' => 'Tour & Taxi',
 ];

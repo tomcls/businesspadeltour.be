@@ -133,6 +133,7 @@
             </div>
           </div>
   
+          <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.sessions')}}" class="text-base font-medium color-dark-blue hover:text-gray-900">{{ucFirst(__('menu.session1'))}}</a>
           <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.price')}}" class="text-base font-medium color-dark-blue hover:text-gray-900">{{__('menu.price')}}</a>
           <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.articles')}}" class="text-base font-medium color-dark-blue hover:text-gray-900">{{__('menu.news')}}</a>
   

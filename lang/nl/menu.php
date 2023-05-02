@@ -5,7 +5,7 @@ return [
     'program' => 'Programma',
     'programTeaser' => '5 sessies van 36 teams elke vrijdagmiddag',
     'club' => 'Clubs',
-    'clubTeaser' => '5 clubs verspreid over heel België',
+    'clubTeaser' => '3 clubs verspreid over heel België',
     'agenda' => 'Agenda',
     'agendaTeaser' => 'Waar en wanneer vinden de wedstrijden plaats?',
     'sponsors' => 'Partners',

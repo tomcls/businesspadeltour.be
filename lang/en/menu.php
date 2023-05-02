@@ -5,7 +5,7 @@ return [
     'program' => 'Program',
      'programTeaser' => '5 sessions of 36 teams every Friday afternoon',
      'club' => 'Clubs',
-     'clubTeaser' => '5 clubs spread throughout Belgium',
+     'clubTeaser' => '3 clubs spread throughout Belgium',
      'agenda' => 'Program',
      'agendaTeaser' => 'What are the dates and places of the different sessions?',
      'sponsors' => 'Partners',

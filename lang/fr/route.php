@@ -17,5 +17,6 @@ return [
     'register' => 'inscription',
     'rules' => 'reglement',
     'price' => "tarif",
+    'sessions' => 'sessions',
 
 ];

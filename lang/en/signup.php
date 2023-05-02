@@ -18,7 +18,7 @@ return [
     'successTeaser2'=> 'Keep in touch... and welcome in this new adventure.',
     "signupCompleted"=> "Business padel tour registration",
     "category"=> "Category",
-    'selectcategory' => 'Select a catégorie',
+    'selectcategory' => 'Indicate the team\'s level',
     'address' => 'Company address',
     'addressPlaceholder' => 'Street number, zip city',
     'size' => 'T-shirt size',

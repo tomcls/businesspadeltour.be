@@ -18,7 +18,7 @@ return [
     'successTeaser2'=>'Keep in touch... et bienvenue dans cette nouvelle aventure',
     "signupCompleted"=> "Inscription au Business padel tour",
     "category"=> "Catégorie",
-    'selectcategory' => 'Sélectionnez une catégorie',
+    'selectcategory' => 'Indiquez le niveau de l’équipe',
     'address' => 'Adresse de votre société',
     'addressPlaceholder' => 'Rue numéro, code postal ville',
     'size' => 'Taille du T-shirt',

@@ -57,6 +57,10 @@ Route::prefix('{locale}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('set.l
     Route::get('/'. trans('route.price'), function () {
         return view('components.pages.price');
     });
+    
+    Route::get('/'. trans('route.sessions'), function () {
+        return view('components.pages.sessions');
+    });
 
     Route::get('/' . trans('route.article').'/{slug}', function ($locale,$slug) {
         return new Response((new ArticleController)->show($locale,$slug));

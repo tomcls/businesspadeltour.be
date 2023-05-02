@@ -18,7 +18,7 @@ return [
     "successTeaser2"=> "Houd contact... en welkom bij dit nieuwe avontuur",
     "signupCompleted"=> "Inschrijving voor de Business padel tour",
     "category"=> "Categorie",
-    'selectcategory' => 'Select a categorie',
+    'selectcategory' => 'Geef het niveau van de ploeg aan',
     'address' => 'Adres van uw bedrijf',
     'addressPlaceholder' => 'Straat nummer, postcode stad',
     'size' => 'T-shirt maat',
