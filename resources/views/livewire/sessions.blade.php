@@ -27,6 +27,7 @@
                 id="carouselExampleCaptions"
                 class="relative"
                 data-te-carousel-init
+                data-te-carousel-slide
                 >
                 <div class="absolute bottom-0 left-0 right-0 z-[2] mx-[15%]  mb-4  list-none justify-center p-0 hidden"
                     data-te-carousel-indicators>
