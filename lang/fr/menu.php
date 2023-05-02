@@ -14,7 +14,7 @@ return [
     */
 
     'program' => 'Programme',
-    'programTeaser' => '5 sessions de 36 équipes tous les vendredi apres-midi',
+    'programTeaser' => '3 sessions de 36 équipes tous les vendredi apres-midi',
     'club' => 'Les clubs',
     'clubTeaser' => '3 clubs répartis dans toute la Belgique',
     'agenda' => 'Programme',
