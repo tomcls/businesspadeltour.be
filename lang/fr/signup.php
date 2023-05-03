@@ -24,4 +24,7 @@ return [
     'size' => 'Taille du T-shirt',
     'selectsize' => 'Sélectionner la taille',
     'customShirt' => 'Pour la personnalisation de vos t-shirts, merci de nous envoyer votre logo en eps vectorisé ou jpeg HD à l’adresse mail katia@businesspadeltour.be',
+    'fun'=> 'Nous sommes débutants et nous jouons pour le fun',
+    'expert'=> 'Nous jouons régulièrement au Padel',
+    'pro'=> 'Nous pensons passer Pro dans peu de temps',
 ];

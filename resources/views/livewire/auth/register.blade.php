@@ -469,11 +469,11 @@
                
                        Highlighted: "text-white bg-dark-blue", Not Highlighted: "text-gray-900"
                      -->
-                     <li wire:click="setCategory('fun')"  x-on:click.prevent="category = 'Fun';toggle()" class="text-gray-900 cursor-default select-none p-4 text-sm" id="listbox-option-0" role="option">
+                     <li wire:click="setCategory('fun')"  x-on:click.prevent="category = '{{__('signup.fun')}}';toggle()" class="text-gray-900 cursor-default select-none p-4 text-sm" id="listbox-option-0" role="option">
                        <div class="flex flex-col">
                          <div class="flex justify-between"  >
                            <!-- Selected: "font-semibold", Not Selected: "font-normal" -->
-                           <p class="font-normal text-xs">Fun</p>
+                           <p class="font-normal text-xs">{{__('signup.fun')}}</p>
                            <!--
                              Checkmark, only display for selected option.
                
@@ -486,11 +486,28 @@
                          </div>
                        </div>
                      </li>
-                     <li wire:click="setCategory('expert')"  x-on:click.prevent="category = 'Expert';toggle()" class="text-gray-900 cursor-default select-none p-4 text-sm" id="listbox-option-0" role="option">
+                     <li wire:click="setCategory('expert')"  x-on:click.prevent="category = '{{__('signup.expert')}}';toggle()" class="text-gray-900 cursor-default select-none p-4 text-sm" id="listbox-option-0" role="option">
                        <div class="flex flex-col">
                          <div class="flex justify-between"  >
                            <!-- Selected: "font-semibold", Not Selected: "font-normal" -->
-                           <p class="font-normal text-xs">Expert</p>
+                           <p class="font-normal text-xs">{{__('signup.expert')}}</p>
+                           <!--
+                             Checkmark, only display for selected option.
+               
+                             Highlighted: "text-white", Not Highlighted: "text-indigo-500"
+                           -->
+                           <span class="text-blue-500">
+                             <!-- Heroicon name: mini/check -->
+                             <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Ribbon</title><circle cx="256" cy="160" r="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path d="M143.65 227.82L48 400l86.86-.42a16 16 0 0113.82 7.8L192 480l88.33-194.32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path d="M366.54 224L464 400l-86.86-.42a16 16 0 00-13.82 7.8L320 480l-64-140.8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><circle cx="256" cy="160" r="64" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
+                           </span>
+                         </div>
+                       </div>
+                     </li>
+                     <li wire:click="setCategory('pro')"  x-on:click.prevent="category = '{{__('signup.pro')}}';toggle()" class="text-gray-900 cursor-default select-none p-4 text-sm" id="listbox-option-0" role="option">
+                       <div class="flex flex-col">
+                         <div class="flex justify-between"  >
+                           <!-- Selected: "font-semibold", Not Selected: "font-normal" -->
+                           <p class="font-normal text-xs">{{__('signup.pro')}}</p>
                            <!--
                              Checkmark, only display for selected option.
                

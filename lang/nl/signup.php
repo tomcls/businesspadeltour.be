@@ -24,5 +24,8 @@ return [
     'size' => 'T-shirt maat',
     'selectsize' => 'Selecteer T-shirt maat',
     'customShirt' => 'Voor de personnalisatie van de t-shirts, gelieve ons zo vlug mogelijk uw logo door te sturen in eps gevectoriseerd of jpeg HD op mail katia@businesspadeltour.be',
+    'fun'=> 'Wij zijn beginners en we spelen voor ons plezier',
+    'expert'=> 'We spelen regelmatig Padel',
+    'pro'=> 'We verwachten in de nabije toekomst Pro te gaan',
 
 ];

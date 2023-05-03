@@ -24,4 +24,7 @@ return [
     'size' => 'T-shirt size',
     'selectsize' => 'Select the size',
     'customShirt' => 'For the personalization of your t-shirts, thank you to send us your logo in eps vectorized or jpeg HD to the email address katia@businesspadeltour.be',
+    'fun'=> 'We are beginners and we play for fun',
+    'expert'=> 'We regularly play Padel',
+    'pro'=> 'We expect to go Pro in the near future',
 ];
