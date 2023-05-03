@@ -4,6 +4,7 @@ x-init="">
     
     <div class="container mx-auto px-5 py-2 lg:px-32 lg:pt-12">
         <h1 class="text-3xl font-bold tracking-tight color-dark-blue sm:text-4xl mb-10">{{ucFirst(__('route.sessions'))}} Tour & Taxi</h1>
+        <h2 class="text-xl  tracking-tight text-gray-400 sm:text-xl mb-10">{{__('home.clubContent1')}} {{__('home.agendaWhen1')}}</h2>
         <div class="-m-1 flex flex-wrap md:-m-2">
             @for ($i = 1; $i < 138; $i++)
                 <div class="flex w-1/3 sm:w-1/4 flex-wrap">

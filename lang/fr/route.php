@@ -18,5 +18,6 @@ return [
     'rules' => 'reglement',
     'price' => "tarif",
     'sessions' => 'sessions',
+    'ranking' => 'classements',
 
 ];

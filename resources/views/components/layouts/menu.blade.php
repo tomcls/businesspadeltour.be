@@ -96,7 +96,7 @@
                       <p class="mt-1 text-sm color-dark-blue">{{__('menu.sponsorsTeaser')}}</p>
                     </div>
                   </a>
-                  <a href="{{url('/').'/'.App::currentLocale().'/classement'}}" x-on:click="isOpen=false" class="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50">
+                  <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.ranking')}}" x-on:click="isOpen=false" class="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50">
                     <!-- Heroicon name: outline/arrow-path -->
                     <svg class="h-6 w-6 flex-shrink-0 color-light-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M3 3v1.5M3 21v-6m0 0l2.77-.693a9 9 0 016.208.682l.108.054a9 9 0 006.086.71l3.114-.732a48.524 48.524 0 01-.005-10.499l-3.11.732a9 9 0 01-6.085-.711l-.108-.054a9 9 0 00-6.208-.682L3 4.5M3 15V4.5"></path>
@@ -276,6 +276,13 @@
                   <path stroke-linecap="round" stroke-linejoin="round" d="M3 3v1.5M3 21v-6m0 0l2.77-.693a9 9 0 016.208.682l.108.054a9 9 0 006.086.71l3.114-.732a48.524 48.524 0 01-.005-10.499l-3.11.732a9 9 0 01-6.085-.711l-.108-.054a9 9 0 00-6.208-.682L3 4.5M3 15V4.5"></path>
                 </svg>
                 <span class="ml-3 text-base font-medium text-gray-900">{{__('menu.ranking')}}</span>
+              </a>
+              <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.sessions')}}" x-on:click="isMobileNavOpen=false" class="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50">
+                <!-- Heroicon name: outline/squares-2x2 -->
+                <svg class="h-6 w-6 flex-shrink-0 color-light-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"></path>
+                </svg>
+                <span class="ml-3 text-base font-medium text-gray-900">{{ucFirst(__('menu.session1'))}}</span>
               </a>
               <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.articles')}}" x-on:click="isMobileNavOpen=false" class="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50">
                 <!-- Heroicon name: outline/squares-2x2 -->
