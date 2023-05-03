@@ -89,4 +89,5 @@ return [
     'priceImin'=> 'I am registering',
     'sponsorTitle'=> 'In partnership with',
     'sponsorTeaser' => 'Immovlan and B19 launch the first inter-company padel competition in Belgium',
+    'closed' => 'Closed',
 ];

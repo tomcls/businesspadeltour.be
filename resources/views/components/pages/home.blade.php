@@ -227,7 +227,7 @@
                       <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                     </svg>
                   </div>
-                  {{__('home.clubContentPrefix1')}} 
+                  <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.sessions')}}" class=" color-dark-blue hover:text-gray-900"> {{__('home.clubContentPrefix1')}}  « {{__('home.closed')}} » </a>
                 </dt>
                 <dd class="mt-0 text-base leading-7 text-gray-600">
                   <b>{{__('home.when')}}: </b> {{__('home.agendaWhen1')}}<br/>

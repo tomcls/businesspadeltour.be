@@ -89,4 +89,5 @@ return [
     'priceImin'=>'Je m\'inscris',
     'sponsorTitle'=>'En partenariat avec',
     'sponsorTeaser' => 'Immovlan et B19 lancent la première compétition de padel inter entreprises en Belgique',
+    'closed' => 'Clôturé',
 ];
