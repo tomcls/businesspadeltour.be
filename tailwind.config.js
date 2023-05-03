@@ -5,7 +5,8 @@ module.exports = {
     "./resources/**/*.js",
     "./resources/**/*.vue",
     "./src/**/*.{html,js}",
-    "./node_modules/tw-elements/dist/js/**/*.js"
+    "./node_modules/tw-elements/dist/js/**/*.js",
+    "./node_modules/flowbite/**/*.js"
   ],
   theme: {
     extend: {},
@@ -14,6 +15,7 @@ module.exports = {
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio'),
-    require("tw-elements/dist/plugin.cjs")
+    require('flowbite/plugin'),
+    require("tw-elements/dist/plugin.cjs"),
   ],
 }

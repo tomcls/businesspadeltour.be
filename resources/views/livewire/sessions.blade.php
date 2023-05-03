@@ -1,13 +1,14 @@
 
-<div x-data="">
+<div wire:ignore x-data="{}"
+x-init="">
     
     <div class="container mx-auto px-5 py-2 lg:px-32 lg:pt-12">
         <h1 class="text-3xl font-bold tracking-tight color-dark-blue sm:text-4xl mb-10">{{ucFirst(__('route.sessions'))}} Tour & Taxi</h1>
         <div class="-m-1 flex flex-wrap md:-m-2">
-            @for ($i = 1; $i < 139; $i++)
+            @for ($i = 1; $i < 138; $i++)
                 <div class="flex w-1/3 sm:w-1/4 flex-wrap">
                     <div class="w-full p-1 md:p-2">
-                        <a href="#" wire:click.prevent="$set('showEditModal', true)" >
+                        <a href="#" wire:click.prevent="$set('showEditModal', true)" @click="window.carousel.slideTo({{$i-1}})" >
                             <img
                             alt="gallery"
                             class="block h-full w-full rounded-lg object-cover object-center"
@@ -19,70 +20,35 @@
         </div>
     </div>
     
+
     <x-modal.dialog wire:model.defer="showEditModal">
         <x-slot name="title"></x-slot>
     
         <x-slot name="content">
-            <div
-                id="carouselExampleCaptions"
-                class="relative"
-                data-te-carousel-init
-                data-te-carousel-slide
-                >
-                <div class="absolute bottom-0 left-0 right-0 z-[2] mx-[15%]  mb-4  list-none justify-center p-0 hidden"
-                    data-te-carousel-indicators>
-                    @for ($i = 0; $i < 139; $i++)
-                    <button
-                        type="button"
-                        data-te-target="#carouselExampleCaptions"
-                        data-te-slide-to="{{$i}}"
-                        data-te-carousel-active
-                        class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-                        aria-current="true"
-                        aria-label="Slide {{$i}}"></button>
-                    @endfor
-                    
-                </div>
-                <div class="relative w-full overflow-hidden after:clear-both after:block after:content-[''] " >
-                    @for ($i = 1; $i < 139; $i++)
-                    <div
-                        class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-                        @if ($i == 1)
-                            data-te-carousel-active
-                        @endif
-                        data-te-carousel-item
-                        style="backface-visibility: hidden">
-                        <div class=" w-full  sm:h-screen mx-auto" style="background-position: 50%; text-align: center">
-                            <a href="" wire:click.prevent="$set('showEditModal', false)">
-                                <img src="{{url('/').'/images/sessions/session1_'.$i.'.jpg'}}" class="object-cover  h-full mx-auto" />
-                            </a>
+            <div  class="relative w-full" >
+                <!-- Carousel wrapper -->
+                
+                <div class="relative h-56 overflow-hidden rounded-lg md:h-screen">
+                    @for ($i = 1; $i < 140; $i++)
+                     <!-- Item 1 -->
+                        <div class="containerImage hidden duration-700 ease-in-out" id="carousel-item-{{$i}}"  >
+                            <img src="{{url('/').'/images/sessions/session1_'.$i.'.jpg'}}"  class="absolute block sm:h-screen -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." wire:click.prevent="$set('showEditModal', false)">
                         </div>
-                    </div>
                     @endfor
-                    <button
-                        class="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
-                        type="button"
-                        data-te-target="#carouselExampleCaptions"
-                        data-te-slide="prev">
-                        <span class="inline-block h-8 w-8">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-                            </svg>
-                        </span>
-                        <span class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">Previous</span>
-                    </button>
-                    <button
-                        class="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
-                        type="button"
-                        data-te-target="#carouselExampleCaptions"
-                        data-te-slide="next">
-                        <span class="inline-block h-8 w-8">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                            </svg>
-                        </span>
-                        <span class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"> Next</span>
-                    </button>
+                </div>
+                <!-- Slider controls -->
+                <button type="button" id="data-carousel-prev" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" >
+                    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                        <svg aria-hidden="true" class="w-6 h-6 text-white dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                        <span class="sr-only">Previous</span>
+                    </span>
+                </button>
+                <button type="button" id="data-carousel-next" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" >
+                    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                        <svg aria-hidden="true" class="w-6 h-6 text-white dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        <span class="sr-only">Next</span>
+                    </span>
+                </button>
             </div>
         </x-slot>
     
@@ -92,5 +58,45 @@
             
         </x-slot>
     </x-modal.dialog>
-</div>
 
+
+    <script>
+        window.onload = function() {
+
+          const items = [];
+            for (let index = 0; index < 139; index++) {
+                
+                items.push({
+                    position: index,
+                    el: document.getElementById('carousel-item-'+(index+1))
+                })
+            }
+            console.log(items)
+            window.options = {
+                defaultPosition: 1,
+                interval: 3000,
+                
+                // callback functions
+                onNext: () => {
+                    console.log('next slider item is shown');
+                },
+                onPrev: ( ) => {
+                    console.log('previous slider item is shown');
+                },
+                onChange: ( ) => {
+                    console.log('new slider item has been shown');
+                }
+            };
+            window.carousel = new Carousel(items, window.options);
+
+            document.getElementById('data-carousel-next').addEventListener("click", function() {
+                carousel.next();
+            });
+            document.getElementById('data-carousel-prev').addEventListener("click", function() {
+                carousel.prev();
+            });
+        };
+    </script>
+
+
+</div>

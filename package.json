@@ -20,6 +20,7 @@
     },
     "dependencies": {
         "alpinejs": "^3.11.1",
+        "flowbite": "^1.6.5",
         "tw-elements": "^1.0.0-beta2"
     }
 }
