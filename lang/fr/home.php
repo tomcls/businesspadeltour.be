@@ -41,7 +41,7 @@ return [
     'clubContentPrefix4' => 'Nivelles',
     'clubContentPrefix5' => 'Anvers',
     'clubContentPrefix6' => 'Knokke-Heist',
-    'clubContent1' => 'Tour & Taxis Padel Club (avenue du Port 86c – 1000 Bruxelles)',
+    'clubContent1' => 'Tours & Taxis Padel Club (avenue du Port 86c – 1000 Bruxelles)',
     'clubContent2' => 'Garrincha Gent (Pauline van Pottelsberghelaan 25 – 9051 Gent)',
     'clubContent3' => 'Planet Padel (rue de la Vallée 10 4470 Saint-Georges sur Meuse)',
     'clubContent4' => 'Eleven Padel (rue de l’Industrie 11 – 1400 Nivelles)',

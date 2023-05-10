@@ -2,8 +2,8 @@
 <div wire:ignore x-data="{}"
 x-init="">
     <div class="container mx-auto px-5 py-2 lg:px-32 lg:pt-12">
-        <h1 class="text-3xl font-bold tracking-tight color-dark-blue sm:text-4xl mb-10">{{ucFirst(__('route.sessions'))}} Tour & Taxi</h1>
-        <h2 class="text-xl  tracking-tight text-gray-400 sm:text-xl mb-10">{{__('home.clubContent1')}} {{__('home.agendaWhen1')}}</h2>
+        <h1 class="text-3xl font-bold tracking-tight color-dark-blue sm:text-4xl mb-10">{{ucFirst(__('sessions.tournoi'))}} Tours & Taxi</h1>
+        <h2 class="text-xl  tracking-tight text-gray-400 sm:text-xl mb-10">{{__('sessions.tournoi')}} {{__('home.agendaWhen1')}}</h2>
         <div class="-m-1 flex flex-wrap md:-m-2">
             @for ($i = 1; $i < 138; $i++)
                 <div class="flex w-1/3 sm:w-1/4 flex-wrap">
@@ -48,16 +48,18 @@ x-init="">
                     </span>
                 </button>
             </div>
+            <button wire:click="$set('showEditModal', false)" type="button" class="hidden sm:block bottom-7 right-7 absolute z-50 rounded-full bg-blue-600 p-2 text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                    <svg fill="" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="h-5 w-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+              </button>
         </x-slot>
     
         <x-slot name="footer">
-            {{-- <x-button.secondary wire:click="$set('showEditModal', false)"></x-button.secondary> --}}
             
             
         </x-slot>
     </x-modal.dialog>
-
-
     <script>
         window.onload = function() {
 
@@ -69,7 +71,6 @@ x-init="">
                     el: document.getElementById('carousel-item-'+(index+1))
                 })
             }
-            console.log(items)
             window.options = {
                 defaultPosition: 1,
                 interval: 3000,

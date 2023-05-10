@@ -107,8 +107,7 @@
             <img src="{{url('/').'/images/section/bg5.jpg'}}" alt="Product screenshot" class="hidden sm:block w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[30rem] md:-ml-4 lg:-ml-0" width="2432" height="1442">
             <div class="lg:pr-8 lg:pt-4">
               <div class="lg:max-w-lg">
-                <h2 class="text-lg font-semibold leading-8 tracking-tight color-light-blue">{{__('home.pgmTitle')}}</h2>
-                <p class="mt-2 text-3xl font-bold tracking-tight text-gray-300 sm:text-3xl">{{__('home.pgmTitle2')}}</p>
+                <p class="mt-2 text-3xl font-bold tracking-tight color-light-blue sm:text-3xl">{{__('home.pgmTitle')}}</p>
                 <p class="mt-6 text-lg leading-8 text-gray-900">{{__('home.pgmTeaser')}}</p>
                 <dl class="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-900 lg:max-w-none">
                   <div class="relative pl-9">
@@ -128,7 +127,7 @@
                       <svg class="absolute top-1 left-1 h-6 w-6 color-light-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                       </svg>
-                      {{__('home.pgmContentPrefix2')}}
+                      
                     </dt>
                     <dd class="inline">{{__('home.pgmContent2')}}</dd>
                   </div>

@@ -68,7 +68,14 @@ switch ($maxWidth ?? '2xl') {
                     x-transition:leave="ease-in duration-200"
                     x-transition:leave-start="opacity-100"
                     x-transition:leave-end="opacity-0">
-        <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+        <div class="absolute inset-0 bg-gray-500 opacity-75">
+
+        <button wire:click="$set('showEditModal', false)" type="button" class="sm:hidden bottom-7 right-7 absolute rounded-full bg-blue-600 p-2 text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+            <svg fill="" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="h-5 w-5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+        </div>
     </div>
 
     <div x-show="show" class="bg-black bg-opacity-50   shadow-xl transform transition-all sm:w-full "
