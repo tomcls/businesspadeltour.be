@@ -96,7 +96,7 @@
                 </dl>
               </div>
             </div>
-            <img src="{{url('/').'/images/section/bg7.jpg'}}" alt="Product screenshot" class="hidden sm:block  w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[50rem] md:-ml-4 lg:-ml-0" width="2432" height="1442">
+            <img src="{{url('/').'/images/section/session1_131.jpg'}}" alt="Product screenshot" class="hidden sm:block  w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[50rem] md:-ml-4 lg:-ml-0" width="2432" height="1442">
           </div>
         </div>
       </div>
@@ -104,7 +104,7 @@
       <div class="overflow-hidden bg-white py-24 sm:py-32" id="program">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
           <div class="mx-auto grid max-w-2xl grid-cols-1 gap-y-16 gap-x-8 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-            <img src="{{url('/').'/images/section/bg5.jpg'}}" alt="Product screenshot" class="hidden sm:block w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[30rem] md:-ml-4 lg:-ml-0" width="2432" height="1442">
+            <img src="{{url('/').'/images/section/bg10.png'}}" alt="Product screenshot" class="hidden sm:block w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[30rem] md:-ml-4 lg:-ml-0" width="2432" height="1442">
             <div class="lg:pr-8 lg:pt-4">
               <div class="lg:max-w-lg">
                 <p class="mt-2 text-3xl font-bold tracking-tight color-light-blue sm:text-3xl">{{__('home.pgmTitle')}}</p>
@@ -205,7 +205,7 @@
                 </dl>
               </div>
             </div>
-            <img src="{{url('/').'/images/section/bg2.jpg'}}" alt="Product screenshot" class="w-[52rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[54rem] md:-ml-4 lg:-ml-0" width="2432" height="1442">
+            <img src="{{url('/').'/images/section/session1_107.jpg'}}" alt="Product screenshot" class="w-[52rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[54rem] md:-ml-4 lg:-ml-0" width="2432" height="1442">
           </div>
         </div>
       </div>
