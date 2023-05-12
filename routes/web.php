@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\CSVController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SitemapXmlController;
 use App\Http\Livewire\Price;
@@ -38,6 +39,8 @@ Route::get('/', function () {
     return new Response((new HomeController)->index());
 });
 Route::get('/sitemap.xml', [SitemapXmlController::class, 'index']);
+
+Route::get('/players/download', [CSVController::class,'download'])->name('players');
 
 Route::prefix('{locale}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('set.locale')->group(function ($r) {
 
