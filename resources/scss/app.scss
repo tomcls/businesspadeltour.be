@@ -13,6 +13,11 @@
 .color-dark-blue {
     color:#24335e;
 }
+
+.border-dark-blue {
+    --tw-border-opacity: 1;
+    border-color: rgb(43 54 125 / var(--tw-border-opacity));
+}
 .bg-light-blue {
     background-color:#6fc3c3;
 }

@@ -1,70 +1,111 @@
 
-<div wire:ignore x-data="{}"
-x-init="">
+<div  x-data="{}" x-init="">
+
     <div class="container mx-auto px-5 py-2 lg:px-32 lg:pt-12">
-        <h1 class="text-3xl font-bold tracking-tight color-dark-blue sm:text-4xl mb-10">{{ucFirst(__('sessions.tournoi'))}} Tours & Taxi</h1>
-        <h2 class="text-xl  tracking-tight text-gray-400 sm:text-xl mb-10">{{__('sessions.tournoi')}} {{__('home.agendaWhen1')}}</h2>
-        <div class="-m-1 flex flex-wrap md:-m-2">
-            @for ($i = 1; $i < 138; $i++)
-                <div class="flex w-1/3 sm:w-1/4 flex-wrap">
-                    <div class="w-full p-1 md:p-2">
-                        <a href="#" wire:click.prevent="$set('showEditModal', true)" @click="window.carousel.slideTo({{$i-1}})" >
-                            <img
-                            alt="gallery"
-                            class="block h-full w-full rounded-lg object-cover object-center"
-                            src="{{url('/').'/images/sessions/session1_'.$i.'.jpg'}}" />
-                        </a>
+        <div>
+            <div class="sm:hidden">
+              <label for="tabs" class="sr-only">Select a tab</label>
+              <!-- Use an "onChange" listener to redirect the user to the selected tab URL. -->
+              <select id="tabs" name="tabs" class="block w-full rounded-md border-gray-300 py-2 pl-3 pr-10 text-base focus:border-dark-blue focus:outline-none focus:ring-indigo-500 sm:text-sm">
+                <option>{{ucFirst(__('sessions.tournoi'))}} Tours & Taxi</option>
+                <option>{{ucFirst(__('sessions.tournoi'))}} Liège</option>
+              </select>
+            </div>
+            <div class="hidden sm:block">
+              <div class="border-b border-gray-200">
+                <nav class="-mb-px flex space-x-8" aria-label="Tabs">
+                  <!-- Current: "border-dark-blue color-dark-blue", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
+                  <a href="#" wire:click="$set('tab', 'toursandtaxi')" class="{{$tab =='toursandtaxi' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium" aria-current="page">{{ucFirst(__('sessions.tournoi'))}} Tours & Taxi</a>
+                  <a href="#" wire:click="$set('tab', 'liege')" class=" {{$tab =='liege' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium">{{ucFirst(__('sessions.tournoi'))}} Liège</a>
+                </nav>
+              </div>
+            </div>
+        </div>
+        <div class=" {{$tab!='toursandtaxi'?'hidden':''}}">
+            <h1 class="text-3xl font-bold tracking-tight color-dark-blue sm:text-4xl mb-10"></h1>
+            <h2 class="text-xl  tracking-tight text-gray-400 sm:text-xl mb-10">{{__('sessions.tournoi')}} {{__('home.agendaWhen1')}}</h2>
+            <div class="-m-1 flex flex-wrap md:-m-2">
+                @for ($i = 1; $i < 138; $i++)
+                    <div class="flex w-1/3 sm:w-1/4 flex-wrap">
+                        <div class="w-full p-1 md:p-2">
+                            <a href="#" wire:click.prevent="$set('showEditModal', true)" @click="window.carousel.slideTo({{$i-1}})" >
+                                <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="{{url('/').'/images/sessions/session1_'.$i.'.jpg'}}" />
+                            </a>
+                        </div>
                     </div>
-                </div>
-            @endfor
+                @endfor
+            </div>
+        </div>
+        <div  class=" {{$tab!='liege'?'hidden':''}}">
+            <h1 class="text-3xl font-bold tracking-tight color-dark-blue sm:text-4xl mb-10"></h1>
+            <h2 class="text-xl  tracking-tight text-gray-400 sm:text-xl mb-10">{{__('sessions.tournoi')}} {{__('home.agendaWhen2')}}</h2>
+            <div class="-m-1 flex flex-wrap md:-m-2">
+                @for ($i = 140; $i < 162; $i++)
+                    <div class="flex w-1/3 sm:w-1/4 flex-wrap">
+                        <div class="w-full p-1 md:p-2">
+                            <a href="#" wire:click.prevent="$set('showEditModal', true)" @click="window.carousel.slideTo({{$i-1}})" >
+                                <img
+                                alt="gallery"
+                                class="block h-full w-full rounded-lg object-cover object-center"
+                                src="{{url('/').'/images/sessions/session1_'.$i.'.jpg'}}" />
+                            </a>
+                        </div>
+                    </div>
+                @endfor
+            </div>
         </div>
     </div>
-    <x-modal.dialog wire:model.defer="showEditModal">
-        <x-slot name="title"></x-slot>
-    
-        <x-slot name="content">
-            <div  class="relative w-full" >
-                <!-- Carousel wrapper -->
-                
-                <div class="relative h-56 overflow-hidden rounded-lg md:h-screen">
-                    @for ($i = 1; $i < 140; $i++)
-                     <!-- Item 1 -->
-                        <div class="containerImage hidden duration-700 ease-in-out" id="carousel-item-{{$i}}"  >
-                            <img src="{{url('/').'/images/sessions/session1_'.$i.'.jpg'}}"  class="absolute block sm:h-screen -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." wire:click.prevent="$set('showEditModal', false)">
-                        </div>
-                    @endfor
+    <div  wire:ignore>
+
+        <x-modal.dialog wire:model.defer="showEditModal">
+            <x-slot name="title"></x-slot>
+        
+            <x-slot name="content">
+                <div  class="relative w-full" >
+                    <!-- Carousel wrapper -->
+                    
+                    <div class="relative h-56 overflow-hidden rounded-lg md:h-screen">
+                        @for ($i = 1; $i < 162; $i++)
+                         <!-- Item 1 -->
+                            <div class="containerImage hidden duration-700 ease-in-out" id="carousel-item-{{$i}}"  >
+                                <img src="{{url('/').'/images/sessions/session1_'.$i.'.jpg'}}"  class="absolute block sm:h-screen -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." wire:click.prevent="$set('showEditModal', false)">
+                            </div>
+                        @endfor
+                    </div>
+                    <!-- Slider controls -->
+                    <button type="button" id="data-carousel-prev" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" >
+                        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                            <svg aria-hidden="true" class="w-6 h-6 text-white dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                            <span class="sr-only">Previous</span>
+                        </span>
+                    </button>
+                    <button type="button" id="data-carousel-next" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" >
+                        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                            <svg aria-hidden="true" class="w-6 h-6 text-white dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            <span class="sr-only">Next</span>
+                        </span>
+                    </button>
                 </div>
-                <!-- Slider controls -->
-                <button type="button" id="data-carousel-prev" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" >
-                    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                        <svg aria-hidden="true" class="w-6 h-6 text-white dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-                        <span class="sr-only">Previous</span>
-                    </span>
-                </button>
-                <button type="button" id="data-carousel-next" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" >
-                    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                        <svg aria-hidden="true" class="w-6 h-6 text-white dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                        <span class="sr-only">Next</span>
-                    </span>
-                </button>
-            </div>
-            <button wire:click="$set('showEditModal', false)" type="button" class="hidden sm:block bottom-7 right-7 absolute z-50 rounded-full bg-blue-600 p-2 text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-                    <svg fill="" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="h-5 w-5">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-              </button>
-        </x-slot>
+                <button wire:click="$set('showEditModal', false)" type="button" class="hidden sm:block bottom-7 right-7 absolute z-50 rounded-full bg-blue-600 p-2 text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                        <svg fill="" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="h-5 w-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                  </button>
+            </x-slot>
+        
+            <x-slot name="footer">
+                
+                
+            </x-slot>
+        </x-modal.dialog>
+    </div>
+
     
-        <x-slot name="footer">
-            
-            
-        </x-slot>
-    </x-modal.dialog>
     <script>
         window.onload = function() {
 
           const items = [];
-            for (let index = 0; index < 139; index++) {
+            for (let index = 0; index < 161; index++) {
                 
                 items.push({
                     position: index,

@@ -49,7 +49,7 @@
           </div>
         </div>
         <div class="bg-gray-50 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-          <img class="aspect-[3/2] object-cover lg:aspect-auto lg:h-full lg:w-full" src="{{url('/').'/images/section/bg9.png'}}" alt="">
+          <img class="aspect-[3/2] object-cover lg:aspect-auto lg:h-full lg:w-full" src="{{url('/').'/images/section/home.jpg'}}" alt="">
         </div>
       </div>
       <div class="overflow-hidden bg-black py-24 sm:py-32" id="summary">
