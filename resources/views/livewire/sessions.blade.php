@@ -103,7 +103,7 @@
     
     <script>
         window.onload = function() {
-
+            console.log('onload')
           const items = [];
             for (let index = 0; index < 259; index++) {
                 
@@ -115,8 +115,6 @@
             window.options = {
                 defaultPosition: 1,
                 interval: 3000,
-                
-                // callback functions
                 onNext: () => {
                     console.log('next slider item is shown');
                 },
@@ -137,6 +135,4 @@
             });
         };
     </script>
-
-
 </div>
