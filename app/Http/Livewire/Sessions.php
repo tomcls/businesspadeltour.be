@@ -7,7 +7,7 @@ use Livewire\Component;
 class Sessions extends Component
 {
     public $showEditModal = false;
-    public $tab = 'liege'; // liege
+    public $tab = 'toursandtaxi'; // liege
 
     public function render()
     {
