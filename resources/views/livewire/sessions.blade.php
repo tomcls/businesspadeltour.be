@@ -105,7 +105,7 @@
         window.onload = function() {
 
           const items = [];
-            for (let index = 0; index < 161; index++) {
+            for (let index = 0; index < 259; index++) {
                 
                 items.push({
                     position: index,
