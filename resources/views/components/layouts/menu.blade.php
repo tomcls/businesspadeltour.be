@@ -207,7 +207,7 @@
                 From: "opacity-100 translate-y-0"
                 To: "opacity-0 translate-y-1"
             -->
-            <div x-show="isOpen"
+            <div x-show="isOpen" style="display: none"
                 @click.outside="isOpen = false"
                 x-transition:enter="transition ease-out duration-100 transform"
                 x-transition:enter-start="opacity-0 scale-95"
@@ -254,7 +254,7 @@
         From: "opacity-100 scale-100"
         To: "opacity-0 scale-95"
     -->
-    <div x-show="isMobileNavOpen"
+    <div x-show="isMobileNavOpen" style="display: none"
         @click.outside="isMobileNavOpen = false"
         x-transition:enter="transition ease-out duration-100 transform"
         x-transition:enter-start="opacity-0 scale-95"
