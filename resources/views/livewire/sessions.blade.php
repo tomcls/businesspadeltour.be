@@ -28,6 +28,8 @@
         <div class=" {{$tab!='toursandtaxi'?'hidden':''}}">
             <h1 class="text-3xl font-bold tracking-tight color-dark-blue sm:text-4xl mb-10"></h1>
             <h2 class="text-xl  tracking-tight text-gray-400 sm:text-xl mb-10">{{__('sessions.tournoi')}} {{__('home.agendaWhen1')}}</h2>
+            <div  class="mb-10 pt-10  text-sm font-semibold"><a class="text-blue-500" href="{{url('/').'/images/toursandtaxi.zip'}}">{{__('sessions.download')}}</a></div>
+
             <div class="-m-1 flex flex-wrap md:-m-2">
                 @for ($i = 1; $i < 139; $i++)
                     <div class="flex w-1/3 sm:w-1/4 flex-wrap">
@@ -43,6 +45,8 @@
         <div  class=" {{$tab!='liege'?'hidden':''}}">
             <h1 class="text-3xl font-bold tracking-tight color-dark-blue sm:text-4xl mb-10"></h1>
             <h2 class="text-xl  tracking-tight text-gray-400 sm:text-xl mb-10">{{__('sessions.tournoi')}} {{__('home.agendaWhen2')}}</h2>
+            <div  class="mb-10 pt-10  text-sm font-semibold"><a class="text-blue-500" href="{{url('/').'/images/liege.zip'}}">{{__('sessions.download')}}</a></div>
+
             <div class="-m-1 flex flex-wrap md:-m-2">
                 @for ($i = 140; $i < 239; $i++)
                     <div class="flex w-1/3 sm:w-1/4 flex-wrap">
@@ -62,6 +66,7 @@
         <div  class=" {{$tab!='nivelle'?'hidden':''}}">
             <h1 class="text-3xl font-bold tracking-tight color-dark-blue sm:text-4xl mb-10"></h1>
             <h2 class="text-xl  tracking-tight text-gray-400 sm:text-xl mb-10">{{__('sessions.tournoi')}} {{__('home.agendaWhen3')}}</h2>
+            <div  class="mb-10 pt-10  text-sm font-semibold"><a class="text-blue-500" href="{{url('/').'/images/nivelles.zip'}}">{{__('sessions.download')}}</a></div>
             <div class="-m-1 flex flex-wrap md:-m-2">
                 @for ($i = 240; $i < 340; $i++)
                     <div class="flex w-1/3 sm:w-1/4 flex-wrap" wire:ignore>

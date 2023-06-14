@@ -2,5 +2,5 @@
 
 return [
     'tournoi' => 'Tournoi',
-
+    'download' => 'Alles downloaden'
 ];
