@@ -18,9 +18,9 @@
               <div class="border-b border-gray-200">
                 <nav class="-mb-px flex space-x-8" aria-label="Tabs">
                   <!-- Current: "border-dark-blue color-dark-blue", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
-                  <a href="#" wire:click="$set('tab', 'toursandtaxi')" class="{{$tab =='toursandtaxi' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium" aria-current="page">{{ucFirst(__('sessions.tournoi'))}} Tours & Taxi</a>
-                  <a href="#" wire:click="$set('tab', 'liege')" class=" {{$tab =='liege' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium">{{ucFirst(__('sessions.tournoi'))}} Liège</a>
-                  <a href="#" wire:click="$set('tab', 'nivelles')" class=" {{$tab =='nivelles' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium">{{ucFirst(__('sessions.tournoi'))}} Nivelles</a>
+                  <a href="" wire:click.prevent="$set('tab', 'toursandtaxi')" class="{{$tab =='toursandtaxi' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium" aria-current="page">{{ucFirst(__('sessions.tournoi'))}} Tours & Taxi</a>
+                  <a href="" wire:click.prevent="$set('tab', 'liege')" class=" {{$tab =='liege' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium">{{ucFirst(__('sessions.tournoi'))}} Liège</a>
+                  <a href="" wire:click.prevent="$set('tab', 'nivelles')" class=" {{$tab =='nivelles' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium">{{ucFirst(__('sessions.tournoi'))}} Nivelles</a>
                 </nav>
               </div>
             </div>
@@ -61,7 +61,7 @@
                 @endfor
             </div>
         </div>
-        <div  class=" {{$tab!='nivelle'?'hidden':''}}">
+        <div  class=" {{$tab!='nivelles'?'hidden':''}}">
             <h1 class="text-3xl font-bold tracking-tight color-dark-blue sm:text-4xl mb-10"></h1>
             <h2 class="text-xl  tracking-tight text-gray-400 sm:text-xl mb-10">{{__('sessions.tournoi')}} {{__('home.agendaWhen3')}}</h2>
             <div  class="mb-10 pt-10  text-sm font-semibold"><a class="text-blue-500" href="{{url('/').'/images/nivelles.zip'}}">{{__('sessions.download')}}</a></div>
