@@ -31,7 +31,7 @@
             <div class="-m-1 flex flex-wrap md:-m-2">
                 @for ($i = 1; $i < 139; $i++)
                     <div class="flex w-1/3 sm:w-1/4 flex-wrap">
-                        <div class="w-full p-1 md:p-2">
+                        <div class="w-full p-1 md:p-2"  wire:ignore>
                             <a href="#" wire:click.prevent="$set('showEditModal', true)" @click="window.carousel.slideTo({{$i-1}})" >
                                 <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="{{url('/').'/images/logo/logo-img.png'}}" data-src="{{url('/').'/images/sessions/session1_'.$i.'.jpg'}}" />
                             </a>
@@ -46,7 +46,7 @@
             <div class="-m-1 flex flex-wrap md:-m-2">
                 @for ($i = 140; $i < 239; $i++)
                     <div class="flex w-1/3 sm:w-1/4 flex-wrap">
-                        <div class="w-full p-1 md:p-2">
+                        <div class="w-full p-1 md:p-2" wire:ignore>
                             <a href="#" wire:click.prevent="$set('showEditModal', true)" @click="window.carousel.slideTo({{$i-1}})" >
                                 <img
                                 alt="gallery"
@@ -64,9 +64,9 @@
             <h2 class="text-xl  tracking-tight text-gray-400 sm:text-xl mb-10">{{__('sessions.tournoi')}} {{__('home.agendaWhen3')}}</h2>
             <div class="-m-1 flex flex-wrap md:-m-2">
                 @for ($i = 240; $i < 340; $i++)
-                    <div class="flex w-1/3 sm:w-1/4 flex-wrap">
+                    <div class="flex w-1/3 sm:w-1/4 flex-wrap" wire:ignore>
                         <div class="w-full p-1 md:p-2">
-                            <a href="#" wire:click.prevent="$set('showEditModal', true)" @click="window.carousel.slideTo({{$i-1}})" >
+                            <a href="#" wire:click.prevent="$set('showEditModal', true)" @click="window.carousel.slideTo({{$i-1}});loadImages()" >
                                 <img
                                 alt="gallery"
                                 class="block h-full w-full rounded-lg object-cover object-center"
