@@ -28,13 +28,13 @@
         <div class=" {{$tab!='toursandtaxi'?'hidden':''}}">
             <h1 class="text-3xl font-bold tracking-tight color-dark-blue sm:text-4xl mb-10"></h1>
             <h2 class="text-xl  tracking-tight text-gray-400 sm:text-xl ">{{__('sessions.tournoi')}} {{__('home.agendaWhen1')}}</h2>
-            <div  class="mb-10 pt-10  text-sm font-semibold"><a class="text-blue-500" href="{{url('/').'/images/toursandtaxi.zip'}}">{{__('sessions.download')}}</a></div>
+            <div  class="mb-10 pt-10  text-sm font-semibold"><a class="text-blue-500" href="{{env('APP_URL').'/images/toursandtaxi.zip'}}">{{__('sessions.download')}}</a></div>
             <div class="-m-1 flex flex-wrap md:-m-2">
                 @for ($i = 1; $i < 139; $i++)
                     <div class="flex w-1/3 sm:w-1/4 flex-wrap">
                         <div class="w-full p-1 md:p-2"  wire:ignore>
                             <a href="#" wire:click.prevent="$set('showEditModal', true)" @click="window.carousel.slideTo({{$i-1}})" >
-                                <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="{{url('/').'/images/logo/logo-img.png'}}" data-src="{{url('/').'/images/sessions/session1_'.$i.'.jpg'}}" />
+                                <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="{{env('APP_URL').'/images/logo/logo-img.png'}}" data-src="{{env('APP_URL').'/images/sessions/session1_'.$i.'.jpg'}}" />
                             </a>
                         </div>
                     </div>
@@ -44,7 +44,7 @@
         <div  class=" {{$tab!='liege'?'hidden':''}}">
             <h1 class="text-3xl font-bold tracking-tight color-dark-blue sm:text-4xl mb-10"></h1>
             <h2 class="text-xl  tracking-tight text-gray-400 sm:text-xl ">{{__('sessions.tournoi')}} {{__('home.agendaWhen2')}}</h2>
-            <div  class="mb-10 pt-10  text-sm font-semibold"><a class="text-blue-500" href="{{url('/').'/images/liege.zip'}}">{{__('sessions.download')}}</a></div>
+            <div  class="mb-10 pt-10  text-sm font-semibold"><a class="text-blue-500" href="{{env('APP_URL').'/images/liege.zip'}}">{{__('sessions.download')}}</a></div>
             <div class="-m-1 flex flex-wrap md:-m-2">
                 @for ($i = 140; $i < 239; $i++)
                     <div class="flex w-1/3 sm:w-1/4 flex-wrap">
@@ -53,8 +53,8 @@
                                 <img
                                 alt="gallery"
                                 class="block h-full w-full rounded-lg object-cover object-center"
-                                src="{{url('/').'/images/logo/logo-img.png'}}"
-                                data-src="{{url('/').'/images/sessions/session1_'.$i.'.jpg'}}" />
+                                src="{{env('APP_URL').'/images/logo/logo-img.png'}}"
+                                data-src="{{env('APP_URL').'/images/sessions/session1_'.$i.'.jpg'}}" />
                             </a>
                         </div>
                     </div>
@@ -64,7 +64,7 @@
         <div  class=" {{$tab!='nivelles'?'hidden':''}}">
             <h1 class="text-3xl font-bold tracking-tight color-dark-blue sm:text-4xl mb-10"></h1>
             <h2 class="text-xl  tracking-tight text-gray-400 sm:text-xl mb-10">{{__('sessions.tournoi')}} {{__('home.agendaWhen3')}}</h2>
-            <div  class="mb-10   text-sm font-semibold"><a class="text-blue-500" href="{{url('/').'/images/nivelles.zip'}}">{{__('sessions.download')}}</a></div>
+            <div  class="mb-10   text-sm font-semibold"><a class="text-blue-500" href="{{env('APP_URL').'/images/nivelles.zip'}}">{{__('sessions.download')}}</a></div>
             <div class="-m-1 flex flex-wrap md:-m-2">
                 @for ($i = 240; $i < 340; $i++)
                     <div class="flex w-1/3 sm:w-1/4 flex-wrap" wire:ignore>
@@ -73,8 +73,8 @@
                                 <img
                                 alt="gallery"
                                 class="block h-full w-full rounded-lg object-cover object-center"
-                                src="{{url('/').'/images/logo/logo-img.png'}}"
-                                data-src="{{url('/').'/images/sessions/session1_'.$i.'.jpg'}}" />
+                                src="{{env('APP_URL').'/images/logo/logo-img.png'}}"
+                                data-src="{{env('APP_URL').'/images/sessions/session1_'.$i.'.jpg'}}" />
                             </a>
                         </div>
                     </div>
@@ -95,7 +95,7 @@
                         @for ($i = 1; $i < 340; $i++)
                          <!-- Item 1 -->
                             <div class="containerImage hidden duration-700 ease-in-out" id="carousel-item-{{$i}}"  >
-                                <img src="{{url('/').'/images/sessions/session1_'.$i.'.jpg'}}"  class="absolute block sm:h-screen -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." wire:click.prevent="$set('showEditModal', false)">
+                                <img src="{{env('APP_URL').'/images/sessions/session1_'.$i.'.jpg'}}"  class="absolute block sm:h-screen -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." wire:click.prevent="$set('showEditModal', false)">
                             </div>
                         @endfor
                     </div>
