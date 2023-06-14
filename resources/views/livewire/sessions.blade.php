@@ -8,10 +8,10 @@
             <div class="sm:hidden">
               <label for="tabs" class="sr-only">Select a tab</label>
               <!-- Use an "onChange" listener to redirect the user to the selected tab URL. -->
-              <select id="tabs" name="tabs" class="block w-full rounded-md border-gray-300 py-2 pl-3 pr-10 text-base focus:border-dark-blue focus:outline-none focus:ring-indigo-500 sm:text-sm">
-                <option  wire:click="$set('tab', 'toursandtaxi')">{{ucFirst(__('sessions.tournoi'))}} Tours & Taxi</option>
-                <option  wire:click="$set('tab', 'liege')">{{ucFirst(__('sessions.tournoi'))}} Liège</option>
-                <option  wire:click="$set('tab', 'nivelle')">{{ucFirst(__('sessions.tournoi'))}} Nivelle</option>
+              <select id="tabs" name="tabs"  wire:model="tab"  class="block w-full rounded-md border-gray-300 py-2 pl-3 pr-10 text-base focus:border-dark-blue focus:outline-none focus:ring-indigo-500 sm:text-sm">
+                <option value="toursandtaxi"  >{{ucFirst(__('sessions.tournoi'))}} Tours & Taxi</option>
+                <option value="liege" >{{ucFirst(__('sessions.tournoi'))}} Liège</option>
+                <option value="nivelle" >{{ucFirst(__('sessions.tournoi'))}} Nivelle</option>
               </select>
             </div>
             <div class="hidden sm:block">
