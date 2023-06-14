@@ -46,7 +46,7 @@
             <h2 class="text-xl  tracking-tight text-gray-400 sm:text-xl ">{{__('sessions.tournoi')}} {{__('home.agendaWhen2')}}</h2>
             <div  class="mb-10 pt-10  text-sm font-semibold"><a class="text-blue-500" href="{{env('APP_URL').'/images/liege.zip'}}">{{__('sessions.download')}}</a></div>
             <div class="-m-1 flex flex-wrap md:-m-2">
-                @for ($i = 140; $i < 239; $i++)
+                @for ($i = 140; $i < 259; $i++)
                     <div class="flex w-1/3 sm:w-1/4 flex-wrap">
                         <div class="w-full p-1 md:p-2" wire:ignore>
                             <a href="#" wire:click.prevent="$set('showEditModal', true)" @click="window.carousel.slideTo({{$i-1}})" >
@@ -66,7 +66,7 @@
             <h2 class="text-xl  tracking-tight text-gray-400 sm:text-xl mb-10">{{__('sessions.tournoi')}} {{__('home.agendaWhen4')}}</h2>
             <div  class="mb-10   text-sm font-semibold"><a class="text-blue-500" href="{{env('APP_URL').'/images/nivelles.zip'}}">{{__('sessions.download')}}</a></div>
             <div class="-m-1 flex flex-wrap md:-m-2">
-                @for ($i = 240; $i < 340; $i++)
+                @for ($i = 261; $i < 340; $i++)
                     <div class="flex w-1/3 sm:w-1/4 flex-wrap" wire:ignore>
                         <div class="w-full p-1 md:p-2">
                             <a href="#" wire:click.prevent="$set('showEditModal', true)" @click="window.carousel.slideTo({{$i-1}});loadImages()" >
