@@ -33,6 +33,33 @@ import { Carousel } from 'flowbite';
 //     forceTLS: (import.meta.env.VITE_PUSHER_SCHEME ?? 'https') === 'https',
 //     enabledTransports: ['ws', 'wss'],
 // });
+export function loadImages() {
+    var observer = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.intersectionRatio > 0.0) {
+                    const img = entry.target;
+                    
+                    if (!hasClass(img,'loaded') && !hasClass(img,'logo') && img.dataset.src) {
+                          img.setAttribute('src', img.dataset.src);
+                          img.className += ' loaded';
+                    }
+                }
+            });
+        },
+        {}
+    )
+    for (let img of document.getElementsByTagName('img')) {
+        observer.observe(img);
+    }
+};
+window.loadImages = loadImages;
+
+export function hasClass(element, className) {
+    return (' ' + element.className + ' ').indexOf(' ' + className+ ' ') > -1;
+}
+window.hasClass = hasClass;
+
 import Alpine from 'alpinejs'
  
 window.Alpine = Alpine

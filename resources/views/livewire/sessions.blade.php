@@ -1,5 +1,7 @@
 
-<div  x-data="{}" x-init="">
+<div  x-data="{
+
+}" x-init="loadImages()">
 
     <div class="container mx-auto px-5 py-2 lg:px-32 lg:pt-12">
         <div>
@@ -7,8 +9,9 @@
               <label for="tabs" class="sr-only">Select a tab</label>
               <!-- Use an "onChange" listener to redirect the user to the selected tab URL. -->
               <select id="tabs" name="tabs" class="block w-full rounded-md border-gray-300 py-2 pl-3 pr-10 text-base focus:border-dark-blue focus:outline-none focus:ring-indigo-500 sm:text-sm">
-                <option>{{ucFirst(__('sessions.tournoi'))}} Tours & Taxi</option>
-                <option>{{ucFirst(__('sessions.tournoi'))}} Liège</option>
+                <option  wire:click="$set('tab', 'toursandtaxi')">{{ucFirst(__('sessions.tournoi'))}} Tours & Taxi</option>
+                <option  wire:click="$set('tab', 'liege')">{{ucFirst(__('sessions.tournoi'))}} Liège</option>
+                <option  wire:click="$set('tab', 'nivelle')">{{ucFirst(__('sessions.tournoi'))}} Nivelle</option>
               </select>
             </div>
             <div class="hidden sm:block">
@@ -17,6 +20,7 @@
                   <!-- Current: "border-dark-blue color-dark-blue", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
                   <a href="#" wire:click="$set('tab', 'toursandtaxi')" class="{{$tab =='toursandtaxi' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium" aria-current="page">{{ucFirst(__('sessions.tournoi'))}} Tours & Taxi</a>
                   <a href="#" wire:click="$set('tab', 'liege')" class=" {{$tab =='liege' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium">{{ucFirst(__('sessions.tournoi'))}} Liège</a>
+                  <a href="#" wire:click="$set('tab', 'nivelle')" class=" {{$tab =='nivelle' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium">{{ucFirst(__('sessions.tournoi'))}} Nivelle</a>
                 </nav>
               </div>
             </div>
@@ -25,11 +29,11 @@
             <h1 class="text-3xl font-bold tracking-tight color-dark-blue sm:text-4xl mb-10"></h1>
             <h2 class="text-xl  tracking-tight text-gray-400 sm:text-xl mb-10">{{__('sessions.tournoi')}} {{__('home.agendaWhen1')}}</h2>
             <div class="-m-1 flex flex-wrap md:-m-2">
-                @for ($i = 1; $i < 138; $i++)
+                @for ($i = 1; $i < 139; $i++)
                     <div class="flex w-1/3 sm:w-1/4 flex-wrap">
                         <div class="w-full p-1 md:p-2">
                             <a href="#" wire:click.prevent="$set('showEditModal', true)" @click="window.carousel.slideTo({{$i-1}})" >
-                                <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="{{url('/').'/images/sessions/session1_'.$i.'.jpg'}}" />
+                                <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="{{url('/').'/images/logo/logo-img.png'}}" data-src="{{url('/').'/images/sessions/session1_'.$i.'.jpg'}}" />
                             </a>
                         </div>
                     </div>
@@ -40,14 +44,34 @@
             <h1 class="text-3xl font-bold tracking-tight color-dark-blue sm:text-4xl mb-10"></h1>
             <h2 class="text-xl  tracking-tight text-gray-400 sm:text-xl mb-10">{{__('sessions.tournoi')}} {{__('home.agendaWhen2')}}</h2>
             <div class="-m-1 flex flex-wrap md:-m-2">
-                @for ($i = 140; $i < 260; $i++)
+                @for ($i = 140; $i < 239; $i++)
                     <div class="flex w-1/3 sm:w-1/4 flex-wrap">
                         <div class="w-full p-1 md:p-2">
                             <a href="#" wire:click.prevent="$set('showEditModal', true)" @click="window.carousel.slideTo({{$i-1}})" >
                                 <img
                                 alt="gallery"
                                 class="block h-full w-full rounded-lg object-cover object-center"
-                                src="{{url('/').'/images/sessions/session1_'.$i.'.jpg'}}" />
+                                src="{{url('/').'/images/logo/logo-img.png'}}"
+                                data-src="{{url('/').'/images/sessions/session1_'.$i.'.jpg'}}" />
+                            </a>
+                        </div>
+                    </div>
+                @endfor
+            </div>
+        </div>
+        <div  class=" {{$tab!='nivelle'?'hidden':''}}">
+            <h1 class="text-3xl font-bold tracking-tight color-dark-blue sm:text-4xl mb-10"></h1>
+            <h2 class="text-xl  tracking-tight text-gray-400 sm:text-xl mb-10">{{__('sessions.tournoi')}} {{__('home.agendaWhen3')}}</h2>
+            <div class="-m-1 flex flex-wrap md:-m-2">
+                @for ($i = 240; $i < 340; $i++)
+                    <div class="flex w-1/3 sm:w-1/4 flex-wrap">
+                        <div class="w-full p-1 md:p-2">
+                            <a href="#" wire:click.prevent="$set('showEditModal', true)" @click="window.carousel.slideTo({{$i-1}})" >
+                                <img
+                                alt="gallery"
+                                class="block h-full w-full rounded-lg object-cover object-center"
+                                src="{{url('/').'/images/logo/logo-img.png'}}"
+                                data-src="{{url('/').'/images/sessions/session1_'.$i.'.jpg'}}" />
                             </a>
                         </div>
                     </div>
@@ -65,7 +89,7 @@
                     <!-- Carousel wrapper -->
                     
                     <div class="relative h-56 overflow-hidden rounded-lg md:h-screen">
-                        @for ($i = 1; $i < 260; $i++)
+                        @for ($i = 1; $i < 340; $i++)
                          <!-- Item 1 -->
                             <div class="containerImage hidden duration-700 ease-in-out" id="carousel-item-{{$i}}"  >
                                 <img src="{{url('/').'/images/sessions/session1_'.$i.'.jpg'}}"  class="absolute block sm:h-screen -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." wire:click.prevent="$set('showEditModal', false)">
@@ -105,7 +129,7 @@
         window.onload = function() {
             console.log('onload')
           const items = [];
-            for (let index = 0; index < 259; index++) {
+            for (let index = 0; index < 339; index++) {
                 
                 items.push({
                     position: index,
