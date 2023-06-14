@@ -168,10 +168,10 @@
                       <p class="text-base font-medium text-gray-900">Liège</p>
                     </div>
                   </a>
-                  <a href="{{route('photos').'/nivelle'}}" x-on:click="isOpen=false" class="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50">
+                  <a href="{{route('photos').'/nivelles'}}" x-on:click="isOpen=false" class="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50">
                     <!-- Heroicon name: outline/shield-check -->
                     <div class="ml-4">
-                      <p class="text-base font-medium text-gray-900">Nivelle</p>
+                      <p class="text-base font-medium text-gray-900">Nivelles</p>
                     </div>
                   </a>
                 </div>
