@@ -11,7 +11,7 @@
               <select id="tabs" name="tabs"  wire:model="tab"  class="block w-full rounded-md border-gray-300 py-2 pl-3 pr-10 text-base focus:border-dark-blue focus:outline-none focus:ring-indigo-500 sm:text-sm">
                 <option value="toursandtaxi"  >{{ucFirst(__('sessions.tournoi'))}} Tours & Taxi</option>
                 <option value="liege" >{{ucFirst(__('sessions.tournoi'))}} Liège</option>
-                <option value="nivelle" >{{ucFirst(__('sessions.tournoi'))}} Nivelle</option>
+                <option value="nivelles" >{{ucFirst(__('sessions.tournoi'))}} Nivelles</option>
               </select>
             </div>
             <div class="hidden sm:block">
@@ -20,7 +20,7 @@
                   <!-- Current: "border-dark-blue color-dark-blue", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
                   <a href="#" wire:click="$set('tab', 'toursandtaxi')" class="{{$tab =='toursandtaxi' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium" aria-current="page">{{ucFirst(__('sessions.tournoi'))}} Tours & Taxi</a>
                   <a href="#" wire:click="$set('tab', 'liege')" class=" {{$tab =='liege' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium">{{ucFirst(__('sessions.tournoi'))}} Liège</a>
-                  <a href="#" wire:click="$set('tab', 'nivelle')" class=" {{$tab =='nivelle' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium">{{ucFirst(__('sessions.tournoi'))}} Nivelle</a>
+                  <a href="#" wire:click="$set('tab', 'nivelles')" class=" {{$tab =='nivelles' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium">{{ucFirst(__('sessions.tournoi'))}} Nivelles</a>
                 </nav>
               </div>
             </div>

@@ -11,7 +11,7 @@
               <select id="tabs" name="tabs"  wire:model="tab"  class="block w-full rounded-md border-gray-300 py-2 pl-3 pr-10 text-base focus:border-dark-blue focus:outline-none focus:ring-indigo-500 sm:text-sm">
                 <option value="toursandtaxi"  >{{ucFirst(__('sessions.tournoi'))}} Tours & Taxi</option>
                 <option value="liege" >{{ucFirst(__('sessions.tournoi'))}} Liège</option>
-                <option value="nivelle" >{{ucFirst(__('sessions.tournoi'))}} Nivelle</option>
+                <option value="nivelles" >{{ucFirst(__('sessions.tournoi'))}} Nivelles</option>
               </select>
             </div>
             <div class="hidden sm:block">
@@ -20,7 +20,7 @@
                   <!-- Current: "border-dark-blue color-dark-blue", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
                   <a href="#" wire:click="$set('tab', 'toursandtaxi')" class="{{$tab =='toursandtaxi' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium" aria-current="page">{{ucFirst(__('sessions.tournoi'))}} Tours & Taxi</a>
                   <a href="#" wire:click="$set('tab', 'liege')" class=" {{$tab =='liege' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium">{{ucFirst(__('sessions.tournoi'))}} Liège</a>
-                  <a href="#" wire:click="$set('tab', 'nivelle')" class=" {{$tab =='nivelle' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium">{{ucFirst(__('sessions.tournoi'))}} Nivelle</a>
+                  <a href="#" wire:click="$set('tab', 'nivelles')" class=" {{$tab =='nivelles' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium">{{ucFirst(__('sessions.tournoi'))}} Nivelles</a>
                 </nav>
               </div>
             </div>
@@ -28,7 +28,7 @@
         <div class=" {{$tab!='toursandtaxi'?'hidden':''}}">
             <h1 class="text-3xl font-bold tracking-tight color-dark-blue sm:text-4xl mb-10"></h1>
             <h2 class="text-xl  tracking-tight text-gray-400 sm:text-xl ">{{__('sessions.tournoi')}} {{__('home.agendaWhen1')}}</h2>
-            <div  class="mb-10 pt-10  text-sm font-semibold"><a class="text-sky-400" href="{{url('/').'/images/toursandtaxi.zip'}}">Tout telecharger</a></div>
+            <div  class="mb-10 pt-10  text-sm font-semibold"><a class="text-blue-500" href="{{url('/').'/images/toursandtaxi.zip'}}">Tout telecharger</a></div>
             <div class="-m-1 flex flex-wrap md:-m-2">
                 @for ($i = 1; $i < 139; $i++)
                     <div class="flex w-1/3 sm:w-1/4 flex-wrap">
@@ -44,7 +44,7 @@
         <div  class=" {{$tab!='liege'?'hidden':''}}">
             <h1 class="text-3xl font-bold tracking-tight color-dark-blue sm:text-4xl mb-10"></h1>
             <h2 class="text-xl  tracking-tight text-gray-400 sm:text-xl ">{{__('sessions.tournoi')}} {{__('home.agendaWhen2')}}</h2>
-            <a href="{{url('/').'/images/liege.zip'}}" class="mb-10 text-blue-700">Tout telecharger</a>
+            <div  class="mb-10 pt-10  text-sm font-semibold"><a class="text-blue-500" href="{{url('/').'/images/liege.zip'}}">Tout telecharger</a></div>
             <div class="-m-1 flex flex-wrap md:-m-2">
                 @for ($i = 140; $i < 239; $i++)
                     <div class="flex w-1/3 sm:w-1/4 flex-wrap">
@@ -64,7 +64,7 @@
         <div  class=" {{$tab!='nivelle'?'hidden':''}}">
             <h1 class="text-3xl font-bold tracking-tight color-dark-blue sm:text-4xl mb-10"></h1>
             <h2 class="text-xl  tracking-tight text-gray-400 sm:text-xl mb-10">{{__('sessions.tournoi')}} {{__('home.agendaWhen3')}}</h2>
-            <a href="{{url('/').'/images/nivelle.zip'}}" class="mb-10 text-blue-700">Tout telecharger</a>
+            <div  class="mb-10 pt-10  text-sm font-semibold"><a class="text-blue-500" href="{{url('/').'/images/nivelles.zip'}}">Tout telecharger</a></div>
             <div class="-m-1 flex flex-wrap md:-m-2">
                 @for ($i = 240; $i < 340; $i++)
                     <div class="flex w-1/3 sm:w-1/4 flex-wrap" wire:ignore>
