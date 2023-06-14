@@ -49,6 +49,7 @@
                 x-transition:leave="transition ease-in duration-75 transform"
                 x-transition:leave-start="opacity-100 scale-100"
                 x-transition:leave-end="opacity-0 scale-95"
+                style="display: none"
                 class="absolute z-10 -ml-4 mt-3 w-screen max-w-md transform px-2 sm:px-0 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2">
               <div class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                 <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
@@ -122,12 +123,63 @@
               </div>
             </div>
           </div>
+          <div x-data="{ isOpen: false }" class="relative" >
+            <!-- Item active: "text-gray-900", Item inactive: "color-dark-blue" -->
+            <button @click="isOpen = !isOpen" type="button" class="color-dark-blue group inline-flex items-center rounded-md text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2" aria-expanded="false">
+              <span>Photos</span>
+              <!--
+                Heroicon name: mini/chevron-down
   
-          <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.sessions')}}" class="text-base font-medium color-dark-blue hover:text-gray-900">Photos</a>
+                Item active: "text-gray-600", Item inactive: "color-dark-blue"
+              -->
+              <svg class="color-dark-blue ml-2 h-5 w-5 group-hover:color-dark-blue" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+              </svg>
+            </button>
+            <!--
+              'Solutions' flyout menu, show/hide based on flyout menu state.
+  
+              Entering: "transition ease-out duration-200"
+                From: "opacity-0 translate-y-1"
+                To: "opacity-100 translate-y-0"
+              Leaving: "transition ease-in duration-150"
+                From: "opacity-100 translate-y-0"
+                To: "opacity-0 translate-y-1"
+            -->
+            <div x-show="isOpen"
+                @click.outside="isOpen = false"
+                x-transition:enter="transition ease-out duration-100 transform"
+                x-transition:enter-start="opacity-0 scale-95"
+                x-transition:enter-end="opacity-100 scale-100"
+                x-transition:leave="transition ease-in duration-75 transform"
+                x-transition:leave-start="opacity-100 scale-100"
+                x-transition:leave-end="opacity-0 scale-95"
+                style="display: none"
+                class="absolute z-10 -ml-4 mt-3 w-screen max-w-xs transform px-2 sm:px-0 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2">
+              <div class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+                <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                  <a href="{{route('photos').'/toursandtaxi'}}" x-on:click="isOpen=false" class="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50">
+                    <div class="ml-4">
+                      <p class="text-base font-medium text-gray-900">Tours & Taxi</p>
+                    </div>
+                  </a>
+                  <a href="{{route('photos').'/liege'}}" x-on:click="isOpen=false" class="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50">
+                    <div class="ml-4">
+                      <p class="text-base font-medium text-gray-900">Liège</p>
+                    </div>
+                  </a>
+                  <a href="{{route('photos').'/nivelle'}}" x-on:click="isOpen=false" class="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50">
+                    <!-- Heroicon name: outline/shield-check -->
+                    <div class="ml-4">
+                      <p class="text-base font-medium text-gray-900">Nivelle</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
           <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.price')}}" class="text-base font-medium color-dark-blue hover:text-gray-900">{{__('menu.price')}}</a>
           <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.articles')}}" class="text-base font-medium color-dark-blue hover:text-gray-900">{{__('menu.news')}}</a>
-  
-      
         </nav>
         <div class="hidden items-center justify-end md:flex md:flex-1 lg:w-0 ">
           <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}" class="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-dark-blue px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700">{{__('menu.signup')}}</a>

@@ -4,7 +4,9 @@ use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\CSVController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SitemapXmlController;
+use App\Http\Livewire\Photos;
 use App\Http\Livewire\Price;
+use App\Http\Livewire\Sessions;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Log;
@@ -64,7 +66,12 @@ Route::prefix('{locale}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('set.l
     Route::get('/'. trans('route.sessions'), function () {
         return view('components.pages.sessions');
     });
-    
+
+    // Route::get('/photos/{slug?}', function ($slug) {
+    //     return view('components.pages.photos');
+    // });
+    Route::get('/photos/{slug?}', Photos::class)->name('photos');
+
     Route::get('/'. trans('route.ranking'), function () {
         return view('components.pages.ranking');
     });
