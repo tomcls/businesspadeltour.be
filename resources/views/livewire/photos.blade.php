@@ -92,7 +92,7 @@
                     <!-- Carousel wrapper -->
                     
                     <div class="relative h-56 overflow-hidden rounded-lg md:h-screen">
-                        @for ($i = 1; $i < 340; $i++)
+                        @for ($i = 1; $i < 391; $i++)
                          <!-- Item 1 -->
                             <div class="containerImage hidden duration-700 ease-in-out" id="carousel-item-{{$i}}"  >
                                 <img src="{{env('APP_URL').'/images/sessions/session1_'.$i.'.jpg'}}"  class="absolute block sm:h-screen -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." wire:click.prevent="$set('showEditModal', false)">
@@ -130,9 +130,9 @@
     
     <script>
         window.onload = function() {
-            console.log('onload')
+            
           const items = [];
-            for (let index = 0; index < 339; index++) {
+            for (let index = 0; index < 391; index++) {
                 
                 items.push({
                     position: index,
