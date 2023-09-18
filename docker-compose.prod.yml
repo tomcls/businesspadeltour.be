@@ -1,6 +1,6 @@
 version: '3'
 services:
-    nginx-vw:
+    nginxpadel:
         build:
             context: ./docker/prod/nginx
             dockerfile: Dockerfile
@@ -15,8 +15,8 @@ services:
         networks:
             - dev-network
         depends_on:
-            - php-vw
-    php-vw:
+            - phppadel
+    phppadel:
         build:
             context: ./docker/prod/php8.2
             dockerfile: Dockerfile
