@@ -12,7 +12,8 @@
                 <option value="toursandtaxi"  >{{ucFirst(__('sessions.tournoi'))}} Tours & Taxi</option>
                 <option value="liege" >{{ucFirst(__('sessions.tournoi'))}} Liège</option>
                 <option value="nivelles" >{{ucFirst(__('sessions.tournoi'))}} Nivelles</option>
-              </select>
+                <option value="knokke" >{{ucFirst(__('sessions.knokke'))}} Knokke</option>
+            </select>
             </div>
             <div class="hidden sm:block">
               <div class="border-b border-gray-200">
@@ -21,6 +22,7 @@
                   <a href="" wire:click.prevent="$set('tab', 'toursandtaxi')" class="{{$tab =='toursandtaxi' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium" aria-current="page">{{ucFirst(__('sessions.tournoi'))}} Tours & Taxi</a>
                   <a href="" wire:click.prevent="$set('tab', 'liege')" class=" {{$tab =='liege' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium">{{ucFirst(__('sessions.tournoi'))}} Liège</a>
                   <a href="" wire:click.prevent="$set('tab', 'nivelles')" class=" {{$tab =='nivelles' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium">{{ucFirst(__('sessions.tournoi'))}} Nivelles</a>
+                  <a href="#" wire:click.prevent="$set('tab', 'knokke')" class=" {{$tab =='knokke' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium">{{ucFirst(__('sessions.tournoi'))}} Knokke</a>
                 </nav>
               </div>
             </div>
@@ -81,6 +83,26 @@
                 @endfor
             </div>
         </div>
+        <div  class=" {{$tab!='knokke'?'hidden':''}}">
+            <h1 class="text-3xl font-bold tracking-tight color-dark-blue sm:text-4xl mb-10"></h1>
+            <h2 class="text-xl  tracking-tight text-gray-400 sm:text-xl mb-10">{{__('sessions.tournoi')}} {{__('home.agendaWhen4')}}</h2>
+            <div  class="mb-10 pt-10  text-sm font-semibold"><a class="text-blue-500" href="{{env('APP_URL').'/images/knokke.zip'}}">{{__('sessions.download')}}</a></div>
+            <div class="-m-1 flex flex-wrap md:-m-2">
+                @for ($i = 341; $i < 502; $i++)
+                    <div class="flex w-1/3 sm:w-1/4 flex-wrap" wire:ignore>
+                        <div class="w-full p-1 md:p-2">
+                            <a href="#" wire:click.prevent="$set('showEditModal', true)" @click="window.carousel.slideTo({{$i-1}});loadImages()" >
+                                <img
+                                alt="gallery"
+                                class="block h-full w-full rounded-lg object-cover object-center"
+                                src="{{env('APP_URL').'/images/logo/logo-img.png'}}"
+                                data-src="{{env('APP_URL').'/images/sessions/session1_'.$i.'.jpg'}}" />
+                            </a>
+                        </div>
+                    </div>
+                @endfor
+            </div>
+        </div>
     </div>
     <div  wire:ignore>
 
@@ -92,7 +114,7 @@
                     <!-- Carousel wrapper -->
                     
                     <div class="relative h-56 overflow-hidden rounded-lg md:h-screen">
-                        @for ($i = 1; $i < 340; $i++)
+                        @for ($i = 1; $i < 501; $i++)
                          <!-- Item 1 -->
                             <div class="containerImage hidden duration-700 ease-in-out" id="carousel-item-{{$i}}"  >
                                 <img src="{{env('APP_URL').'/images/sessions/session1_'.$i.'.jpg'}}"  class="absolute block sm:h-screen -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." wire:click.prevent="$set('showEditModal', false)">
@@ -132,7 +154,7 @@
         window.onload = function() {
             console.log('onload')
           const items = [];
-            for (let index = 0; index < 339; index++) {
+            for (let index = 0; index < 501; index++) {
                 
                 items.push({
                     position: index,
