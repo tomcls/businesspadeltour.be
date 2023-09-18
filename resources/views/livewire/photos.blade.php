@@ -155,7 +155,7 @@
             console.log('onload')
           const items = [];
             for (let index = 0; index < 501; index++) {
-                
+                console.log(index)
                 items.push({
                     position: index,
                     el: document.getElementById('carousel-item-'+(index+1))
