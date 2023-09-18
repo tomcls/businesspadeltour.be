@@ -114,7 +114,7 @@
                     <!-- Carousel wrapper -->
                     
                     <div class="relative h-56 overflow-hidden rounded-lg md:h-screen">
-                        @for ($i = 1; $i < 500; $i++)
+                        @for ($i = 1; $i < 502; $i++)
                          <!-- Item 1 -->
                             <div class="containerImage hidden duration-700 ease-in-out" id="carousel-item-{{$i}}"  >
                                 <img src="{{env('APP_URL').'/images/logo/logo-img.png'}}" data-src="{{env('APP_URL').'/images/sessions/session1_'.$i.'.jpg'}}"  class="absolute block sm:h-screen -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." wire:click.prevent="$set('showEditModal', false)">
