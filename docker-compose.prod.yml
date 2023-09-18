@@ -18,7 +18,7 @@ services:
             - php-vw
     php-vw:
         build:
-            context: ./docker/prod/octane8.2
+            context: ./docker/prod/php8.2
             dockerfile: Dockerfile
             args:
                 WWWGROUP: '${WWWGROUP}'
