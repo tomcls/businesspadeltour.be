@@ -32,7 +32,7 @@
             <h2 class="text-xl  tracking-tight text-gray-400 sm:text-xl ">{{__('sessions.tournoi')}} {{__('home.agendaWhen1')}}</h2>
             <div  class="mb-10 pt-10  text-sm font-semibold"><a class="text-blue-500" href="{{env('APP_URL').'/images/toursandtaxi.zip'}}">{{__('sessions.download')}}</a></div>
             <div class="-m-1 flex flex-wrap md:-m-2">
-                @for ($i = 1; $i < 139; $i++)
+                @for ($i = 1; $i < 140; $i++)
                     <div class="flex w-1/3 sm:w-1/4 flex-wrap">
                         <div class="w-full p-1 md:p-2"  wire:ignore>
                             <a href="#" wire:click.prevent="$set('showEditModal', true)" @click="window.carousel.slideTo({{$i-1}})" >
@@ -68,7 +68,7 @@
             <h2 class="text-xl  tracking-tight text-gray-400 sm:text-xl mb-10">{{__('sessions.tournoi')}} {{__('home.agendaWhen4')}}</h2>
             <div  class="mb-10   text-sm font-semibold"><a class="text-blue-500" href="{{env('APP_URL').'/images/nivelles.zip'}}">{{__('sessions.download')}}</a></div>
             <div class="-m-1 flex flex-wrap md:-m-2">
-                @for ($i = 261; $i < 340; $i++)
+                @for ($i = 259; $i < 390; $i++)
                     <div class="flex w-1/3 sm:w-1/4 flex-wrap" wire:ignore>
                         <div class="w-full p-1 md:p-2">
                             <a href="#" wire:click.prevent="$set('showEditModal', true)" @click="window.carousel.slideTo({{$i-1}});loadImages()" >
@@ -117,7 +117,7 @@
                         @for ($i = 1; $i < 501; $i++)
                          <!-- Item 1 -->
                             <div class="containerImage hidden duration-700 ease-in-out" id="carousel-item-{{$i}}"  >
-                                <img src="{{env('APP_URL').'/images/sessions/session1_'.$i.'.jpg'}}"  class="absolute block sm:h-screen -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." wire:click.prevent="$set('showEditModal', false)">
+                                <img src="{{env('APP_URL').'/images/logo/logo-img.png'}}" data-src="{{env('APP_URL').'/images/sessions/session1_'.$i.'.jpg'}}"  class="absolute block sm:h-screen -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." wire:click.prevent="$set('showEditModal', false)">
                             </div>
                         @endfor
                     </div>
