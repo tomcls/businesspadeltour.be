@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SitemapXmlController;
 use App\Http\Livewire\Contact;
 use App\Http\Livewire\Photos;
+use App\Http\Livewire\Video;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Route;
 //use Laravel\Octane\Facades\Octane;
@@ -66,6 +67,7 @@ Route::prefix('{locale}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('set.l
     // });
 
     Route::get('/contact', Contact::class)->name('contact');
+    Route::get('/video', Video::class)->name('video');
     
     Route::get('/photos/{slug?}', Photos::class)->name('photos');
 
