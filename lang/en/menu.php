@@ -12,7 +12,7 @@ return [
      'sponsorsTeaser' => 'Immovlan and B19',
      'ranking' => 'Rankings',
      'rankingTeaser' => 'They will be visible after the first session',
-     'watchFinal' => 'Watch Final 2022',
+     'watchFinal' => 'Watch Final 2023',
      'contactUs' => 'Contact-us',
      'price' => 'Prices',
      'news' => 'News',

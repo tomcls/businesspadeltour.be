@@ -23,7 +23,7 @@ return [
     'sponsorsTeaser' => 'Immovlan et B19',
     'ranking' => 'Les classements',
     'rankingTeaser' => 'Ils seront visibles après la premiere session',
-    'watchFinal' => 'Regarder la finale 2022',
+    'watchFinal' => 'Regarder la finale 2023',
     'contactUs' => 'Contactez-nous',
     'price' => 'Tarifs',
     'news' => 'Actu',

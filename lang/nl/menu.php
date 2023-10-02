@@ -12,7 +12,7 @@ return [
     'sponsorsTeaser' => 'Immovlan en B19',
     'ranking' => 'Ranglijst',
     'rankingTeaser' => 'Ze zullen zichtbaar zijn na de eerste sessie',
-    'watchFinal' => 'Bekijk Finale 2022',
+    'watchFinal' => 'Bekijk Finale 2023',
     'contactUs' => 'Contact',
     'price' => 'Prijzen',
     'news' => 'Nieuws',
