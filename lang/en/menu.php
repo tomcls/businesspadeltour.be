@@ -16,6 +16,6 @@ return [
      'contactUs' => 'Contact-us',
      'price' => 'Prices',
      'news' => 'News',
-     'signup' => 'Register',
+     'signup' => 'Keep in touch',
      'session1' => 'Photos Tours & Taxi',
 ];

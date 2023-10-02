@@ -4,12 +4,9 @@ use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\CSVController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SitemapXmlController;
+use App\Http\Livewire\Contact;
 use App\Http\Livewire\Photos;
-use App\Http\Livewire\Price;
-use App\Http\Livewire\Sessions;
 use Illuminate\Http\Response;
-use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Route;
 //use Laravel\Octane\Facades\Octane;
 
@@ -55,10 +52,7 @@ Route::prefix('{locale}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('set.l
     Route::get('/', function () {
         return new Response((new HomeController)->index());
     });
-    Route::get('/' . trans('route.articles'), function () {
-        return new Response((new ArticleController)->index());
-    });
-
+    
     Route::get('/'. trans('route.price'), function () {
         return view('components.pages.price');
     });
@@ -70,7 +64,14 @@ Route::prefix('{locale}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('set.l
     // Route::get('/photos/{slug?}', function ($slug) {
     //     return view('components.pages.photos');
     // });
+
+    Route::get('/contact', Contact::class)->name('contact');
+    
     Route::get('/photos/{slug?}', Photos::class)->name('photos');
+
+    Route::get('/' . trans('route.articles'), function () {
+        return new Response((new ArticleController)->index());
+    });
 
     Route::get('/'. trans('route.ranking'), function () {
         return view('components.pages.ranking');

@@ -16,6 +16,6 @@ return [
     'contactUs' => 'Contact',
     'price' => 'Prijzen',
     'news' => 'Nieuws',
-    'signup' => 'Registreren',
+    'signup' => 'Blijf op de hoogte',
     'session1' => 'Photos Tours & Taxi',
 ];

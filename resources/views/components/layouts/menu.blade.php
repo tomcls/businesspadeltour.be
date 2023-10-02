@@ -188,7 +188,7 @@
           <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.articles')}}" class="text-base font-medium color-dark-blue hover:text-gray-900">{{__('menu.news')}}</a>
         </nav>
         <div class="hidden items-center justify-end md:flex md:flex-1 lg:w-0 ">
-          <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}" class="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-dark-blue px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700">{{__('menu.signup')}}</a>
+          <a href="{{url('/').'/'.App::currentLocale().'/contact'}}" class="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-dark-blue px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700">{{__('menu.signup')}}</a>
           <div x-data="{ isOpen: false }" class="relative ml-3">
             <!-- Item active: "text-gray-900", Item inactive: "color-dark-blue" -->
             <button @click="isOpen = !isOpen" type="button" class="color-dark-blue group inline-flex items-center rounded-md  text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2" aria-expanded="false">
@@ -383,7 +383,7 @@
             </a>
           </div>
           <div class="flow-root text-center justify-center items-center w-full">
-            <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}" class=" inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-dark-blue px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700">{{__('menu.signup')}}</a>
+            <a href="{{url('/').'/'.App::currentLocale().'/contact'}}" class=" inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-dark-blue px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700">{{__('menu.signup')}}</a>
           </div>
         </div>
 

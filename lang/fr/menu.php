@@ -27,6 +27,6 @@ return [
     'contactUs' => 'Contactez-nous',
     'price' => 'Tarifs',
     'news' => 'Actu',
-    'signup' => 'Inscription',
+    'signup' => 'Restez informé',
     'session1' => 'Photos Tours & Taxi',
 ];
