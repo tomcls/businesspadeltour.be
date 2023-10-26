@@ -41,7 +41,7 @@ Route::get('/', function () {
 Route::get('/sitemap.xml', [SitemapXmlController::class, 'index']);
 
 Route::get('/players/download', [CSVController::class,'download'])->name('players');
-Route::get('/contacts/download', [CSVController::class,'download'])->name('contactsCSV');
+Route::get('/contacts/download', [CSVController::class,'contacts'])->name('contactsCSV');
 
 Route::prefix('{locale}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('set.locale')->group(function ($r) {
 
