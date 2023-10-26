@@ -14,22 +14,14 @@ use Livewire\Component;
 
 class Register extends Component
 {
-    public $playerOneFirstname = '';
-    public $playerOneLastname = '';
-    public $playerOneEmail = '';
-    public $playerOnePhone = '';
-    public $playerOneSize = '';
-    public $playerTwoFirstname = '';
-    public $playerTwoLastname = '';
-    public $playerTwoEmail = '';
-    public $playerTwoPhone = '';
-    public $playerTwoSize = '';
+    
     public $companyName = '';
     public $companyVAT = '';
     public $session = '';
     public $saved = false;
     public $category = null;
     public $address = null;
+
     public $totalTeam = 1;
     public $sessions = [];
     
