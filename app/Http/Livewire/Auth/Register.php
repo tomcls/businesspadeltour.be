@@ -30,7 +30,12 @@ class Register extends Component
     public $saved = false;
     public $category = null;
     public $address = null;
+    public $totalTeam = 1;
+    public $sessions = [];
     
+    public function mount() {
+        $this->sessions = Session::where('startdate', '>=', '2024-01-01')->get();
+    }
     public function register()
     {
 
@@ -271,14 +276,6 @@ class Register extends Component
         //auth()->login($user);
         $this->saved = true;
         // return redirect('/index');
-    }
-    public function setSession($name = "session")
-    {
-        $this->session = $name;
-    }
-    public function setCategory($name = "fun")
-    {
-        $this->category = $name;
     }
     public function updatedEmail()
     {
