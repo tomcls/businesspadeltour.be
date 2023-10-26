@@ -293,10 +293,10 @@ class Register extends Component
     }
     public function onTeamValidated($team)
     {
-        logger('onTeamValidated' . $this->totalTeam);
+       
         $this->totalTeamsValidated[$team['number']] = $team;
         if (count($this->totalTeamsValidated) == $this->totalTeam) {
-            logger($this->totalTeamsValidated);
+            logger('onTeamValidated' . $this->totalTeam);
             // $this->saved = true;
             $company = new Company();
             $company->name = $this->company['name'];
@@ -346,6 +346,8 @@ class Register extends Component
                     $team->save();
                     $this->saved = true;
                 }
+            } else {
+                logger('no company');
             }
         }
     }
