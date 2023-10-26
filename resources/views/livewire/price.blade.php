@@ -8,7 +8,7 @@
       <div class="mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none mb-10">
         <div class="p-8 sm:p-10 lg:flex-auto">
           <h3 class="text-2xl font-bold tracking-tight text-gray-300">{{__('home.priceTitle2')}}</h3>
-          <p class="mt-6 text-base leading-7 text-gray-100">{{__('home.priceTeaser2')}}</p>
+          <p class="mt-6 text-base leading-7 text-gray-100">{!!__('home.priceTeaser2')!!}</p>
           <div class="mt-10 flex items-center gap-x-4">
             <h4 class="flex-none text-sm font-semibold leading-6 color-light-blue">{{__('home.priceInclude')}}</h4>
             <div class="h-px flex-auto bg-gray-100"></div>
