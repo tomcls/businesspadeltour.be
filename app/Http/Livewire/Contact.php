@@ -24,7 +24,6 @@ class Contact extends Component
         ];
     }
     public function mount() {
-        logger('hello');
         $this->contact = $this->createBlankContact();
     }
     public function createBlankContact() {
@@ -39,6 +38,69 @@ class Contact extends Component
         try {
             $this->contact->save();
             $this->saved = true;
+
+
+            $mailchimp = new \MailchimpTransactional\ApiClient();
+            $mailchimp->setApiKey(env('MAILCHIMP_APIKEY'));
+            // player one
+            $template_content = array(
+                array(
+                    'name' => 'firstname',
+                    'content' => $this->contact->firstname
+                ),
+                array(
+                    'name' => 'lastname',
+                    'content' => $this->contact->lastname
+                ),
+                array(
+                    'name' => 'email',
+                    'content' => $this->contact->email
+                ),
+                array(
+                    'name' => 'phone',
+                    'content' => $this->contact->phone
+                ),
+                array(
+                    'name' => 'companyName',
+                    'content' => $this->contact->company_name
+                ),
+                array(
+                    'name' => 'companyVAT',
+                    'content' => $this->contact->company_vat
+                ),
+                array(
+                    'name' => 'companyAddress',
+                    'content' => $this->contact->company_address
+                ),
+                array(
+                    'name' => 'companyZip',
+                    'content' => $this->contact->company_zip
+                ),
+                array(
+                    'name' => 'url',
+                    'content' => 'https://businesspadeltour.be/contacts/download?p=afzefeazcvfvzfgzczeqfczyiklyuilguik'
+                ));
+            $to = [];
+            array_push($to,[
+                "email" =>  'info@businesspadeltour.be',
+                "type" => "to"
+            ]);
+            $message = [
+                "from_email" => "info@businesspadeltour.be",
+                'from_name'  => 'Business padel tour',
+                "subject" => __('signup.signupCompleted'),
+                "to" => $to,
+                "headers" => ["Reply-To" => "info@businesspadeltour.be"],
+                'global_merge_vars' => $template_content
+            ];
+           // Log::alert('Player 1 email sent '.App::currentLocale());
+            $response = $mailchimp->messages->sendTemplate([
+                "template_name" => "bpt_stay_tune",
+                "template_content" => $template_content,
+                "message" => $message,
+            ]);
+
+
         } catch (\Exception $e) {
             $c = ModelsContact::whereEmail($this->contact->email)->first();
             if($c) {
