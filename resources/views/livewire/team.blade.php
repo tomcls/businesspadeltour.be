@@ -241,7 +241,7 @@
     <div class=" grid grid-cols-1 gap-y-4 sm:grid-cols-2 sm:gap-x-8 mt-4">
         <div>
             <div>
-              <label class="block text-md font-medium text-gray-700 mb-2">{{__('signup.playerone')}} {{$session}}</label>
+              <label class="block text-md font-medium text-gray-700 mb-2">{{__('signup.playerone')}}</label>
               <label for="playerOneFirstname" class="block text-sm font-medium text-gray-900">{{__('signup.firstname')}}</label>
               <div class="mt-1">
                 <input wire:model="playerOneFirstname" type="text" name="playerOneFirstname" id="playerOneFirstname" autocomplete="given-name" class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500">
