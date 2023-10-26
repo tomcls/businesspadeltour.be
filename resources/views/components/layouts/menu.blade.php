@@ -359,6 +359,26 @@
             <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}" class=" inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-dark-blue px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700">{{__('home.priceImin')}}</a>
             <a href="{{url('/').'/'.App::currentLocale().'/contact'}}" class=" inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-dark-blue px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700">{{__('menu.signup')}}</a>
           </div>
+          <div class="flex flex-row  content-between justify-between  w-full">
+            <a href="{{url('/').'/en'}}" class=" flex items-center rounded-lg   text-center  w-full">
+              <!-- Heroicon name: outline/lifebuoy -->
+              <div class="text-center  w-full">
+                <p class="text-base font-medium text-blue-900 ">en</p>
+              </div>
+            </a>
+            <a href="{{url('/').'/nl'}}" class=" flex items-start rounded-lg  w-full ">
+              <!-- Heroicon name: outline/lifebuoy -->
+              <div class="text-center  w-full">
+                <p class="text-base font-medium text-blue-900">nl</p>
+              </div>
+            </a>
+            <a href="{{url('/').'/fr'}}" class=" flex items-start rounded-lg   w-full">
+              <!-- Heroicon name: outline/lifebuoy -->
+              <div class="text-center  w-full">
+                <p class="text-base font-medium text-blue-900">fr</p>
+              </div>
+            </a>
+          </div>
         </div>
 
       </div>
