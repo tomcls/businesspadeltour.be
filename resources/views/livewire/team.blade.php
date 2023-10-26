@@ -1,5 +1,5 @@
 <div class="mt-5">
-    <h2 class="text-lg font-bold">Equipe {{$teamNumber}}</h2>
+    <h2 class="text-lg font-bold">Equipe {{$team['number']}}</h2>
     <div class=" grid grid-cols-1 gap-y-4 sm:grid-cols-2 sm:gap-x-8 mt-4">
      <!-- SELECT BOX -->
      <div>
@@ -97,7 +97,7 @@
           </div>
           
         </div>
-        @error('session') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
+        @error('team.session') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
 
       </div>
       <div>
@@ -234,7 +234,7 @@
          </div>
          
        </div>
-       @error('category') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
+       @error('team.category') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
 
       </div>
     </div>
@@ -244,27 +244,27 @@
               <label class="block text-md font-medium text-gray-700 mb-2">{{__('signup.playerone')}}</label>
               <label for="playerOneFirstname" class="block text-sm font-medium text-gray-900">{{__('signup.firstname')}}</label>
               <div class="mt-1">
-                <input wire:model="playerOneFirstname" type="text" name="playerOneFirstname" id="playerOneFirstname" autocomplete="given-name" class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500">
-                @error('playerOneFirstname') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
+                <input wire:model="team.playerOneFirstname" type="text" name="playerOneFirstname" id="playerOneFirstname" autocomplete="given-name" class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                @error('team.playerOneFirstname') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
               </div>
             </div>
             <div>
               <label for="playerOneLastname" class="block text-sm font-medium text-gray-900">{{__('signup.lastname')}}</label>
               <div class="mt-1">
-                <input wire:model="playerOneLastname" id="playerOneLastname" name="playerOneLastname" type="text" autocomplete="family-name" class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500">
-                @error('playerOneLastname') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
+                <input wire:model="team.playerOneLastname" id="playerOneLastname" name="playerOneLastname" type="text" autocomplete="family-name" class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                @error('team.playerOneLastname') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
               </div>
             </div>
             <div>
               <label for="playerOneEmail" class="block text-sm font-medium text-gray-900">Email</label>
               <div class="mt-1">
-                <input wire:model="playerOneEmail" id="playerOneEmail" name="playerOneEmail" type="email" autocomplete="email" class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500">
-                @error('playerOneEmail') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
+                <input wire:model="team.playerOneEmail" id="playerOneEmail" name="playerOneEmail" type="email" autocomplete="email" class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                @error('team.playerOneEmail') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
               </div>
             </div>
             <div>
               <label for="playerOneSize" class="block text-sm font-medium leading-6 text-gray-900">{{__('signup.size')}}</label>
-              <select id="playerOneSize" name="playerOneSize" wire:model="playerOneSize" class="mt-2 block w-full rounded-md border-0 py-1.5 pl-3 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-indigo-600 sm:text-sm sm:leading-6">
+              <select id="playerOneSize" name="playerOneSize" wire:model="team.playerOneSize" class="mt-2 block w-full rounded-md border-0 py-1.5 pl-3 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-indigo-600 sm:text-sm sm:leading-6">
                 <option >{{__('signup.selectsize')}}</option>
                 <option value="S">S</option>
                 <option value="M">M</option>
@@ -272,7 +272,7 @@
                 <option value="XL">XL</option>
                 <option value="XXL">XXL</option>
               </select>
-              @error('playerOneSize') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
+              @error('team.playerOneSize') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
             </div>
         </div>
     
@@ -281,8 +281,8 @@
               <label class="block text-md font-medium text-gray-700 mb-2">{{__('signup.playertwo')}} </label>
               <label for="playerTwoFirstname" class="block text-sm font-medium text-gray-900">{{__('signup.firstname')}}</label>
               <div class="mt-1">
-                <input wire:model="playerTwoFirstname" type="text" name="playerTwoFirstname" id="playerTwoFirstname" autocomplete="given-name" class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500">
-                @error('playerTwoFirstname') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
+                <input wire:model="team.playerTwoFirstname" type="text" name="playerTwoFirstname" id="playerTwoFirstname" autocomplete="given-name" class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                @error('team.playerTwoFirstname') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
               </div>
             </div>
             <div>
@@ -290,8 +290,8 @@
                 <label for="playerTwoLastname" class="block text-sm font-medium text-gray-900">{{__('signup.lastname')}}</label>
               </div>
               <div class="mt-1">
-                <input wire:model="playerTwoLastname" type="text" name="playerTwoLastname" id="playerTwoLastname" autocomplete="family-name" class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500" aria-describedby="phone-optional">
-                @error('playerTwoLastname') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
+                <input wire:model="team.playerTwoLastname" type="text" name="playerTwoLastname" id="playerTwoLastname" autocomplete="family-name" class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500" aria-describedby="phone-optional">
+                @error('team.playerTwoLastname') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
               </div>
             </div>
             <div>
@@ -299,13 +299,13 @@
                 <label for="playerTwoEmail" class="block text-sm font-medium text-gray-900">Email</label>
               </div>
               <div class="mt-1">
-                <input wire:model="playerTwoEmail" type="text" name="playerTwoEmail" id="playerTwoEmail" autocomplete="email" class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500" aria-describedby="phone-optional">
-                @error('playerTwoEmail') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
+                <input wire:model="team.playerTwoEmail" type="text" name="playerTwoEmail" id="playerTwoEmail" autocomplete="email" class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500" aria-describedby="phone-optional">
+                @error('team.playerTwoEmail') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
               </div>
             </div>
             <div>
               <label for="playerTwoSize" class="block text-sm font-medium leading-6 text-gray-900">{{__('signup.size')}}</label>
-              <select id="playerTwoSize" name="playerTwoSize" wire:model="playerTwoSize" class="mt-2 block w-full rounded-md border-0 py-1.5 pl-3 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-indigo-600 sm:text-sm sm:leading-6">
+              <select id="playerTwoSize" name="playerTwoSize" wire:model="team.playerTwoSize" class="mt-2 block w-full rounded-md border-0 py-1.5 pl-3 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-indigo-600 sm:text-sm sm:leading-6">
                 <option >{{__('signup.selectsize')}}</option>
                 <option value="S">S</option>
                 <option value="M">M</option>
@@ -313,7 +313,7 @@
                 <option value="XL">XL</option>
                 <option value="XXL">XXL</option>
               </select>
-              @error('playerTwoSize') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
+              @error('team.playerTwoSize') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
             </div>
           </div>
     </div>

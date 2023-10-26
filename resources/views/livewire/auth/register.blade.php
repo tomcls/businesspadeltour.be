@@ -37,7 +37,7 @@
                 </defs>
               </svg>
             </div>
-            <h3 class="text-lg font-medium text-white">{{__('signup.title')}}</h3>
+            <h3 class="text-lg font-medium text-white">{{__('signup.title')}} total {{count($totalTeamsValidated)}}</h3>
             <p class="mt-6 max-w-3xl text-base text-indigo-50">{{__('signup.teaser')}}</p>
             <dl class="mt-8 space-y-6">
               <dt><span class="sr-only">Phone number</span></dt>
@@ -94,7 +94,7 @@
           </div>
           <!-- Contact form -->
           <div class="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
-            <form wire:submit.prevent="register" >
+            <form wire:submit.prevent="validateTeam" >
               <div>
                   @if($saved)
                   <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
@@ -152,34 +152,34 @@
                 <div >
                   <label for="companyName" class="block text-sm font-medium text-gray-900">{{__('signup.companyname')}}</label>
                   <div class="mt-1">
-                    <input wire:model="companyName" type="text" name="companyName" id="companyName" class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500">
-                    @error('companyName') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
+                    <input wire:model="company.name" type="text" name="companyName" id="companyName" class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                    @error('company.name') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
                   </div>
                 </div>
                 <div >
                   <label for="companyVAT" class="block text-sm font-medium text-gray-900">{{__('signup.companyvat')}}</label>
                   <div class="mt-1">
-                    <input wire:model="companyVAT" type="text" name="companyVAT" id="companyVAT" class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500">
-                    @error('companyVAT') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
+                    <input wire:model="company.vat" type="text" name="companyVAT" id="companyVAT" class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                    @error('company.vat') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
                   </div>
                 </div>   
                 <div >
                   <label for="address" class="block text-sm font-medium text-gray-900">{{__('signup.address')}}</label>
                   <div class="mt-1">
-                    <input wire:model="address" type="text" name="address" id="address" placeholder="{{__('signup.addressPlaceholder')}}" class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500">
-                    @error('address') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
+                    <input wire:model="company.address" type="text" name="address" id="address" placeholder="{{__('signup.addressPlaceholder')}}" class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                    @error('company.address') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
                   </div>
                 </div> 
                 <div >
                   <label for="emailManager" class="block text-sm font-medium text-gray-900">Email du responsable</label>
                   <div class="mt-1">
-                    <input wire:model="emailManager" type="text" name="emailManager" id="emailManager" placeholder="Email du responsable" class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500">
-                    @error('emailManager') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
+                    <input wire:model="company.email" type="text" name="emailManager" id="emailManager" placeholder="Vous allez recevoir l'email de confirmation" class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                    @error('company.email') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
                   </div>
                 </div>
                 <div>
                   <label for="totalTeam" class="block text-sm font-medium leading-6 text-gray-900">Nombre d'équipe</label>
-                  <select id="totalTeam" name="totalTeam" wire:model="totalTeam" class="mt-2 block w-full rounded-md border-0 py-1.5 pl-3 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                  <select id="totalTeam" name="totalTeam" wire:model="totalTeam" wire:change="onTotalTeamChanged($event.target.value)"   class="mt-2 block w-full rounded-md border-0 py-1.5 pl-3 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-indigo-600 sm:text-sm sm:leading-6">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
