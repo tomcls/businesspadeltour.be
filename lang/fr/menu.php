@@ -29,4 +29,5 @@ return [
     'news' => 'Actu',
     'signup' => 'Restez informé',
     'session1' => 'Photos Tours & Taxi',
+    'season2023' => 'Saison 2023',
 ];

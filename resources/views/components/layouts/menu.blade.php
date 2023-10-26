@@ -126,7 +126,7 @@
           <div x-data="{ isOpen: false }" class="relative" >
             <!-- Item active: "text-gray-900", Item inactive: "color-dark-blue" -->
             <button @click="isOpen = !isOpen" type="button" class="color-dark-blue group inline-flex items-center rounded-md text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2" aria-expanded="false">
-              <span>Photos</span>
+              <span>{{__('menu.season2023')}}</span>
               <!--
                 Heroicon name: mini/chevron-down
   
@@ -184,6 +184,7 @@
               </div>
             </div>
           </div>
+          <a href="{{url('/').'/'.App::currentLocale().'#agenda'}}" class="text-base font-medium color-dark-blue hover:text-gray-900">Planning 2024</a>
           <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.price')}}" class="text-base font-medium color-dark-blue hover:text-gray-900">{{__('menu.price')}}</a>
           <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.articles')}}" class="text-base font-medium color-dark-blue hover:text-gray-900">{{__('menu.news')}}</a>
         </nav>
@@ -351,6 +352,12 @@
                   <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z"></path>
                 </svg>
                 <span class="ml-3 text-base font-medium text-gray-900">{{__('menu.news')}}</span>
+              </a>
+              <a href="{{url('/').'/'.App::currentLocale().'#agenda'}}" x-on:click="isMobileNavOpen=false" class="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50">
+                <svg class="h-6 w-6 flex-shrink-0 color-light-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z"></path>
+                </svg>
+                <span class="ml-3 text-base font-medium text-gray-900">planning 2024</span>
               </a>
               <a href="{{url('/').'/'.App::currentLocale().'#sponsor'}}" x-on:click="isMobileNavOpen=false" class="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50">
                 <!-- Heroicon name: outline/arrow-path -->

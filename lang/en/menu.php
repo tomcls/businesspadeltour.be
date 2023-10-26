@@ -18,4 +18,5 @@ return [
      'news' => 'News',
      'signup' => 'Keep in touch',
      'session1' => 'Photos Tours & Taxi',
+     'season2023' => 'Season 2023',
 ];
