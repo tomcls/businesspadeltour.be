@@ -26,9 +26,12 @@ class Register extends Component
     protected function rules()
     {
         return [
+            'company.firstname' => 'required',
+            'company.lastname' => 'required',
             'company.name' => 'required',
             'company.vat' => 'required',
             'company.email' => 'required|email',
+            'company.phone' => 'required',
             'company.address' => 'required',
         ];
     }
@@ -299,15 +302,26 @@ class Register extends Component
             logger('onTeamValidated' . $this->totalTeam);
             // $this->saved = true;
             $company = new Company();
+            $company->firstname = $this->company['firstname'];
+            $company->lastname = $this->company['lastname'];
             $company->name = $this->company['name'];
             $company->vat = $this->company['vat'];
             $company->email = $this->company['email'];
             $company->address = $this->company['address'];
+            $company->phone = $this->company['phone'];
             try {
                 $company->save();
             } catch (\Throwable $th) {
                 $company = Company::whereEmail($this->company['email'])->first();
-            }
+                $company->firstname = $this->company['firstname'];
+                $company->lastname = $this->company['lastname'];
+                $company->name = $this->company['name'];
+                $company->vat = $this->company['vat'];
+                $company->email = $this->company['email'];
+                $company->address = $this->company['address'];
+                $company->phone = $this->company['phone'];
+                $company->update();
+            }   
             if($company) {
 
                 foreach ($this->totalTeamsValidated as $key => $value) {
@@ -346,6 +360,91 @@ class Register extends Component
                     $team->save();
                     $this->saved = true;
                 }
+                $mailchimp = new \MailchimpTransactional\ApiClient();
+                $mailchimp->setApiKey(env('MAILCHIMP_APIKEY'));
+                // player one
+                $template_content = array(
+                    array(
+                        'name' => 'companyFirstname',
+                        'content' => $company->firstname
+                    ),
+                    array(
+                        'name' => 'companyLastname',
+                        'content' => $company->lastname
+                    ),
+                    array(
+                        'name' => 'companyName',
+                        'content' => $company->name
+                    ),
+                    array(
+                        'name' => 'companyVAT',
+                        'content' => $company->vat
+                    ),
+                    array(
+                        'name' => 'companyEmail',
+                        'content' => $company->email
+                    ),
+                    array(
+                        'name' => 'companyPhone',
+                        'content' => $company->phone
+                    ),
+                    array(
+                        'name' => 'CompanyAddress',
+                        'content' => $company->address
+                    ),
+                    array(
+                        'name' => 'totalTeams',
+                        'content' => $this->totalTeam
+                    ));
+                $to = [];
+                array_push($to,[
+                    "email" =>  'info@businesspadeltour.be',
+                    "type" => "to"
+                ]);
+                $message = [
+                    "from_email" => "info@businesspadeltour.be",
+                    'from_name'  => 'Business padel tour',
+                    "subject" => "BusinessPadelTour: Nouvelle inscription équipe",
+                    "to" => $to,
+                    "headers" => ["Reply-To" => "info@businesspadeltour.be"],
+                    'global_merge_vars' => $template_content
+                ];
+               // Log::alert('Player 1 email sent '.App::currentLocale());
+                $response = $mailchimp->messages->sendTemplate([
+                    "template_name" => "bpt_signup_admin",
+                    "template_content" => $template_content,
+                    "message" => $message,
+                ]);
+
+
+                $template_content = array(
+                    array(
+                        'name' => 'firstname',
+                        'content' => $company->firstname
+                    ),
+                    array(
+                        'name' => 'lastname',
+                        'content' => $company->lastname
+                    ));
+                $to = [];
+                array_push($to,[
+                    "email" =>  'info@businesspadeltour.be',
+                    "type" => "to"
+                ]);
+                $message = [
+                    "from_email" => "info@businesspadeltour.be",
+                    'from_name'  => 'Business padel tour',
+                    "subject" => "BusinessPadelTour: Nouvelle inscription équipe",
+                    "to" => $to,
+                    "headers" => ["Reply-To" => "info@businesspadeltour.be"],
+                    'global_merge_vars' => $template_content
+                ];
+               // Log::alert('Player 1 email sent '.App::currentLocale());
+                $response = $mailchimp->messages->sendTemplate([
+                    "template_name" => "bpt_signup_".App::currentLocale(),
+                    "template_content" => $template_content,
+                    "message" => $message,
+                ]);
             } else {
                 logger('no company');
             }

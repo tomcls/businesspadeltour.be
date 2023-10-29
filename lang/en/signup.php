@@ -27,4 +27,8 @@ return [
     'fun'=> 'We are beginners and we play for fun',
     'expert'=> 'We regularly play Padel',
     'pro'=> 'We expect to go Pro in the near future',
+    'phoneMgr'=> 'Phone of the manager',
+    'mailMgr'=> 'Email of the manager',
+    'lastnameMgr'=> 'Lastname du responsable',
+    'firstnameMgr'=> 'Firstname du responsable',
 ];

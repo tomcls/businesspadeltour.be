@@ -150,6 +150,20 @@
               <div class="grid grid-cols-1 gap-y-4 sm:grid-cols-2 sm:gap-x-8">
 
                 <div >
+                  <label for="companyFirstname" class="block text-sm font-medium text-gray-900">{{__('signup.firstnameMgr')}}</label>
+                  <div class="mt-1">
+                    <input wire:model="company.firstname" type="text" name="companyFirstname" id="companyFirstname" class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                    @error('company.firstname') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
+                  </div>
+                </div>
+                <div >
+                  <label for="companyLastname" class="block text-sm font-medium text-gray-900">{{__('signup.lastnameMgr')}}</label>
+                  <div class="mt-1">
+                    <input wire:model="company.lastname" type="text" name="companyLastname" id="companyLastname" class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                    @error('company.lastname') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
+                  </div>
+                </div>   
+                <div >
                   <label for="companyName" class="block text-sm font-medium text-gray-900">{{__('signup.companyname')}}</label>
                   <div class="mt-1">
                     <input wire:model="company.name" type="text" name="companyName" id="companyName" class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500">
@@ -171,10 +185,17 @@
                   </div>
                 </div> 
                 <div >
-                  <label for="emailManager" class="block text-sm font-medium text-gray-900">Email du responsable</label>
+                  <label for="emailManager" class="block text-sm font-medium text-gray-900">{{__('signup.mailMgr')}}</label>
                   <div class="mt-1">
                     <input wire:model="company.email" type="text" name="emailManager" id="emailManager" placeholder="Vous allez recevoir l'email de confirmation" class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500">
                     @error('company.email') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
+                  </div>
+                </div>
+                <div >
+                  <label for="phoneManager" class="block text-sm font-medium text-gray-900">{{__('signup.phoneMgr')}}</label>
+                  <div class="mt-1">
+                    <input wire:model="company.phone" type="text" name="phoneManager" id="phoneManager" placeholder="Vous allez recevoir l'email de confirmation" class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                    @error('company.phone') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
                   </div>
                 </div>
                 <div>
