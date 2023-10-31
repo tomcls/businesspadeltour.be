@@ -37,7 +37,7 @@
                 </defs>
               </svg>
             </div>
-            <h3 class="text-lg font-medium text-white">{{__('signup.title')}} total {{count($totalTeamsValidated)}}</h3>
+            <h3 class="text-lg font-medium text-white">{{__('signup.title')}} </h3>
             <p class="mt-6 max-w-3xl text-base text-indigo-50">{{__('signup.teaser')}}</p>
             <dl class="mt-8 space-y-6">
               <dt><span class="sr-only">Phone number</span></dt>
