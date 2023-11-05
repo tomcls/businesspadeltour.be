@@ -138,7 +138,7 @@ class CSVController extends Controller
             $result = $values->implode("\n");
             return response()->streamDownload(function () use($result){
                 echo $result ;
-            }, 'users.csv');
+            }, 'companies.csv');
         }
     }
 }
