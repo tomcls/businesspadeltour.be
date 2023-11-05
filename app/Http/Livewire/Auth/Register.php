@@ -3,16 +3,12 @@
 namespace App\Http\Livewire\Auth;
 
 use App\Models\Company;
-use App\Models\PlayerSession;
 use App\Models\Session;
 use App\Models\Team;
 use App\Models\User;
-use App\Models\UserSession;
-use Exception;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Hash;
 use Livewire\Component;
-use Illuminate\Http\Request;
 
 class Register extends Component
 {
