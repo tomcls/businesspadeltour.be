@@ -30,19 +30,19 @@ class CSVController extends Controller
             p2.size p2_size,
             p2.created_at p1_created_at,
             
-            player_sessions.company_id,
+            teams.company_id,
             sessions.name,
             sessions.address,
             sessions.startdate,
             sessions.club_name,
-            player_sessions.session_id,
-            player_sessions.category,
+            teams.session_id,
+            teams.category,
             companies.name
-            FROM `player_sessions`
-            LEFT JOIN users p1 ON player_sessions.player_one = p1.id
-            LEFT JOIN users p2 ON player_sessions.player_two = p2.id
-            LEFT JOIN sessions ON player_sessions.session_id = sessions.id
-            LEFT JOIN companies ON player_sessions.company_id = companies.id  
+            FROM `teams`
+            LEFT JOIN users p1 ON teams.player_one = p1.id
+            LEFT JOIN users p2 ON teams.player_two = p2.id
+            LEFT JOIN sessions ON teams.session_id = sessions.id
+            LEFT JOIN companies ON teams.company_id = companies.id  
             ');
             
             if (count($players) < 1) return;
