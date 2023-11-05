@@ -59,9 +59,10 @@
               <div class="lg:max-w-lg">
                 <h2 class="text-lg font-semibold leading-8 tracking-tight color-light-blue">{{__('home.summaryTitle')}}</h2>
                 <p class="mt-2 text-3xl font-bold tracking-tight text-gray-300 sm:text-4xl">{{__('home.summaryTitle2')}}</p>
-                <p class="mt-6 text-lg leading-8 text-white">{{__('home.summaryTeaser')}}</p>
+                <p class="mt-6 text-lg leading-8 text-white">{!!__('home.summaryTeaser')!!}</p>
+                <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}" class="mt-10 block w-full rounded-md bg-light-blue px-8 py-3 text-center text-md font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">{{__('home.priceImin')}}</a>
                 <dl class="mt-10 max-w-xl space-y-8 text-base leading-7 text-white lg:max-w-none">
-                  <div class="relative pl-9">
+                  {{-- <div class="relative pl-9">
                     <dt class="inline font-semibold text-gray-400">
                       <!-- Heroicon name: mini/cloud-arrow-up -->
                       <svg class="absolute top-1 left-1 h-6 w-6 color-light-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -92,7 +93,7 @@
                       {{__('home.summaryContentPrefix3')}}
                     </dt>
                     <dd class="inline">{{__('home.summaryContent3')}}</dd>
-                  </div>
+                  </div> --}}
                 </dl>
               </div>
             </div>

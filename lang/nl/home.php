@@ -17,7 +17,7 @@ return [
     'moreinfo' => 'Meer info',
     'summaryTitle' => 'De Business Padel Tour',
     'summaryTitle2' => 'Waarover gaat het?',
-    'summaryTeaser' => 'De Business Padel Tour is een padel-competitie tussen bedrijven die in 6 voorrondes wordt gespeeld. ',
+    'summaryTeaser' => "De Business Padel Tour, gelanceerd in 2023, is een padelcompetitie die openstaat voor alle bedrijven die actief zijn in België. <br>De competitie bestaat uit een reeks sessies op vrijdagmiddag in een aantal padelclubs in heel België. <br><br>In 2024 zullen 6 clubs gastheer zijn voor een onderdeel van de Business Padel Tour, met sessies in Luik, Brussel, Waterloo, Gent, Antwerpen en Nijvel, en de grote finale in Le Zoute. Dit jaar zijn er twee categorieën: Fun en Expert.<br><br><b> Het doel van de Business Padel Tour is drieledig: Sport + Plezier + Netwerken</b><br><br> 80 teams konden elkaar ontmoeten in 2023 en we hopen minstens 250 teams te verzamelen voor het seizoen 2024.",
     'summaryContentPrefix1' => 'Waar? ',
     'summaryContentPrefix2' => 'Uiteraard sluiten we elke sessie af met een drink',
     'summaryContentPrefix3' => 'Het doel',

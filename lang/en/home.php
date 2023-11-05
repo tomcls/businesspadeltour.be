@@ -17,7 +17,7 @@ return [
     'moreinfo' => 'More info',
     'summaryTitle' => 'The Business Padel Tour',
     'summaryTitle2' => 'What is it all about?',
-    'summaryTeaser' => 'The Business Padel Tour is an inter-company padel competition that takes place in Belgium in 5 stages',
+    'summaryTeaser' => "Launched in 2023, the Business Padel Tour is a Padel competition open to all companies operating in Belgium. The competition consists of several sessions held on Friday afternoons at various Padel clubs throughout Belgium. <br>In 2024, 6 clubs will host a stage of the Business Padel Tour, with sessions in Liège, Brussels, Waterloo, Ghent, Antwerp and Nivelles, and the grand finale at Le Zoute.<br><br> The tournament is mixed, open to all, and this year we're planning two categories: Fun and Expert. <br><br><b>The aim of the Business Padel Tour is threefold: Sport + Fun + Networking</b><br><br> 80 teams were able to meet in 2023, and we hope to gather at least 250 teams for the 2024 season.",
     'summaryContentPrefix1' => 'Where? ',
     'summaryContentPrefix2' => 'Each session is followed by a drink - apéro ',
     'summaryContentPrefix3' => 'The objective',
