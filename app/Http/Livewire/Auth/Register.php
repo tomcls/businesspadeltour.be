@@ -357,8 +357,12 @@ class Register extends Component
                     $team->session_id = $value['session'];
                     $team->category = $value['category'];
                     $team->company_id = $company->id;
-
-                    $team->save();
+                    try {
+                        $team->save();
+                    } catch (\Throwable $th) {
+                        //throw $th;
+                    }
+                    
                     $this->saved = true;
                 }
                 $mailchimp = new \MailchimpTransactional\ApiClient();
