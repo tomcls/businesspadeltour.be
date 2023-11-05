@@ -3,7 +3,10 @@
 return [
 
     "title" => "Inschrijving voor een sessie",
-    "teaser" => "Inschrijving is 250 Eur (excl. BTW) per team per sessie",
+    "teaser" => "Inschrijving is: ",
+    'teaser250' => '- 250 Eur excl. BTW per team per sessie',
+    'teaser215' => '- 215 Eur excl. BTW per team voor 5 sessies of meer',
+    'teaser195' => '- 195 Eur excl. BTW per team voor 10 sessies of meer',
     'playerone' => 'Eerste speler',
     "playertwo" => "Tweede speler",
     "firstname" => "Voornaam",
@@ -13,8 +16,8 @@ return [
     "companyvat" => "BTW-nummer",
     "select" => "Selecteer een sessie",
     "signup" => "Registreer",
-    "success" => "Inschrijving geslaagd",
-    "succesTeaser" => "U ontvangt een e-mail met meer details over uw sessie",
+    "success" => "Bedankt voor uw registratie",
+    "succesTeaser" => "We hebben je zojuist een bevestigingse-mail gestuurd.",
     "successTeaser2"=> "Houd contact... en welkom bij dit nieuwe avontuur",
     "signupCompleted"=> "Inschrijving voor de Business padel tour",
     "category"=> "Categorie",
@@ -31,4 +34,9 @@ return [
     'mailMgr'=> 'E-mail van de manager',
     'lastnameMgr'=> 'Naam van de manager',
     'firstnameMgr'=> 'Voornaam van de manager',
+    'numberOfTeams' =>'Aantal teams',
+    'funTeaser'=> " <b>De funcategorie</b> is bedoeld voor spelers waarvan de cumulatieve ranking niet hoger is dan P300. Bijvoorbeeld, twee P100's, één P100 en één P200, één niet-geklasseerde en één P300, twee niet-geklasseerde spelers kunnen meedoen aan de Fun-categorie.",
+    'expertTeaser'=> '<b>De Expert-categorie</b> staat open voor alle teams, maar teams met een cumulatieve ranking van meer dan 300 zijn verplicht om mee te doen aan de Expert-categorie.',
+    'levelTeaser' => 'In het belang van iedereen wordt spelers gevraagd om consistent te zijn in hun keuze van deelname in relatie tot hun niveau.',
+    'andGiveaccessTo'=>'En geeft je recht op'
 ];

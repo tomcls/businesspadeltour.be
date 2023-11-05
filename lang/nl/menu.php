@@ -19,4 +19,5 @@ return [
     'signup' => 'Blijf op de hoogte',
     'session1' => 'Photos Tours & Taxi',
     'season2023' => 'Seizoen 2023',
+    'rule' => 'Regels',
 ];

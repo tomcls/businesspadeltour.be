@@ -115,4 +115,30 @@ class CSVController extends Controller
             }, 'users.csv');
         }
     }
+    public function companies (Request $request) {
+        
+        if(isset($request['p']) && $request['p'] == 'afzefeazcvfvzfgzczeqfczyiklyuilguik') {
+
+            $players = DB::select('SELECT *
+            FROM `companies`  
+            ');
+            
+            if (count($players) < 1) return;
+
+            $titles = implode(',', array_keys((array) $players[0]));
+            
+            $values = collect($players)->map(function ($result) {
+                return implode(',', collect($result)->map(function ($thing) {
+                    return '"'.$thing.'"';
+                })->toArray());
+            });
+
+            $values->prepend($titles);
+            
+            $result = $values->implode("\n");
+            return response()->streamDownload(function () use($result){
+                echo $result ;
+            }, 'users.csv');
+        }
+    }
 }

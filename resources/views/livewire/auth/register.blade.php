@@ -3,7 +3,7 @@
       <div class="relative bg-white shadow-xl">
         <div class="grid grid-cols-1 lg:grid-cols-3">
           <!-- Contact information -->
-          <div class="relative overflow-hidden bg-dark-blue py-10 px-6 sm:px-10 xl:p-12">
+          <div class="relative overflow-hidden bg-dark-blue py-10 px-6 sm:px-10 xl:p-6">
             <div class="pointer-events-none absolute inset-0 sm:hidden" aria-hidden="true">
               <svg class="absolute inset-0 h-full w-full" width="343" height="388" viewBox="0 0 343 388" fill="none" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
                 <path d="M-99 461.107L608.107-246l707.103 707.107-707.103 707.103L-99 461.107z" fill="url(#linear1)" fill-opacity=".1" />
@@ -38,7 +38,21 @@
               </svg>
             </div>
             <h3 class="text-lg font-medium text-white">{{__('signup.title')}} </h3>
-            <p class="mt-6 max-w-3xl text-base text-indigo-50">{{__('signup.teaser')}}</p>
+            <p class="mt-6 max-w-3xl text-base text-indigo-50  pb-2">{{__('signup.teaser')}}</p>
+            <ul class="text-white text-sm">
+              <li>{{__('signup.teaser250')}}</li>
+              <li>{{__('signup.teaser215')}}</li>
+              <li>{{__('signup.teaser195')}}</li>
+            </ul>
+            <p class="mt-6 max-w-3xl text-base text-indigo-50 pb-2">{{__('signup.andGiveaccessTo')}}</p>
+            <ul class="text-white text-xs">
+              <li> - {{__('home.priceInclude1')}}</li>
+              <li> - {{__('home.priceInclude2')}}</li>
+              <li> - {{__('home.priceInclude3')}}</li>
+              <li> - {{__('home.priceInclude4')}}</li>
+              <li> - {{__('home.priceInclude5')}}</li>
+              <li> - {{__('home.priceInclude6')}}</li>
+            </ul>
             <dl class="mt-8 space-y-6">
               <dt><span class="sr-only">Phone number</span></dt>
               <dd class="flex text-base text-indigo-50">
@@ -199,7 +213,7 @@
                   </div>
                 </div>
                 <div>
-                  <label for="totalTeam" class="block text-sm font-medium leading-6 text-gray-900">Nombre d'équipe</label>
+                  <label for="totalTeam" class="block text-sm font-medium leading-6 text-gray-900">{{__('signup.numberOfTeams')}}</label>
                   <select id="totalTeam" name="totalTeam" wire:model="totalTeam" wire:change="onTotalTeamChanged($event.target.value)"   class="mt-2 block w-full rounded-md border-0 py-1.5 pl-3 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-indigo-600 sm:text-sm sm:leading-6">
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -220,7 +234,16 @@
                 @endfor
               </div>
               <div class="flex-1 w-full pt-3">
-                  <p class="text-red-700 text-sm">{{__('signup.customShirt')}}</p>
+                  <p class="text-red-700 text-xs">{{__('signup.customShirt')}}</p>
+              </div>
+              <div class="flex-1 w-full pt-3">
+                <p class="text-slate-700 text-sm">{!!__('signup.funTeaser')!!}</p>
+              </div>
+              <div class="flex-1 w-full pt-3">
+                <p class="text-slate-700 text-sm">{!!__('signup.expertTeaser')!!}</p>
+              </div>
+              <div class="flex-1 w-full pt-3">
+                <p class="text-slate-700 text-sm">{!!__('signup.levelTeaser')!!}</p>
               </div>
               <div class="sm:col-span-2 sm:flex sm:justify-end pt-2">
                 <button type="submit" wire:type="submit" class="mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-light-blue px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-dark-blue focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 sm:w-auto">{{__('signup.signup')}}</button>

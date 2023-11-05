@@ -162,7 +162,7 @@
                       <svg class="absolute top-1 left-1 h-6 w-6 color-light-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                       </svg>
-                      {{__('home.clubContentPrefix1')}}:
+                      <a href="https://planetpadel.be/" class="color-light-blue">{{__('home.clubContentPrefix1')}}:</a>
                     </dt>
                     <dd class="inline">{{__('home.clubContent1')}}</dd>
                   </div>
@@ -172,7 +172,7 @@
                       <svg class="absolute top-1 left-1 h-6 w-6 color-light-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                       </svg>
-                      {{__('home.clubContentPrefix2')}}:
+                      <a href="https://www.tourtaxispadel.brussels/" class="color-light-blue"> {{__('home.clubContentPrefix2')}}:</a>
                     </dt>
                     <dd class="inline">{{__('home.clubContent2')}}</dd>
                   </div>
@@ -184,7 +184,7 @@
                       <svg class="absolute top-1 left-1 h-6 w-6 color-light-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                       </svg>
-                      {{__('home.clubContentPrefix3')}}:
+                      <a href="https://www.tereiken.be/" class="color-light-blue">{{__('home.clubContentPrefix3')}}:</a>
                     </dt>
                     <dd class="inline">{{__('home.clubContent3')}}</dd>
                   </div>
@@ -195,7 +195,7 @@
                       <svg class="absolute top-1 left-1 h-6 w-6 color-light-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                       </svg>
-                      {{__('home.clubContentPrefix4')}}:
+                      <a href="https://teropadelclub.be/fr" class="color-light-blue">{{__('home.clubContentPrefix4')}}:</a>
                     </dt>
                     <dd class="inline">{{__('home.clubContent4')}}</dd>
                   </div>
@@ -205,7 +205,7 @@
                       <svg class="absolute top-1 left-1 h-6 w-6 color-light-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                       </svg>
-                      {{__('home.clubContentPrefix5')}}:
+                      <a href="https://garrincha.be/" class="color-light-blue">{{__('home.clubContentPrefix5')}}:</a>
                     </dt>
                     <dd class="inline">{{__('home.clubContent5')}}</dd>
                   </div>
@@ -217,7 +217,7 @@
                       <svg class="absolute top-1 left-1 h-6 w-6 color-light-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                       </svg>
-                      {{__('home.clubContentPrefix6')}}:
+                      <a href="https://elevenpadel.be/" class="color-light-blue"> {{__('home.clubContentPrefix6')}}:</a>
                     </dt>
                     <dd class="inline">{{__('home.clubContent6')}}</dd>
                   </div>
@@ -227,7 +227,7 @@
                       <svg class="absolute top-1 left-1 h-6 w-6 color-light-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                       </svg>
-                      {{__('home.clubContentPrefix7')}}:
+                      <a href="https://www.royalzoutetennisclub.be/" class="color-light-blue">  {{__('home.clubContentPrefix7')}}:</a>
                     </dt>
                     <dd class="inline">{{__('home.clubContent7')}}</dd>
                   </div>
@@ -256,7 +256,7 @@
                       <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                     </svg>
                   </div>
-                  <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.sessions')}}" class=" color-dark-blue hover:text-gray-900"> {{__('home.clubContentPrefix1')}}   </a>
+                  <a href="https://planetpadel.be/" class="color-light-blue"> {{__('home.clubContentPrefix1')}}   </a>
                 </dt>
                 <dd class="mt-0 text-base leading-7 text-gray-600">
                   <b>{{__('home.when')}}: </b> {{__('home.agendaWhen1')}}<br/>
@@ -274,7 +274,7 @@
                       <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                     </svg>
                   </div>
-                  {{__('home.clubContentPrefix2')}} 
+                  <a href="https://www.tourtaxispadel.brussels/" class="color-light-blue"> {{__('home.clubContentPrefix2')}} </a>
                 </dt>
                 
                 <dd class="mt-0 text-base leading-7 text-gray-600">
@@ -291,7 +291,7 @@
                       <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                     </svg>
                   </div>
-                  {{__('home.clubContentPrefix3')}} 
+                  <a href="https://www.tereiken.be/" class="color-light-blue"> {{__('home.clubContentPrefix3')}} </a>
                 </dt>
                 
                 <dd class="mt-0 text-base leading-7 text-gray-600">
@@ -307,7 +307,7 @@
                       <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                     </svg>
                   </div>
-                  {{__('home.clubContentPrefix4')}} 
+                  <a href="https://teropadelclub.be/fr" class="color-light-blue"> {{__('home.clubContentPrefix4')}} </a>
                 </dt>
                 
                 <dd class="mt-0 text-base leading-7 text-gray-600">
@@ -323,7 +323,7 @@
                       <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                     </svg>
                   </div>
-                  {{__('home.clubContentPrefix5')}} 
+                  <a href="https://garrincha.be/" class="color-light-blue"> {{__('home.clubContentPrefix5')}} </a>
                 </dt>
                 
                 <dd class="mt-0 text-base leading-7 text-gray-600">
@@ -339,7 +339,7 @@
                       <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                     </svg>
                   </div>
-                  {{__('home.clubContentPrefix6')}} 
+                  <a href="https://elevenpadel.be/" class="color-light-blue">{{__('home.clubContentPrefix6')}} </a>
                 </dt>
                 
                 <dd class="mt-0 text-base leading-7 text-gray-600">
@@ -357,7 +357,7 @@
                       <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 01-.982-3.172M9.497 14.25a7.454 7.454 0 00.981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 007.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 002.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 012.916.52 6.003 6.003 0 01-5.395 4.972m0 0a6.726 6.726 0 01-2.749 1.35m0 0a6.772 6.772 0 01-3.044 0"></path>
                     </svg>
                   </div>
-                  {{__('home.thefinale')}}
+                  <a href="https://www.royalzoutetennisclub.be/" class="color-light-blue"> {{__('home.thefinale')}}</a>
                 </dt>
                 
                 <dd class="mt-0 text-base leading-7 text-gray-600">
@@ -377,10 +377,15 @@
             <p class="mt-6 text-lg leading-8 text-gray-300">{{__('home.priceTeaser')}}</p>
             <p class="mt-6 text-lg leading-8 text-gray-300 "><b>{{__('home.firstIn')}}</b></p>
           </div>
-          <div class="mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
+          <div class="mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none mb-10">
             <div class="p-8 sm:p-10 lg:flex-auto">
               <h3 class="text-2xl font-bold tracking-tight text-gray-300">{{__('home.priceTitle2')}}</h3>
-              <p class="mt-6 text-base leading-7 text-gray-100">{!!__('home.priceTeaser2')!!}</p>
+              <p class="mt-6 max-w-3xl text-base text-indigo-50 pb-2">{{__('signup.teaser')}}</p>
+              <ul class="text-white text-normal">
+                <li>{{__('signup.teaser250')}}</li>
+                <li>{{__('signup.teaser215')}}</li>
+                <li>{{__('signup.teaser195')}}</li>
+              </ul>
               <div class="mt-10 flex items-center gap-x-4">
                 <h4 class="flex-none text-sm font-semibold leading-6 color-light-blue">{{__('home.priceInclude')}}</h4>
                 <div class="h-px flex-auto bg-gray-100"></div>
@@ -393,7 +398,7 @@
                   </svg>
                   {{__('home.priceInclude1')}}
                 </li>
-
+    
                 <li class="flex gap-x-3">
                   <!-- Heroicon name: mini/check -->
                   <svg class="h-6 w-5 flex-none color-light-blue" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -401,7 +406,7 @@
                   </svg>
                   {{__('home.priceInclude2')}}
                 </li>
-
+    
                 <li class="flex gap-x-3">
                   <!-- Heroicon name: mini/check -->
                   <svg class="h-6 w-5 flex-none color-light-blue" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -423,18 +428,21 @@
                   </svg>
                   {{__('home.priceInclude5')}}
                 </li>
+                <li class="flex gap-x-3">
+                  <!-- Heroicon name: mini/check -->
+                  <svg class="h-6 w-5 flex-none color-light-blue" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+                  </svg>
+                  {{__('home.priceInclude6')}}
+                </li>
               </ul>
             </div>
-            <div class="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">
-              <div class="rounded-2xl bg-gray-50 py-10 text-center ring-1 ring-inset ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:py-16">
+            <div class="mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-xs lg:flex-shrink-0">
+              <div class="rounded-2xl  py-10 text-center ring-1 ring-inset ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:pt-40">
                 <div class="mx-auto max-w-xs px-8">
-                  <p class="text-base font-semibold text-gray-600">{{__('home.pricePerSession')}}</p>
-                  <p class="mt-6 flex items-baseline justify-center gap-x-2">
-                    <span class="text-5xl font-bold tracking-tight text-gray-900">€250</span>
-                    <span class="text-sm font-semibold leading-6 tracking-wide text-gray-600">EUR</span>
-                  </p>
-                  <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}" class="mt-10 block w-full rounded-md bg-light-blue px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">{{__('home.priceImin')}}</a>
-                  <p class="mt-6 text-xs leading-5 text-gray-600">{{__('home.priceInvoice')}}</p>
+                  
+                  <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}" class="mt-10 block w-full rounded-md bg-light-blue px-8 py-3 text-center text-md font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">{{__('home.priceImin')}}</a>
+                  
                 </div>
               </div>
             </div>
@@ -468,6 +476,9 @@
           </div>
           <div class="flex flex-1 mt-10">
             <ul role="list" class="sm:grid sm:grid-cols-6   sm:gap-4 sm:items-center justify-center  sm:border-t sm:border-gray-200 sm:py-5   sm:space-x-12">
+              <li>
+              <a href="https://wilmeyer.com/" target="_blank"  ><img class="mx-auto w-50 items-center justify-center mt-7" src="{{url('/').'/images/sponsors/wilmeyer.png'}}" alt=""></a>
+              </li>
               <li>
                 <a href="https://tour-taxis.com/fr/event/world-padel-tour-2023-gare-maritime/" target="_blank"  ><img class="mx-auto w-50 items-center justify-center mt-7" src="{{url('/').'/images/clubs/padelclub.png'}}" alt=""></a>
               </li>

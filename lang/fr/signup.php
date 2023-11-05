@@ -3,7 +3,10 @@
 return [
 
     'title' => 'Inscription pour une session',
-    'teaser' => 'L’inscription revient à 250 Eur (HTVA 302,5 eur TTC) par équipe par session',
+    'teaser' => 'L’inscription revient à',
+    'teaser250' => '- 250 Eur HTVA par équipe par session',
+    'teaser215' => '- 215 Eur HTVA par équipe à partir de 5 sessions',
+    'teaser195' => '- 195 Eur HTVA par équipe à partir de 10 sessions',
     'playerone' => 'Premier joueur',
     'playertwo' => 'Second joueur',
     'firstname' => 'Prénom',
@@ -13,8 +16,8 @@ return [
     'companyvat' => 'Numéro de TVA',
     'select' => 'Sélectionnez une session',
     'signup' => 's\'enregister',
-    'success'=>'Enregistrement réussi',
-    'successTeaser'=>'Vous recevrez un e-mail avec plus de détails sur votre session.',
+    'success'=>'Merci pour votre inscription',
+    'successTeaser'=>'Nous venons de vous faire parvenir un mail de confirmation.',
     'successTeaser2'=>'Keep in touch... et bienvenue dans cette nouvelle aventure',
     "signupCompleted"=> "Inscription au Business padel tour",
     "category"=> "Catégorie",
@@ -31,4 +34,9 @@ return [
     'mailMgr'=> 'Email du responsable',
     'lastnameMgr'=> 'Nom du responsable',
     'firstnameMgr'=> 'Prénom du responsable',
+    'numberOfTeams' => 'Nombre d\'équipe(s)',
+    'funTeaser'=> ' <b>La catégorie Fun</b> est prévue pour des joueurs donc le classement cumulé ne dépasse pas P300. Par exemple, deux P100, un P100 et un P200, un non classé et un P300, deux non-classés peuvent s’inscrire en Fun.',
+    'expertTeaser'=> '<b>La catégorie Expert</b> est ouverte à toutes les équipes, mais les équipes dont le classement cumulé dépasse 300 sont obligées de s’inscrire dans la catégorie Expert',
+    'levelTeaser' => ' Dans l’intérêt de tous, il est demandé aux joueurs de faire preuve de cohérence dans le choix de leur inscription par rapport à leur niveau',
+    'andGiveaccessTo'=>'Et donne droit à'
 ];
