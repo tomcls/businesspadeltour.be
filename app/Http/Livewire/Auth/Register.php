@@ -127,7 +127,7 @@ class Register extends Component
 
                     $content .="<br><b>Equipe ".$key."</b><br/>";
                     $content .="<b>- Joueur 1:</b> ".$value['playerOneFirstname']."  ".$value['playerOneFirstname']."<br/>";
-                    $content .="<b>- Joueur 2:</b> ".$value['playerTwoFirstname']."  ".$value['playerOneFirstname']."<br/>";
+                    $content .="<b>- Joueur 2:</b> ".$value['playerTwoLastname']."  ".$value['playerOneLastname']."<br/>";
                     $content .="<b>Session:</b><br/>";
                     $session = Session::whereId($value['session'])->first();
                     logger('adzefzfez');
@@ -205,7 +205,7 @@ class Register extends Component
                 } else {
                     $price = 250 * $this->totalTeam;
                 }
-                
+
                 $template_content = array(
                     array(
                         'name' => 'firstname',
