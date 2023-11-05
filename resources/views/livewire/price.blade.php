@@ -9,7 +9,7 @@
         <div class="p-8 sm:p-10 lg:flex-auto">
           <h3 class="text-2xl font-bold tracking-tight text-gray-300">{{__('home.priceTitle2')}}</h3>
           <p class="mt-6 max-w-3xl text-base text-indigo-50 pb-2">{{__('signup.teaser')}}</p>
-          <ul class="text-white text-normal">
+          <ul class="text-white text-lg">
             <li>{{__('signup.teaser250')}}</li>
             <li>{{__('signup.teaser215')}}</li>
             <li>{{__('signup.teaser195')}}</li>
@@ -88,6 +88,9 @@
             </li>
             <li>
               <a href="https://www.newb19.be/home"  target="_blank" > <img class="mx-auto w-50 " src="{{url('/').'/images/sponsors/b19.png'}}" alt=""></a>
+            </li>
+            <li>
+              <a href="https://wilmeyer.com/"  target="_blank" > <img class="mx-auto w-50 items-center justify-center mt-7" src="{{url('/').'/images/sponsors/wilmeyer.png'}}" alt=""></a>
             </li>
             <!-- More people... -->
           </ul>

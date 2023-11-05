@@ -38,5 +38,6 @@ return [
     'funTeaser'=> ' <b>The fun category</b> is intended for players whose cumulative ranking does not exceed P300. For example, two P100s, one P100 and one P200, one non-ranked and one P300, two non-ranked players can enter the Fun category.',
     'expertTeaser'=> '<b>La catégorie Expert</b> is open to all teams, but teams whose cumulative ranking exceeds 300 are obliged to register in the Expert category.',
     'levelTeaser' => " In everyone's interest, players are asked to be consistent in their choice of entry level.",
-    'andGiveaccessTo'=>'And entitles you to'
+    'andGiveaccessTo'=>'And entitles you to',
+    'mailConf' => 'You will receive a confirmation email'
 ];

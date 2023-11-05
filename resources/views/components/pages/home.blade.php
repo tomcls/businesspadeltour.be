@@ -96,7 +96,7 @@
                 </dl>
               </div>
             </div>
-            <img src="{{url('/').'/images/section/session1_131.jpg'}}" alt="Product screenshot" class="hidden sm:block  w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[50rem] md:-ml-4 lg:-ml-0" width="2432" height="1442">
+            <img src="{{url('/').'/images/sessions/session1_416.jpg'}}" alt="Product screenshot" class="hidden sm:block  w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[50rem] md:-ml-4 lg:-ml-0" width="2432" height="1442">
           </div>
         </div>
       </div>
@@ -256,7 +256,7 @@
                       <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                     </svg>
                   </div>
-                  <a href="https://planetpadel.be/" class="color-light-blue"> {{__('home.clubContentPrefix1')}}   </a>
+                  <a href="https://planetpadel.be/" class="color-light-blue"> {{__('home.clubContentPrefix1')}} ( Planet Padel) </a>
                 </dt>
                 <dd class="mt-0 text-base leading-7 text-gray-600">
                   <b>{{__('home.when')}}: </b> {{__('home.agendaWhen1')}}<br/>
@@ -274,7 +274,7 @@
                       <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                     </svg>
                   </div>
-                  <a href="https://www.tourtaxispadel.brussels/" class="color-light-blue"> {{__('home.clubContentPrefix2')}} </a>
+                  <a href="https://www.tourtaxispadel.brussels/" class="color-light-blue"> {{__('home.clubContentPrefix2')}} (Tour & Taxis Padel Club) </a>
                 </dt>
                 
                 <dd class="mt-0 text-base leading-7 text-gray-600">
@@ -291,7 +291,7 @@
                       <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                     </svg>
                   </div>
-                  <a href="https://www.tereiken.be/" class="color-light-blue"> {{__('home.clubContentPrefix3')}} </a>
+                  <a href="https://www.tereiken.be/" class="color-light-blue"> {{__('home.clubContentPrefix3')}} (Ter Eiken Padel)</a>
                 </dt>
                 
                 <dd class="mt-0 text-base leading-7 text-gray-600">
@@ -307,7 +307,7 @@
                       <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                     </svg>
                   </div>
-                  <a href="https://teropadelclub.be/fr" class="color-light-blue"> {{__('home.clubContentPrefix4')}} </a>
+                  <a href="https://teropadelclub.be/fr" class="color-light-blue"> {{__('home.clubContentPrefix4')}} (Tero)</a>
                 </dt>
                 
                 <dd class="mt-0 text-base leading-7 text-gray-600">
@@ -323,7 +323,7 @@
                       <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                     </svg>
                   </div>
-                  <a href="https://garrincha.be/" class="color-light-blue"> {{__('home.clubContentPrefix5')}} </a>
+                  <a href="https://garrincha.be/" class="color-light-blue"> {{__('home.clubContentPrefix5')}} (Garrincha)</a>
                 </dt>
                 
                 <dd class="mt-0 text-base leading-7 text-gray-600">
@@ -339,7 +339,7 @@
                       <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                     </svg>
                   </div>
-                  <a href="https://elevenpadel.be/" class="color-light-blue">{{__('home.clubContentPrefix6')}} </a>
+                  <a href="https://elevenpadel.be/" class="color-light-blue">{{__('home.clubContentPrefix6')}} (Eleven Padel)</a>
                 </dt>
                 
                 <dd class="mt-0 text-base leading-7 text-gray-600">
@@ -357,7 +357,7 @@
                       <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 01-.982-3.172M9.497 14.25a7.454 7.454 0 00.981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 007.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 002.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 012.916.52 6.003 6.003 0 01-5.395 4.972m0 0a6.726 6.726 0 01-2.749 1.35m0 0a6.772 6.772 0 01-3.044 0"></path>
                     </svg>
                   </div>
-                  <a href="https://www.royalzoutetennisclub.be/" class="color-light-blue"> {{__('home.thefinale')}}</a>
+                  <a href="https://www.royalzoutetennisclub.be/" class="color-light-blue"> {{__('home.thefinale')}} (Royal Zoute Tennis & Padel Club)</a>
                 </dt>
                 
                 <dd class="mt-0 text-base leading-7 text-gray-600">
@@ -463,6 +463,9 @@
               <li>
                 <a href="https://www.newb19.be/home"  target="_blank" > <img class="mx-auto w-50 " src="{{url('/').'/images/sponsors/b19.png'}}" alt=""></a>
               </li>
+              <li>
+                <a href="https://wilmeyer.com/"  target="_blank" > <img class="mx-auto w-50 items-center justify-center mt-7" src="{{url('/').'/images/sponsors/wilmeyer.png'}}" alt=""></a>
+              </li>
               <!-- More people... -->
             </ul>
           </div>
@@ -476,9 +479,6 @@
           </div>
           <div class="flex flex-1 mt-10">
             <ul role="list" class="sm:grid sm:grid-cols-6   sm:gap-4 sm:items-center justify-center  sm:border-t sm:border-gray-200 sm:py-5   sm:space-x-12">
-              <li>
-              <a href="https://wilmeyer.com/" target="_blank"  ><img class="mx-auto w-50 items-center justify-center mt-7" src="{{url('/').'/images/sponsors/wilmeyer.png'}}" alt=""></a>
-              </li>
               <li>
                 <a href="https://tour-taxis.com/fr/event/world-padel-tour-2023-gare-maritime/" target="_blank"  ><img class="mx-auto w-50 items-center justify-center mt-7" src="{{url('/').'/images/clubs/padelclub.png'}}" alt=""></a>
               </li>

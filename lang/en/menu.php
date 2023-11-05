@@ -3,7 +3,7 @@
 return [
 
     'program' => 'Program',
-     'programTeaser' => '3 sessions of 36 teams every Friday afternoon',
+     'programTeaser' => '6 padel sessions on 6 Friday afternoon',
      'club' => 'Clubs',
      'clubTeaser' => '3 clubs spread throughout Belgium',
      'agenda' => 'Program',

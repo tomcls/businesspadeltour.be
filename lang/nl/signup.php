@@ -38,5 +38,6 @@ return [
     'funTeaser'=> " <b>De funcategorie</b> is bedoeld voor spelers waarvan de cumulatieve ranking niet hoger is dan P300. Bijvoorbeeld, twee P100's, één P100 en één P200, één niet-geklasseerde en één P300, twee niet-geklasseerde spelers kunnen meedoen aan de Fun-categorie.",
     'expertTeaser'=> '<b>De Expert-categorie</b> staat open voor alle teams, maar teams met een cumulatieve ranking van meer dan 300 zijn verplicht om mee te doen aan de Expert-categorie.',
     'levelTeaser' => 'In het belang van iedereen wordt spelers gevraagd om consistent te zijn in hun keuze van deelname in relatie tot hun niveau.',
-    'andGiveaccessTo'=>'En geeft je recht op'
+    'andGiveaccessTo'=>'En geeft je recht op',
+    'mailConf' => 'U ontvangt een bevestigingsmail'
 ];

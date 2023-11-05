@@ -79,15 +79,13 @@
                 Highlighted: "text-white bg-dark-blue", Not Highlighted: "text-gray-900"
               -->
               @foreach ($sessions as $s)
-              <li wire:click="setSession({{$s->id}})"  x-on:click.prevent="session = '{{$s->name}}';toggle()" class="text-gray-900 cursor-default select-none p-4 text-sm" id="listbox-option-0" role="option">
-                <div class="flex flex-col">
-                  <div class="flex justify-between"  >
+              <li wire:click="setSession({{$s->id}})"  x-on:click.prevent="session = '{{$s->city}}: {{$s->startdate}}';toggle()" class="cursor-pointer hover:bg-gray-200 text-gray-900  select-none p-4 text-sm" id="listbox-option-0" role="option">
+                <div class="flex flex-col ">
+                  <div class="flex justify-between "  >
                     <!-- Selected: "font-semibold", Not Selected: "font-normal" -->
-                    <p class="font-normal text-xs">{{$s->city}}: {{$s->startdate}}</p>
+                    <p class="font-normal text-xs ">{{$s->city}}: {{$s->startdate}}</p>
                     
                   </div>
-                  <!-- Highlighted: "text-indigo-200", Not Highlighted: "text-gray-500" -->
-                  <p class="text-gray-500 text-xs">{{$s->club_name}} {{$s->address}}</p>
                 </div>
               </li>
               @endforeach
@@ -178,11 +176,11 @@
        
                Highlighted: "text-white bg-dark-blue", Not Highlighted: "text-gray-900"
              -->
-             <li wire:click="setCategory('fun')"  x-on:click.prevent="category = '{{__('signup.fun')}}';toggle()" class="text-gray-900 cursor-default select-none p-4 text-sm" id="listbox-option-0" role="option">
+             <li wire:click="setCategory('fun')"  x-on:click.prevent="category = 'Fun';toggle()" class="text-gray-900 cursor-default select-none p-4 text-sm" id="listbox-option-0" role="option">
                <div class="flex flex-col">
                  <div class="flex justify-between"  >
                    <!-- Selected: "font-semibold", Not Selected: "font-normal" -->
-                   <p class="font-normal text-xs">{{__('signup.fun')}}</p>
+                   <p class="font-normal text-xs"><b>FUN: </b>{{__('signup.fun')}}</p>
                    <!--
                      Checkmark, only display for selected option.
        
@@ -195,11 +193,11 @@
                  </div>
                </div>
              </li>
-             <li wire:click="setCategory('expert')"  x-on:click.prevent="category = '{{__('signup.expert')}}';toggle()" class="text-gray-900 cursor-default select-none p-4 text-sm" id="listbox-option-0" role="option">
+             <li wire:click="setCategory('expert')"  x-on:click.prevent="category = 'Expert';toggle()" class="text-gray-900 cursor-default select-none p-4 text-sm" id="listbox-option-0" role="option">
                <div class="flex flex-col">
                  <div class="flex justify-between"  >
                    <!-- Selected: "font-semibold", Not Selected: "font-normal" -->
-                   <p class="font-normal text-xs">{{__('signup.expert')}}</p>
+                   <p class="font-normal text-xs"><b>Expert: </b>{{__('signup.expert')}}</p>
                    <!--
                      Checkmark, only display for selected option.
        

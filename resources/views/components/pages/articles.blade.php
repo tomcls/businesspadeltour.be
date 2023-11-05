@@ -58,6 +58,9 @@
                   <li>
                     <a href="https://www.newb19.be/home"  target="_blank" > <img class="mx-auto w-50 " src="{{url('/').'/images/sponsors/b19.png'}}" alt=""></a>
                   </li>
+                  <li>
+                    <a href="https://wilmeyer.com/"  target="_blank" > <img class="mx-auto w-50 items-center justify-center mt-7" src="{{url('/').'/images/sponsors/wilmeyer.png'}}" alt=""></a>
+                  </li>
                   <!-- More people... -->
                 </ul>
               </div>

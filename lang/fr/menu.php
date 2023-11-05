@@ -14,10 +14,10 @@ return [
     */
 
     'program' => 'Programme',
-    'programTeaser' => '3 sessions de 36 équipes tous les vendredi apres-midi',
+    'programTeaser' => '6 sessions de padel sur 6 vendredi apres-midi',
     'club' => 'Les clubs',
-    'clubTeaser' => '3 clubs répartis dans toute la Belgique',
-    'agenda' => 'Programme',
+    'clubTeaser' => '6 clubs répartis dans toute la Belgique',
+    'agenda' => 'Le programme',
     'agendaTeaser' => 'Quelles sont les dates et lieux des différentes sessions ?',
     'sponsors' => 'Les partenaires',
     'sponsorsTeaser' => 'Immovlan et B19',

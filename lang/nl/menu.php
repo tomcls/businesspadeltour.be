@@ -3,9 +3,9 @@
 return [
 
     'program' => 'Programma',
-    'programTeaser' => '3 sessies van 36 teams elke vrijdagmiddag',
+    'programTeaser' => '6 padel sessies voor 6 vrijdagmiddag',
     'club' => 'Clubs',
-    'clubTeaser' => '3 clubs verspreid over heel België',
+    'clubTeaser' => '6 clubs verspreid over heel België',
     'agenda' => 'Agenda',
     'agendaTeaser' => 'Waar en wanneer vinden de wedstrijden plaats?',
     'sponsors' => 'Partners',
