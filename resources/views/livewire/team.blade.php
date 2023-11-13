@@ -79,11 +79,11 @@
                 Highlighted: "text-white bg-dark-blue", Not Highlighted: "text-gray-900"
               -->
               @foreach ($sessions as $s)
-              <li wire:click="setSession({{$s->id}})"  x-on:click.prevent="session = '{{$s->city}}: {{$s->startdate}}';toggle()" class="cursor-pointer hover:bg-gray-200 text-gray-900  select-none p-4 text-sm" id="listbox-option-0" role="option">
+              <li wire:click="setSession({{$s->id}})"  x-on:click.prevent="session = '{{$s->city}}: {{\Carbon\Carbon::parse($s->startdate)->format('d-m-Y')}}';toggle()" class="cursor-pointer hover:bg-gray-200 text-gray-900  select-none p-4 text-sm" id="listbox-option-0" role="option">
                 <div class="flex flex-col ">
                   <div class="flex justify-between "  >
                     <!-- Selected: "font-semibold", Not Selected: "font-normal" -->
-                    <p class="font-normal text-xs ">{{$s->city}}: {{$s->startdate}}</p>
+                    <p class="font-normal text-xs ">{{$s->city}}: {{\Carbon\Carbon::parse($s->startdate)->format('d-m-Y')}}</p>
                     
                   </div>
                 </div>

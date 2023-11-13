@@ -6,6 +6,7 @@ use App\Models\Company;
 use App\Models\Session;
 use App\Models\Team;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Hash;
 use Livewire\Component;
@@ -126,11 +127,9 @@ class Register extends Component
                     $content .="<b>- Joueur 2:</b> ".$value['playerTwoLastname']."  ".$value['playerOneLastname']."<br/>";
                     $content .="<b>Session:</b><br/>";
                     $session = Session::whereId($value['session'])->first();
-                    logger('adzefzfez');
-                    logger($value['session']);
-                    logger($session);
-                    $content .="<b>- Lieu:</b> ".$session->club."  ".$session->address."<br/>";
-                    $content .="<b>- Date:</b> ".$session->startdate."<br/>";
+                    
+                    $content .="<b>- Lieu:</b> ".$session->club."  ".$session->city."<br/>";
+                    $content .="<b>- Date:</b> ". Carbon::parse($session->startdate)->format('d-m-Y') ."<br/>";
                     $content .="<b>Category:</b> ".$value['category']."<br/>";
                 }
                 $mailchimp = new \MailchimpTransactional\ApiClient();
