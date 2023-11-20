@@ -163,7 +163,7 @@
                       <svg class="absolute top-1 left-1 h-6 w-6 color-light-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                       </svg>
-                      <a href="https://planetpadel.be/" class="color-light-blue">{{__('home.clubContentPrefix1')}}:</a>
+                      <a href="https://planetpadel.be/"  target="blank" class="color-light-blue">{{__('home.clubContentPrefix1')}}:</a>
                     </dt>
                     <dd class="inline">{{__('home.clubContent1')}}</dd>
                   </div>
