@@ -15,7 +15,7 @@ return [
     'companyname' => 'Nom de votre société',
     'companyvat' => 'Numéro de TVA',
     'select' => 'Sélectionnez une session',
-    'signup' => 's\'enregister',
+    'signup' => 's\'enregistrer',
     'success'=>'Merci pour votre inscription',
     'successTeaser'=>'Nous venons de vous faire parvenir un mail de confirmation.',
     'successTeaser2'=>'Keep in touch... et bienvenue dans cette nouvelle aventure',

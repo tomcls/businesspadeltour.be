@@ -10,7 +10,7 @@ return [
     'phone' => 'Téléphone',
     'companyname' => 'Nom de votre société',
     'companyvat' => 'Numéro de TVA',
-    'signup' => 's\'enregister',
+    'signup' => 's\'enregistrer',
     'success'=>'Merci!',
     'successTeaser'=>'Nous vous tiendrons au courant par email',
     'successTeaser2'=>'Keep in touch... et à l\'année prochaine',
