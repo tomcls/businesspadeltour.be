@@ -190,26 +190,6 @@
                     <dd class="inline">{{__('home.clubContent3')}}</dd>
                   </div>
 
-                  <div class="relative pl-9">
-                    <dt class="inline font-semibold text-gray-400">
-                      <!-- Heroicon name: mini/server -->
-                      <svg class="absolute top-1 left-1 h-6 w-6 color-light-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
-                      </svg>
-                      <a href="https://teropadelclub.be/fr" class="color-light-blue">{{__('home.clubContentPrefix4')}}:</a>
-                    </dt>
-                    <dd class="inline">{{__('home.clubContent4')}}</dd>
-                  </div>
-                  <div class="relative pl-9">
-                    <dt class="inline font-semibold text-gray-400">
-                      <!-- Heroicon name: mini/server -->
-                      <svg class="absolute top-1 left-1 h-6 w-6 color-light-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
-                      </svg>
-                      <a href="https://garrincha.be/"  target="blank" class="color-light-blue">{{__('home.clubContentPrefix5')}}:</a>
-                    </dt>
-                    <dd class="inline">{{__('home.clubContent5')}}</dd>
-                  </div>
 
 
                   <div class="relative pl-9">
@@ -314,22 +294,6 @@
                 <dd class="mt-0 text-base leading-7 text-gray-600">
                   <b>{{__('home.when')}}: </b> {{__('home.agendaWhen4')}}<br/>
                   <b>{{__('home.where')}}: </b> {{__('home.agendaWhere4')}}<br/><br/>
-                </dd>
-              </div>
-              <div class="relative pl-16">
-                <dt class="text-base font-semibold leading-7 text-gray-900">
-                  <div class="absolute top-0 left-0 flex h-10 w-10 items-center justify-center rounded-lg bg-light-blue">
-                    <!-- Heroicon name: outline/finger-print -->
-                    <svg class=" h-6 w-6 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
-                    </svg>
-                  </div>
-                  <a href="https://garrincha.be/"  target="blank" class="color-light-blue"> {{__('home.clubContentPrefix5')}} (Garrincha)</a>
-                </dt>
-                
-                <dd class="mt-0 text-base leading-7 text-gray-600">
-                  <b>{{__('home.when')}}: </b> {{__('home.agendaWhen5')}}<br/>
-                  <b>{{__('home.where')}}: </b> {{__('home.agendaWhere5')}}<br/><br/>
                 </dd>
               </div>
               <div class="relative pl-16">
