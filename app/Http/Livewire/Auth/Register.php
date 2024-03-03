@@ -123,8 +123,8 @@ class Register extends Component
 
 
                     $content .="<br><b>Equipe ".$key."</b><br/>";
-                    $content .="<b>- Joueur 1:</b> ".$value['playerOneFirstname']."  ".$value['playerOneFirstname']."<br/>";
-                    $content .="<b>- Joueur 2:</b> ".$value['playerTwoLastname']."  ".$value['playerOneLastname']."<br/>";
+                    $content .="<b>- Joueur 1:</b> ".$value['playerOneFirstname']."  ".$value['playerOneLastname']."<br/>";
+                    $content .="<b>- Joueur 2:</b> ".$value['playerTwoFirstname']."  ".$value['playerTwoLastname']."<br/>";
                     $content .="<b>Session:</b><br/>";
                     $session = Session::whereId($value['session'])->first();
                     
