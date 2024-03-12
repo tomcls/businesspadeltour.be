@@ -1,10 +1,10 @@
 <div class="sticky top-0 bg-white z-10" x-data="{ isMobileNavOpen: false }">
     <div class="mx-auto px-6">
-      <div class="flex items-center justify-between border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
+      <div class="flex items-center justify-between border-b-2 border-gray-100 py-0 md:justify-start md:space-x-10">
         <div class="flex justify-start lg:w-0 lg:flex-1">
           <a href="{{url('/').'/'.App::currentLocale().''}}">
             <span class="sr-only">Business Padel Tour</span>
-            <img class="h-8 w-auto sm:h-14" src="{{url('/').'/images/logo/logo.svg'}}" alt="Business Padel Tour">
+            <img class="h-8 w-auto sm:h-24" src="{{url('/').'/images/logo/bpt.svg'}}" alt="Business Padel Tour">
           </a>
         </div>
         <div class="-my-2 -mr-2 md:hidden">
@@ -21,26 +21,10 @@
             <!-- Item active: "text-gray-900", Item inactive: "color-dark-blue" -->
             <button @click="isOpen = !isOpen" type="button" class="color-dark-blue group inline-flex items-center rounded-md text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2" aria-expanded="false">
               <span>Business Padel Tour</span>
-              <!--
-                Heroicon name: mini/chevron-down
-  
-                Item active: "text-gray-600", Item inactive: "color-dark-blue"
-              -->
               <svg class="color-dark-blue ml-2 h-5 w-5 group-hover:color-dark-blue" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                 <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
               </svg>
             </button>
-  
-            <!--
-              'Solutions' flyout menu, show/hide based on flyout menu state.
-  
-              Entering: "transition ease-out duration-200"
-                From: "opacity-0 translate-y-1"
-                To: "opacity-100 translate-y-0"
-              Leaving: "transition ease-in duration-150"
-                From: "opacity-100 translate-y-0"
-                To: "opacity-0 translate-y-1"
-            -->
             <div x-show="isOpen"
                 @click.outside="isOpen = false"
                 x-transition:enter="transition ease-out duration-100 transform"
