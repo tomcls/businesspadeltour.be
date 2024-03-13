@@ -20,6 +20,7 @@ class Register extends Component
     public $totalTeamsValidated = [];
     protected $listeners = ['onTeamValidated', 'onTotalTeamChanged'];
     public $company;
+    public $promo;
     protected function rules()
     {
         return [
@@ -30,6 +31,8 @@ class Register extends Component
             'company.email' => 'required|email',
             'company.phone' => 'required',
             'company.address' => 'required',
+            'company.zip' => 'required',
+            'company.city' => 'required',
         ];
     }
     public function mount()
@@ -61,7 +64,7 @@ class Register extends Component
             $company->name = $this->company['name'];
             $company->vat = $this->company['vat'];
             $company->email = $this->company['email'];
-            $company->address = $this->company['address'];
+            $company->address = $this->company['address'].", ".$this->company['zip']." ".$this->company['city'];
             $company->phone = $this->company['phone'];
             try {
                 $company->save();
@@ -79,6 +82,22 @@ class Register extends Component
             if($company) {
                 $playersEmail = [];
                 $content = "";
+                $price = 0;
+                if($this->totalTeam>=10) {
+                    $price = 195 * $this->totalTeam;
+                } else if($this->totalTeam>=5) {
+                    $price = 215 * $this->totalTeam;
+                } else {
+                    $price = 250 * $this->totalTeam;
+                }
+                if($this->promo == "rosselpadel") {
+                    $price = 150 * $this->totalTeam;
+                }
+
+                if($this->promo == "Vertuozatour24") {
+                    $price = 140 * $this->totalTeam;
+                }
+
                 foreach ($this->totalTeamsValidated as $key => $value) {
                     $userOne = new User();
                     $userOne->firstname = $value['playerOneFirstname'];
@@ -123,14 +142,24 @@ class Register extends Component
 
 
                     $content .="<br><b>Equipe ".$key."</b><br/>";
-                    $content .="<b>- Joueur 1:</b> ".$value['playerOneFirstname']."  ".$value['playerOneLastname']." t-Shirt: ".$value['playerOneSize']."<br/>";
-                    $content .="<b>- Joueur 2:</b> ".$value['playerTwoFirstname']."  ".$value['playerTwoLastname']." t-Shirt: ".$value['playerTwoSize']."<br/>";
-                    $content .="<b>Session:</b><br/>";
+                    $content .="<b>- ".__('Player')." 1:</b> ".$value['playerOneFirstname']."  ".$value['playerOneLastname']." t-Shirt: ".$value['playerOneSize']."<br/>";
+                    $content .="<b>- ".__('Player')." 2:</b> ".$value['playerTwoFirstname']."  ".$value['playerTwoLastname']." t-Shirt: ".$value['playerTwoSize']."<br/>";
+                    $content .="<b>".__('Session').":</b><br/>";
                     $session = Session::whereId($value['session'])->first();
                     
-                    $content .="<b>- Lieu:</b> ".$session->club."  ".$session->city."<br/>";
-                    $content .="<b>- Date:</b> ". Carbon::parse($session->startdate)->format('d-m-Y') ."<br/>";
-                    $content .="<b>Category:</b> ".$value['category']."<br/>";
+                    $content .="<b>- ".__('Place').":</b> ".$session->club."  ".$session->city."<br/>";
+                    $content .="<b>- ".__('Date').":</b> ". Carbon::parse($session->startdate)->format('d-m-Y') ."<br/>";
+                    $content .="<b>".__('Category').":</b> ".$value['category']."<br/>";
+
+                    if($this->promo == "rosselpadel") {
+                        $content .="<br/><b>".__('Price')." Promo code</b>: ".$price." €";
+                    }
+    
+                    if($this->promo == "Vertuozatour24") {
+                        $content .="<br/><b>".__('Price')." Promo code</b>: ".$price." €";
+                    }
+
+                    
                 }
                 $mailchimp = new \MailchimpTransactional\ApiClient();
                 $mailchimp->setApiKey(env('MAILCHIMP_APIKEY'));
@@ -192,15 +221,7 @@ class Register extends Component
                     "message" => $message,
                 ]);
 
-                $price = 0;
-                if($this->totalTeam>=10) {
-                    $price = 195 * $this->totalTeam;
-                } else if($this->totalTeam>=5) {
-                    $price = 215 * $this->totalTeam;
-                } else {
-                    $price = 250 * $this->totalTeam;
-                }
-
+               
                 $template_content = array(
                     array(
                         'name' => 'firstname',

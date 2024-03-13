@@ -39,5 +39,15 @@ return [
     'expertTeaser'=> '<b>La catégorie Expert</b> is open to all teams, but teams whose cumulative ranking exceeds 300 are obliged to register in the Expert category.',
     'levelTeaser' => " In everyone's interest, players are asked to be consistent in their choice of entry level.",
     'andGiveaccessTo'=>'And entitles you to',
-    'mailConf' => 'You will receive a confirmation email'
+    'mailConf' => 'You will receive a confirmation email',
+    "zip" => "Zip",
+    "city" => "City",
+    "zipPlaceholder" => "ex: 1000",
+    "cityPlaceholder" => "ex: Brussels",
+    "promo" => "Promo code",
+    "Player" => "Player",
+    "Session" => "",
+    "Lieu" => "",
+    "Date" => "",
+    "Category" => ""
 ];

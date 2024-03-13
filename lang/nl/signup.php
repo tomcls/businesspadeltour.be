@@ -39,5 +39,16 @@ return [
     'expertTeaser'=> '<b>De Expert-categorie</b> staat open voor alle teams, maar teams met een cumulatieve ranking van meer dan 300 zijn verplicht om mee te doen aan de Expert-categorie.',
     'levelTeaser' => 'In het belang van iedereen wordt spelers gevraagd om consistent te zijn in hun keuze van deelname in relatie tot hun niveau.',
     'andGiveaccessTo'=>'En geeft je recht op',
-    'mailConf' => 'U ontvangt een bevestigingsmail'
+    'mailConf' => 'U ontvangt een bevestigingsmail',
+    "zip" => "Postcode",
+    "city" => "Stad",
+    "zipPlaceholder" => "ex: 1000",
+    "cityPlaceholder" => "ex: Brussel",
+    "promo" => "Promotie code",
+    "Player" => "Speler",
+    "Session" => "Sessie",
+    "Place" => "Plaats",
+    "Date" => "Datum",
+    "Category" => "Categorie",
+    "Price"=>"Prijs"
 ];

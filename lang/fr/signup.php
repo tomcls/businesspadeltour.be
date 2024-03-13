@@ -39,5 +39,16 @@ return [
     'expertTeaser'=> '<b>La catégorie Expert</b> est ouverte à toutes les équipes, mais les équipes dont le classement cumulé dépasse 300 sont obligées de s’inscrire dans la catégorie Expert',
     'levelTeaser' => ' Dans l’intérêt de tous, il est demandé aux joueurs de faire preuve de cohérence dans le choix de leur inscription par rapport à leur niveau',
     'andGiveaccessTo'=>'Et donne droit à',
-    'mailConf' => 'Vous allez recevoir l\'email de confirmation'
+    'mailConf' => 'Vous allez recevoir l\'email de confirmation',
+    "zip" => "Code postal",
+    "city" => "Ville",
+    "zipPlaceholder" => "ex: 1000",
+    "cityPlaceholder" => "ex: Bruxelles",
+    "promo" => "Promo code",
+    "Player" => "Joueur",
+    "Session" => "Session",
+    "Place" => "Lieu",
+    "Date" => "Date",
+    "Category" => "Categorie",
+    "Price"=>"Prix"
 ];

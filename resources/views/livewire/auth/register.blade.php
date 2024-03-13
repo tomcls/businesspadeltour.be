@@ -163,7 +163,21 @@
                     <input wire:model="company.lastname" type="text" name="companyLastname" id="companyLastname" class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500">
                     @error('company.lastname') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
                   </div>
-                </div>   
+                </div> 
+                <div >
+                  <label for="emailManager" class="block text-sm font-medium text-gray-900">{{__('signup.mailMgr')}}</label>
+                  <div class="mt-1">
+                    <input wire:model="company.email" type="text" name="emailManager" id="emailManager" placeholder="{{__('signup.mailConf')}}" class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                    @error('company.email') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
+                  </div>
+                </div>
+                <div >
+                  <label for="phoneManager" class="block text-sm font-medium text-gray-900">{{__('signup.phoneMgr')}}</label>
+                  <div class="mt-1">
+                    <input wire:model="company.phone" type="text" name="phoneManager" id="phoneManager" placeholder="" class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                    @error('company.phone') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
+                  </div>
+                </div>  
                 <div >
                   <label for="companyName" class="block text-sm font-medium text-gray-900">{{__('signup.companyname')}}</label>
                   <div class="mt-1">
@@ -184,21 +198,32 @@
                     <input wire:model="company.address" type="text" name="address" id="address" placeholder="{{__('signup.addressPlaceholder')}}" class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500">
                     @error('company.address') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
                   </div>
+                </div>  
+                <div class="flex flex-row space-x-2">
+                  
+                  <div>
+                    <div class="mt-1">
+                      <label for="zip" class="block text-sm font-medium text-gray-900">{{__('signup.zip')}}</label>
+                      <input wire:model="company.zip" type="text" name="zip" id="zip" placeholder="{{__('signup.zipPlaceholder')}}" class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                      @error('company.zip') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
+                    </div>
+                  </div>
+                  <div>
+                    <label for="city" class="block text-sm font-medium text-gray-900">{{__('signup.city')}}</label>
+                    <div class="mt-1">
+                      <input wire:model="company.city" type="text" name="city" id="city" placeholder="{{__('signup.cityPlaceholder')}}" class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                      @error('company.city') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
+                    </div>
+                  </div>
+                </div>  
+
+                <div >
+                  <label for="promo" class="block text-sm font-medium text-gray-900">{{__('signup.promo')}}</label>
+                  <div class="mt-1">
+                    <input wire:model="promo" type="text" name="promo" id="promo" placeholder="" class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                    @error('promo') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
+                  </div>
                 </div> 
-                <div >
-                  <label for="emailManager" class="block text-sm font-medium text-gray-900">{{__('signup.mailMgr')}}</label>
-                  <div class="mt-1">
-                    <input wire:model="company.email" type="text" name="emailManager" id="emailManager" placeholder="{{__('signup.mailConf')}}" class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500">
-                    @error('company.email') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
-                  </div>
-                </div>
-                <div >
-                  <label for="phoneManager" class="block text-sm font-medium text-gray-900">{{__('signup.phoneMgr')}}</label>
-                  <div class="mt-1">
-                    <input wire:model="company.phone" type="text" name="phoneManager" id="phoneManager" placeholder="" class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500">
-                    @error('company.phone') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
-                  </div>
-                </div>
                 <div>
                   <label for="totalTeam" class="block text-sm font-medium leading-6 text-gray-900">{{__('signup.numberOfTeams')}}</label>
                   <select id="totalTeam" name="totalTeam" wire:model="totalTeam" wire:change="onTotalTeamChanged($event.target.value)"   class="mt-2 block w-full rounded-md border-0 py-1.5 pl-3 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-indigo-600 sm:text-sm sm:leading-6">
