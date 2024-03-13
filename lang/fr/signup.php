@@ -19,7 +19,7 @@ return [
     'success'=>'Merci pour votre inscription',
     'successTeaser'=>'Nous venons de vous faire parvenir un mail de confirmation.',
     'successTeaser2'=>'Keep in touch... et bienvenue dans cette nouvelle aventure',
-    "signupCompleted"=> "Inscription au Business padel tour",
+    "signupCompleted"=> "Inscription au Vertuoza padel tour",
     "category"=> "Catégorie",
     'selectcategory' => 'Indiquez le niveau de l’équipe',
     'address' => 'Adresse de votre société',

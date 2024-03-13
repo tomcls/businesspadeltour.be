@@ -3,8 +3,8 @@
       <div class="flex items-center justify-between border-b-2 border-gray-100 py-0 md:justify-start md:space-x-10">
         <div class="flex justify-start lg:w-0 lg:flex-1">
           <a href="{{url('/').'/'.App::currentLocale().''}}">
-            <span class="sr-only">Business Padel Tour</span>
-            <img class="h-8 w-auto sm:h-24" src="{{url('/').'/images/logo/bpt-logo.svg'}}" alt="Business Padel Tour">
+            <span class="sr-only">Vertuoza Padel Tour</span>
+            <img class="h-8 w-auto sm:h-24" src="{{url('/').'/images/logo/bpt-logo.svg'}}" alt="Vertuoza Padel Tour">
           </a>
         </div>
         <div class="-my-2 -mr-2 md:hidden">
@@ -20,7 +20,7 @@
           <div x-data="{ isOpen: false }" class="relative" >
             <!-- Item active: "text-gray-900", Item inactive: "color-dark-blue" -->
             <button @click="isOpen = !isOpen" type="button" class="color-dark-blue group inline-flex items-center rounded-md text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2" aria-expanded="false">
-              <span>Business Padel Tour</span>
+              <span>Vertuoza Padel Tour</span>
               <svg class="color-dark-blue ml-2 h-5 w-5 group-hover:color-dark-blue" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                 <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
               </svg>
@@ -43,7 +43,7 @@
                       <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"></path>
                     </svg>
                     <div class="ml-4">
-                      <p class="text-base font-medium text-gray-900">Business Padel Tour</p>
+                      <p class="text-base font-medium text-gray-900">Vertuoza Padel Tour</p>
                       <p class="mt-1 text-sm color-dark-blue">{{__('menu.programTeaser')}}</p>
                     </div>
                   </a>

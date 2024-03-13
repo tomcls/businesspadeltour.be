@@ -19,7 +19,7 @@ return [
     'success'=> 'Thank you for registering',
     'successTeaser'=> 'We have just sent you a confirmation e-mail.',
     'successTeaser2'=> 'Keep in touch... and welcome in this new adventure.',
-    "signupCompleted"=> "Business padel tour registration",
+    "signupCompleted"=> "Vertuoza padel tour registration",
     "category"=> "Category",
     'selectcategory' => "Indicate the team\'s level",
     'address' => 'Company address',

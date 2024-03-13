@@ -19,7 +19,7 @@ return [
     "success" => "Bedankt voor uw registratie",
     "succesTeaser" => "We hebben je zojuist een bevestigingse-mail gestuurd.",
     "successTeaser2"=> "Houd contact... en welkom bij dit nieuwe avontuur",
-    "signupCompleted"=> "Inschrijving voor de Business padel tour",
+    "signupCompleted"=> "Inschrijving voor de Vertuoza padel tour",
     "category"=> "Categorie",
     'selectcategory' => 'Geef het niveau van de ploeg aan',
     'address' => 'Adres van uw bedrijf',

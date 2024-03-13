@@ -87,7 +87,7 @@ class Contact extends Component
             ]);
             $message = [
                 "from_email" => "info@businesspadeltour.be",
-                'from_name'  => 'Business padel tour',
+                'from_name'  => 'Vertuoza padel tour',
                 "subject" => __('signup.signupCompleted'),
                 "to" => $to,
                 "headers" => ["Reply-To" => "info@businesspadeltour.be"],
