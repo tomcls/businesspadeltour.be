@@ -6,9 +6,9 @@ return [
     |--------------------------------------------------------------------------
     */
     'h1' => 'Bienvenue sur le Vertuoza Padel Tour',
-    'teaser' => 'Immovlan et Virtuoza lancent le Virtuoza Padel Tour',
+    'teaser' => 'Immovlan et Vertuoza lancent le Vertuoza Padel Tour',
     'moreinfo' => 'Plus d\'infos',
-    'summaryTitle' => 'Le Virtuoza Padel Tour',
+    'summaryTitle' => 'Le Vertuoza Padel Tour',
     'summaryTitle2' => 'De quoi s’agit-il ?',
     'summaryTeaser' => 'Lancé en 2023, le Vertuoza Padel Tour (anciennement Business Padel Tour) est une compétition de Padel ouverte à toute entreprise active en Belgique. La compétition se compose de plusieurs sessions organisées le vendredi après-midi dans plusieurs clubs de Padel répartis sur toute la Belgique. <br/>En 2024, 6 clubs accueilleront une étape du Business Padel Tour, avec des sessions à Liège, Bruxelles, Waterloo, Gand, Anvers et Nivelles, et la grande finale au Zoute<br><br>Le tournoi est mixte, ouvert à tous et cette année nous prévoyons deux catégories : Fun et Expert.<br><br><b>L’objectif du Business Padel Tour est triple : Sport + Fun + Networking</b><br><br>80 équipes ont pu se rencontrer en 2023, nous espérons rassembler au moins 250 équipe sur la saison 2024',
     'summaryContentPrefix1' => 'Où? ',
@@ -19,7 +19,7 @@ return [
     'summaryContent3' => ' étant bien entendu de se rencontrer dans une ambiance sportive et conviviale.',
     'pgmTitle' => 'Qui peut s’inscrire ?',
     'pgmTitle2' => '2 catégories « Fun » et « Expert »',
-    'pgmTeaser' => 'Le Virtuoza Padel Tour est ouvert à tous, mais chaque équipe doit être inscrite au nom d’une entreprise.',
+    'pgmTeaser' => 'Le Vertuoza Padel Tour est ouvert à tous, mais chaque équipe doit être inscrite au nom d’une entreprise.',
     'pgmContentPrefix1' => 'Une société',
     'pgmContentPrefix2' => 'Nous avons prévu 2 catégories : « Fun » et « Expert »',
     'pgmContentPrefix3' => 'Les équipes ',
@@ -78,7 +78,7 @@ return [
     'priceTeaser2'=>'L’inscription revient à 250 eur HTVA( 302,5 eur TTC) par équipe par session <br/>(5 équipes pour <b>€215</b> / équipe et 10 équipes <b>€195</b> / équipe) ',
     'priceInclude'=>'Ce qui donne droit à',
     'priceInclude1'=>'4 matches de Padel',
-    'priceInclude2'=>'Un T-shirt Virtuoza Padel Tour au nom de votre entreprise',
+    'priceInclude2'=>'Un T-shirt Vertuoza Padel Tour au nom de votre entreprise',
     'priceInclude3'=>'Les balles sont fournies',
     'priceInclude4'=>'Cocktail dînatoire en fin de session',
     'priceInclude5'=>'Un accès aux éventuelles animations annexes (clinics & autres)',
@@ -87,6 +87,6 @@ return [
     'priceInvoice'=>'Factures et reçus disponibles pour faciliter le remboursement de l\'entreprise',
     'priceImin'=>'Je m\'inscris',
     'sponsorTitle'=>'Nos partenaires',
-    'sponsorTeaser' => 'Immovlan et Virtuoza lancent la première compétition de padel inter entreprises en Belgique',
+    'sponsorTeaser' => 'Immovlan et Vertuoza lancent la première compétition de padel inter entreprises en Belgique',
     'closed' => 'Clôturé',
 ];
