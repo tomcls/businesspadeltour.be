@@ -50,5 +50,6 @@ return [
     "Place" => "Lieu",
     "Date" => "Date",
     "Category" => "Categorie",
-    "Price"=>"Prix"
+    "Price"=>"Prix",
+    "Welcome on the Vertuoza Padel Tour"=>"Bienvenue sur le Vertuoza Padel Tour"
 ];

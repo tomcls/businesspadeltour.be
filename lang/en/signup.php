@@ -46,8 +46,10 @@ return [
     "cityPlaceholder" => "ex: Brussels",
     "promo" => "Promo code",
     "Player" => "Player",
-    "Session" => "",
-    "Lieu" => "",
-    "Date" => "",
-    "Category" => ""
+    "Session" => "Session",
+    "Place" => "Place",
+    "Date" => "Date",
+    "Category" => "Category",
+    "Price"=>"Price",
+    "Welcome on the Vertuoza Padel Tour"=>"Welcome on the Vertuoza Padel Tour"
 ];
