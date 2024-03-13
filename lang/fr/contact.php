@@ -16,6 +16,6 @@ return [
     'successTeaser2'=>'Keep in touch... et à l\'année prochaine',
     "signupCompleted"=> "Inscription au Business padel tour",
     'address' => 'Adresse de votre société',
-    'addressPlaceholder' => 'Rue numéro, code postal ville',
+    'addressPlaceholder' => '',
     'zip' => 'Code postal',
 ];

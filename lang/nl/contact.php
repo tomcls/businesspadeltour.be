@@ -17,6 +17,6 @@ return [
     "signupCompleted"=> "Inscription au Business padel tour",
     "category"=> "Catégorie",
     'address' => 'Adresse de votre société',
-    'addressPlaceholder' => 'Rue numéro, code postal ville',
+    'addressPlaceholder' => '',
     'zip' => 'PostCode',
 ];
