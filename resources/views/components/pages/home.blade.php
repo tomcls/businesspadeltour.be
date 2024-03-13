@@ -36,7 +36,7 @@
                       <img class="mx-auto w-50 items-center justify-center mt-7" src="{{url('/').'/images/sponsors/immovlan_mauve.png'}}" alt="">
                     </li>
                     <li>
-                      <img class="mx-auto w-20 pt-5" src="{{url('/').'/images/sponsors/b19.png'}}" alt="">
+                      <img class="mx-auto w-40 pt-5" src="{{url('/').'/images/sponsors/Vertuoza-Logo.png'}}" alt="">
                     </li>
                     <!-- More people... -->
                   </ul>
@@ -424,6 +424,9 @@
             <ul role="list" class="items-center justify-center inline-flex space-x-10">
               <li>
                 <a href="https://immo.vlan.be/fr"  target="_blank" > <img class="mx-auto w-50 items-center justify-center mt-7" src="{{url('/').'/images/sponsors/immovlan_mauve.png'}}" alt=""></a>
+              </li>
+              <li>
+                <a href="https://www.vertuoza.com/"  target="_blank" > <img class="mx-auto h-14 mt-4 " src="{{url('/').'/images/sponsors/Vertuoza-Logo.png'}}" alt=""></a>
               </li>
               <li>
                 <a href="https://wilmeyer.com/"  target="_blank" > <img class="mx-auto w-50 items-center justify-center mt-7" src="{{url('/').'/images/sponsors/wilmeyer.png'}}" alt=""></a>

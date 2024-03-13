@@ -13,11 +13,11 @@ return [
     |
     */
 
-    'teaser' => 'Immovlan and B19 launch the Business Padel Tour',
+    'teaser' => 'Immovlan and Virtuoza launch the Virtuoza Padel Tour',
     'moreinfo' => 'More info',
-    'summaryTitle' => 'The Business Padel Tour',
+    'summaryTitle' => 'The Virtuoza Padel Tour',
     'summaryTitle2' => 'What is it all about?',
-    'summaryTeaser' => "Launched in 2023, the Business Padel Tour is a Padel competition open to all companies operating in Belgium. The competition consists of several sessions held on Friday afternoons at various Padel clubs throughout Belgium. <br>In 2024, 6 clubs will host a stage of the Business Padel Tour, with sessions in Liège, Brussels, Waterloo, Ghent, Antwerp and Nivelles, and the grand finale at Le Zoute.<br><br> The tournament is mixed, open to all, and this year we're planning two categories: Fun and Expert. <br><br><b>The aim of the Business Padel Tour is threefold: Sport + Fun + Networking</b><br><br> 80 teams were able to meet in 2023, and we hope to gather at least 250 teams for the 2024 season.",
+    'summaryTeaser' => "Launched in 2023, the Virtuoza Padel Tour is a Padel competition open to all companies operating in Belgium. The competition consists of several sessions held on Friday afternoons at various Padel clubs throughout Belgium. <br>In 2024, 6 clubs will host a stage of the Virtuoza Padel Tour, with sessions in Liège, Brussels, Waterloo, Ghent, Antwerp and Nivelles, and the grand finale at Le Zoute.<br><br> The tournament is mixed, open to all, and this year we're planning two categories: Fun and Expert. <br><br><b>The aim of the Business Padel Tour is threefold: Sport + Fun + Networking</b><br><br> 80 teams were able to meet in 2023, and we hope to gather at least 250 teams for the 2024 season.",
     'summaryContentPrefix1' => 'Where? ',
     'summaryContentPrefix2' => 'Each session is followed by a drink - apéro ',
     'summaryContentPrefix3' => 'The objective',
@@ -26,7 +26,7 @@ return [
     'summaryContent3' => ' and of course we want to meet each other in a sporty and friendly atmosphere',
     'pgmTitle' => 'Who can register?',
     'pgmTitle2' => '2 categories « Fun » and « Expert »',
-    'pgmTeaser' => 'The Business Padel Tour is open to all, but each team must be registered on behalf of a company.',
+    'pgmTeaser' => 'The Virtuoza Padel Tour is open to all, but each team must be registered on behalf of a company.',
     'pgmContentPrefix1' => 'A company',
     'pgmContentPrefix2' => 'We have planned 2 categories: « Fun » and « Expert ».',
     'pgmContentPrefix3' => 'The teams ',
@@ -85,7 +85,7 @@ return [
     'priceTeaser2'=> 'Registration costs 250 Eur EXCL. VAT( 302,5 eur VAT included) per team per session and entitles you to',
     'priceInclude'=> 'This entitles you to',
     'priceInclude1'=> '4 matches in the afternoon',
-    'priceInclude2'=> 'A Business Padel Tour T-shirt with your company name',
+    'priceInclude2'=> 'A Virtuoza Padel Tour T-shirt with your company name',
     'priceInclude3'=> 'balls are provided',
     'priceInclude4'=> 'The drink/apero at the end of the session',
     'priceInclude5'=>'Access to additional activities (clinics & others)',
@@ -94,6 +94,6 @@ return [
     'priceInvoice'=> 'Invoices and receipts available to facilitate reimbursement of the company',
     'priceImin'=> 'I am registering',
     'sponsorTitle'=> 'In partnership with',
-    'sponsorTeaser' => 'Immovlan and B19 launch the first inter-company padel competition in Belgium',
+    'sponsorTeaser' => 'Immovlan and Virtuoza launch the first inter-company padel competition in Belgium',
     'closed' => 'Closed',
 ];
