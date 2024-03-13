@@ -12,7 +12,7 @@ return [
     | these language lines according to your application's requirements.
     |
     */
-
+    'Welcome on the Vertuoza Padel Tour' => 'Bienvenue sur le Vertuoza Padel Tour',
     'teaser' => 'Immovlan and Virtuoza launch the Virtuoza Padel Tour',
     'moreinfo' => 'More info',
     'summaryTitle' => 'The Virtuoza Padel Tour',

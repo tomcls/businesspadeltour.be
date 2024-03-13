@@ -13,6 +13,7 @@ return [
     |
     */
 
+    'Welcome on the Vertuoza Padel Tour' => 'Welkom op de Vertuoza Padel Tour',
     'teaser' => 'Immovlan & Virtuoza presenteren de Virtuoza Padel Tour',
     'moreinfo' => 'Meer info',
     'summaryTitle' => 'De Virtuoza Padel Tour',
