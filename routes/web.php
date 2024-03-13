@@ -57,10 +57,13 @@ Route::prefix('{locale}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('set.l
         return new Response((new HomeController)->index());
     });
     
-    Route::get('/'. trans('route.price'), function () {
+    Route::get('/tarif', function () {
         return view('components.pages.price');
     });
-    
+    Route::get('/price', function () {
+        return view('components.pages.price');
+    });
+
     Route::get('/'. trans('route.sessions'), function () {
         return view('components.pages.sessions');
     });
@@ -74,7 +77,10 @@ Route::prefix('{locale}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('set.l
     
     Route::get('/photos/{slug?}', Photos::class)->name('photos');
 
-    Route::get('/' . trans('route.articles'), function () {
+    Route::get('/news', function () {
+        return new Response((new ArticleController)->index());
+    });
+    Route::get('/articles', function () {
         return new Response((new ArticleController)->index());
     });
 
@@ -85,9 +91,14 @@ Route::prefix('{locale}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('set.l
     Route::get('/' . trans('route.article').'/{slug}', function ($locale,$slug) {
         return new Response((new ArticleController)->show($locale,$slug));
     });
-    Route::get('/'. trans('route.register'), function () {
+    Route::get('/inscription', function () {
         return view('components.pages.register');
     });
+
+    Route::get('/register', function () {
+        return view('components.pages.register');
+    });
+
    // Route::get('/' . trans('route.article', []).'/{slug}', 'ArticleController@show')->name('article');
     // Octane::route('GET','/en/index',function () {return new Response((new HomeController)->index());});
 });
