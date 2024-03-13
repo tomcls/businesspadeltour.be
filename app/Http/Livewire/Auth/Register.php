@@ -208,7 +208,7 @@ class Register extends Component
                 ]);
                 $message = [
                     "from_email" => "info@businesspadeltour.be",
-                    'from_name'  => 'Business padel tour',
+                    'from_name'  => 'Vertuoza padel tour',
                     "subject" => "BusinessPadelTour: Nouvelle inscription équipe",
                     "to" => $to,
                     "headers" => ["Reply-To" => "info@businesspadeltour.be"],
@@ -254,7 +254,7 @@ class Register extends Component
                 ]);
                 $message = [
                     "from_email" => "info@businesspadeltour.be",
-                    'from_name'  => 'Business padel tour',
+                    'from_name'  => 'Vertuoza padel tour',
                     "subject" => "BusinessPadelTour: Nouvelle inscription équipe",
                     "to" => $to,
                     "headers" => ["Reply-To" => "info@businesspadeltour.be"],
@@ -299,8 +299,8 @@ class Register extends Component
                     ]);
                     $message = [
                         "from_email" => "info@businesspadeltour.be",
-                        'from_name'  => 'Business padel tour',
-                        "subject" => "BusinessPadelTour: Nouvelle inscription équipe",
+                        'from_name'  => 'Vertuoza padel tour',
+                        "subject" => "VertuozaPadelTour: Nouvelle inscription équipe",
                         "to" => $to,
                         "headers" => ["Reply-To" => "info@businesspadeltour.be"],
                         'global_merge_vars' => $template_content

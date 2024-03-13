@@ -14,7 +14,7 @@ return [
     'success' => 'Bedankt!',
     'successTeaser' => 'We houden u op de hoogte via e-mail',
     'successTeaser2' => 'Hou contact... en hopelijk tot volgend jaar',
-    "signupCompleted" => "Inscription au Business padel tour",
+    "signupCompleted" => "Inscription au Vertuoza padel tour",
     'address' => 'Bedrijfsadres',
     "addressPlaceholder" => "Straatnummer, postcode, plaats",
     'zip' => 'Postal code',
