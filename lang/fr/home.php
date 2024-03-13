@@ -5,7 +5,7 @@ return [
     /*
     |--------------------------------------------------------------------------
     */
-    'Welcome on the Vertuoza Padel Tour' => 'Bienvenue sur le Vertuoza Padel Tour',
+    'home.h1' => 'Bienvenue sur le Vertuoza Padel Tour',
     'teaser' => 'Immovlan et Virtuoza lancent le Virtuoza Padel Tour',
     'moreinfo' => 'Plus d\'infos',
     'summaryTitle' => 'Le Virtuoza Padel Tour',
