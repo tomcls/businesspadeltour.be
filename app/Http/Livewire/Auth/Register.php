@@ -95,7 +95,7 @@ class Register extends Component
                 }
 
                 if($this->promo == "Vertuozatour24") {
-                    $price = 140 * $this->totalTeam;
+                    $price = 195 * $this->totalTeam;
                 }
 
                 foreach ($this->totalTeamsValidated as $key => $value) {
