@@ -4,7 +4,7 @@
         <div class="flex justify-start lg:w-0 lg:flex-1">
           <a href="{{url('/').'/'.App::currentLocale().''}}">
             <span class="sr-only">Business Padel Tour</span>
-            <img class="h-8 w-auto sm:h-24" src="{{url('/').'/images/logo/bpt.svg-logo'}}" alt="Business Padel Tour">
+            <img class="h-8 w-auto sm:h-24" src="{{url('/').'/images/logo/bpt-logo.svg'}}" alt="Business Padel Tour">
           </a>
         </div>
         <div class="-my-2 -mr-2 md:hidden">
