@@ -454,9 +454,6 @@
                 <a href="https://planetpadel.be/" target="_blank"  ><img class="mx-auto w-50 items-center justify-center mt-7" src="{{url('/').'/images/clubs/planetpadel.png'}}" alt=""></a>
               </li>
               <li>
-                <a href="https://garrincha.be/" target="_blank" ><img class="mx-auto w-50 items-center justify-center mt-7" src="{{url('/').'/images/clubs/garrincha.jpg'}}" alt=""></a>
-              </li>
-              <li>
                 <a href="https://elevenpadel.be/" target="_blank" ><img class="mx-auto w-50 items-center justify-center mt-7" src="{{url('/').'/images/clubs/eleven.jpg'}}" alt=""></a>
               </li>
               <li>
