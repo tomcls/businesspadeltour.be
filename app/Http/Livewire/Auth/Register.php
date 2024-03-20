@@ -142,21 +142,21 @@ class Register extends Component
 
 
                     $content .="<br><b>Equipe ".$key."</b><br/>";
-                    $content .="<b>- ".__('Player')." 1:</b> ".$value['playerOneFirstname']."  ".$value['playerOneLastname']." t-Shirt: ".$value['playerOneSize']."<br/>";
-                    $content .="<b>- ".__('Player')." 2:</b> ".$value['playerTwoFirstname']."  ".$value['playerTwoLastname']." t-Shirt: ".$value['playerTwoSize']."<br/>";
-                    $content .="<b>".__('Session').":</b><br/>";
+                    $content .="<b>- ".__('signup.Player')." 1:</b> ".$value['playerOneFirstname']."  ".$value['playerOneLastname']." t-Shirt: ".$value['playerOneSize']."<br/>";
+                    $content .="<b>- ".__('signup.Player')." 2:</b> ".$value['playerTwoFirstname']."  ".$value['playerTwoLastname']." t-Shirt: ".$value['playerTwoSize']."<br/>";
+                    $content .="<b>".__('signup.Session').":</b><br/>";
                     $session = Session::whereId($value['session'])->first();
                     
-                    $content .="<b>- ".__('Place').":</b> ".$session->club."  ".$session->city."<br/>";
-                    $content .="<b>- ".__('Date').":</b> ". Carbon::parse($session->startdate)->format('d-m-Y') ."<br/>";
-                    $content .="<b>".__('Category').":</b> ".$value['category']."<br/>";
+                    $content .="<b>- ".__('signup.Place').":</b> ".$session->club."  ".$session->city."<br/>";
+                    $content .="<b>- ".__('signup.Date').":</b> ". Carbon::parse($session->startdate)->format('d-m-Y') ."<br/>";
+                    $content .="<b>".__('signup.Category').":</b> ".$value['category']."<br/>";
 
-                    if($this->promo == "rosselpadel") {
-                        $content .="<br/><b>".__('Price')." Promo code</b>: ".$price." €";
+                    if(strtolower($this->promo) == "rosselpadel") {
+                        $content .="<br/><b>".__('signup.Price')." Promo code ".$this->promo."</b>: ".$price." € +TVA";
                     }
     
-                    if($this->promo == "vertuozatour24") {
-                        $content .="<br/><b>".__('Price')." Promo code</b>: ".$price." €";
+                    if(strtolower($this->promo) == "vertuozatour24") {
+                        $content .="<br/><b>".__('signup.Price')." Promo code ".$this->promo."</b>: ".$price." € + TVA";
                     }
 
                     
