@@ -94,7 +94,7 @@ class Register extends Component
                     $price = 150 * $this->totalTeam;
                 }
 
-                if($this->promo == "Vertuozatour24") {
+                if($this->promo == "vertuozatour24") {
                     $price = 195 * $this->totalTeam;
                 }
 
@@ -155,7 +155,7 @@ class Register extends Component
                         $content .="<br/><b>".__('Price')." Promo code</b>: ".$price." €";
                     }
     
-                    if($this->promo == "Vertuozatour24") {
+                    if($this->promo == "vertuozatour24") {
                         $content .="<br/><b>".__('Price')." Promo code</b>: ".$price." €";
                     }
 
