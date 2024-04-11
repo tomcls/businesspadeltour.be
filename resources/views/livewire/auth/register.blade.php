@@ -75,7 +75,7 @@
                 <div class="ml-9">Redflag Events</div>
                 <div class="ml-9">76 bvd Lambermont 1030 Bruxelles</div>
                 <div class="ml-9">BE 0898.069.649</div>
-                <div class="ml-9">BE 51 3630 3269 1262</div>
+                <div class="ml-9">BE55 1431 2763 6644</div>
               </dd>
             </dl>
             <ul role="list" class="mt-8 flex space-x-3">
