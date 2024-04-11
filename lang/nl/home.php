@@ -63,7 +63,7 @@ return [
     'agendaWhen1' => 'Vrijdag 12 April 2024 (13:30)',
     'agendaWhen2' => 'Vrijdag 26 April 2024 (13:30)',
     'agendaWhen3' => 'Vrijdag 17 mei 2024 (13:30)',
-    'agendaWhen4' => 'Vrijdag 24 mei 2024 (13:30)',
+    'agendaWhen4' => 'Donderdag 23 mei 2024 (13:30)',
     'agendaWhen5' => 'Vrijdag 7 june 2024 (13:30)',
     'agendaWhen6' => 'Vrijdag 21 june 2024 (13:30)',
     'agendaWhen7' => 'Vrijdag 16-17 augustus 2024 (13:30)',

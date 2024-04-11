@@ -55,7 +55,7 @@ return [
     'agendaWhen1' => 'Vendredi 12 avril 2024 (13:30)',
     'agendaWhen2' => 'Vendredi 26 avril 2024 (13:30)',
     'agendaWhen3' => 'Vendredi 17 mai 2024 (13:30)',
-    'agendaWhen4' => 'Vendredi 24 mai 2024 (13:30)',
+    'agendaWhen4' => 'Jeudi 23 mai 2024 (13:30)',
     'agendaWhen5' => 'Vendredi 7 juin 2024 (13:30)',
     'agendaWhen6' => 'Vendredi 21 juin 2024 (13:30)',
     'agendaWhen7' => 'Vendredi 16-17 août 2024 (13:30)',
