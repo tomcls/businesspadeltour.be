@@ -29,7 +29,6 @@
         </div>
         <div class=" {{$tab!='toursandtaxi'?'hidden':''}}">
             <h1 class="text-3xl font-bold tracking-tight color-dark-blue sm:text-4xl mb-10"></h1>
-            <h2 class="text-xl  tracking-tight text-gray-400 sm:text-xl ">{{__('sessions.tournoi')}} 28/04/2023</h2>
             <div  class="mb-10 pt-10  text-sm font-semibold"><a class="text-blue-500" href="{{env('APP_URL').'/images/toursandtaxi.zip'}}">{{__('sessions.download')}}</a></div>
             <div class="-m-1 flex flex-wrap md:-m-2">
                 @for ($i = 1; $i < 140; $i++)
@@ -45,7 +44,6 @@
         </div>
         <div  class=" {{$tab!='liege'?'hidden':''}}">
             <h1 class="text-3xl font-bold tracking-tight color-dark-blue sm:text-4xl mb-10"></h1>
-            <h2 class="text-xl  tracking-tight text-gray-400 sm:text-xl ">{{__('sessions.tournoi')}} 26/05/2023</h2>
             <div  class="mb-10 pt-10  text-sm font-semibold"><a class="text-blue-500" href="{{env('APP_URL').'/images/liege.zip'}}">{{__('sessions.download')}}</a></div>
             <div class="-m-1 flex flex-wrap md:-m-2">
                 @for ($i = 140; $i < 259; $i++)
@@ -65,7 +63,6 @@
         </div>
         <div  class=" {{$tab!='nivelles'?'hidden':''}}">
             <h1 class="text-3xl font-bold tracking-tight color-dark-blue sm:text-4xl mb-10"></h1>
-            <h2 class="text-xl  tracking-tight text-gray-400 sm:text-xl mb-10">{{__('sessions.tournoi')}} 09/06/2023</h2>
             <div  class="mb-10   text-sm font-semibold"><a class="text-blue-500" href="{{env('APP_URL').'/images/nivelles.zip'}}">{{__('sessions.download')}}</a></div>
             <div class="-m-1 flex flex-wrap md:-m-2">
                 @for ($i = 259; $i < 341; $i++)
@@ -85,7 +82,6 @@
         </div>
         <div  class=" {{$tab!='knokke'?'hidden':''}}">
             <h1 class="text-3xl font-bold tracking-tight color-dark-blue sm:text-4xl mb-10"></h1>
-            <h2 class="text-xl  tracking-tight text-gray-400 sm:text-xl mb-10">{{__('sessions.tournoi')}} </h2>
             <div  class="mb-10 pt-10  text-sm font-semibold"><a class="text-blue-500" href="{{env('APP_URL').'/images/knokke.zip'}}">{{__('sessions.download')}}</a></div>
             <div class="-m-1 flex flex-wrap md:-m-2">
                 @for ($i = 341; $i < 501; $i++)
