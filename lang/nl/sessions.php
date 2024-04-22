@@ -2,5 +2,7 @@
 
 return [
     'tournoi' => 'Tournoi',
-    'download' => 'Alles downloaden'
+    'download' => 'Alles downloaden',
+    'morning' => 'Morgen',
+    'afternoon' => 'Namiddag'
 ];

@@ -83,7 +83,7 @@
                 <div class="flex flex-col ">
                   <div class="flex justify-between "  >
                     <!-- Selected: "font-semibold", Not Selected: "font-normal" -->
-                    <p class="font-normal text-xs ">{{$s->city}}: {{\Carbon\Carbon::parse($s->startdate)->format('d-m-Y')}}</p>
+                    <p class="font-normal text-xs ">{{$s->city}}: {{\Carbon\Carbon::parse($s->startdate)->format('d-m-Y')}} {{$s->id == 11 ? __('sessions.afternoon') : '' }}  {{$s->id == 12 ? __('sessions.morning') : '' }}</p>
                     
                   </div>
                 </div>
