@@ -119,7 +119,7 @@
           <div x-data="{ isOpen: false }" class="relative" >
             <!-- Item active: "text-gray-900", Item inactive: "color-dark-blue" -->
             <button @click="isOpen = !isOpen" type="button" class="color-dark-blue group inline-flex items-center rounded-md text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2" aria-expanded="false">
-              <span>{{__('menu.season2023')}}</span>
+              <span>Photos</span>
               <!--
                 Heroicon name: mini/chevron-down
   
@@ -150,27 +150,15 @@
                 style="display: none"
                 class="absolute z-10 -ml-4 mt-3 w-screen max-w-xs transform px-2 sm:px-0 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2">
               <div class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-                <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                <div class="relative grid gap-6 bg-white px-5 py-3 sm:gap-4 sm:p-4">
                   <a href="{{url('/').'/'.App::currentLocale().'/photos/toursandtaxi'}}" x-on:click="isOpen=false" class="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50">
                     <div class="ml-4">
-                      <p class="text-base font-medium text-gray-900">Tours & Taxi</p>
+                      <p class="text-base font-medium text-gray-900">2023</p>
                     </div>
                   </a>
-                  <a href="{{url('/').'/'.App::currentLocale().'/photos/liege'}}" x-on:click="isOpen=false" class="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50">
+                  <a href="{{url('/').'/'.App::currentLocale().'/photos2024/liege'}}" x-on:click="isOpen=false" class="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50">
                     <div class="ml-4">
-                      <p class="text-base font-medium text-gray-900">Liège</p>
-                    </div>
-                  </a>
-                  <a href="{{url('/').'/'.App::currentLocale().'/photos/nivelles'}}" x-on:click="isOpen=false" class="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50">
-                    <!-- Heroicon name: outline/shield-check -->
-                    <div class="ml-4">
-                      <p class="text-base font-medium text-gray-900">Nivelles</p>
-                    </div>
-                  </a>
-                  <a href="{{url('/').'/'.App::currentLocale().'/photos/knokke'}}" x-on:click="isOpen=false" class="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50">
-                    <!-- Heroicon name: outline/shield-check -->
-                    <div class="ml-4">
-                      <p class="text-base font-medium text-gray-900">Knokke</p>
+                      <p class="text-base font-medium text-gray-900">2024</p>
                     </div>
                   </a>
                 </div>

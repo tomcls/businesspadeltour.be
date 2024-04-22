@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SitemapXmlController;
 use App\Http\Livewire\Contact;
 use App\Http\Livewire\Photos;
+use App\Http\Livewire\Photos2024;
 use App\Http\Livewire\Video;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Route;
@@ -76,6 +77,7 @@ Route::prefix('{locale}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('set.l
     Route::get('/video', Video::class)->name('video');
     
     Route::get('/photos/{slug?}', Photos::class)->name('photos');
+    Route::get('/photos2024/{slug?}', Photos2024::class)->name('photos2024');
 
     Route::get('/news', function () {
         return new Response((new ArticleController)->index());
