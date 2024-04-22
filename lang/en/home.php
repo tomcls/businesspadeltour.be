@@ -65,6 +65,7 @@ return [
     'agendaWhen4' => 'Thursday 23 mei 2024 (13:30)',
     'agendaWhen5' => 'Friday 7 june 2024 (13:30)',
     'agendaWhen6' => 'Friday 21 june 2024 (13:30)',
+    'agendaWhen6bis' => 'Friday 21 june 2024 (10:00)',
     'agendaWhen7' => 'Friday 16-17 augustus 2024 (13:30)',
     'agendaWhere1' => 'Planet Padel (rue de la Vallée 10 4470 Saint-Georges sur Meuse ) ',
     'agendaWhere2' => 'Tour & Taxis Padel Club (avenue du Port 86c – 1000 Brussels) ',
