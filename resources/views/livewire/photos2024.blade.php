@@ -26,7 +26,7 @@
             <h1 class="text-3xl font-bold tracking-tight color-dark-blue sm:text-4xl mb-10"></h1>
             <div  class="mb-10 pt-10  text-sm font-semibold"><a class="text-blue-500" href="{{env('APP_URL').'/images/liege.zip'}}">{{__('sessions.download')}}</a></div>
             <div class="-m-1 flex flex-wrap md:-m-2">
-                @for ($i = 503; $i < 604; $i++)
+                @for ($i = 504; $i < 604; $i++)
                     <div class="flex w-1/3 sm:w-1/4 flex-wrap">
                         <div class="w-full p-1 md:p-2" wire:ignore>
                             <a href="#" wire:click.prevent="$set('showEditModal', true)" @click="window.carousel.slideTo({{$i-1}})" >
@@ -52,7 +52,7 @@
                     <!-- Carousel wrapper -->
                     
                     <div class="relative h-56 overflow-hidden rounded-lg md:h-screen">
-                        @for ($i = 503; $i < 604; $i++)
+                        @for ($i = 504; $i < 604; $i++)
                          <!-- Item 1 -->
                             <div class="containerImage hidden duration-700 ease-in-out" id="carousel-item-{{$i}}"  >
                                 <img src="{{env('APP_URL').'/images/logo/logo-img.png'}}" data-src="{{env('APP_URL').'/images/sessions/session1_'.$i.'.jpg'}}"  class="absolute block sm:h-screen -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." wire:click.prevent="$set('showEditModal', false)">
@@ -92,7 +92,7 @@
         window.onload = function() {
             console.log('onload')
           const items = [];
-            for (let index = 503; index < 604; index++) {
+            for (let index = 504; index < 604; index++) {
                 console.log(index)
                 items.push({
                     position: index,
