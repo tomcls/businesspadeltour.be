@@ -83,7 +83,7 @@
                 <div class="flex flex-col ">
                   <div class="flex justify-between "  >
                     <!-- Selected: "font-semibold", Not Selected: "font-normal" -->
-                    <p class="font-normal text-xs ">{{$s->city}}: {{\Carbon\Carbon::parse($s->startdate)->format('d-m-Y')}} {{$s->id == 11 ? __('sessions.afternoon') : '' }}  {{$s->id == 13 ? __('sessions.morning') : '' }} {!!$s->id == 13 ? '<span class="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10"><b>Sold Out!</b></span> </p>': "" !!}
+                    <p class="font-normal text-xs ">{{$s->city}}: {{\Carbon\Carbon::parse($s->startdate)->format('d-m-Y')}} {{$s->id == 11 ? __('sessions.afternoon') : '' }}  {{$s->id == 13 ? __('sessions.morning') : '' }} {!!$s->id == 7 ? '<span class="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10"><b>Sold Out!</b></span> </p>': "" !!}
                     
                   </div>
                 </div>
