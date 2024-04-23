@@ -259,7 +259,7 @@
                 </dt>
                 
                 <dd class="mt-0 text-base leading-7 text-gray-600">
-                  <b>{{__('home.when')}}: </b> {{__('home.agendaWhen2')}}<br/>
+                  <b>{{__('home.when')}}: </b> {{__('home.agendaWhen2')}} <span class="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10"><b>Sold Out!</b></span><br/>
                   <b>{{__('home.where')}}: </b> {{__('home.agendaWhere2')}}<br/><br/>
                 </dd>
               </div>
