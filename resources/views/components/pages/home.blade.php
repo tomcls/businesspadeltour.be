@@ -308,7 +308,7 @@
                 </dt>
                 
                 <dd class="mt-0 text-base leading-7 text-gray-600">
-                  <b>{{__('home.when')}}: </b> {{__('home.agendaWhen6bis')}}<br/>
+                  <b>{{__('home.when')}}: </b> {{__('home.agendaWhen6bis')}} {{__('sessions.morning')}}<br/>
                   <b>{{__('home.where')}}: </b> {{__('home.agendaWhere6')}}<br/><br/>
                 </dd>
               </div>
@@ -324,7 +324,7 @@
                 </dt>
                 
                 <dd class="mt-0 text-base leading-7 text-gray-600">
-                  <b>{{__('home.when')}}: </b> {{__('home.agendaWhen6')}}<br/>
+                  <b>{{__('home.when')}}: </b> {{__('home.agendaWhen6')}} {{__('sessions.afternoon')}}<br/>
                   <b>{{__('home.where')}}: </b> {{__('home.agendaWhere6')}}<br/><br/>
                 </dd>
               </div>
