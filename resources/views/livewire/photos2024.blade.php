@@ -1,17 +1,14 @@
 
-<div  x-data="{
-
-}" x-init="loadImages()">
+<div x-init="loadImages()">
 
     <div class="container mx-auto px-5 py-2 lg:px-32 lg:pt-12">
         <div>
             <div class="sm:hidden">
               <label for="tabs" class="sr-only">Select a tab</label>
-              <!-- Use an "onChange" listener to redirect the user to the selected tab URL. -->
               <select id="tabs" name="tabs"  wire:model="tab"  class="block w-full rounded-md border-gray-300 py-2 pl-3 pr-10 text-base focus:border-dark-blue focus:outline-none focus:ring-indigo-500 sm:text-sm">
                 <option value="liege" >{{ucFirst(__('sessions.tournoi'))}} Liège</option>
                 <option value="toursandtaxi" >{{ucFirst(__('sessions.tournoi'))}} Tours & Taxi</option>
-            </select>
+              </select>
             </div>
             <div class="hidden sm:block">
               <div class="border-b border-gray-200">
@@ -23,51 +20,59 @@
               </div>
             </div>
         </div>
-      
-        <div  class=" {{$tab!='liege'?'hidden':''}}">
-            <h1 class="text-3xl font-bold tracking-tight color-dark-blue sm:text-4xl mb-10"></h1>
-            <div  class="mb-10 pt-10  text-sm font-semibold"><a class="text-blue-500" href="{{env('APP_URL').'/images/liege.zip'}}">{{__('sessions.download')}}</a></div>
-            <div class="-m-1 flex flex-wrap md:-m-2">
-                @for ($i = 1; $i < 103; $i++)
-                    <div class="flex w-1/3 sm:w-1/4 flex-wrap">
-                        <div class="w-full p-1 md:p-2" wire:ignore>
-                            <a href="#" wire:click.prevent="$set('showEditModal', true)" @click="window.carousel.slideTo({{$i-1}})" >
-                                <img
-                                alt="gallery"
-                                class="block h-full w-full rounded-lg object-cover object-center"
-                                src="{{env('APP_URL').'/images/logo/logo-img.png'}}"
-                                data-src="{{env('APP_URL').'/images/sessions2024/session1_'.$i.'.jpg'}}" />
-                            </a>
+        <div>
+
+            <div  class=" {{$tab!='liege'?'hidden':'aaaaa'}}">
+                
+                <div  class="mb-10 pt-10  text-sm font-semibold">
+                    <a class="text-blue-500" href="{{env('APP_URL').'/images/liege.zip'}}">
+                        {{__('sessions.download')}}
+                    </a>
+                </div>
+                <div class="-m-1 flex flex-wrap md:-m-2">
+                    @for ($i = 1; $i < 103; $i++)
+                        <div class="flex w-1/3 sm:w-1/4 flex-wrap">
+                            <div class="w-full p-1 md:p-2" wire:ignore>
+                                <button wire:click="$set('showEditModal', true)" @click="window.carousel.slideTo({{$i-1}})" >
+                                    <img
+                                    alt="gallery"
+                                    class="block h-full w-full rounded-lg object-cover object-center"
+                                    src="{{env('APP_URL').'/images/logo/logo-img.png'}}"
+                                    data-src="{{env('APP_URL').'/images/sessions2024/session1_'.$i.'.jpg'}}" />
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                @endfor
+                    @endfor
+                </div>
+            </div>
+            <div  class=" {{$tab!='toursandtaxi'?'hidden':'bbbbb'}}">
+                
+                <div  class="mb-10 pt-10  text-sm font-semibold">
+                    <a class="text-blue-500" href="{{env('APP_URL').'/images/toursandtaxi.zip'}}">
+                        {{__('sessions.download')}}
+                    </a>
+                </div>
+                <div class="-m-1 flex flex-wrap md:-m-2">
+                    @for ($i = 103; $i < 269; $i++)
+                        <div class="flex w-1/3 sm:w-1/4 flex-wrap">
+                            <div class="w-full p-1 md:p-2" wire:ignore>
+                                <button wire:click="$set('showEditModal', true)" @click="window.carousel.slideTo({{$i-1}})" >
+                                    <img
+                                    alt="gallery"
+                                    class="block h-full w-full rounded-lg object-cover object-center"
+                                    src="{{env('APP_URL').'/images/logo/logo-img.png'}}"
+                                    data-src="{{env('APP_URL').'/images/sessions2024/session1_'.$i.'.jpg'}}" />
+                                </button>
+                            </div>
+                        </div>
+                    @endfor
+                </div>
             </div>
         </div>
-        <div  class=" {{$tab!='toursandtaxi'?'hidden':''}}">
-            <h1 class="text-3xl font-bold tracking-tight color-dark-blue sm:text-4xl mb-10"></h1>
-            <div  class="mb-10 pt-10  text-sm font-semibold"><a class="text-blue-500" href="{{env('APP_URL').'/images/toursandtaxi.zip'}}">{{__('sessions.download')}}</a></div>
-            <div class="-m-1 flex flex-wrap md:-m-2">
-                @for ($i = 103; $i < 269; $i++)
-                    <div class="flex w-1/3 sm:w-1/4 flex-wrap">
-                        <div class="w-full p-1 md:p-2" wire:ignore>
-                            <a href="#" wire:click.prevent="$set('showEditModal', true)" @click="window.carousel.slideTo({{$i-1}})" >
-                                <img
-                                alt="gallery"
-                                class="block h-full w-full rounded-lg object-cover object-center"
-                                src="{{env('APP_URL').'/images/logo/logo-img.png'}}"
-                                data-src="{{env('APP_URL').'/images/sessions2024/session1_'.$i.'.jpg'}}" />
-                            </a>
-                        </div>
-                    </div>
-                @endfor
-            </div>
-        </div>
-    </div>
     <div  wire:ignore>
 
         <x-modal.dialog wire:model.defer="showEditModal">
             <x-slot name="title"></x-slot>
-        
             <x-slot name="content">
                 <div  class="relative w-full" >
                     <!-- Carousel wrapper -->
@@ -102,8 +107,6 @@
             </x-slot>
         
             <x-slot name="footer">
-                
-                
             </x-slot>
         </x-modal.dialog>
     </div>
@@ -142,4 +145,5 @@
             });
         };
     </script>
+</div>
 </div>

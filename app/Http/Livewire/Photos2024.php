@@ -8,11 +8,15 @@ use Livewire\Component;
 class Photos2024 extends Component
 {
     public $showEditModal = false;
-    public $tab = 'toursandtaxi'; // liege
+    public $tab = 'liege'; // liege
+    //public $queryString = ['slug'];
+    public $slug = 'liege';
 
     public function mount(Request $request, $slug = null)
     {
-        $this->tab = $slug?? 'toursandtaxi';
+        $this->tab = $slug ?? 'liege';
+        $this->slug = $slug ?? 'liege';
+        logger('tab ='.$this->tab);
     }
     public function render()
     {

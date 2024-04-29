@@ -46,7 +46,7 @@ Route::get('/contacts/download', [CSVController::class,'contacts'])->name('conta
 Route::get('/users/download', [CSVController::class,'users'])->name('usersCSV');
 Route::get('/companies/download', [CSVController::class,'companies'])->name('companiesCSV');
 
-Route::prefix('{locale}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('set.locale')->group(function ($r) {
+Route::prefix('{locale?}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('set.locale')->group(function ($r) {
 
     if (in_array(app('request')->segment(1), array_keys(config('app.locales')))) {
         app()->setLocale(app('request')->segment(1));
