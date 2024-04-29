@@ -10,6 +10,7 @@
               <!-- Use an "onChange" listener to redirect the user to the selected tab URL. -->
               <select id="tabs" name="tabs"  wire:model="tab"  class="block w-full rounded-md border-gray-300 py-2 pl-3 pr-10 text-base focus:border-dark-blue focus:outline-none focus:ring-indigo-500 sm:text-sm">
                 <option value="liege" >{{ucFirst(__('sessions.tournoi'))}} Liège</option>
+                <option value="toursandtaxi" >{{ucFirst(__('sessions.tournoi'))}} Tours & Taxi</option>
             </select>
             </div>
             <div class="hidden sm:block">
@@ -17,6 +18,7 @@
                 <nav class="-mb-px flex space-x-8" aria-label="Tabs">
                   <!-- Current: "border-dark-blue color-dark-blue", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
                   <a href="" wire:click.prevent="$set('tab', 'liege')" class=" {{$tab =='liege' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium">{{ucFirst(__('sessions.tournoi'))}} Liège</a>
+                  <a href="" wire:click.prevent="$set('tab', 'toursandtaxi')" class="{{$tab =='toursandtaxi' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium" aria-current="page">{{ucFirst(__('sessions.tournoi'))}} Tours & Taxi</a>
                 </nav>
               </div>
             </div>
@@ -26,7 +28,26 @@
             <h1 class="text-3xl font-bold tracking-tight color-dark-blue sm:text-4xl mb-10"></h1>
             <div  class="mb-10 pt-10  text-sm font-semibold"><a class="text-blue-500" href="{{env('APP_URL').'/images/liege.zip'}}">{{__('sessions.download')}}</a></div>
             <div class="-m-1 flex flex-wrap md:-m-2">
-                @for ($i = 1; $i < 104; $i++)
+                @for ($i = 1; $i < 269; $i++)
+                    <div class="flex w-1/3 sm:w-1/4 flex-wrap">
+                        <div class="w-full p-1 md:p-2" wire:ignore>
+                            <a href="#" wire:click.prevent="$set('showEditModal', true)" @click="window.carousel.slideTo({{$i-1}})" >
+                                <img
+                                alt="gallery"
+                                class="block h-full w-full rounded-lg object-cover object-center"
+                                src="{{env('APP_URL').'/images/logo/logo-img.png'}}"
+                                data-src="{{env('APP_URL').'/images/sessions2024/session1_'.$i.'.jpg'}}" />
+                            </a>
+                        </div>
+                    </div>
+                @endfor
+            </div>
+        </div>
+        <div  class=" {{$tab!='toursandtaxi'?'hidden':''}}">
+            <h1 class="text-3xl font-bold tracking-tight color-dark-blue sm:text-4xl mb-10"></h1>
+            <div  class="mb-10 pt-10  text-sm font-semibold"><a class="text-blue-500" href="{{env('APP_URL').'/images/toursandtaxi.zip'}}">{{__('sessions.download')}}</a></div>
+            <div class="-m-1 flex flex-wrap md:-m-2">
+                @for ($i = 1; $i < 269; $i++)
                     <div class="flex w-1/3 sm:w-1/4 flex-wrap">
                         <div class="w-full p-1 md:p-2" wire:ignore>
                             <a href="#" wire:click.prevent="$set('showEditModal', true)" @click="window.carousel.slideTo({{$i-1}})" >
@@ -52,7 +73,7 @@
                     <!-- Carousel wrapper -->
                     
                     <div class="relative h-56 overflow-hidden rounded-lg md:h-screen">
-                        @for ($i = 1; $i < 104; $i++)
+                        @for ($i = 1; $i < 268; $i++)
                          <!-- Item 1 -->
                             <div class="containerImage hidden duration-700 ease-in-out" id="carousel-item-{{$i}}"  >
                                 <img src="{{env('APP_URL').'/images/logo/logo-img.png'}}" data-src="{{env('APP_URL').'/images/sessions2024/session1_'.$i.'.jpg'}}"  class="absolute block sm:h-screen -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." wire:click.prevent="$set('showEditModal', false)">
@@ -92,7 +113,7 @@
         window.onload = function() {
             console.log('onload')
           const items = [];
-            for (let index = 0; index < 103; index++) {
+            for (let index = 0; index < 269; index++) {
                 items.push({
                     position: index,
                     el: document.getElementById('carousel-item-'+(index+1))
