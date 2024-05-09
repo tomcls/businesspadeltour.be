@@ -49,7 +49,10 @@
           </div>
         </div>
         <div class="bg-gray-50 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-          <img class="aspect-[3/2] object-cover lg:aspect-auto lg:h-full lg:w-full" src="{{url('/').'/images/section/home.jpg'}}" alt="">
+          <video autoplay="" id="heroVideo" loop="" muted="" poster="images/hero-video-poster.jpg" class="hidden sm:block paspect-[3/2] object-cover lg:aspect-auto lg:h-full lg:w-full">
+            <source src="https://itcl.s3.eu-west-1.amazonaws.com/businesspadeltour/padel.mp4" type="video/mp4" />
+          </video>
+          <img alt="poster image mobile" class="sm:hidden paspect-[3/2] object-cover lg:aspect-auto lg:h-full lg:w-full" src="{{url('/').'/images/section/home.jpg'}}" />
         </div>
       </div>
       <div class="overflow-hidden bg-black py-24 sm:py-32" id="summary">
