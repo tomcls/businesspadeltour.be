@@ -98,6 +98,11 @@ class Register extends Component
                     $price = 195 * $this->totalTeam;
                 }
 
+
+                if($this->promo == "antwerp1705") {
+                    $price = 0 * $this->totalTeam;
+                }
+
                 foreach ($this->totalTeamsValidated as $key => $value) {
                     $userOne = new User();
                     $userOne->firstname = $value['playerOneFirstname'];
@@ -158,6 +163,9 @@ class Register extends Component
                     if(strtolower($this->promo) == "vertuozatour24") {
                         $content .="<br/><b>".__('signup.Price')." Promo code ".$this->promo."</b>: ".$price." € + TVA";
                     }
+                    if(strtolower($this->promo) == strtolower("antwerp1705")) {
+                        $content .="<br/><b>".__('signup.Price')." Promo code ".$this->promo."</b>: ".$price." € + TVA";
+                    }
 
                     
                 }
@@ -209,7 +217,7 @@ class Register extends Component
                 $message = [
                     "from_email" => "info@businesspadeltour.be",
                     'from_name'  => 'Vertuoza padel tour',
-                    "subject" => "BusinessPadelTour: Nouvelle inscription équipe",
+                    "subject" => __('signup.VertuozaPadelTour: New team sign-up'),
                     "to" => $to,
                     "headers" => ["Reply-To" => "info@businesspadeltour.be"],
                     'global_merge_vars' => $template_content
@@ -255,7 +263,7 @@ class Register extends Component
                 $message = [
                     "from_email" => "info@businesspadeltour.be",
                     'from_name'  => 'Vertuoza padel tour',
-                    "subject" => "BusinessPadelTour: Nouvelle inscription équipe",
+                    "subject" => __('signup.VertuozaPadelTour: New team sign-up'),
                     "to" => $to,
                     "headers" => ["Reply-To" => "info@businesspadeltour.be"],
                     'global_merge_vars' => $template_content
@@ -300,7 +308,7 @@ class Register extends Component
                     $message = [
                         "from_email" => "info@businesspadeltour.be",
                         'from_name'  => 'Vertuoza padel tour',
-                        "subject" => "VertuozaPadelTour: Nouvelle inscription équipe",
+                        "subject" => __('signup.VertuozaPadelTour: New team sign-up'),
                         "to" => $to,
                         "headers" => ["Reply-To" => "info@businesspadeltour.be"],
                         'global_merge_vars' => $template_content

@@ -49,10 +49,7 @@
           </div>
         </div>
         <div class="bg-gray-50 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-          <video autoplay="" id="heroVideo" loop="" muted="" poster="images/hero-video-poster.jpg" class="hidden sm:block paspect-[3/2] object-cover lg:aspect-auto lg:h-full lg:w-full">
-            <source src="https://itcl.s3.eu-west-1.amazonaws.com/businesspadeltour/padel.mp4" type="video/mp4" />
-          </video>
-          <img alt="poster image mobile" class="sm:hidden paspect-[3/2] object-cover lg:aspect-auto lg:h-full lg:w-full" src="{{url('/').'/images/section/home.jpg'}}" />
+          <img alt="poster image mobile" class=" paspect-[3/2] object-cover lg:aspect-auto lg:h-full lg:w-full" src="{{url('/').'/images/section/home.jpg'}}" />
         </div>
       </div>
       <div class="overflow-hidden bg-black py-24 sm:py-32" id="summary">
@@ -100,7 +97,9 @@
                 </dl>
               </div>
             </div>
-            <img src="{{url('/').'/images/sessions/session1_416.jpg'}}" alt="Product screenshot" class="hidden sm:block  w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[50rem] md:-ml-4 lg:-ml-0" width="2432" height="1442">
+            <video autoplay="" id="heroVideo" controls   class="sm:block  w-full max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[50rem] md:-ml-4 lg:-ml-0">
+              <source src="https://itcl.s3.eu-west-1.amazonaws.com/businesspadeltour/padel.mp4" type="video/mp4" />
+            </video>
           </div>
         </div>
       </div>

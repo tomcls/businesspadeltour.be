@@ -51,5 +51,6 @@ return [
     "Date" => "Date",
     "Category" => "Category",
     "Price"=>"Price",
-    "Welcome on the Vertuoza Padel Tour"=>"Welcome on the Vertuoza Padel Tour"
+    "Welcome on the Vertuoza Padel Tour"=>"Welcome on the Vertuoza Padel Tour",
+    "VertuozaPadelTour: New team sign-up" => "VertuozaPadelTour: Nouvelle inscription équipe"
 ];
