@@ -30,7 +30,7 @@
                     </a>
                 </div>
                 <div class="-m-1 flex flex-wrap md:-m-2">
-                    @for ($i = 1; $i < 103; $i++)
+                    @for ($i = 1; $i < 102; $i++)
                         <div class="flex w-1/3 sm:w-1/4 flex-wrap">
                             <div class="w-full p-1 md:p-2" wire:ignore>
                                 <button wire:click="$set('showEditModal', true)" @click="window.carousel.slideTo({{$i-1}})" >
