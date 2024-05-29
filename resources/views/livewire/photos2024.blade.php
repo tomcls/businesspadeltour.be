@@ -8,7 +8,7 @@
               <select id="tabs" name="tabs"  wire:model="tab"  class="block w-full rounded-md border-gray-300 py-2 pl-3 pr-10 text-base focus:border-dark-blue focus:outline-none focus:ring-indigo-500 sm:text-sm">
                 <option value="liege" >{{ucFirst(__('sessions.tournoi'))}} Liège</option>
                 <option value="toursandtaxi" >{{ucFirst(__('sessions.tournoi'))}} Tours & Taxi</option>
-                <option value="waterloo" >{{ucFirst(__('sessions.waterloo'))}} Waterloo</option>
+                <option value="waterloo" >{{ucFirst(__('sessions.tournoi'))}} Waterloo</option>
               </select>
             </div>
             <div class="hidden sm:block">
