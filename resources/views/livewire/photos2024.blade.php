@@ -9,6 +9,7 @@
                 <option value="liege" >{{ucFirst(__('sessions.tournoi'))}} Liège</option>
                 <option value="toursandtaxi" >{{ucFirst(__('sessions.tournoi'))}} Tours & Taxi</option>
                 <option value="waterloo" >{{ucFirst(__('sessions.tournoi'))}} Waterloo</option>
+                <option value="anvers" >{{ucFirst(__('sessions.tournoi'))}} {{App::currentLocale() == 'fr': 'Anvers': 'Antwerp'}}</option>
               </select>
             </div>
             <div class="hidden sm:block">
@@ -18,6 +19,7 @@
                   <a href="{{route('photos2024',['slug'=>'liege'])}}" class=" {{$tab =='liege' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium">{{ucFirst(__('sessions.tournoi'))}} Liège</a>
                   <a href="{{route('photos2024',['slug'=>'toursandtaxi'])}}"  class="{{$tab =='toursandtaxi' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium" aria-current="page">{{ucFirst(__('sessions.tournoi'))}} Tours & Taxi</a>
                   <a href="{{route('photos2024',['slug'=>'waterloo'])}}"  class="{{$tab =='waterloo' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium" aria-current="page">{{ucFirst(__('sessions.tournoi'))}} Waterloo</a>
+                  <a href="{{route('photos2024',['slug'=>'anvers'])}}"  class="{{$tab =='anvers' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium" aria-current="page">{{ucFirst(__('sessions.tournoi'))}} {{App::currentLocale() == 'fr': 'Anvers': 'Antwerp'}}</a>
                 </nav>
               </div>
             </div>
@@ -67,6 +69,28 @@
                     @endfor
                 </div>
             </div>
+            <div  class=" {{$tab!='anvers'?'hidden':'cccc'}}">
+                <div  class="mb-10 pt-10  text-sm font-semibold">
+                    <a class="text-blue-500" href="{{env('APP_URL').'/images/sessions2024/anvers2024.zip'}}">
+                        {{__('sessions.download')}}
+                    </a>
+                </div>
+                <div class="-m-1 flex flex-wrap md:-m-2">
+                    @for ($i = 269; $i < 442; $i++)
+                        <div class="flex w-1/3 sm:w-1/4 flex-wrap">
+                            <div class="w-full p-1 md:p-2" wire:ignore>
+                                <button wire:click="$set('showEditModal', true)" @click="window.carousel.slideTo({{$i-1}})" >
+                                    <img
+                                    alt="gallery"
+                                    class="block h-full w-full rounded-lg object-cover object-center"
+                                    src="{{env('APP_URL').'/images/logo/logo-img.png'}}"
+                                    data-src="{{env('APP_URL').'/images/sessions2024/session1_'.$i.'.jpg'}}" />
+                                </button>
+                            </div>
+                        </div>
+                    @endfor
+                </div>
+            </div>
             <div  class=" {{$tab!='waterloo'?'hidden':'cccc'}}">
                 <div  class="mb-10 pt-10  text-sm font-semibold">
                     <a class="text-blue-500" href="{{env('APP_URL').'/images/sessions2024/waterloo2024.zip'}}">
@@ -74,7 +98,7 @@
                     </a>
                 </div>
                 <div class="-m-1 flex flex-wrap md:-m-2">
-                    @for ($i = 269; $i < 442; $i++)
+                    @for ($i = 442; $i < 584; $i++)
                         <div class="flex w-1/3 sm:w-1/4 flex-wrap">
                             <div class="w-full p-1 md:p-2" wire:ignore>
                                 <button wire:click="$set('showEditModal', true)" @click="window.carousel.slideTo({{$i-1}})" >
@@ -99,7 +123,7 @@
                     <!-- Carousel wrapper -->
                     
                     <div class="relative h-56 overflow-hidden rounded-lg md:h-screen">
-                        @for ($i = 1; $i < 441; $i++)
+                        @for ($i = 1; $i < 583; $i++)
                          <!-- Item 1 -->
                             <div class="containerImage hidden duration-700 ease-in-out" id="carousel-item-{{$i}}"  >
                                 <img src="{{env('APP_URL').'/images/logo/logo-img.png'}}" data-src="{{env('APP_URL').'/images/sessions2024/session1_'.$i.'.jpg'}}"  class="absolute block sm:h-screen -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." wire:click.prevent="$set('showEditModal', false)">
@@ -137,7 +161,7 @@
         window.onload = function() {
             console.log('onload')
           const items = [];
-            for (let index = 0; index < 440; index++) {
+            for (let index = 0; index < 583; index++) {
                 items.push({
                     position: index,
                     el: document.getElementById('carousel-item-'+(index+1))
