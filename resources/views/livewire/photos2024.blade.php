@@ -34,11 +34,11 @@
                 <div class="-m-1 flex flex-wrap md:-m-2">
                     @for ($i = 1; $i < 102; $i++)
                         <div class="flex w-1/3 sm:w-1/4 flex-wrap">
-                            <div class="w-full p-1 md:p-2" wire:ignore>
+                            <div class="max-h-64 w-full text-center justify-center content-center p-1 md:p-2" wire:ignore>
                                 <button wire:click="$set('showEditModal', true)" @click="window.carousel.slideTo({{$i-1}})" >
                                     <img
                                     alt="gallery"
-                                    class="block h-full w-full rounded-lg object-cover object-center"
+                                    class="max-h-64 block h-full w-full rounded-lg object-cover object-center"
                                     src="{{env('APP_URL').'/images/logo/logo-img.png'}}"
                                     data-src="{{env('APP_URL').'/images/sessions2024/session1_'.$i.'.jpg'}}" />
                                 </button>
@@ -54,13 +54,13 @@
                     </a>
                 </div>
                 <div class="-m-1 flex flex-wrap md:-m-2">
-                    @for ($i = 102; $i < 269; $i++)
+                    @for ($i = 103; $i < 269; $i++)
                         <div class="flex w-1/3 sm:w-1/4 flex-wrap">
-                            <div class="w-full p-1 md:p-2" wire:ignore>
+                            <div class="max-h-64 w-full text-center justify-center content-center p-1 md:p-2" wire:ignore>
                                 <button wire:click="$set('showEditModal', true)" @click="window.carousel.slideTo({{$i-1}})" >
                                     <img
                                     alt="gallery"
-                                    class="block h-full w-full rounded-lg object-cover object-center"
+                                    class="max-h-64  block h-full w-full rounded-lg object-cover object-center"
                                     src="{{env('APP_URL').'/images/logo/logo-img.png'}}"
                                     data-src="{{env('APP_URL').'/images/sessions2024/session1_'.$i.'.jpg'}}" />
                                 </button>
@@ -78,11 +78,11 @@
                 <div class="-m-1 flex flex-wrap md:-m-2">
                     @for ($i = 268; $i < 442; $i++)
                         <div class="flex w-1/3 sm:w-1/4 flex-wrap">
-                            <div class="w-full p-1 md:p-2" wire:ignore>
+                            <div class="max-h-64 w-full text-center justify-center content-center p-1 md:p-2" wire:ignore>
                                 <button wire:click="$set('showEditModal', true)" @click="window.carousel.slideTo({{$i-1}})" >
                                     <img
                                     alt="gallery"
-                                    class="block h-full w-full rounded-lg object-cover object-center"
+                                    class="max-h-64  block h-full w-full rounded-lg object-cover object-center"
                                     src="{{env('APP_URL').'/images/logo/logo-img.png'}}"
                                     data-src="{{env('APP_URL').'/images/sessions2024/session1_'.$i.'.jpg'}}" />
                                 </button>
@@ -100,11 +100,11 @@
                 <div class="-m-1 flex flex-wrap md:-m-2">
                     @for ($i = 442; $i < 584; $i++)
                         <div class="flex w-1/3 sm:w-1/4 flex-wrap">
-                            <div class="w-full p-1 md:p-2" wire:ignore>
+                            <div class="max-h-64 w-full text-center justify-center content-center p-1 md:p-2" wire:ignore>
                                 <button wire:click="$set('showEditModal', true)" @click="window.carousel.slideTo({{$i-1}})" >
                                     <img
                                     alt="gallery"
-                                    class="block h-full w-full rounded-lg object-cover object-center"
+                                    class="block max-h-64 w-full rounded-lg object-cover object-center"
                                     src="{{env('APP_URL').'/images/logo/logo-img.png'}}"
                                     data-src="{{env('APP_URL').'/images/sessions2024/session1_'.$i.'.jpg'}}" />
                                 </button>
