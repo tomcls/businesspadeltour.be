@@ -25,7 +25,7 @@
         <div>
             <div  class=" {{$tab!='liege'?'hidden':'aaaaa'}}">
                 <div  class="mb-10 pt-10  text-sm font-semibold">
-                    <a class="text-blue-500" href="{{env('APP_URL').'/images/liege2024.zip'}}">
+                    <a class="text-blue-500" href="{{env('APP_URL').'/images/sessions2024/liege2024.zip'}}">
                         {{__('sessions.download')}}
                     </a>
                 </div>
@@ -47,7 +47,7 @@
             </div>
             <div  class=" {{$tab!='toursandtaxi'?'hidden':'bbbbb'}}">
                 <div  class="mb-10 pt-10  text-sm font-semibold">
-                    <a class="text-blue-500" href="{{env('APP_URL').'/images/toursandtaxi2024.zip'}}">
+                    <a class="text-blue-500" href="{{env('APP_URL').'/images/sessions2024/toursandtaxi2024.zip'}}">
                         {{__('sessions.download')}}
                     </a>
                 </div>
