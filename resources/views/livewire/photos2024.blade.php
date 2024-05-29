@@ -16,104 +16,48 @@
               <div class="border-b border-gray-200">
                 <nav class="-mb-px flex space-x-8" aria-label="Tabs">
                   <!-- Current: "border-dark-blue color-dark-blue", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
-                  <a href="{{route('photos2024',['slug'=>'liege'])}}" class=" {{$tab =='liege' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium">{{ucFirst(__('sessions.tournoi'))}} Liège</a>
-                  <a href="{{route('photos2024',['slug'=>'toursandtaxi'])}}"  class="{{$tab =='toursandtaxi' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium" aria-current="page">{{ucFirst(__('sessions.tournoi'))}} Tours & Taxi</a>
-                  <a href="{{route('photos2024',['slug'=>'waterloo'])}}"  class="{{$tab =='waterloo' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium" aria-current="page">{{ucFirst(__('sessions.tournoi'))}} Waterloo</a>
-                  <a href="{{route('photos2024',['slug'=>'anvers'])}}"  class="{{$tab =='anvers' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium" aria-current="page">{{ucFirst(__('sessions.tournoi'))}} {{App::currentLocale() == 'fr'? 'Anvers': 'Antwerp'}}</a>
+                  <a href="https://businesspadeltour.be/{{App::currentLocale().'/photos2024/liege'}}" class=" {{$tab =='liege' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium">{{ucFirst(__('sessions.tournoi'))}} Liège</a>
+                  <a href="https://businesspadeltour.be/{{App::currentLocale().'/photos2024/toursandtaxi'}}"  class="{{$tab =='toursandtaxi' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium" aria-current="page">{{ucFirst(__('sessions.tournoi'))}} Tours & Taxi</a>
+                  <a href="https://businesspadeltour.be/{{App::currentLocale().'/photos2024/waterloo'}}"  class="{{$tab =='waterloo' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium" aria-current="page">{{ucFirst(__('sessions.tournoi'))}} Waterloo</a>
+                  <a href="https://businesspadeltour.be/{{App::currentLocale().'/photos2024/anvers'}}"  class="{{$tab =='anvers' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium" aria-current="page">{{ucFirst(__('sessions.tournoi'))}} {{App::currentLocale() == 'fr'? 'Anvers': 'Antwerp'}}</a>
                 </nav>
               </div>
             </div>
         </div>
-        <div>
-            <div  class=" {{$tab!='liege'?'hidden':'aaaaa'}}">
-                <div  class="mb-10 pt-10  text-sm font-semibold">
-                    <a class="text-blue-500" href="{{env('APP_URL').'/images/sessions2024/liege2024.zip'}}">
-                        {{__('sessions.download')}}
-                    </a>
-                </div>
-                <div class="-m-1 flex flex-wrap md:-m-2">
-                    @for ($i = 1; $i < 102; $i++)
-                        <div class="flex w-1/3 sm:w-1/4 flex-wrap">
-                            <div class="max-h-64 w-full text-center justify-center content-center p-1 md:p-2" wire:ignore>
-                                <button wire:click="$set('showEditModal', true)" @click="window.carousel.slideTo({{$i-1}})" >
-                                    <img
-                                    alt="gallery"
-                                    class="max-h-64 block h-full w-full rounded-lg object-cover object-center"
-                                    src="{{env('APP_URL').'/images/logo/logo-img.png'}}"
-                                    data-src="{{env('APP_URL').'/images/sessions2024/session1_'.$i.'.jpg'}}" />
-                                </button>
-                            </div>
-                        </div>
-                    @endfor
-                </div>
+
+        <div >
+            <div  class="mb-10 pt-10  text-sm font-semibold">
+                <a class="text-blue-500" href="{{env('APP_URL').'/images/sessions2024/liege2024.zip'}}">
+                    {{__('sessions.download')}}
+                </a>
             </div>
-            <div  class=" {{$tab!='toursandtaxi'?'hidden':'bbbbb'}}">
-                <div  class="mb-10 pt-10  text-sm font-semibold">
-                    <a class="text-blue-500" href="{{env('APP_URL').'/images/sessions2024/toursandtaxi2024.zip'}}">
-                        {{__('sessions.download')}}
-                    </a>
-                </div>
-                <div class="-m-1 flex flex-wrap md:-m-2">
-                    @for ($i = 103; $i < 269; $i++)
-                        <div class="flex w-1/3 sm:w-1/4 flex-wrap">
-                            <div class="max-h-64 w-full text-center justify-center content-center p-1 md:p-2" wire:ignore>
-                                <button wire:click="$set('showEditModal', true)" @click="window.carousel.slideTo({{$i-1}})" >
-                                    <img
-                                    alt="gallery"
-                                    class="max-h-64  block h-full w-full rounded-lg object-cover object-center"
-                                    src="{{env('APP_URL').'/images/logo/logo-img.png'}}"
-                                    data-src="{{env('APP_URL').'/images/sessions2024/session1_'.$i.'.jpg'}}" />
-                                </button>
-                            </div>
+            <div class="-m-1 flex flex-wrap md:-m-2">
+                @php
+                    $position = 0;
+                @endphp
+                @for ($i = $currentImage['from']; $i <= $currentImage['to']; $i++)
+                    <div class="flex w-1/3 sm:w-1/4 flex-wrap">
+                        <div class="max-h-64 w-full text-center justify-center content-center p-1 md:p-2" wire:ignore>
+                            <button wire:click="$set('showEditModal', true)"  
+                                @if(($i) <= $currentImage['to']-1) 
+                                    @click="window.carousel.slideTo({{$position}})" 
+                                @endif >
+                                <img
+                                alt="gallery"
+                                class="max-h-64 block h-full w-full rounded-lg object-cover object-center"
+                                src="{{env('APP_URL').'/images/logo/logo-img.png'}}"
+                                data-src="{{env('APP_URL').'/images/sessions2024/session1_'.$i.'.jpg'}}" />
+                            </button>
                         </div>
-                    @endfor
-                </div>
-            </div>
-            <div  class=" {{$tab!='waterloo'?'hidden':'cccc'}}">
-                <div  class="mb-10 pt-10  text-sm font-semibold">
-                    <a class="text-blue-500" href="{{env('APP_URL').'/images/sessions2024/waterloo2024.zip'}}">
-                        {{__('sessions.download')}}
-                    </a>
-                </div>
-                <div class="-m-1 flex flex-wrap md:-m-2">
-                    @for ($i = 268; $i < 442; $i++)
-                        <div class="flex w-1/3 sm:w-1/4 flex-wrap">
-                            <div class="max-h-64 w-full text-center justify-center content-center p-1 md:p-2" wire:ignore>
-                                <button wire:click="$set('showEditModal', true)" @click="window.carousel.slideTo({{$i-1}})" >
-                                    <img
-                                    alt="gallery"
-                                    class="max-h-64  block h-full w-full rounded-lg object-cover object-center"
-                                    src="{{env('APP_URL').'/images/logo/logo-img.png'}}"
-                                    data-src="{{env('APP_URL').'/images/sessions2024/session1_'.$i.'.jpg'}}" />
-                                </button>
-                            </div>
-                        </div>
-                    @endfor
-                </div>
-            </div>
-            <div  class=" {{$tab!='anvers'?'hidden':'cccc'}}">
-                <div  class="mb-10 pt-10  text-sm font-semibold">
-                    <a class="text-blue-500" href="{{env('APP_URL').'/images/sessions2024/anvers2024.zip'}}">
-                        {{__('sessions.download')}}
-                    </a>
-                </div>
-                <div class="-m-1 flex flex-wrap md:-m-2">
-                    @for ($i = 442; $i < 584; $i++)
-                        <div class="flex w-1/3 sm:w-1/4 flex-wrap">
-                            <div class="max-h-64 w-full text-center justify-center content-center p-1 md:p-2" wire:ignore>
-                                <button wire:click="$set('showEditModal', true)" @click="window.carousel.slideTo({{$i-1}})" >
-                                    <img
-                                    alt="gallery"
-                                    class="block max-h-64 w-full rounded-lg object-cover object-center"
-                                    src="{{env('APP_URL').'/images/logo/logo-img.png'}}"
-                                    data-src="{{env('APP_URL').'/images/sessions2024/session1_'.$i.'.jpg'}}" />
-                                </button>
-                            </div>
-                        </div>
-                    @endfor
-                </div>
+                    </div>
+                    @php
+                        $position ++;
+                    @endphp
+                @endfor
             </div>
         </div>
+            
+           
     <div  wire:ignore>
 
         <x-modal.dialog wire:model.defer="showEditModal">
@@ -123,7 +67,7 @@
                     <!-- Carousel wrapper -->
                     
                     <div class="relative h-56 overflow-hidden rounded-lg md:h-screen">
-                        @for ($i = 1; $i < 583; $i++)
+                        @for ($i = $currentImage['from']; $i <= $currentImage['to']; $i++)
                          <!-- Item 1 -->
                             <div class="containerImage hidden duration-700 ease-in-out" id="carousel-item-{{$i}}"  >
                                 <img src="{{env('APP_URL').'/images/logo/logo-img.png'}}" data-src="{{env('APP_URL').'/images/sessions2024/session1_'.$i.'.jpg'}}"  class="absolute block sm:h-screen -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." wire:click.prevent="$set('showEditModal', false)">
@@ -159,16 +103,19 @@
     
     <script>
         window.onload = function() {
-            console.log('onload')
           const items = [];
-            for (let index = 0; index < 582; index++) {
+          let position = 0;
+            for (let index = {{$currentImage['from']}}; index <= {{$currentImage['to']}}; index++) {
+                console.log(index, position);
                 items.push({
-                    position: index,
-                    el: document.getElementById('carousel-item-'+(index+1))
+                    position: position  ,
+                    el: document.getElementById('carousel-item-'+(index ))
                 })
+                position ++;
             }
             window.options = {
-                defaultPosition: 1,
+                defaultPosition: 0,
+                activeItemPosition: 0 ,
                 interval: 3000,
                 onNext: () => {
                     console.log('next slider item is shown');
