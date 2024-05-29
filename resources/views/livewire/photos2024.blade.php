@@ -66,27 +66,27 @@
                         </div>
                     @endfor
                 </div>
-                <div  class=" {{$tab!='waterloo'?'hidden':'bbbbb'}}">
-                    <div  class="mb-10 pt-10  text-sm font-semibold">
-                        <a class="text-blue-500" href="{{env('APP_URL').'/images/waterloo2024.zip'}}">
-                            {{__('sessions.download')}}
-                        </a>
-                    </div>
-                    <div class="-m-1 flex flex-wrap md:-m-2">
-                        @for ($i = 269; $i < 442; $i++)
-                            <div class="flex w-1/3 sm:w-1/4 flex-wrap">
-                                <div class="w-full p-1 md:p-2" wire:ignore>
-                                    <button wire:click="$set('showEditModal', true)" @click="window.carousel.slideTo({{$i-1}})" >
-                                        <img
-                                        alt="gallery"
-                                        class="block h-full w-full rounded-lg object-cover object-center"
-                                        src="{{env('APP_URL').'/images/logo/logo-img.png'}}"
-                                        data-src="{{env('APP_URL').'/images/sessions2024/session1_'.$i.'.jpg'}}" />
-                                    </button>
-                                </div>
+            </div>
+            <div  class=" {{$tab!='waterloo'?'hidden':'cccc'}}">
+                <div  class="mb-10 pt-10  text-sm font-semibold">
+                    <a class="text-blue-500" href="{{env('APP_URL').'/images/waterloo2024.zip'}}">
+                        {{__('sessions.download')}}
+                    </a>
+                </div>
+                <div class="-m-1 flex flex-wrap md:-m-2">
+                    @for ($i = 269; $i < 442; $i++)
+                        <div class="flex w-1/3 sm:w-1/4 flex-wrap">
+                            <div class="w-full p-1 md:p-2" wire:ignore>
+                                <button wire:click="$set('showEditModal', true)" @click="window.carousel.slideTo({{$i-1}})" >
+                                    <img
+                                    alt="gallery"
+                                    class="block h-full w-full rounded-lg object-cover object-center"
+                                    src="{{env('APP_URL').'/images/logo/logo-img.png'}}"
+                                    data-src="{{env('APP_URL').'/images/sessions2024/session1_'.$i.'.jpg'}}" />
+                                </button>
                             </div>
-                        @endfor
-                    </div>
+                        </div>
+                    @endfor
                 </div>
             </div>
         </div>
