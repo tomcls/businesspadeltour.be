@@ -16,16 +16,15 @@
                   <!-- Current: "border-dark-blue color-dark-blue", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
                   <a href="{{route('photos2024',['slug'=>'liege'])}}" class=" {{$tab =='liege' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium">{{ucFirst(__('sessions.tournoi'))}} Liège</a>
                   <a href="{{route('photos2024',['slug'=>'toursandtaxi'])}}"  class="{{$tab =='toursandtaxi' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium" aria-current="page">{{ucFirst(__('sessions.tournoi'))}} Tours & Taxi</a>
+                  <a href="{{route('photos2024',['slug'=>'waterloo'])}}"  class="{{$tab =='waterloo' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium" aria-current="page">{{ucFirst(__('sessions.waterloo'))}} Waterloo</a>
                 </nav>
               </div>
             </div>
         </div>
         <div>
-
             <div  class=" {{$tab!='liege'?'hidden':'aaaaa'}}">
-                
                 <div  class="mb-10 pt-10  text-sm font-semibold">
-                    <a class="text-blue-500" href="{{env('APP_URL').'/images/liege.zip'}}">
+                    <a class="text-blue-500" href="{{env('APP_URL').'/images/liege2024.zip'}}">
                         {{__('sessions.download')}}
                     </a>
                 </div>
@@ -46,9 +45,8 @@
                 </div>
             </div>
             <div  class=" {{$tab!='toursandtaxi'?'hidden':'bbbbb'}}">
-                
                 <div  class="mb-10 pt-10  text-sm font-semibold">
-                    <a class="text-blue-500" href="{{env('APP_URL').'/images/toursandtaxi.zip'}}">
+                    <a class="text-blue-500" href="{{env('APP_URL').'/images/toursandtaxi2024.zip'}}">
                         {{__('sessions.download')}}
                     </a>
                 </div>
@@ -67,6 +65,28 @@
                         </div>
                     @endfor
                 </div>
+                <div  class=" {{$tab!='toursandtaxi'?'hidden':'bbbbb'}}">
+                    <div  class="mb-10 pt-10  text-sm font-semibold">
+                        <a class="text-blue-500" href="{{env('APP_URL').'/images/waterloo2024.zip'}}">
+                            {{__('sessions.download')}}
+                        </a>
+                    </div>
+                    <div class="-m-1 flex flex-wrap md:-m-2">
+                        @for ($i = 269; $i < 442; $i++)
+                            <div class="flex w-1/3 sm:w-1/4 flex-wrap">
+                                <div class="w-full p-1 md:p-2" wire:ignore>
+                                    <button wire:click="$set('showEditModal', true)" @click="window.carousel.slideTo({{$i-1}})" >
+                                        <img
+                                        alt="gallery"
+                                        class="block h-full w-full rounded-lg object-cover object-center"
+                                        src="{{env('APP_URL').'/images/logo/logo-img.png'}}"
+                                        data-src="{{env('APP_URL').'/images/sessions2024/session1_'.$i.'.jpg'}}" />
+                                    </button>
+                                </div>
+                            </div>
+                        @endfor
+                    </div>
+                </div>
             </div>
         </div>
     <div  wire:ignore>
@@ -78,7 +98,7 @@
                     <!-- Carousel wrapper -->
                     
                     <div class="relative h-56 overflow-hidden rounded-lg md:h-screen">
-                        @for ($i = 1; $i < 268; $i++)
+                        @for ($i = 1; $i < 441; $i++)
                          <!-- Item 1 -->
                             <div class="containerImage hidden duration-700 ease-in-out" id="carousel-item-{{$i}}"  >
                                 <img src="{{env('APP_URL').'/images/logo/logo-img.png'}}" data-src="{{env('APP_URL').'/images/sessions2024/session1_'.$i.'.jpg'}}"  class="absolute block sm:h-screen -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." wire:click.prevent="$set('showEditModal', false)">
@@ -116,7 +136,7 @@
         window.onload = function() {
             console.log('onload')
           const items = [];
-            for (let index = 0; index < 267; index++) {
+            for (let index = 0; index < 440; index++) {
                 items.push({
                     position: index,
                     el: document.getElementById('carousel-item-'+(index+1))
