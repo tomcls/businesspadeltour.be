@@ -27,7 +27,7 @@
 
         <div >
             <div  class="mb-10 pt-10  text-sm font-semibold">
-                <a class="text-blue-500" href="{{env('APP_URL').'/images/sessions2024/{{$slug}}2024.zip'}}">
+                <a class="text-blue-500" href="{{env('APP_URL').'/images/sessions2024/'.$slug.'2024.zip'}}">
                     {{__('sessions.download')}}
                 </a>
             </div>
