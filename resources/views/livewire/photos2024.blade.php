@@ -16,7 +16,7 @@
                   <!-- Current: "border-dark-blue color-dark-blue", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
                   <a href="{{route('photos2024',['slug'=>'liege'])}}" class=" {{$tab =='liege' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium">{{ucFirst(__('sessions.tournoi'))}} Liège</a>
                   <a href="{{route('photos2024',['slug'=>'toursandtaxi'])}}"  class="{{$tab =='toursandtaxi' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium" aria-current="page">{{ucFirst(__('sessions.tournoi'))}} Tours & Taxi</a>
-                  <a href="{{route('photos2024',['slug'=>'waterloo'])}}"  class="{{$tab =='waterloo' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium" aria-current="page">{{ucFirst(__('sessions.waterloo'))}} Waterloo</a>
+                  <a href="{{route('photos2024',['slug'=>'waterloo'])}}"  class="{{$tab =='waterloo' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium" aria-current="page">{{ucFirst(__('sessions.tournoi'))}} Waterloo</a>
                 </nav>
               </div>
             </div>
@@ -65,7 +65,7 @@
                         </div>
                     @endfor
                 </div>
-                <div  class=" {{$tab!='toursandtaxi'?'hidden':'bbbbb'}}">
+                <div  class=" {{$tab!='waterloo'?'hidden':'bbbbb'}}">
                     <div  class="mb-10 pt-10  text-sm font-semibold">
                         <a class="text-blue-500" href="{{env('APP_URL').'/images/waterloo2024.zip'}}">
                             {{__('sessions.download')}}
