@@ -321,22 +321,6 @@
                 </dt>
                 
                 <dd class="mt-0 text-base leading-7 text-gray-600">
-                  <b>{{__('home.when')}}: </b> {{__('home.agendaWhen6bis')}} {{__('sessions.morning')}}<br/>
-                  <b>{{__('home.where')}}: </b> {{__('home.agendaWhere6')}}<br/><br/>
-                </dd>
-              </div>
-              <div class="relative pl-16">
-                <dt class="text-base font-semibold leading-7 text-gray-900">
-                  <div class="absolute top-0 left-0 flex h-10 w-10 items-center justify-center rounded-lg bg-light-blue">
-                    <!-- Heroicon name: outline/finger-print -->
-                    <svg class=" h-6 w-6 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
-                    </svg>
-                  </div>
-                  <a href="https://elevenpadel.be/"  target="blank" class="color-light-blue">{{__('home.clubContentPrefix6')}} (Eleven Padel)</a>
-                </dt>
-                
-                <dd class="mt-0 text-base leading-7 text-gray-600">
                   <b>{{__('home.when')}}: </b> {{__('home.agendaWhen6')}} {{__('sessions.afternoon')}}<br/>
                   <b>{{__('home.where')}}: </b> {{__('home.agendaWhere6')}}<br/><br/>
                 </dd>
