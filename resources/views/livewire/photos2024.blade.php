@@ -54,7 +54,7 @@
                     </a>
                 </div>
                 <div class="-m-1 flex flex-wrap md:-m-2">
-                    @for ($i = 103; $i < 269; $i++)
+                    @for ($i = 102; $i < 269; $i++)
                         <div class="flex w-1/3 sm:w-1/4 flex-wrap">
                             <div class="w-full p-1 md:p-2" wire:ignore>
                                 <button wire:click="$set('showEditModal', true)" @click="window.carousel.slideTo({{$i-1}})" >
@@ -76,7 +76,7 @@
                     </a>
                 </div>
                 <div class="-m-1 flex flex-wrap md:-m-2">
-                    @for ($i = 269; $i < 442; $i++)
+                    @for ($i = 268; $i < 442; $i++)
                         <div class="flex w-1/3 sm:w-1/4 flex-wrap">
                             <div class="w-full p-1 md:p-2" wire:ignore>
                                 <button wire:click="$set('showEditModal', true)" @click="window.carousel.slideTo({{$i-1}})" >
@@ -161,7 +161,7 @@
         window.onload = function() {
             console.log('onload')
           const items = [];
-            for (let index = 0; index < 583; index++) {
+            for (let index = 0; index < 582; index++) {
                 items.push({
                     position: index,
                     el: document.getElementById('carousel-item-'+(index+1))
