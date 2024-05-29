@@ -9,7 +9,7 @@
                 <option value="liege" >{{ucFirst(__('sessions.tournoi'))}} Liège</option>
                 <option value="toursandtaxi" >{{ucFirst(__('sessions.tournoi'))}} Tours & Taxi</option>
                 <option value="waterloo" >{{ucFirst(__('sessions.tournoi'))}} Waterloo</option>
-                <option value="anvers" >{{ucFirst(__('sessions.tournoi'))}} {{App::currentLocale() == 'fr': 'Anvers': 'Antwerp'}}</option>
+                <option value="anvers" >{{ucFirst(__('sessions.tournoi'))}} {{App::currentLocale() == 'fr'? 'Anvers': 'Antwerp'}}</option>
               </select>
             </div>
             <div class="hidden sm:block">
@@ -19,7 +19,7 @@
                   <a href="{{route('photos2024',['slug'=>'liege'])}}" class=" {{$tab =='liege' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium">{{ucFirst(__('sessions.tournoi'))}} Liège</a>
                   <a href="{{route('photos2024',['slug'=>'toursandtaxi'])}}"  class="{{$tab =='toursandtaxi' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium" aria-current="page">{{ucFirst(__('sessions.tournoi'))}} Tours & Taxi</a>
                   <a href="{{route('photos2024',['slug'=>'waterloo'])}}"  class="{{$tab =='waterloo' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium" aria-current="page">{{ucFirst(__('sessions.tournoi'))}} Waterloo</a>
-                  <a href="{{route('photos2024',['slug'=>'anvers'])}}"  class="{{$tab =='anvers' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium" aria-current="page">{{ucFirst(__('sessions.tournoi'))}} {{App::currentLocale() == 'fr': 'Anvers': 'Antwerp'}}</a>
+                  <a href="{{route('photos2024',['slug'=>'anvers'])}}"  class="{{$tab =='anvers' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium" aria-current="page">{{ucFirst(__('sessions.tournoi'))}} {{App::currentLocale() == 'fr'? 'Anvers': 'Antwerp'}}</a>
                 </nav>
               </div>
             </div>
