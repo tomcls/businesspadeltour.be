@@ -21,6 +21,7 @@ class Photos2024 extends Component
 
     public function mount(Request $request, $slug = null)
     {
+        $this->tab = $slug;
         $this->slug = $this->tab;
         foreach ($this->images as $key => $img) {
             if($key == $this->slug) {
