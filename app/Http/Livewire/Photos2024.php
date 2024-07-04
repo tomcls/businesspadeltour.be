@@ -21,14 +21,21 @@ class Photos2024 extends Component
 
     public function mount(Request $request, $slug = null)
     {
-        $this->tab = $slug ?? 'liege';
-        $this->slug = $slug ?? 'liege';
+        $this->slug = $this->tab;
         foreach ($this->images as $key => $img) {
             if($key == $this->slug) {
                 $this->currentImage = $img;
             }
         }
-        logger($this->currentImage);
+    } 
+    public function updatedTab($name,$value) {
+         $this->slug = $name ;
+        foreach ($this->images as $key => $img) {
+            if($key == $this->tab) {
+                $this->currentImage = $img;
+            }
+        }
+        redirect(route('photos2024',['locale'=>'fr','slug'=>$this->slug]));
     }
     public function render()
     {
