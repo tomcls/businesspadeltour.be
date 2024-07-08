@@ -10,6 +10,7 @@
                 <option value="toursandtaxi" >{{ucFirst(__('sessions.tournoi'))}} Tours & Taxi</option>
                 <option value="waterloo" >{{ucFirst(__('sessions.tournoi'))}} Waterloo</option>
                 <option value="anvers" >{{ucFirst(__('sessions.tournoi'))}} {{App::currentLocale() == 'fr'? 'Anvers': 'Antwerp'}}</option>
+                <option value="nivelles" >{{ucFirst(__('sessions.tournoi'))}} {{App::currentLocale() == 'fr'? 'Nivelles': 'Nijvel'}}</option>
               </select>
             </div>
             <div class="hidden sm:block">
@@ -19,7 +20,7 @@
                   <a href="https://businesspadeltour.be/{{App::currentLocale().'/photos2024/liege'}}" class=" {{$tab =='liege' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium">{{ucFirst(__('sessions.tournoi'))}} Liège</a>
                   <a href="https://businesspadeltour.be/{{App::currentLocale().'/photos2024/toursandtaxi'}}"  class="{{$tab =='toursandtaxi' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium" aria-current="page">{{ucFirst(__('sessions.tournoi'))}} Tours & Taxi</a>
                   <a href="https://businesspadeltour.be/{{App::currentLocale().'/photos2024/waterloo'}}"  class="{{$tab =='waterloo' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium" aria-current="page">{{ucFirst(__('sessions.tournoi'))}} Waterloo</a>
-                  <a href="https://businesspadeltour.be/{{App::currentLocale().'/photos2024/anvers'}}"  class="{{$tab =='anvers' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium" aria-current="page">{{ucFirst(__('sessions.tournoi'))}} {{App::currentLocale() == 'fr'? 'Anvers': 'Antwerp'}}</a>
+                  <a href="https://businesspadeltour.be/{{App::currentLocale().'/photos2024/nivelles'}}"  class="{{$tab =='nivelles' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium" aria-current="page">{{ucFirst(__('sessions.tournoi'))}} {{App::currentLocale() == 'fr'? 'Nivelles': 'Nijvel'}}</a>
                 </nav>
               </div>
             </div>
