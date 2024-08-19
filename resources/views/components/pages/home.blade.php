@@ -98,7 +98,7 @@
               </div>
             </div>
             <video autoplay="" id="heroVideo" controls   class="sm:block  w-full max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[50rem] md:-ml-4 lg:-ml-0">
-              <source src="https://itcl.s3.eu-west-1.amazonaws.com/businesspadeltour/padel.mp4" type="video/mp4" />
+              <source src="https://itcl.s3.eu-west-1.amazonaws.com/businesspadeltour/padel_compressed.mp4" type="video/mp4" />
             </video>
           </div>
         </div>
