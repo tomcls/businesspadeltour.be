@@ -12,7 +12,7 @@ class Photos2024 extends Component
         "toursandtaxi" => ["name_nl"=>"toursandtaxi","name_fr"=>"toursandtaxi","from"=> 103, "to"=> 267, 'slug'=> 'toursandtaxi'],
         "waterloo" => ["name_nl"=>"waterloo","name_fr"=>"waterloo","from"=> 268, "to"=> 442, 'slug'=> 'waterloo'],
         "anvers" => ["name_nl"=>"anvers","name_fr"=>"anvers","from"=> 443, "to"=> 584, 'slug'=> 'anvers'],
-        "nivelles" => ["name_nl"=>"nijvel","name_fr"=>"nivelles","from"=> 585, "to"=> 767, 'slug'=> 'nivelles'],,
+        "nivelles" => ["name_nl"=>"nijvel","name_fr"=>"nivelles","from"=> 585, "to"=> 767, 'slug'=> 'nivelles'],
         "brugge" => ["name_nl"=>"brugge","name_fr"=>"brugge","from"=> 768, "to"=> 904, 'slug'=> 'brugge'],
         "knokke" => ["name_nl"=>"knokke","name_fr"=>"knokke","from"=> 905, "to"=> 1056, 'slug'=> 'knokke']
     ];
