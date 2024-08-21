@@ -12,6 +12,7 @@
                 <option value="anvers" >{{ucFirst(__('sessions.tournoi'))}} {{App::currentLocale() == 'fr'? 'Anvers': 'Antwerp'}}</option>
                 <option value="nivelles" >{{ucFirst(__('sessions.tournoi'))}} {{App::currentLocale() == 'fr'? 'Nivelles': 'Nijvel'}}</option>
                 <option value="knokke" >{{ucFirst(__('sessions.tournoi'))}} Knokke</option>
+                <option value="brugge" >{{ucFirst(__('sessions.tournoi'))}} Brugge</option>
               </select>
             </div>
             <div class="hidden sm:block">
@@ -24,6 +25,7 @@
                   <a href="https://businesspadeltour.be/{{App::currentLocale().'/photos2024/anvers'}}"  class="{{$tab =='anvers' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium" aria-current="page">{{ucFirst(__('sessions.tournoi'))}} {{App::currentLocale() == 'fr'? 'Anvers': 'Antwerp'}}</a>
                   <a href="https://businesspadeltour.be/{{App::currentLocale().'/photos2024/nivelles'}}"  class="{{$tab =='nivelles' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium" aria-current="page">{{ucFirst(__('sessions.tournoi'))}} {{App::currentLocale() == 'fr'? 'Nivelles': 'Nijvel'}}</a>
                   <a href="https://businesspadeltour.be/{{App::currentLocale().'/photos2024/knokke'}}"  class="{{$tab =='knokke' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium" aria-current="page">{{ucFirst(__('sessions.tournoi'))}} Finale Fun</a>
+                  <a href="https://businesspadeltour.be/{{App::currentLocale().'/photos2024/brugge'}}"  class="{{$tab =='brugge' ? 'border-dark-blue color-dark-blue' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}}  whitespace-nowrap border-b-2 py-4 px-1 text-md font-medium" aria-current="page">{{ucFirst(__('sessions.tournoi'))}} Finale Expert</a>
                 </nav>
               </div>
             </div>
