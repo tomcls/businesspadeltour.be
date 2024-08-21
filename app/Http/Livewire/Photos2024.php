@@ -13,9 +13,8 @@ class Photos2024 extends Component
         "waterloo" => ["name_nl"=>"waterloo","name_fr"=>"waterloo","from"=> 268, "to"=> 442, 'slug'=> 'waterloo'],
         "anvers" => ["name_nl"=>"anvers","name_fr"=>"anvers","from"=> 443, "to"=> 584, 'slug'=> 'anvers'],
         "nivelles" => ["name_nl"=>"nijvel","name_fr"=>"nivelles","from"=> 585, "to"=> 767, 'slug'=> 'nivelles'],
-
         "knokke" => ["name_nl"=>"knokke","name_fr"=>"knokke","from"=> 768, "to"=> 904, 'slug'=> 'knokke'],
-        "brugge" => ["name_nl"=>"brugge","name_fr"=>"brugge","from"=> 904, "to"=> 1025, 'slug'=> 'brugge']
+        "brugge" => ["name_nl"=>"brugge","name_fr"=>"brugge","from"=> 905, "to"=> 1025, 'slug'=> 'brugge']
     ];
     public $currentImage;
     public $showEditModal = false;
