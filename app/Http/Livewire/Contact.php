@@ -31,10 +31,7 @@ class Contact extends Component
     }
     public function save()
     {
-
-        logger('save');
         $this->validate();
-        logger('save.validate');
         try {
             $this->contact->save();
             $this->saved = true;

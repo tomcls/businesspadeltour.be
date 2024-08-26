@@ -165,7 +165,7 @@
               </div>
             </div>
           </div>
-          <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}" class="text-base font-bold color-light-blue hover:text-gray-900">{{__('home.priceImin')}}</a>
+          <a href="{{url('/').'/'.App::currentLocale().'/contact'}}" class="text-base font-bold color-light-blue hover:text-gray-900">{{__('menu.contactUs')}}</a>
           <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.price')}}" class="text-base font-medium color-dark-blue hover:text-gray-900">{{__('menu.price')}}</a>
           <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.articles')}}" class="text-base font-medium color-dark-blue hover:text-gray-900">{{__('menu.news')}}</a>
         </nav>
