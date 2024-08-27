@@ -3,8 +3,8 @@
 return [
     "persoInfo" => "Persoonlijke informatie",
     'companyInfo' => 'Bedrijfsinformatie',
-    'title' => 'Ik wil op de hoogte blijven voor de volgende sessie van 2024',
-    'teaser' => 'Laatste nieuws ontvangen voor de volgende padelsessie 2024',
+    'title' => 'Ik wil op de hoogte blijven voor de volgende sessie van 2025',
+    'teaser' => 'Laatste nieuws ontvangen voor de volgende padelsessie 2025',
     'firstname' => 'Voornaam',
     'lastname' => 'Achternaam',
     "phone" => "telefoon",

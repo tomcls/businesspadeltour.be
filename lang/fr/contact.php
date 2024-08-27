@@ -3,8 +3,8 @@
 return [
     'persoInfo' => 'Informations personnelles',
     'companyInfo' => 'Informations de votre compagnie',
-    'title' => 'Je veux rester informé pour la prochaine session 2024',
-    'teaser' => 'Recevez les dernières informations concernant la session 2024',
+    'title' => 'Je veux rester informé pour la prochaine session 2025',
+    'teaser' => 'Recevez les dernières informations concernant la session 2025',
     'firstname' => 'Prénom',
     'lastname' => 'Nom',
     'phone' => 'Téléphone',
