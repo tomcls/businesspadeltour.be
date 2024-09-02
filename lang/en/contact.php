@@ -18,4 +18,6 @@ return [
     'address' => 'Bedrijfsadres',
     "addressPlaceholder" => "Straatnummer, postcode, plaats",
     'zip' => 'Postal code',
+    'teaser' => 'Dear sporting friends, the 2024 season of the Vertuoza Padel Tour is now over, but we\'re back in 2025 with more dates, new partner clubs and a few surprises in store.',
+    'teaser2' => 'To make sure you don\'t miss out on any Vertuoza Padel Tour news and to be kept up to date with our upcoming events, simply register using the form below.'
 ];

@@ -1,10 +1,12 @@
 
-<div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
-    
+<div class="mx-auto max-w-7xl sm:px-6 lg:px-8 pt-5">
+  <h1 class="text-xl font-semibold leading-7 text-gray-900 py-5 pb-10 px-5">{{__('contact.title')}}</h1>
+    <p class="font-light px-5"> {{__('contact.teaser')}} </p>
+
+    <p class="font-light px-5">{{__('contact.teaser2')}}</p>
     <form wire:submit.prevent="save">
         <div class="space-y-12 mt-5 px-5">
             <div class="border-b border-gray-900/10 pb-12">
-                <h1 class="text-xl font-semibold leading-7 text-gray-900 py-5 pb-10 ">{{__('contact.title')}}</h1>
 
                 <h2 class="text-base font-semibold leading-7 text-gray-900">{{__('contact.persoInfo')}}</h2>
         
