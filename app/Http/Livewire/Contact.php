@@ -17,10 +17,10 @@ class Contact extends Component
             'contact.lastname' => 'required',
             'contact.email' => 'required|email',
             'contact.phone' => 'required',
-            'contact.company_name' => 'required',
-            'contact.company_vat' => 'required',
-            'contact.company_address' => 'required',
-            'contact.company_zip' => 'required',
+            'contact.company_name' => 'sometimes',
+            'contact.company_vat' => 'sometimes',
+            'contact.company_address' => 'sometimes',
+            'contact.company_zip' => 'sometimes',
         ];
     }
     public function mount() {

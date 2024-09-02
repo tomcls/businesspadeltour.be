@@ -32,9 +32,11 @@ class CampaignJob implements ShouldQueue
     {
         $mailchimp = new \MailchimpTransactional\ApiClient();
         $mailchimp->setApiKey(env('MAILCHIMP_APIKEY'));
+        $cpt =0;
+        $users = User::get();
+        //$users = User::where('email', '=', 'tomclassius@gmail.com')->get();
 
-        $users = User::where('email', '=', 'ericditspi@gmail.com')->get();
-        logger($users);
+       // logger($users);
         foreach ($users as $key => $user) {
             // player one
             $template_content = array(
@@ -72,10 +74,12 @@ class CampaignJob implements ShouldQueue
                 )
             );
             $to = [];
+            $email = trim(strtolower( $user->email));
             array_push($to, [
-                "email" =>  $user->email,
+                "email" =>  $email,
                 "type" => "to"
             ]);
+           
             $message = [
                 "from_email" => "info@businesspadeltour.be",
                 'from_name'  => 'Vertuoza padel tour',
@@ -84,13 +88,20 @@ class CampaignJob implements ShouldQueue
                 "headers" => ["Reply-To" => "info@businesspadeltour.be"],
                 'global_merge_vars' => $template_content
             ];
-            // Log::alert('Player 1 email sent '.App::currentLocale());
-            $response = $mailchimp->messages->sendTemplate([
-                "template_name" => "template_eric",
-                "template_content" => $template_content,
-                "message" => $message,
-            ]);
-            logger($response);
+            $cpt ++;
+            try {
+                logger('mail sent to '.$email. " total = ".$cpt);
+                // Log::alert('Player 1 email sent '.App::currentLocale());
+                $response = $mailchimp->messages->sendTemplate([
+                    "template_name" => "template_eric",
+                    "template_content" => $template_content,
+                    "message" => $message,
+                ]);
+                logger($response);
+            } catch (\Throwable $th) {
+                //throw $th;
+                logger('email not sent to '.$email);
+            }
         }
     }
 }
