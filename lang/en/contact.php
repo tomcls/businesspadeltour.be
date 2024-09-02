@@ -10,7 +10,7 @@ return [
     "phone" => "phone",
     "companyname" => "Company name",
     'companyvat' => 'VAT number',
-    'signup' => 'save',
+    'signup' => 'Send',
     'success' => 'Thanks!',
     'successTeaser' => 'We will keep you informed via e-mail',
     'successTeaser2' => 'Keep in touch... and hopefully until next year',
