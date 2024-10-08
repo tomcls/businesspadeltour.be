@@ -4,7 +4,21 @@ use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\CSVController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SitemapXmlController;
+use App\Http\Controllers\StripeController;
+use App\Http\Livewire\Admin\Companies;
+use App\Http\Livewire\Admin\Logos;
+use App\Http\Livewire\Admin\Sessions;
+use App\Http\Livewire\Admin\Teams;
+use App\Http\Livewire\Admin\Users;
+use App\Http\Livewire\Auth\Login;
+use App\Http\Livewire\Auth\RequestPwd;
+use App\Http\Livewire\Auth\UpdatePwd;
+use App\Http\Livewire\Charge;
+use App\Http\Livewire\ChargeSuccess;
 use App\Http\Livewire\Contact;
+use App\Http\Livewire\Me\Invoice;
+use App\Http\Livewire\Me\Logo;
+use App\Http\Livewire\Me\Profile;
 use App\Http\Livewire\Photos;
 use App\Http\Livewire\Photos2024;
 use App\Http\Livewire\Video;
@@ -46,7 +60,23 @@ Route::get('/contacts/download', [CSVController::class,'contacts'])->name('conta
 Route::get('/users/download', [CSVController::class,'users'])->name('usersCSV');
 Route::get('/companies/download', [CSVController::class,'companies'])->name('companiesCSV');
 
+Route::post('/stripe/create', [StripeController::class, 'create'])->name('stripe.create');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/me/profile', Profile::class)->name('me.profile');
+    Route::get('/me/invoices', Invoice::class)->name('me.invoices');
+    Route::get('/me/logo', Logo::class)->name('me.logo');
+});
+Route::get('users/logout', function () {
+    //  phpinfo(); 
+      auth()->logout();
+      return redirect('/');
+  })->name('logout');
 Route::prefix('{locale?}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('set.locale')->group(function ($r) {
+
+    Route::get('/login', Login::class)->name('login');
+    Route::get('/update-password/{userId}/{token}', UpdatePwd::class)->name('auth.updatePassword');
+    Route::get('/request-password', RequestPwd::class)->name('auth.requestPassword');
 
     if (in_array(app('request')->segment(1), array_keys(config('app.locales')))) {
         app()->setLocale(app('request')->segment(1));
@@ -56,7 +86,7 @@ Route::prefix('{locale?}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('set.
     });
     Route::get('/', function () {
         return new Response((new HomeController)->index());
-    });
+    })->name('home');
     
     Route::get('/tarif', function () {
         return view('components.pages.price');
@@ -100,7 +130,16 @@ Route::prefix('{locale?}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('set.
     Route::get('/register', function () {
         return view('components.pages.register');
     });
+    Route::get('/charge', Charge::class)->name('charge');
 
+    Route::get('/charge-success', ChargeSuccess::class)->name('charge.success');
    // Route::get('/' . trans('route.article', []).'/{slug}', 'ArticleController@show')->name('article');
     // Octane::route('GET','/en/index',function () {return new Response((new HomeController)->index());});
+});
+Route::group(['middleware' => ['auth', 'can:admin']], function () {
+    Route::get('/admin/users', Users::class)->name('admin.users');
+    Route::get('/admin/teams', Teams::class)->name('admin.teams');
+    Route::get('/admin/companies', Companies::class)->name('admin.companies');
+    Route::get('/admin/sessions', Sessions::class)->name('admin.sessions');
+    Route::get('/admin/logos', Logos::class)->name('admin.logos');
 });

@@ -4,7 +4,7 @@
         <div class="flex justify-start lg:w-0 lg:flex-1">
           <a href="{{url('/').'/'.App::currentLocale().''}}">
             <span class="sr-only">Vertuoza Padel Tour</span>
-            <img class="h-8 w-auto sm:h-24" src="{{url('/').'/images/logo/bpt-logo.svg'}}" alt="Vertuoza Padel Tour">
+            <x-icon.vertuoza class="w-44 " />
           </a>
         </div>
         <div class="-my-2 -mr-2 md:hidden">

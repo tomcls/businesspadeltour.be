@@ -7,12 +7,14 @@
     "require": {
         "php": "^8.0.2",
         "guzzlehttp/guzzle": "^7.2",
+        "laravel/cashier": "^14.14",
         "laravel/framework": "^9.19",
         "laravel/octane": "^1.4",
         "laravel/sanctum": "^3.0",
         "laravel/tinker": "^2.7",
         "livewire/livewire": "^2.11",
-        "mailchimp/transactional": "^1.0"
+        "mailchimp/transactional": "^1.0",
+        "mews/captcha": "^3.3"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
@@ -38,7 +40,8 @@
     "scripts": {
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover --ansi"
+            "@php artisan package:discover --ansi",
+            "@php artisan vendor:publish --force --tag=livewire:assets --ansi"
         ],
         "post-update-cmd": [
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force"

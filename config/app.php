@@ -129,7 +129,14 @@ return [
     'key' => env('APP_KEY'),
 
     'cipher' => 'AES-256-CBC',
-
+    /*
+    |------------------------------------------------------
+    | STRIPE
+    |------------------------------------------------------
+    |
+    */
+    'stripe_key' => env('STRIPE_SECRET','pk_test_51Q67MlRuw8G7vrjJtm3rkfmS3cL1DFJJvbjW47HmWNxKitginJDKxOUIoWQjVru0Pn0t4lIgzZDXfqcgxjEAIEU9005qaonRfi'),
+    'stripe_secret' => env('STRIPE_SECRET','sk_test_51Q67MlRuw8G7vrjJBxkRUiwxllj6nSiVeEQR76w6BSfCoipvPy9WlyRxHCyTvFQnwrjet2IpUSdrZB1BXQ1hvHhV00o4SqhaAS'),
     /*
     |--------------------------------------------------------------------------
     | Maintenance Mode Driver
