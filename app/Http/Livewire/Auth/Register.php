@@ -37,7 +37,7 @@ class Register extends Component
     }
     public function mount()
     {
-        $this->sessions = Session::where('startdate', '>=', '2024-01-01')->get();
+        $this->sessions = Session::where('startdate', '>=', '2025-01-01')->get();
         $this->company['vat'] = 'BE 0';
     }
 
