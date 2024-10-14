@@ -9,7 +9,7 @@ return [
      'agenda' => 'Program',
      'agendaTeaser' => 'What are the dates and places of the different sessions?',
      'sponsors' => 'Partners',
-     'sponsorsTeaser' => 'Immovlan and B19',
+     'sponsorsTeaser' => 'Immovlan and Vertuoza',
      'ranking' => 'Rankings',
      'rankingTeaser' => 'They will be visible after the first session',
      'watchFinal' => 'Watch Final 2023',

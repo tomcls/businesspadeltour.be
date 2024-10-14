@@ -9,7 +9,7 @@ return [
     'agenda' => 'Agenda',
     'agendaTeaser' => 'Waar en wanneer vinden de wedstrijden plaats?',
     'sponsors' => 'Partners',
-    'sponsorsTeaser' => 'Immovlan en B19',
+    'sponsorsTeaser' => 'Immovlan en Vertuoza',
     'ranking' => 'Ranglijst',
     'rankingTeaser' => 'Ze zullen zichtbaar zijn na de eerste sessie',
     'watchFinal' => 'Bekijk Finale 2023',

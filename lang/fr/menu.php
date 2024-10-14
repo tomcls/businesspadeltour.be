@@ -20,7 +20,7 @@ return [
     'agenda' => 'Le programme',
     'agendaTeaser' => 'Quelles sont les dates et lieux des différentes sessions ?',
     'sponsors' => 'Les partenaires',
-    'sponsorsTeaser' => 'Immovlan et B19',
+    'sponsorsTeaser' => 'Immovlan et Vertuoza',
     'ranking' => 'Les classements',
     'rankingTeaser' => 'Ils seront visibles après la premiere session',
     'watchFinal' => 'Regarder la finale 2023',
