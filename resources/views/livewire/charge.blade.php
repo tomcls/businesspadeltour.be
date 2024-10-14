@@ -1,11 +1,10 @@
-<style>
+
+<div class="max-w-xl mx-auto pt-4">
+  <style>
     /* Variables */
     * {
     box-sizing: border-box;
     }
-
-    
-
     form {
     width: 30vw;
     min-width: 500px;
@@ -247,8 +246,8 @@
     }
     }
 </style>
-<div class="max-w-xl mx-auto pt-4">
     <!-- Display a payment form -->
+    <h1 class="font-black">{{__('Total incl. VAT')}}: {{$price}}€</h1>
     <form id="payment-form" method="POST">
        
         <div id="payment-element">
@@ -309,7 +308,7 @@ async function handleSubmit(e) {
     elements,
     confirmParams: {
       // Make sure to change this to your payment completion page
-      return_url: "{{route('charge.success')}}",
+      return_url: "{{route('charge.success',['ueid'=>$eventUser->id ?? null])}}",
     },
   });
 

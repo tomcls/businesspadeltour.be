@@ -42,8 +42,8 @@
                   </ul>
                 </div> 
                 <div class="mt-10 flex items-center justify-center gap-x-6">
-                  <a href="{{url('/').'/'.App::currentLocale().'#summary'}}" class="rounded-md bg-dark-blue px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">{{__('home.moreinfo')}}</a>
-                  <a href="{{url('/').'/'.App::currentLocale().'/contact'}}" class="rounded-md bg-dark-blue px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">{{__('menu.contactUs')}}</a>
+                  <a href="{{url('/').'/'.App::currentLocale().'#summary'}}" class="rounded-md bg-dark-blue px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-800">{{__('home.moreinfo')}}</a>
+                  <a href="{{url('/').'/'.App::currentLocale().'/contact'}}" class="rounded-md bg-dark-blue px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-800">{{__('menu.contactUs')}}</a>
                 </div>
               </div>
             </div>
@@ -53,66 +53,30 @@
           <img alt="poster image mobile" class=" paspect-[3/2] object-cover lg:aspect-auto lg:h-full lg:w-full" src="{{url('/').'/images/section/home.jpg'}}" />
         </div>
       </div>
-      <div class="overflow-hidden bg-black py-24 sm:py-32" id="summary">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-          <div class="mx-auto grid max-w-2xl grid-cols-1 gap-y-16 gap-x-8 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-            <div class="lg:pr-8 lg:pt-4">
-              <div class="lg:max-w-lg">
-                <h2 class="text-lg font-semibold leading-8 tracking-tight color-light-blue">{{__('home.summaryTitle')}}</h2>
-                <p class="mt-2 text-3xl font-bold tracking-tight text-gray-300 sm:text-4xl">{{__('home.summaryTitle2')}}</p>
-                <p class="mt-6 text-lg leading-8 text-white">{!!__('home.summaryTeaser')!!}</p>
-                <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}" class="mt-10 block w-full rounded-md bg-light-blue px-8 py-3 text-center text-md font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">{{__('home.priceImin')}}</a>
-                <dl class="mt-10 max-w-xl space-y-8 text-base leading-7 text-white lg:max-w-none">
-                  {{-- <div class="relative pl-9">
-                    <dt class="inline font-semibold text-gray-400">
-                      <!-- Heroicon name: mini/cloud-arrow-up -->
-                      <svg class="absolute top-1 left-1 h-6 w-6 color-light-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
-                      </svg>
-                      {{__('home.summaryContentPrefix1')}}
-                    </dt>
-                    <dd class="inline">{{__('home.summaryContent1')}}</dd>
-                  </div>
-      
-                  <div class="relative pl-9">
-                    <dt class="inline font-semibold text-gray-400">
-                      <!-- Heroicon name: mini/lock-closed -->
-                      <svg class="absolute top-1 left-1 h-6 w-6 color-light-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
-                      </svg>
-                      {{__('home.summaryContentPrefix2')}}
-                    </dt>
-                    <dd class="inline">{{__('home.summaryContent2')}}</dd>
-                  </div>
-      
-                  <div class="relative pl-9">
-                    <dt class="inline font-semibold text-gray-400">
-                      <!-- Heroicon name: mini/server -->
-                      <svg class="absolute top-1 left-1 h-6 w-6 color-light-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
-                      </svg>
-                      {{__('home.summaryContentPrefix3')}}
-                    </dt>
-                    <dd class="inline">{{__('home.summaryContent3')}}</dd>
-                  </div> --}}
-                </dl>
-              </div>
-            </div>
-            <video autoplay="" id="heroVideo" controls   class="sm:block  w-full max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[50rem] md:-ml-4 lg:-ml-0">
-              <source src="https://itcl.s3.eu-west-1.amazonaws.com/businesspadeltour/padel_compressed.mp4" type="video/mp4" />
-            </video>
+      <div class="bg-black py-24 sm:py-32" id="summary">
+        <div class="mx-auto max-w-7xl px-6 lg:px-4">
+          <div class="mx-auto max-w-7xl sm:text-center">
+            <h2 class="text-3xl font-bold tracking-tight text-gray-200 sm:text-4xl">{{__('What is the Vertuoza Padel Tour?')}}</h2>
+            <p class="mt-6 text-lg leading-8 text-gray-300 sm:text-justify">{!!__("Launched in 2023, the Vertuoza Padel Tour is a Padel competition open to all companies operating in Belgium. The competition consists of several sessions held on Friday afternoons at various Padel clubs throughout Belgium. <br>In 2025, 6 clubs will host a stage of the Vertuoza Padel Tour, with sessions in Liège, Brussels, Waterloo, Ghent, Antwerp and Nivelles, and the grand finale at Le Zoute.<br><br> The tournament is mixed, open to all, and this year we're planning two categories: Fun and Expert. <br><br><b>The aim of the Vertuoza Padel Tour is threefold: Sport + Fun + Networking</b><br><br> 80 teams were able to meet in 2023, and we hope to gather at least 250 teams for the 2025 season.")!!}</p>
           </div>
+        </div>
+      </div>
+      <div class="overflow-hidden bg-black py-2 sm:py-2 pb-24 sm:pb-32" >
+        <div class="mx-auto max-w-7xl px-6 lg:px-8 sm:text-center items-center content-center justify-center">
+          <video  id="heroVideo" controls   class="sm:block  w-full max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10  md:-ml-4 lg:-ml-0">
+            <source src="https://itcl.s3.eu-west-1.amazonaws.com/businesspadeltour/padel_compressed.mp4" type="video/mp4" />
+          </video>
         </div>
       </div>
       
       <div class="overflow-hidden bg-white py-24 sm:py-32" id="program">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
-          <div class="mx-auto grid max-w-2xl grid-cols-1 gap-y-16 gap-x-8 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-            <img src="{{url('/').'/images/section/bg10.png'}}" alt="Product screenshot" class="hidden sm:block w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[30rem] md:-ml-4 lg:-ml-0" width="2432" height="1442">
+          <div class="mx-auto grid max-w-2xl grid-cols-1 gap-y-16 gap-x-8 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 ">
+            <img src="{{url('/').'/images/section/bg10.png'}}" alt="Product screenshot" class="hidden sm:block w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[30rem] md:-ml-4 lg:-ml-0 sm:mt-24" width="2432" height="1442">
             <div class="lg:pr-8 lg:pt-4">
               <div class="lg:max-w-lg">
-                <p class="mt-2 text-3xl font-bold tracking-tight color-light-blue sm:text-3xl">{{__('home.pgmTitle')}}</p>
-                <p class="mt-6 text-lg leading-8 text-gray-900">{{__('home.pgmTeaser')}}</p>
+                <p class="mt-2 text-3xl font-bold tracking-tight color-light-blue sm:text-3xl">{{__('How does it work?')}}</p>
+                <p class="mt-6 text-lg leading-8 text-gray-900">{{__('The Vertuoza Padel Tour is open to all, but each team must be registered in the name of a company, association or organization.')}}</p>
                 <dl class="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-900 lg:max-w-none">
                   <div class="relative pl-9">
                     <dt class="inline font-semibold text-gray-400">
@@ -120,9 +84,9 @@
                       <svg class="absolute top-1 left-1 h-6 w-6 color-light-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                       </svg>
-                      {{__('home.pgmContentPrefix1')}}
+                      
                     </dt>
-                    <dd class="inline">{{__('home.pgmContent1')}}</dd>
+                    <dd class="inline">{{__('Each session is independent: a company can register one or more teams for one or more sessions in one or more categories.')}}</dd>
                   </div>
       
                   <div class="relative pl-9">
@@ -131,9 +95,15 @@
                       <svg class="absolute top-1 left-1 h-6 w-6 color-light-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                       </svg>
-                      
+                      {{__('The categories are')}}:
                     </dt>
-                    <dd class="inline">{{__('home.pgmContent2')}}</dd>
+                    <dd class="inline">
+                      <ul>
+                        <li><span class="font-bold">Fun :</span>  {{__('total team ranking does not exceed P200')}}</li>
+                        <li><span class="font-bold">Advanced :</span> {{__('total team ranking does not exceed P600')}}</li>
+                        <li><span class="font-bold">Expert : </span>{{__('total team ranking exceeds P600')}}</li>
+                      </ul>
+                    </dd>
                   </div>
       
                   <div class="relative pl-9">
@@ -142,9 +112,17 @@
                       <svg class="absolute top-1 left-1 h-6 w-6 color-light-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                       </svg>
-                      {{__('home.pgmContentPrefix3')}}
                     </dt>
-                    <dd class="inline">{{__('home.pgmContent3')}}</dd>
+                    <dd class="inline">{{__('We ask participants to take their actual level into account to ensure fairness.  An unclassified player with a P300 level should register for Advanced rather than Fun. ')}}</dd>
+                  </div>
+                  <div class="relative pl-9">
+                    <dt class="inline font-semibold text-gray-400">
+                      <!-- Heroicon name: mini/server -->
+                      <svg class="absolute top-1 left-1 h-6 w-6 color-light-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
+                      </svg>
+                    </dt>
+                    <dd class="inline">{{__("We don't check players' employment contracts or standings, but we do expect everyone to play fair and correct, given that the competition has no stake in points or official standings.")}}</dd>
                   </div>
                 </dl>
               </div>
@@ -152,13 +130,20 @@
           </div>
         </div>
       </div>
-      <div class="overflow-hidden bg-black py-24 sm:py-32" id="club">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+
+      <div class="bg-black pt-24 sm:pt-32" id="club">
+        <div class="mx-auto max-w-7xl px-6 lg:px-14">
+          <div class="mx-auto max-w-7xl sm:text-center">
+            <h2 class="text-3xl font-bold tracking-tight color-light-blue sm:text-4xl">{{__('The clubs')}}</h2>
+            <p class="mt-6 text-lg leading-8 text-gray-300 sm:text-justify">{!!__("New partnerships mean new clubs!  This year, we'll be present in 12 different clubs throughout Belgium, making the Vertuoza Padel Tour the first corporate padel competition in Belgium, and it's not impossible that other stages will be added to the program.  The partner clubs are listed below.")!!}</p>
+          </div>
+        </div>
+      </div>
+      <div class="overflow-hidden bg-black " >
+        <div class="mx-auto max-w-7xl px-6 lg:px-8 pb-20">
           <div class="mx-auto grid max-w-2xl grid-cols-1 gap-y-16 gap-x-8 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             <div class="lg:pr-8 lg:pt-4">
               <div class="lg:max-w-lg">
-                <h2 class="text-lg font-semibold leading-8 tracking-tight color-light-blue">{{__('home.clubTitle')}}</h2>
-                <p class="mt-2 text-3xl font-bold tracking-tight text-gray-300 sm:text-4xl">{{__('home.clubTitle2')}}</p>
                 <dl class="mt-10 max-w-xl space-y-8 text-base leading-7 text-white lg:max-w-none">
                   <div class="relative pl-9">
                     <dt class="inline font-semibold text-gray-400">
@@ -166,9 +151,13 @@
                       <svg class="absolute top-1 left-1 h-6 w-6 color-light-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                       </svg>
-                      <a href="https://planetpadel.be/"  target="blank" class="color-light-blue">{{__('home.clubContentPrefix1')}}:</a>
+                      <span  class="color-white">{{__('In Flanders')}}:</span>
                     </dt>
-                    <dd class="inline">{{__('home.clubContent1')}}</dd>
+                    <dd class="py-2">- <b><a href="https://grimbergen.arenal.be/" class="color-light-blue" target="blank">{{__('Arenal Grimbergen')}}</a></b> <span class="font-light text-sm">{{__('Antwerpselaan 1, 1853 Grimbergen')}}</span></dd>
+                    <dd class="py-2">- <b><a href="https://brugge.arenal.be" class="color-light-blue" target="blank">{{__('Arenal Bruges')}}</a></b> <span class="font-light text-sm">{{__('Geralaan 51, 8310 Sint-Kruis')}}</span></dd>
+                    <dd class="py-2">- <b><a href="https://waregem.arenal.be/" class="color-light-blue" target="blank">{{__('Arenal Waregem')}}</a></b> <span class="font-light text-sm">{{__('F. Rooseveltlaan 155, 8790 Waregem')}}</span></dd>
+                    <dd class="py-2">- <b><a href="https://bree.arenal.be/" class="color-light-blue" target="blank">{{__('Arenal Bree')}}</a></b> <span class="font-light text-sm">{{__('Watertorenstraat 16, 3960 Bree')}}</span></dd>
+                    <dd class="py-2">- <b><a href="https://mechelen.arenal.be/" class="color-light-blue" target="blank">{{__('Arenal Mechelen')}}</a></b> <span class="font-light text-sm">{{__('Kruisbaan 56, 2800 Mechelen')}}</span></dd>
                   </div>
                   <div class="relative pl-9">
                     <dt class="inline font-semibold text-gray-400">
@@ -176,258 +165,480 @@
                       <svg class="absolute top-1 left-1 h-6 w-6 color-light-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                       </svg>
-                      <a href="https://www.tourtaxispadel.brussels/"  target="blank" class="color-light-blue"> {{__('home.clubContentPrefix2')}}:</a>
+                      <span  class="color-white">{{__('In Brussels')}}:</span>
                     </dt>
-                    <dd class="inline">{{__('home.clubContent2')}}</dd>
+                    <dd class="py-2">- <b><a href="https://www.tourtaxispadel.brussels/" class="color-light-blue" target="blank">{{__('Tour & Taxis Padel Club')}}</a></b> <span class="font-light text-sm">{{__('Tour & Taxis 88 – 1000 Bruxelles')}}</span></dd>
+                    <dd class="py-2">- <b><a href="https://tero.be/fr/houses/detail/tero-padel-club-louise/" class="color-light-blue" target="blank">{{__('Tero Louise')}}</a></b> <span class="font-light text-sm">{{__('rue du Beau Site, 26 – 1000 Bruxelles')}}</span></dd>
                   </div>
-      
-      
-                  <div class="relative pl-9">
-                    <dt class="inline font-semibold text-gray-400">
-                      <!-- Heroicon name: mini/server -->
-                      <svg class="absolute top-1 left-1 h-6 w-6 color-light-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
-                      </svg>
-                      <a href="https://www.tereiken.be/"  target="blank" class="color-light-blue">{{__('home.clubContentPrefix3')}}:</a>
-                    </dt>
-                    <dd class="inline">{{__('home.clubContent3')}}</dd>
-                  </div>
-      
-                  <div class="relative pl-9">
-                    <dt class="inline font-semibold text-gray-400">
-                      <!-- Heroicon name: mini/server -->
-                      <svg class="absolute top-1 left-1 h-6 w-6 color-light-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
-                      </svg>
-                      <a href="https://teropadelclub.be"  target="blank" class="color-light-blue">{{__('home.clubContentPrefix4')}}:</a>
-                    </dt>
-                    <dd class="inline">{{__('home.clubContent4')}}</dd>
-                  </div>
-
-
-
-                  <div class="relative pl-9">
-                    <dt class="inline font-semibold text-gray-400">
-                      <!-- Heroicon name: mini/server -->
-                      <svg class="absolute top-1 left-1 h-6 w-6 color-light-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
-                      </svg>
-                      <a href="https://elevenpadel.be/" class="color-light-blue"> {{__('home.clubContentPrefix6')}}:</a>
-                    </dt>
-                    <dd class="inline">{{__('home.clubContent6')}}</dd>
-                  </div>
-                  <div class="relative pl-9">
-                    <dt class="inline font-semibold text-gray-400">
-                      <!-- Heroicon name: mini/server -->
-                      <svg class="absolute top-1 left-1 h-6 w-6 color-light-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
-                      </svg>
-                      <a href="https://www.royalzoutetennisclub.be/"  target="blank" class="color-light-blue">  {{__('home.clubContentPrefix7')}}:</a>
-                    </dt>
-                    <dd class="inline">{{__('home.clubContent7')}}</dd>
-                  </div>
-
                 </dl>
               </div>
             </div>
-            <img src="{{url('/').'/images/section/session1_107.jpg'}}" alt="Product screenshot" class="w-[52rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[54rem] md:-ml-4 lg:-ml-0" width="2432" height="1442">
+            <div class="lg:pr-8 lg:pt-4">
+              <div class="lg:max-w-lg">
+                <dl class="mt-10 max-w-xl space-y-8 text-base leading-7 text-white lg:max-w-none">
+                  <div class="relative pl-9">
+                    <dt class="inline font-semibold text-gray-400">
+                      <!-- Heroicon name: mini/cloud-arrow-up -->
+                      <svg class="absolute top-1 left-1 h-6 w-6 color-light-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
+                      </svg>
+                      <span  class="color-white">{{__('In Wallonia ')}}:</span>
+                    </dt>
+                    <dd class="py-2">- <b><a href="https://tero.be/fr/houses/detail/tero-padel-club/" class="color-light-blue" target="blank">{{__('Tero Waterloo')}}</a></b> <span class="font-light text-sm">{{__('chaussée de Tervuren 389 – 1410 Waterloo')}}</span></dd>
+                    <dd class="py-2">- <b><a href="https://elevenpadel.be/" class="color-light-blue" target="blank">{{__('Eleven Nivelles')}}</a></b> <span class="font-light text-sm">{{__('rue de l’industrie 11 – 1400 Nivelles')}}</span></dd>
+                    <dd class="py-2">- <b><a href="https://planetpadel.be/" class="color-light-blue" target="blank">{{__('Planet Padel')}}</a></b> <span class="font-light text-sm">{{__('rue de la Vallée 10 – 4470 Saint-Georges-sur Meuse')}}</span></dd>
+                    <dd class="py-2">- <b><a href="https://www.mokkopadelproject.be" class="color-light-blue" target="blank">{{__('Mokko Padel')}}</a></b> <span class="font-light text-sm">{{__('rue de la Glacerie 11 – 5150 Floreffe')}}</span></dd>
+                  </div>
+                 
+                </dl>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <div class="bg-white py-24 sm:py-32" id="agenda">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
           <div class="mx-auto max-w-2xl lg:text-center">
-            <h2 class="text-lg font-semibold leading-8 tracking-tight color-light-blue">{{__('home.agenda')}}</h2>
-            <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{{__('home.agendaTitle2')}}</p>
-            {{-- <p class="mt-6 text-lg leading-8 text-gray-600">Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a elementum pulvinar et feugiat blandit at. In mi viverra elit nunc.</p> --}}
+            <h2 class="text-pretty text-5xl font-medium tracking-tight  sm:text-6xl color-dark-blue pb-7">{{__('Agenda 2025')}}</h2>
+            <p class="mt-2 text-xl font-bold tracking-tight text-gray-700 sm:text-xl">{{__("The 2025 program is practically finalized. If anything changes, we'll be sure to let you know.")}}</p>
+            <p class="mt-2 text-lg font-normal tracking-tight text-gray-700 sm:text-lg">{{__('Each session runs from +/- 1pm to 6pm.  The schedule may vary according to the number of participants and the number of available pitches. A detailed schedule will be provided to each participating team a few days before the session for which they are registered.')}}</p>
           </div>
           <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
-            <dl class="grid max-w-xl grid-cols-1 gap-y-10 gap-x-8 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
-              <div class="relative pl-16">
+            <dl class="grid max-w-xl grid-cols-1 gap-y-5 gap-x-8 lg:max-w-none lg:grid-cols-2 lg:gap-y-2">
+              <div class="relative pl-10">
                 <dt class="text-base font-semibold leading-7 text-gray-900">
-                  <div class="absolute top-0 left-0 flex h-10 w-10 items-center justify-center rounded-lg bg-light-blue">
-                    <!-- Heroicon name: outline/cloud-arrow-up -->
-                    <svg class=" h-6 w-6 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <div class="absolute top-0 left-0 flex h-6 w-6 items-center justify-center rounded-lg bg-dark-blue">
+                    <svg class=" h-4 w-4 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                     </svg>
                   </div>
-                  <a href="https://planetpadel.be/"  target="blank" class="color-light-blue"> {{__('home.clubContentPrefix1')}} ( Planet Padel) </a>
+                  <a href="https://waregem.arenal.be/"  target="blank" class="color-dark-blue"> {{__('Arenal Waregem')}}</a>
                 </dt>
                 <dd class="mt-0 text-base leading-7 text-gray-600">
-                  <b>{{__('home.when')}}: </b> {{__('home.agendaWhen1')}}<br/>
-                  <b>{{__('home.where')}}: </b> {{__('home.agendaWhere1')}}<br/><br/>
+                  <b class="text-sm"> {{__('When')}}: </b> <span class="text-sm">{{__('Friday')}} {{__('21/3/2025')}}</span><br/>
+                  <b class="text-sm">{{__('Place')}}: </b> <span class="text-sm">{{__('Antwerpselaan 1, 1853 Grimbergen')}}</span> <br/><br/>
+                </dd>
+              </div>
+              <div class="relative pl-10">
+                <dt class="text-base font-semibold leading-7 text-gray-900">
+                  <div class="absolute top-0 left-0 flex h-6 w-6 items-center justify-center rounded-lg bg-dark-blue">
+                    <svg class=" h-4 w-4 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
+                    </svg>
+                  </div>
+                  <a href="https://tero.be/fr/houses/detail/tero-padel-club-louise/"  target="blank" class="color-dark-blue"> {{__('Tero Louise')}}</a>
+                </dt>
+                <dd class="mt-0 text-base leading-7 text-gray-600">
+                  <b class="text-sm"> {{__('When')}}: </b> <span class="text-sm">{{__('Friday')}} {{__('28/3/2025')}}</span><br/>
+                  <b class="text-sm">{{__('Place')}}: </b> <span class="text-sm">{{__('rue du Beau Site, 26 – 1000 Bruxelles')}}</span> <br/><br/>
+                </dd>
+              </div>
+              <div class="relative pl-10">
+                <dt class="text-base font-semibold leading-7 text-gray-900">
+                  <div class="absolute top-0 left-0 flex h-6 w-6 items-center justify-center rounded-lg bg-dark-blue">
+                    <svg class=" h-4 w-4 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
+                    </svg>
+                  </div>
+                  <a href="https://planetpadel.be/"  target="blank" class="color-dark-blue"> Tenerife ({{__('find out more about this session')}})</a>
+                </dt>
+                <dd class="mt-0 text-base leading-7 text-gray-600">
+                  <b class="text-sm"> {{__('When')}}: </b> <span class="text-sm">{{__('From 2/4/2025 to 6/4/2025')}}</span><br/>
+                  <b class="text-sm">{{__('Place')}}: </b> <span class="text-sm">{{__('Tenerife')}}</span> <br/><br/>
+                </dd>
+              </div>
+              <div class="relative pl-10">
+                <dt class="text-base font-semibold leading-7 text-gray-900">
+                  <div class="absolute top-0 left-0 flex h-6 w-6 items-center justify-center rounded-lg bg-dark-blue">
+                    <svg class=" h-4 w-4 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
+                    </svg>
+                  </div>
+                  <a href="https://planetpadel.be/"  target="blank" class="color-dark-blue"> {{__('Planet Padel')}} </a>
+                </dt>
+                <dd class="mt-0 text-base leading-7 text-gray-600">
+                  <b class="text-sm"> {{__('When')}}: </b> <span class="text-sm">{{__('Friday')}} {{__('11/4/2025')}}</span><br/>
+                  <b class="text-sm">{{__('Place')}}: </b> <span class="text-sm">{{__('rue de la Vallée 10 – 4470 Saint-Georges-sur Meuse')}}</span> <br/><br/>
+                </dd>
+              </div>
+              <div class="relative pl-10">
+                <dt class="text-base font-semibold leading-7 text-gray-900">
+                  <div class="absolute top-0 left-0 flex h-6 w-6 items-center justify-center rounded-lg bg-dark-blue">
+                    <svg class=" h-4 w-4 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
+                    </svg>
+                  </div>
+                  <a href="https://www.mokkopadelproject.be"  target="blank" class="color-dark-blue"> {{__('Mokko Padel')}} </a>
+                </dt>
+                <dd class="mt-0 text-base leading-7 text-gray-600">
+                  <b class="text-sm"> {{__('When')}}: </b> <span class="text-sm">{{__('Friday')}} {{__('18/4/2025 ')}}</span><br/>
+                  <b class="text-sm">{{__('Place')}}: </b> <span class="text-sm">{{__('rue de la Glacerie 11 – 5150 Floreffe')}}</span> <br/><br/>
+                </dd>
+              </div>
+              <div class="relative pl-10">
+                <dt class="text-base font-semibold leading-7 text-gray-900">
+                  <div class="absolute top-0 left-0 flex h-6 w-6 items-center justify-center rounded-lg bg-dark-blue">
+                    <svg class=" h-4 w-4 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
+                    </svg>
+                  </div>
+                  <a href="https://www.tourtaxispadel.brussels/"  target="blank" class="color-dark-blue"> {{__('Tour & Taxis Padel Club')}}</a>
+                </dt>
+                <dd class="mt-0 text-base leading-7 text-gray-600">
+                  <b class="text-sm"> {{__('When')}}: </b> <span class="text-sm">{{__('Friday')}} {{__('25/4/2025 ')}}</span><br/>
+                  <b class="text-sm">{{__('Place')}}: </b> <span class="text-sm">{{__('Tour & Taxis 88 – 1000 Bruxelles')}}</span> <br/><br/>
+                </dd>
+              </div>
+              <div class="relative pl-10">
+                <dt class="text-base font-semibold leading-7 text-gray-900">
+                  <div class="absolute top-0 left-0 flex h-6 w-6 items-center justify-center rounded-lg bg-dark-blue">
+                    <svg class=" h-4 w-4 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
+                    </svg>
+                  </div>
+                  <a href="https://grimbergen.arenal.be"  target="blank" class="color-dark-blue"> {{__('Arenal Grimbergen')}}</a>
+                </dt>
+                <dd class="mt-0 text-base leading-7 text-gray-600">
+                  <b class="text-sm"> {{__('When')}}: </b> <span class="text-sm">{{__('Friday')}} {{__('9/5/2025')}}</span><br/>
+                  <b class="text-sm">{{__('Place')}}: </b> <span class="text-sm">{{__('Antwerpselaan 1, 1853 Grimbergen')}}</span> <br/><br/>
+                </dd>
+              </div>
+              <div class="relative pl-10">
+                <dt class="text-base font-semibold leading-7 text-gray-900">
+                  <div class="absolute top-0 left-0 flex h-6 w-6 items-center justify-center rounded-lg bg-dark-blue">
+                    <svg class=" h-4 w-4 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
+                    </svg>
+                  </div>
+                  <a href="https://tero.be/fr/houses/detail/tero-padel-club/"  target="blank" class="color-dark-blue"> {{__('Tero Waterloo')}}</a>
+                </dt>
+                <dd class="mt-0 text-base leading-7 text-gray-600">
+                  <b class="text-sm"> {{__('When')}}: </b> <span class="text-sm">{{__('Friday')}} {{__('16/5/2025')}}</span><br/>
+                  <b class="text-sm">{{__('Place')}}: </b> <span class="text-sm">{{__('chaussée de Tervuren 389 – 1410 Waterloo')}}</span> <br/><br/>
+                </dd>
+              </div>
+              <div class="relative pl-10">
+                <dt class="text-base font-semibold leading-7 text-gray-900">
+                  <div class="absolute top-0 left-0 flex h-6 w-6 items-center justify-center rounded-lg bg-dark-blue">
+                    <svg class=" h-4 w-4 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
+                    </svg>
+                  </div>
+                  <a href="https://www.arenal.be "  target="blank" class="color-dark-blue"> {{__('Arenal Antwerp')}}</a>
+                </dt>
+                <dd class="mt-0 text-base leading-7 text-gray-600">
+                  <b class="text-sm"> {{__('When')}}: </b> <span class="text-sm">{{__('Friday')}} {{__('6/6/2025 ')}}</span><br/>
+                  <b class="text-sm">{{__('Place')}}: </b> <span class="text-sm">{{__('Arenal Antwerp')}}</span> <br/><br/>
+                </dd>
+              </div>
+              <div class="relative pl-10">
+                <dt class="text-base font-semibold leading-7 text-gray-900">
+                  <div class="absolute top-0 left-0 flex h-6 w-6 items-center justify-center rounded-lg bg-dark-blue">
+                    <svg class=" h-4 w-4 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
+                    </svg>
+                  </div>
+                  <a href="https://bree.arenal.be "  target="blank" class="color-dark-blue"> {{__('Arenal Bree')}} </a>
+                </dt>
+                <dd class="mt-0 text-base leading-7 text-gray-600">
+                  <b class="text-sm"> {{__('When')}}: </b> <span class="text-sm">{{__('Friday')}} {{__('13/6/2025')}}</span><br/>
+                  <b class="text-sm">{{__('Place')}}: </b> <span class="text-sm">{{__('hWatertorenstraat 16, 3960 Bree')}}</span> <br/><br/>
+                </dd>
+              </div>
+              <div class="relative pl-10">
+                <dt class="text-base font-semibold leading-7 text-gray-900">
+                  <div class="absolute top-0 left-0 flex h-6 w-6 items-center justify-center rounded-lg bg-dark-blue">
+                    <!-- Heroicon name: outline/cloud-arrow-up -->
+                    <svg class=" h-4 w-4 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
+                    </svg>
+                  </div>
+                  <a href="https://brugge.arenal.be"  target="blank" class="color-dark-blue"> {{__('Arenal Bruges')}} </a>
+                </dt>
+                <dd class="mt-0 text-base leading-7 text-gray-600">
+                  <b class="text-sm"> {{__('When')}}: </b> <span class="text-sm">{{__('Friday')}} {{__('20/6/2025')}}</span><br/>
+                  <b class="text-sm">{{__('Place')}}: </b> <span class="text-sm">{{__('Geralaan 51, 8310 Sint-Kruis')}}</span> <br/><br/>
                   {{-- Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget.<br/> --}}
                 </dd>
               </div>
       
+              <div class="relative pl-10">
+                <dt class="text-base font-semibold leading-7 text-gray-900">
+                  <div class="absolute top-0 left-0 flex h-6 w-6 items-center justify-center rounded-lg bg-dark-blue">
+                    <!-- Heroicon name: outline/cloud-arrow-up -->
+                    <svg class=" h-4 w-4 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
+                    </svg>
+                  </div>
+                  <a href="https://elevenpadel.be/"  target="blank" class="color-dark-blue"> {{__('Eleven Nivelles')}}</a>
+                </dt>
+                <dd class="mt-0 text-base leading-7 text-gray-600">
+                  <b class="text-sm"> {{__('When')}}: </b> <span class="text-sm">{{__('Friday')}} {{__('20/6/2025 ')}}</span><br/>
+                  <b class="text-sm">{{__('Place')}}: </b> <span class="text-sm">{{__('rue de l’industrie 11 – 1400 Nivelles')}}</span> <br/><br/>
+                  {{-- Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget.<br/> --}}
+                </dd>
+              </div>
       
-              <div class="relative pl-16">
-                <dt class="text-base font-semibold leading-7 text-gray-900">
-                  <div class="absolute top-0 left-0 flex h-10 w-10 items-center justify-center rounded-lg bg-light-blue">
-                    <!-- Heroicon name: outline/arrow-path -->
-                    <svg class=" h-6 w-6 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
-                    </svg>
-                  </div>
-                  <a href="https://www.tourtaxispadel.brussels/"  target="blank" class="color-light-blue"> {{__('home.clubContentPrefix2')}} (Tour & Taxis Padel Club) </a>
-                </dt>
-                
-                <dd class="mt-0 text-base leading-7 text-gray-600">
-                  <b>{{__('home.when')}}: </b> {{__('home.agendaWhen2')}} <span class="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10"><b>Sold Out!</b></span><br/>
-                  <b>{{__('home.where')}}: </b> {{__('home.agendaWhere2')}}<br/><br/>
-                </dd>
-              </div>
-      
-              <div class="relative pl-16">
-                <dt class="text-base font-semibold leading-7 text-gray-900">
-                  <div class="absolute top-0 left-0 flex h-10 w-10 items-center justify-center rounded-lg bg-light-blue">
-                    <!-- Heroicon name: outline/finger-print -->
-                    <svg class=" h-6 w-6 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
-                    </svg>
-                  </div>
-                  <a href="https://www.tereiken.be/"  target="blank" class="color-light-blue"> {{__('home.clubContentPrefix3')}} (Ter Eiken Padel)</a>
-                </dt>
-                
-                <dd class="mt-0 text-base leading-7 text-gray-600">
-                  <b>{{__('home.when')}}: </b> {{__('home.agendaWhen3')}}<br/>
-                  <b>{{__('home.where')}}: </b> {{__('home.agendaWhere3')}}<br/><br/>
-                </dd>
-              </div>
-              <div class="relative pl-16">
-                <dt class="text-base font-semibold leading-7 text-gray-900">
-                  <div class="absolute top-0 left-0 flex h-10 w-10 items-center justify-center rounded-lg bg-light-blue">
-                    <!-- Heroicon name: outline/finger-print -->
-                    <svg class=" h-6 w-6 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
-                    </svg>
-                  </div>
-                  <a href="https://teropadelclub.be/fr"  target="blank" class="color-light-blue"> {{__('home.clubContentPrefix4')}} (Tero)</a>
-                </dt>
-                
-                <dd class="mt-0 text-base leading-7 text-gray-600">
-                  <b>{{__('home.when')}}: </b> {{__('home.agendaWhen4')}}<br/>
-                  <b>{{__('home.where')}}: </b> {{__('home.agendaWhere4')}}<br/><br/>
-                </dd>
-              </div>
-              <div class="relative pl-16">
-                <dt class="text-base font-semibold leading-7 text-gray-900">
-                  <div class="absolute top-0 left-0 flex h-10 w-10 items-center justify-center rounded-lg bg-light-blue">
-                    <!-- Heroicon name: outline/finger-print -->
-                    <svg class=" h-6 w-6 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
-                    </svg>
-                  </div>
-                  <a href="https://elevenpadel.be/"  target="blank" class="color-light-blue">{{__('home.clubContentPrefix6')}} (Eleven Padel)</a>
-                </dt>
-                
-                <dd class="mt-0 text-base leading-7 text-gray-600">
-                  <b>{{__('home.when')}}: </b> {{__('home.agendaWhen6')}} {{__('sessions.afternoon')}}<br/>
-                  <b>{{__('home.where')}}: </b> {{__('home.agendaWhere6')}}<br/><br/>
-                </dd>
-              </div>
-
-
-              <div class="relative pl-16">
-                <dt class="text-base font-semibold leading-7 text-gray-900">
-                  <div class="absolute top-0 left-0 flex h-10 w-10 items-center justify-center rounded-lg bg-light-blue">
-                    <!-- Heroicon name: outline/finger-print -->
-                    <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 01-.982-3.172M9.497 14.25a7.454 7.454 0 00.981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 007.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 002.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 012.916.52 6.003 6.003 0 01-5.395 4.972m0 0a6.726 6.726 0 01-2.749 1.35m0 0a6.772 6.772 0 01-3.044 0"></path>
-                    </svg>
-                  </div>
-                  <a href="https://www.royalzoutetennisclub.be/" target="blank" class="color-light-blue"> {{__('home.thefinale')}} (Royal Zoute Tennis & Padel Club)</a>
-                </dt>
-                
-                <dd class="mt-0 text-base leading-7 text-gray-600">
-                  <b>{{__('home.when')}}: </b> {{__('home.agendaWhen7')}}<br/>
-                  <b>{{__('home.where')}}: </b> {{__('home.agendaWhere7')}}<br/><br/>
-                </dd>
-              </div>
+              
             </dl>
+          </div>
+          <div class="mx-auto max-w-2xl lg:text-center">
+            <p class="mt-2 text-lg font-normal tracking-tight text-gray-700 sm:text-lg">{!!__('Nous allons nous efforcer de satisfaire tout le monde, mais nous sommes limités par le nombre de terrains disponibles.  <b>Premier arrivé, premier servi !</b>')!!}</p>
           </div>
         </div>
       </div>
-      <!-- This example requires Tailwind CSS v3.0+ -->
-      <div class="bg-dark-blue py-24 sm:py-32" id="price">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-          <div class="mx-auto max-w-2xl sm:text-center">
-            <h2 class="text-3xl font-bold tracking-tight text-gray-200 sm:text-4xl">{{__('home.priceTitle')}}</h2>
-            <p class="mt-6 text-lg leading-8 text-gray-300">{{__('home.priceTeaser')}}</p>
-            <p class="mt-6 text-lg leading-8 text-gray-300 "><b>{{__('home.firstIn')}}</b></p>
-          </div>
-          <div class="mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none mb-10">
-            <div class="p-8 sm:p-10 lg:flex-auto">
-              <h3 class="text-2xl font-bold tracking-tight text-gray-300">{{__('home.priceTitle2')}}</h3>
-              <p class="mt-6 max-w-3xl text-base text-indigo-50 pb-2">{{__('signup.teaser')}}</p>
-              <ul class="text-white text-normal">
-                <li>{{__('signup.teaser250')}}</li>
-                <li>{{__('signup.teaser215')}}</li>
-                <li>{{__('signup.teaser195')}}</li>
-              </ul>
-              <div class="mt-10 flex items-center gap-x-4">
-                <h4 class="flex-none text-sm font-semibold leading-6 color-light-blue">{{__('home.priceInclude')}}</h4>
-                <div class="h-px flex-auto bg-gray-100"></div>
+      <div class="bg-white py-24 sm:py-32" id="price">
+        <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+          <h2 class="text-pretty text-5xl font-medium tracking-tight text-gray-950 sm:text-6xl">{{__('How much is the registration?')}}</h2>
+          <p class="mt-6 max-w-3xl text-xl font-medium text-gray-600 sm:text-2xl">{{__('Since the launch of the Vertuoza Padel Tour, we have strived to offer quality events on a reasonable budget, and in 2025, thanks to the renewed support of our partners and sponsors, our prices will once again remain unchanged.')}}</p>
+          <p class="mt-6 font-medium leading-8 text-gray-500 "><b>{{__('In addition, each registration registered and paid before December 31, 2024 automatically entitles the holder to a 10% discount on the price.')}}</b></p>
+
+        </div>
+        <div class="relative pt-16 sm:pt-24">
+          <div class="absolute inset-x-0 bottom-0 top-48 bg-[radial-gradient(circle_at_center_var(--gradient-position),#7775D6,#25243d,#030712_70%)] [--gradient-position:center] lg:[--gradient-position:150%]"></div>
+          <div class="relative mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+            <div class="grid grid-cols-1 gap-10 lg:grid-cols-3">
+              <div class="-m-2 grid grid-cols-1 rounded-[2rem] shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto max-lg:w-full max-lg:max-w-md">
+                <div class="grid grid-cols-1 rounded-[2rem] p-2 shadow-md shadow-black/5">
+                  <div class="rounded-3xl bg-white p-10 pb-9 shadow-2xl ring-1 ring-black/5">
+                    <h2 class="text-sm/5 font-semibold text-blue-800">{{__('One session')}}</h2>
+                    <p class="mt-2 text-pretty text-sm/6 text-gray-600">{{__('Per team')}}</p>
+                    <div class="mt-8 flex items-center gap-4">
+                      <div class="text-5xl font-medium text-gray-950">250</div>
+                      <div class="text-sm/5 text-gray-600">
+                        <p>EUR</p>
+                        <p>HTVA</p>
+                      </div>
+                    </div>
+                    <div class="mt-8">
+                      <a href="#" aria-label="Start a free trial on the Starter plan" class="inline-block rounded-md bg-blue-800 px-3.5 py-2 text-center text-sm/6 font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-800">Je m'inscris</a>
+                    </div>
+                    <div class="mt-8">
+                      <h3 class="text-sm/6 font-medium text-gray-950">{{__('This price includes')}}:</h3>
+                      <ul class="mt-3 space-y-3">
+                        <li class="group flex items-start gap-4 text-sm/6 text-gray-600 data-[disabled]:text-gray-400">
+                          <span class="inline-flex h-6 items-center">
+                            <svg class="size-4 fill-gray-400 group-data-[disabled]:fill-gray-300" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
+                              <path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
+                            </svg>
+                          </span>
+      
+                          {{__("Participation in the day's session (4 padel matches in the afternoon)")}}
+                        </li>
+                        <li class="group flex items-start gap-4 text-sm/6 text-gray-600 data-[disabled]:text-gray-400">
+                          <span class="inline-flex h-6 items-center">
+                            <svg class="size-4 fill-gray-400 group-data-[disabled]:fill-gray-300" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
+                              <path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
+                            </svg>
+                          </span>
+      
+                          {{__("Participation in the final for the best teams in each session at no extra charge")}}
+                        </li>
+                        <li class="group flex items-start gap-4 text-sm/6 text-gray-600 data-[disabled]:text-gray-400">
+                          <span class="inline-flex h-6 items-center">
+                            <svg class="size-4 fill-gray-400 group-data-[disabled]:fill-gray-300" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
+                              <path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
+                            </svg>
+                          </span>
+      
+                          {{__("A customized T-shirt with your company logo")}}
+                        </li>
+                        <li class="group flex items-start gap-4 text-sm/6 text-gray-600 data-[disabled]:text-gray-400">
+                          <span class="inline-flex h-6 items-center">
+                            <svg class="size-4 fill-gray-400 group-data-[disabled]:fill-gray-300" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
+                              <path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
+                            </svg>
+                          </span>
+      
+                         {{__("The goodie bag filled to the brim by our generous partners")}}
+                        </li>
+                        <li class="group flex items-start gap-4 text-sm/6 text-gray-600 data-[disabled]:text-gray-400">
+                          <span class="inline-flex h-6 items-center">
+                            <svg class="size-4 fill-gray-400 group-data-[disabled]:fill-gray-300" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
+                              <path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
+                            </svg>
+                          </span>
+      
+                          {{__('Access to additional events (clinics, exhibitions, etc.)')}}
+                        </li>
+                        <li class="group flex items-start gap-4 text-sm/6 text-gray-600 data-[disabled]:text-gray-400">
+                          <span class="inline-flex h-6 items-center">
+                            <svg class="size-4 fill-gray-400 group-data-[disabled]:fill-gray-300" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
+                              <path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
+                            </svg>
+                          </span>
+      
+                          {{__('Networking cocktail at the end of each session')}}
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <ul role="list" class="mt-8 grid grid-cols-1 gap-4 text-sm leading-6 text-gray-100 sm:grid-cols-2 sm:gap-6">
-                <li class="flex gap-x-3">
-                  <!-- Heroicon name: mini/check -->
-                  <svg class="h-6 w-5 flex-none color-light-blue" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-                  </svg>
-                  {{__('home.priceInclude1')}}
-                </li>
-    
-                <li class="flex gap-x-3">
-                  <!-- Heroicon name: mini/check -->
-                  <svg class="h-6 w-5 flex-none color-light-blue" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-                  </svg>
-                  {{__('home.priceInclude2')}}
-                </li>
-    
-                <li class="flex gap-x-3">
-                  <!-- Heroicon name: mini/check -->
-                  <svg class="h-6 w-5 flex-none color-light-blue" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-                  </svg>
-                  {{__('home.priceInclude3')}}
-                </li>
-                <li class="flex gap-x-3">
-                  <!-- Heroicon name: mini/check -->
-                  <svg class="h-6 w-5 flex-none color-light-blue" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-                  </svg>
-                  {{__('home.priceInclude4')}}
-                </li>
-                <li class="flex gap-x-3">
-                  <!-- Heroicon name: mini/check -->
-                  <svg class="h-6 w-5 flex-none color-light-blue" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-                  </svg>
-                  {{__('home.priceInclude5')}}
-                </li>
-                <li class="flex gap-x-3">
-                  <!-- Heroicon name: mini/check -->
-                  <svg class="h-6 w-5 flex-none color-light-blue" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-                  </svg>
-                  {{__('home.priceInclude6')}}
-                </li>
-              </ul>
-            </div>
-            <div class="mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-xs lg:flex-shrink-0">
-              <div class="rounded-2xl  py-10 text-center ring-1 ring-inset ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:pt-40">
-                <div class="mx-auto max-w-xs px-8">
-                  
-                  <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}" class="mt-10 block w-full rounded-md bg-light-blue px-8 py-3 text-center text-md font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">{{__('home.priceImin')}}</a>
-                  
+              <div class="-m-2 grid grid-cols-1 rounded-[2rem] shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto max-lg:w-full max-lg:max-w-md">
+                <div class="grid grid-cols-1 rounded-[2rem] p-2 shadow-md shadow-black/5">
+                  <div class="rounded-3xl bg-white p-10 pb-9 shadow-2xl ring-1 ring-black/5">
+                    <h2 class="text-sm/5 font-semibold text-blue-800">{{__("Five sessions")}}</h2>
+                    <p class="mt-2 text-pretty text-sm/6 text-gray-600">{{__("Per team")}}</p>
+                    <div class="mt-8 flex items-center gap-4">
+                      <div class="text-5xl font-medium text-gray-950">215</div>
+                      <div class="text-sm/5 text-gray-600">
+                        <p>EUR</p>
+                        <p>HTVA</p>
+                      </div>
+                    </div>
+                    <div class="mt-8">
+                      <a href="#" aria-label="Start a free trial on the Starter plan" class="inline-block rounded-md bg-blue-800 px-3.5 py-2 text-center text-sm/6 font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-800">Je m'inscris</a>
+                    </div>
+                    <div class="mt-8">
+                      <h3 class="text-sm/6 font-medium text-gray-950">{{__('This price includes')}}:</h3>
+                      <ul class="mt-3 space-y-3">
+                        <li class="group flex items-start gap-4 text-sm/6 text-gray-600 data-[disabled]:text-gray-400">
+                          <span class="inline-flex h-6 items-center">
+                            <svg class="size-4 fill-gray-400 group-data-[disabled]:fill-gray-300" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
+                              <path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
+                            </svg>
+                          </span>
+      
+                          {{__("Participation in the day's session (4 padel matches in the afternoon)")}}
+                        </li>
+                        <li class="group flex items-start gap-4 text-sm/6 text-gray-600 data-[disabled]:text-gray-400">
+                          <span class="inline-flex h-6 items-center">
+                            <svg class="size-4 fill-gray-400 group-data-[disabled]:fill-gray-300" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
+                              <path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
+                            </svg>
+                          </span>
+      
+                          {{__("Participation in the final for the best teams in each session at no extra charge")}}
+                        </li>
+                        <li class="group flex items-start gap-4 text-sm/6 text-gray-600 data-[disabled]:text-gray-400">
+                          <span class="inline-flex h-6 items-center">
+                            <svg class="size-4 fill-gray-400 group-data-[disabled]:fill-gray-300" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
+                              <path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
+                            </svg>
+                          </span>
+      
+                          {{__("A customized T-shirt with your company logo")}}
+                        </li>
+                        <li class="group flex items-start gap-4 text-sm/6 text-gray-600 data-[disabled]:text-gray-400">
+                          <span class="inline-flex h-6 items-center">
+                            <svg class="size-4 fill-gray-400 group-data-[disabled]:fill-gray-300" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
+                              <path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
+                            </svg>
+                          </span>
+      
+                         {{__("The goodie bag filled to the brim by our generous partners")}}
+                        </li>
+                        <li class="group flex items-start gap-4 text-sm/6 text-gray-600 data-[disabled]:text-gray-400">
+                          <span class="inline-flex h-6 items-center">
+                            <svg class="size-4 fill-gray-400 group-data-[disabled]:fill-gray-300" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
+                              <path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
+                            </svg>
+                          </span>
+      
+                          {{__('Access to additional events (clinics, exhibitions, etc.)')}}
+                        </li>
+                        <li class="group flex items-start gap-4 text-sm/6 text-gray-600 data-[disabled]:text-gray-400">
+                          <span class="inline-flex h-6 items-center">
+                            <svg class="size-4 fill-gray-400 group-data-[disabled]:fill-gray-300" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
+                              <path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
+                            </svg>
+                          </span>
+      
+                          {{__('Networking cocktail at the end of each session')}}
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="-m-2 grid grid-cols-1 rounded-[2rem] shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto max-lg:w-full max-lg:max-w-md">
+                <div class="grid grid-cols-1 rounded-[2rem] p-2 shadow-md shadow-black/5">
+                  <div class="rounded-3xl bg-white p-10 pb-9 shadow-2xl ring-1 ring-black/5">
+                    <h2 class="text-sm/5 font-semibold text-blue-800">{{__('Ten sessions')}}</h2>
+                    <p class="mt-2 text-pretty text-sm/6 text-gray-600">{{__("Per team")}}</p>
+                    <div class="mt-8 flex items-center gap-4">
+                      <div class="text-5xl font-medium text-gray-950">195</div>
+                      <div class="text-sm/5 text-gray-600">
+                        <p>EUR</p>
+                        <p>HTVA</p>
+                      </div>
+                    </div>
+                    <div class="mt-8">
+                      <a href="#" aria-label="Start a free trial on the Starter plan" class="inline-block rounded-md bg-blue-800 px-3.5 py-2 text-center text-sm/6 font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-800">Je m'inscris</a>
+                    </div>
+                    <div class="mt-8">
+                      <h3 class="text-sm/6 font-medium text-gray-950">{{__('This price includes')}}:</h3>
+                      <ul class="mt-3 space-y-3">
+                        <li class="group flex items-start gap-4 text-sm/6 text-gray-600 data-[disabled]:text-gray-400">
+                          <span class="inline-flex h-6 items-center">
+                            <svg class="size-4 fill-gray-400 group-data-[disabled]:fill-gray-300" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
+                              <path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
+                            </svg>
+                          </span>
+      
+                          {{__("Participation in the day's session (4 padel matches in the afternoon)")}}
+                        </li>
+                        <li class="group flex items-start gap-4 text-sm/6 text-gray-600 data-[disabled]:text-gray-400">
+                          <span class="inline-flex h-6 items-center">
+                            <svg class="size-4 fill-gray-400 group-data-[disabled]:fill-gray-300" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
+                              <path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
+                            </svg>
+                          </span>
+      
+                          {{__("Participation in the final for the best teams in each session at no extra charge")}}
+                        </li>
+                        <li class="group flex items-start gap-4 text-sm/6 text-gray-600 data-[disabled]:text-gray-400">
+                          <span class="inline-flex h-6 items-center">
+                            <svg class="size-4 fill-gray-400 group-data-[disabled]:fill-gray-300" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
+                              <path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
+                            </svg>
+                          </span>
+      
+                          {{__("A customized T-shirt with your company logo")}}
+                        </li>
+                        <li class="group flex items-start gap-4 text-sm/6 text-gray-600 data-[disabled]:text-gray-400">
+                          <span class="inline-flex h-6 items-center">
+                            <svg class="size-4 fill-gray-400 group-data-[disabled]:fill-gray-300" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
+                              <path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
+                            </svg>
+                          </span>
+      
+                         {{__("The goodie bag filled to the brim by our generous partners")}}
+                        </li>
+                        <li class="group flex items-start gap-4 text-sm/6 text-gray-600 data-[disabled]:text-gray-400">
+                          <span class="inline-flex h-6 items-center">
+                            <svg class="size-4 fill-gray-400 group-data-[disabled]:fill-gray-300" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
+                              <path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
+                            </svg>
+                          </span>
+      
+                          {{__('Access to additional events (clinics, exhibitions, etc.)')}}
+                        </li>
+                        <li class="group flex items-start gap-4 text-sm/6 text-gray-600 data-[disabled]:text-gray-400">
+                          <span class="inline-flex h-6 items-center">
+                            <svg class="size-4 fill-gray-400 group-data-[disabled]:fill-gray-300" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
+                              <path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
+                            </svg>
+                          </span>
+      
+                          {{__('Networking cocktail at the end of each session')}}
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
+            <div class="flex justify-between py-16 opacity-60 max-sm:mx-auto max-sm:max-w-md max-sm:flex-wrap max-sm:justify-evenly max-sm:gap-x-4 max-sm:gap-y-4 sm:py-24">
+              
+            </div>
           </div>
         </div>
+        
       </div>
+      
+     
       
       <div class="bg-white py-24 sm:py-32 " id="sponsor">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
@@ -446,7 +657,7 @@
                 <a href="https://wilmeyer.com/"  target="_blank" > <img class="mx-auto w-50 items-center justify-center mt-7" src="{{url('/').'/images/sponsors/wilmeyer.png'}}" alt=""></a>
               </li>
               <li>
-                <a href="https://santospalaceshop.be/bruxelles/" target="_blank"  ><img class="mx-auto  max-h-20 items-center justify-center mt-7" src="{{url('/').'/images/sponsors/santos.png'}}" alt=""></a>
+                <a href="https://brugge.arenal.be/" target="_blank"  ><img class="mx-auto items-center justify-center mt-7 w-40 h-20" src="https://brugge.arenal.be/themes/custom/arenal/logo-new.svg" alt=""></a>
               </li>
               <!-- More people... -->
             </ul>
@@ -457,7 +668,7 @@
       <div class="bg-white " id="sponsor">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
           <div class="mx-auto max-w-2xl lg:mx-0">
-            <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{{__('home.clubTitle')}}</h2>
+            <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{{__('The clubs')}}</h2>
           </div>
           <div class="flex flex-1 mt-10">
             <ul role="list" class="sm:grid sm:grid-cols-6  sm:gap-4 sm:items-center justify-center  sm:border-t sm:border-gray-200 sm:py-5   sm:space-x-12">
@@ -465,7 +676,7 @@
                 <a href="https://tour-taxis.com/fr/event/world-padel-tour-2023-gare-maritime/" target="_blank"  ><img class="mx-auto items-center justify-center mt-7" src="{{url('/').'/images/clubs/padelclub.png'}}" alt=""></a>
               </li>
               <li>
-                <a href="https://www.tereiken.be/"  target="_blank" ><img class="mx-auto  items-center justify-center mt-7" src="{{url('/').'/images/clubs/tereiken.png'}}" alt=""></a>
+                <a href="https://brugge.arenal.be/"  target="_blank" ><img class="mx-auto  items-center justify-center mt-7" src="https://brugge.arenal.be/themes/custom/arenal/logo-new.svg" alt=""></a>
               </li>
               <li>
                 <a href="https://planetpadel.be/" target="_blank"  ><img class="mx-auto items-center justify-center mt-7" src="{{url('/').'/images/clubs/planetpadel.png'}}" alt=""></a>

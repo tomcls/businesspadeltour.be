@@ -3,6 +3,7 @@
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\CSVController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\SitemapXmlController;
 use App\Http\Controllers\StripeController;
 use App\Http\Livewire\Admin\Companies;
@@ -22,6 +23,7 @@ use App\Http\Livewire\Me\Profile;
 use App\Http\Livewire\Photos;
 use App\Http\Livewire\Photos2024;
 use App\Http\Livewire\Video;
+use App\Http\Livewire\WelcomeEvent;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Route;
 //use Laravel\Octane\Facades\Octane;
@@ -61,6 +63,8 @@ Route::get('/users/download', [CSVController::class,'users'])->name('usersCSV');
 Route::get('/companies/download', [CSVController::class,'companies'])->name('companiesCSV');
 
 Route::post('/stripe/create', [StripeController::class, 'create'])->name('stripe.create');
+
+Route::get('/invoice/{id?}', [InvoiceController::class, 'download'])->name('invoice');
 
 Route::middleware('auth')->group(function () {
     Route::get('/me/profile', Profile::class)->name('me.profile');
@@ -133,6 +137,8 @@ Route::prefix('{locale?}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('set.
     Route::get('/charge', Charge::class)->name('charge');
 
     Route::get('/charge-success', ChargeSuccess::class)->name('charge.success');
+    Route::get('/welcome-event', WelcomeEvent::class)->name('welcome.event');
+   
    // Route::get('/' . trans('route.article', []).'/{slug}', 'ArticleController@show')->name('article');
     // Octane::route('GET','/en/index',function () {return new Response((new HomeController)->index());});
 });
