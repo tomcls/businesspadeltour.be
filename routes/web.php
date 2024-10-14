@@ -24,6 +24,7 @@ use App\Http\Livewire\Photos;
 use App\Http\Livewire\Photos2024;
 use App\Http\Livewire\Video;
 use App\Http\Livewire\WelcomeEvent;
+use App\Http\Livewire\WelcomeEventSuccess;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Route;
 //use Laravel\Octane\Facades\Octane;
@@ -138,6 +139,7 @@ Route::prefix('{locale?}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('set.
 
     Route::get('/charge-success', ChargeSuccess::class)->name('charge.success');
     Route::get('/welcome-event', WelcomeEvent::class)->name('welcome.event');
+    Route::get('/welcome-event-success', WelcomeEventSuccess::class)->name('welcome.event.success');
    
    // Route::get('/' . trans('route.article', []).'/{slug}', 'ArticleController@show')->name('article');
     // Octane::route('GET','/en/index',function () {return new Response((new HomeController)->index());});

@@ -8,6 +8,6 @@ class Price extends Component
 {
     public function render()
     {
-        return view('livewire.price')->layout('layout.home');
+        return view('livewire.price')->layout('layouts.base');
     }
 }

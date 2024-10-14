@@ -26,10 +26,10 @@ class WelcomeEvent extends Component
     public $price;
     public $eventPrice = 50;
     public $events = [
-        1 =>'arenal',
-        2 =>'tero',
-        3 =>'arenal',
-        4 =>'tero',
+        1 => 'arenal',
+        2 => 'tero',
+        3 => 'arenal',
+        4 => 'tero',
     ];
 
     protected function rules()
@@ -81,8 +81,6 @@ class WelcomeEvent extends Component
         $company->address = $this->user['address'] . ", " . $this->user['zip'] . " " . $this->user['city'];
         $company->phone = $this->user['phone'];
 
-        $user = new User();
-
         try {
             $company->save();
         } catch (\Throwable $th) {
@@ -122,8 +120,33 @@ class WelcomeEvent extends Component
         $eventUser->teams = $this->totalTeam;
         $eventUser->save();
 
-        if($this->eventId > 2) {
-            redirect('/'.App::currentLocale().'/charge?ueid='.$eventUser->id);
+        if ($this->eventId > 2) {
+            redirect('/' . App::currentLocale() . '/charge?ueid=' . $eventUser->id);
+        } else {
+            $mailchimp = new \MailchimpTransactional\ApiClient();
+            $mailchimp->setApiKey(env('MAILCHIMP_APIKEY'));
+            // player one
+            $template_content = array();
+            $to = [];
+            array_push($to, [
+                "email" =>  $user->email,
+                "type" => "to"
+            ]);
+            $message = [
+                "from_email" => "info@businesspadeltour.be",
+                'from_name'  => 'Vertuoza padel tour',
+                "subject" => __('Subscription event Vertuoza Padel Tour'),
+                "to" => $to,
+                "headers" => ["Reply-To" => "info@businesspadeltour.be"],
+                'global_merge_vars' => $template_content
+            ];
+            $response = $mailchimp->messages->sendTemplate([
+                "template_name" => "vertuoza_padel_event_thx_" . (App::currentLocale() == 'fr' || App::currentLocale() == 'nl' ? App::currentLocale() : 'fr'),
+                "template_content" => $template_content,
+                "message" => $message,
+            ]);
+            logger($response);
+            redirect('/' . App::currentLocale() . '/welcome-event-success');
         }
     }
     public function onTotalTeamChanged($total)
