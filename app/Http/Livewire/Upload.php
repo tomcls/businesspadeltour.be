@@ -38,7 +38,9 @@ class Upload extends Component
     public  function upload()
     {
         if ($this->upload) {
+           
             $destPathLogo = storage_path('app/logos');
+            logger($destPathLogo);
             $this->notify(['message' => 'Start processing documents(s)... please wait', 'type' => 'alert']);
             try {
                 File::makeDirectory($destPathLogo, 0777, false, false);
