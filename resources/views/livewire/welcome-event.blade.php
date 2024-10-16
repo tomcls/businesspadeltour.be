@@ -33,7 +33,6 @@
             <li><x-icon.right class="w-3 h-3 text-indigo-600" />17h30: {{__('End of tournament and closing drink')}}</li>
         </ul>
       </div>
-  {{$errors}}
       <form class="bg-white max-w-2xl shadow-sm ring-1 ring-gray-900/5 sm:rounded-xl md:col-span-2" wire:submit.prevent="validateCompany"  >
         <div class="px-4 py-6 sm:p-8">
           <div class="grid max-w-2xl grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
@@ -160,7 +159,7 @@
         <div class="flex items-center justify-center gap-x-6 border-t border-gray-900/10 px-4 py-4 sm:px-8">
             <div {{$eventId == 3 || $eventId==4 ? '': 'hidden'}}>
                 <span>{{__('Total incl. VAT')}}</span> 
-                <span class="font-black">{{$price * $totalTeam *1.21}}€</span> 
+                <span class="font-black">{{($price??1) * (intval($totalTeam)??1) * 1.21}}€</span> 
             </div>
           <button type="submit" class="rounded-md bg-blue-700 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700">{{__('Confirm')}}</button>
         </div>

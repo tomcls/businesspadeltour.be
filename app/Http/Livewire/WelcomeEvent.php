@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Models\Company;
+use App\Models\Event;
 use App\Models\EventUser;
 use App\Models\Session;
 use App\Models\User;
@@ -78,20 +79,20 @@ class WelcomeEvent extends Component
         $company->vat = $this->company['vat'];
         $company->email = $this->user['email'];
         $company->zip = $this->company['zip'];
-        $company->address = $this->company['address'].', '.$this->company['city'];
+        $company->address = $this->company['address'] . ', ' . $this->company['city'];
         $company->phone = $this->user['phone'];
 
         try {
             $company->save();
         } catch (\Throwable $th) {
-            logger($th);
+            
             $company = Company::whereEmail($this->user['email'])->first();
             $company->firstname = $this->user['firstname'];
             $company->lastname = $this->user['lastname'];
             $company->name = $this->company['name'];
             $company->vat = $this->company['vat'];
             $company->email = $this->user['email'];
-            $company->address = $this->company['address'].', '.$this->company['city'];
+            $company->address = $this->company['address'] . ', ' . $this->company['city'];
             $company->zip = $this->company['zip'];
             $company->phone = $this->user['phone'];
             $company->update();
@@ -122,11 +123,73 @@ class WelcomeEvent extends Component
         $eventUser->teams = $this->totalTeam;
         $eventUser->save();
 
+        $mailchimp = new \MailchimpTransactional\ApiClient();
+        $mailchimp->setApiKey(env('MAILCHIMP_APIKEY'));
+
+        $event = Event::whereId($this->eventId)->first();
+        // player one
+        $template_content = array(
+            array(
+                'name' => 'companyFirstname',
+                'content' => $company->firstname
+            ),
+            array(
+                'name' => 'companyLastname',
+                'content' => $company->lastname
+            ),
+            array(
+                'name' => 'companyName',
+                'content' => $company->name
+            ),
+            array(
+                'name' => 'companyVAT',
+                'content' => $company->vat
+            ),
+            array(
+                'name' => 'companyEmail',
+                'content' => $company->email
+            ),
+            array(
+                'name' => 'companyPhone',
+                'content' => $company->phone
+            ),
+            array(
+                'name' => 'CompanyAddress',
+                'content' => $company->address
+            ),
+            array(
+                'name' => 'totalTeams',
+                'content' => $this->totalTeam
+            ),
+            array(
+                'name' => 'content',
+                'content' => 'Subscription event Vertuoza Padel Tour <br>'.$event->name
+            )
+        );
+        $to = [];
+        array_push($to, [
+            "email" =>  'info@businesspadeltour.be',
+            "type" => "to"
+        ]);
+        $message = [
+            "from_email" => "info@businesspadeltour.be",
+            'from_name'  => 'Vertuoza padel tour',
+            "subject" => 'Business Padel Tour: Event subscription '.$event->name.' Total teams:'.$this->totalTeam,
+            "to" => $to,
+            "headers" => ["Reply-To" => "info@businesspadeltour.be"],
+            'global_merge_vars' => $template_content
+        ];
+        $response = $mailchimp->messages->sendTemplate([
+            "template_name" => "bpt_signup_admin",
+            "template_content" => $template_content,
+            "message" => $message,
+        ]);
+
+
         if ($this->eventId > 2) {
             redirect('/' . App::currentLocale() . '/charge?ueid=' . $eventUser->id);
         } else {
-            $mailchimp = new \MailchimpTransactional\ApiClient();
-            $mailchimp->setApiKey(env('MAILCHIMP_APIKEY'));
+            
             // player one
             $template_content = array();
             $to = [];
@@ -147,7 +210,7 @@ class WelcomeEvent extends Component
                 "template_content" => $template_content,
                 "message" => $message,
             ]);
-            logger($response);
+
             redirect('/' . App::currentLocale() . '/welcome-event-success');
         }
     }
