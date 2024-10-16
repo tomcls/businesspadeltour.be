@@ -22,7 +22,7 @@ class WelcomeEvent extends Component
     public $promo;
     public $saved = false;
     public $openTeamSection = false;
-    public $eventId;
+    public $eventId = 1;
     public $price;
     public $eventPrice = 50;
     public $events = [
@@ -44,14 +44,10 @@ class WelcomeEvent extends Component
             // 'user.address' => 'required',
             // 'user.zip' => 'required',
             //'user.city' => 'required',
-            'company.firstname' => 'required',
-            'company.lastname' => 'required',
             'company.name' => 'required',
             'company.vat' => 'required',
-            'company.email' => 'required|email',
-            'company.phone' => 'required',
             'company.address' => 'required',
-            'company.zip' => 'required',
+            'company.zip' => 'required|max:4',
             'company.city' => 'required',
         ];
     }
@@ -72,25 +68,31 @@ class WelcomeEvent extends Component
     }
     public function validateCompany()
     {
+        $this->user['lang'] = App::currentLocale();
+        $this->validate();
+
         $company = new Company();
         $company->firstname = $this->user['firstname'];
         $company->lastname = $this->user['lastname'];
         $company->name = $this->company['name'];
         $company->vat = $this->company['vat'];
         $company->email = $this->user['email'];
-        $company->address = $this->user['address'] . ", " . $this->user['zip'] . " " . $this->user['city'];
+        $company->zip = $this->company['zip'];
+        $company->address = $this->company['address'].', '.$this->company['city'];
         $company->phone = $this->user['phone'];
 
         try {
             $company->save();
         } catch (\Throwable $th) {
+            logger($th);
             $company = Company::whereEmail($this->user['email'])->first();
             $company->firstname = $this->user['firstname'];
             $company->lastname = $this->user['lastname'];
             $company->name = $this->company['name'];
             $company->vat = $this->company['vat'];
             $company->email = $this->user['email'];
-            $company->address = $this->company['address'];
+            $company->address = $this->company['address'].', '.$this->company['city'];
+            $company->zip = $this->company['zip'];
             $company->phone = $this->user['phone'];
             $company->update();
         }
