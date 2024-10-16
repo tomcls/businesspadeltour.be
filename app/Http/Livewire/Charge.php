@@ -19,7 +19,7 @@ class Charge extends Component
         if (!empty($request['ueid'])) {
             $this->eventUser = EventUser::whereId($request['ueid'])->first();
             $this->price = $this->eventUser->event->price * $this->eventUser->teams * 1.21;
-            $this->description = "Event ".$this->eventUser->event->name. ' ('.$this->eventUser->teams.' '.($this->eventUser->teams>1?'teams':'teams').')';
+            $this->description = "Event ".$this->eventUser->event->name. ' ('.$this->eventUser->teams.' '.($this->eventUser->teams>1?'teams':'team').')';
         }
         if (!empty($request['iid'])) {
             $this->invoice = Invoice::whereId($request['iid'])->first();
