@@ -22,6 +22,7 @@ use App\Http\Livewire\Me\Logo;
 use App\Http\Livewire\Me\Profile;
 use App\Http\Livewire\Photos;
 use App\Http\Livewire\Photos2024;
+use App\Http\Livewire\Upload;
 use App\Http\Livewire\Video;
 use App\Http\Livewire\WelcomeEvent;
 use App\Http\Livewire\WelcomeEventSuccess;
@@ -135,6 +136,7 @@ Route::prefix('{locale?}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('set.
     Route::get('/register', function () {
         return view('components.pages.register');
     });
+    Route::get('/upload', Upload::class)->name('upload');
     Route::get('/charge', Charge::class)->name('charge');
 
     Route::get('/charge-success', ChargeSuccess::class)->name('charge.success');

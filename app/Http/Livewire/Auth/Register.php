@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\Auth;
 
 use App\Models\Company;
+use App\Models\Invoice;
 use App\Models\Session;
 use App\Models\Team;
 use App\Models\User;
@@ -21,6 +22,7 @@ class Register extends Component
     protected $listeners = ['onTeamValidated', 'onTotalTeamChanged'];
     public $company;
     public $promo;
+    public $invoice;
     protected function rules()
     {
         return [
@@ -79,6 +81,27 @@ class Register extends Component
                 $company->phone = $this->company['phone'];
                 $company->update();
             }   
+            $user = new User();
+            $user->firstname = $this->company['firstname'];
+            $user->lastname = $this->company['lastname'];
+            $user->email = $this->company['email'];
+            $user->phone = $this->company['phone'];
+            $user->lang = App::currentLocale();
+            $user->password =  Hash::make('PadelUser4ever$');
+
+            try {
+                $user->save();
+            } catch (\Throwable $th) {
+                $user = User::whereEmail($this->company['email'])->first();
+                $user->firstname = $this->company['firstname'];
+                $user->lastname = $this->company['lastname'];
+                $user->email = $this->company['email'];
+                $user->phone = $this->company['phone'];
+                $user->lang = App::currentLocale();
+                $user->company_id = $company->id;
+                $user->save();
+            }
+
             if($company) {
                 $playersEmail = [];
                 $content = "";
@@ -320,7 +343,14 @@ class Register extends Component
                         "message" => $message,
                     ]);
                 }
-                
+                $this->invoice = new Invoice();
+                $this->invoice->user_id = $user->id;
+                $this->invoice->invoice_num = Invoice::newInvoiceNumber();
+                $this->invoice->price = $price;
+                $this->invoice->description = "Padel Session subscription: (".(count($this->totalTeamsValidated)>1? (count($this->totalTeamsValidated).'teams'):'1 team').')';
+                $this->invoice->intent = microtime();
+                $this->invoice->save();
+                redirect('/' . App::currentLocale() . '/upload?iid=' . $this->invoice->id);
             } else {
                 logger('no company');
             }

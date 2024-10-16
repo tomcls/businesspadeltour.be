@@ -1,24 +1,40 @@
 <?php
 
-namespace App\Http\Livewire\Me;
+namespace App\Http\Livewire;
 
-use App\Models\Logo as ModelsLogo;
+use App\Models\Company;
+use App\Models\Invoice;
+use App\Models\Logo;
+use App\Models\User;
 use App\Traits\DataTable\WithBulkActions;
 use App\Traits\DataTable\WithCachedRows;
 use App\Traits\DataTable\WithPerPagePagination;
 use App\Traits\DataTable\WithSorting;
 use Exception;
 use Livewire\Component;
-use Illuminate\Support\Str;
-use Livewire\WithFileUploads;
 use File;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
+use Livewire\WithFileUploads;
 
-class Logo extends Component
+class Upload extends Component
 {
-    use WithPerPagePagination, WithSorting, WithBulkActions, WithCachedRows, WithFileUploads;
+    use  WithPerPagePagination, WithSorting, WithBulkActions, WithCachedRows, WithFileUploads;
     public $upload;
     protected $listeners = ['upload'];
-    public function mount() {}
+    public $company_id;
+    public $company;
+    public $user;
+    public $invoice;
+
+    public function mount(Request $request) {
+        if ($request['iid']) {
+            $this->invoice = Invoice::whereId($request['iid'])->first();
+            $this->user = User::whereId($this->invoice->user_id)->first();
+            $this->company = Company::whereId($this->user->company_id)->first();
+        }
+    }
+
     public  function upload()
     {
         if ($this->upload) {
@@ -29,7 +45,7 @@ class Logo extends Component
             } catch (Exception $e) {
             }
 
-            $destinationPath = storage_path('app/logos') . '/' . auth()->user()->company_id;
+            $destinationPath = storage_path('app/logos') . '/' . $this->company->id;
             try {
                 File::makeDirectory($destinationPath, 0777, false, false);
             } catch (Exception $e) {
@@ -37,18 +53,19 @@ class Logo extends Component
             
             $this->notify(['message' => 'Start processing image(s)... please wait', 'type' => 'alert']);
       
-            $this->upload->storeAs('logos/' . auth()->user()->company_id, $this->upload->getClientOriginalName());
+            $this->upload->storeAs('logos/' . $this->company->id, $this->upload->getClientOriginalName());
 
-            ModelsLogo::create([
-                'company_id' => auth()->user()->company_id,
+            Logo::create([
+                'company_id' => $this->company->id,
                 'name' => $this->upload->getClientOriginalName(),
             ]);
             $this->notify(['message' => 'Logo well uploaded', 'type' => 'success']);
+            
         }
     }
     public function getRowsQueryProperty()
     {
-        $query = ModelsLogo::whereCompanyId(auth()->user()->company_id);
+        $query = Logo::whereCompanyId($this->company->id);
 
         return $this->applySorting($query);
     }
@@ -69,8 +86,8 @@ class Logo extends Component
     }
     public function render()
     {
-        return view('livewire.me.logo', [
+        return view('livewire.upload', [
             'rows' => $this->rows
-        ])->layout('layouts.me');
+        ])->layout('layouts.base');
     }
 }

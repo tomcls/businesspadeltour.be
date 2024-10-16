@@ -26,6 +26,7 @@ class ChargeSuccess extends Component
                 $this->invoice->price = $this->price;
                 $this->invoice->description = "Event ".$this->eventUser->event->name. ' ('.$this->eventUser->teams.' '.($this->eventUser->teams>1?'teams':'teams').')';
                 $this->invoice->intent = $request['payment_intent'];
+                $this->invoice->date_payed = now();
                 $this->invoice->save();
                 $user = $this->invoice->user;
                 $mailchimp = new \MailchimpTransactional\ApiClient();
@@ -56,6 +57,14 @@ class ChargeSuccess extends Component
                 ]);
             }
         }
+        if (!empty($request['iid'])) {
+            $this->invoice = Invoice::whereId($request['iid'])->first();
+            //$this->invoice->price = $this->invoice->price;
+            $this->invoice->intent = $request['payment_intent'];
+            $this->invoice->date_payed = now();
+            $this->invoice->save();
+        }
+
     }
     public function render()
     {
