@@ -165,7 +165,7 @@
               </div>
             </div>
           </div>
-          <a href="{{url('/').'/'.App::currentLocale().'/contact'}}" class="text-base font-bold color-light-blue hover:text-gray-900">{{__('menu.contactUs')}}</a>
+          <a href="{{url('/').'/'.App::currentLocale().'#agenda'}}" class="text-base font-bold color-light-blue hover:text-gray-900">{{__('Planning 2025')}}</a>
           <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.price')}}" class="text-base font-medium color-dark-blue hover:text-gray-900">{{__('menu.price')}}</a>
           <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.articles')}}" class="text-base font-medium color-dark-blue hover:text-gray-900">{{__('menu.news')}}</a>
         </nav>
@@ -269,12 +269,12 @@
           </div>
           <div class="mt-6">
             <nav class="grid gap-y-8">
-              <a href="{{url('/').'/'.App::currentLocale().'/welcome-event'}}" x-on:click="isMobileNavOpen=false" class="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50">
+              <a href="{{url('/').'/'.App::currentLocale().'#agenda'}}" x-on:click="isMobileNavOpen=false" class="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50">
                 <!-- Heroicon name: outline/shield-check -->
                 <svg class="h-6 w-6 flex-shrink-0 color-light-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z"></path>
                 </svg>
-                <span class="ml-3 text-base font-medium text-gray-900">{{url('/').'/'.App::currentLocale().'/welcome-event'}}</span>
+                <span class="ml-3 text-base font-medium text-gray-900">{{__('Planning 2025')}}</span>
               </a>
               <a href="{{url('/').'/'.App::currentLocale().'#price'}}" x-on:click="isMobileNavOpen=false" class="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50">
                 <!-- Heroicon name: outline/arrow-path -->
@@ -316,7 +316,7 @@
         <div class="space-y-6 bg-gray-50 px-5 py-5 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
           <div class="flow-root text-center justify-center items-center w-full">
             <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}" class=" inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-dark-blue px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700">{{__('home.priceImin')}}</a>
-            <a href="{{url('/').'/'.App::currentLocale().'/contact'}}" class=" inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-dark-blue px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700">{{__('menu.signup')}}</a>
+            <a href="{{url('/').'/'.App::currentLocale().'#agenda'}}" class=" inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-dark-blue px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700">{{__('Planning 2025')}}</a>
           </div>
           <div class="flow-root">
             <a href="{{url('/').'/'.App::currentLocale().'/video'}}" class="-m-3 flex items-center text-center rounded-md p-3 text-base font-medium text-gray-900 hover:bg-gray-100">
