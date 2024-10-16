@@ -52,7 +52,8 @@ class Upload extends Component
             }
             
             $this->notify(['message' => 'Start processing image(s)... please wait', 'type' => 'alert']);
-      
+            logger('logos/' . $this->company->id);
+            logger($this->upload->getClientOriginalName());
             $this->upload->storeAs('logos/' . $this->company->id, $this->upload->getClientOriginalName());
 
             Logo::create([
