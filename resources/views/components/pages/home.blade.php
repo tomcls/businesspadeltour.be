@@ -28,18 +28,9 @@
             <div class="relative py-32 px-6 sm:py-40 lg:py-56 lg:px-8 lg:pr-0">
               <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
                 <h1 class="color-dark-blue text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl text-center justify-center">{{__('home.h1')}}</h1>
-                <p class="mt-6 text-lg leading-8 text-gray-600 text-center justify-center">{{__('home.teaser')}}</p>
+                {{-- <p class="mt-6 text-lg leading-8 text-gray-600 text-center justify-center">{{__('home.teaser')}}</p> --}}
 
                 <div class="flex flex-1  w-100 flex-row mt-10 items-center justify-center">
-                  <ul role="list" class="items-center justify-center inline-flex space-x-10">
-                    <li>
-                      <img class="mx-auto w-50 items-center justify-center mt-7" src="{{url('/').'/images/sponsors/immovlan_mauve.png'}}" alt="">
-                    </li>
-                    <li>
-                      <img class="mx-auto w-40 pt-5" src="{{url('/').'/images/sponsors/Vertuoza-Logo.png'}}" alt="">
-                    </li>
-                    <!-- More people... -->
-                  </ul>
                 </div> 
                 <div class="mt-10 flex items-center justify-center gap-x-6">
                   <a href="{{url('/').'/'.App::currentLocale().'#summary'}}" class="rounded-md bg-dark-blue px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-800">{{__('home.moreinfo')}}</a>
@@ -159,17 +150,6 @@
                     <dd class="py-2">- <b><a href="https://bree.arenal.be/" class="color-light-blue" target="blank">{{__('Arenal Bree')}}</a></b> <span class="font-light text-sm">{{__('Watertorenstraat 16, 3960 Bree')}}</span></dd>
                     <dd class="py-2">- <b><a href="https://mechelen.arenal.be/" class="color-light-blue" target="blank">{{__('Arenal Mechelen')}}</a></b> <span class="font-light text-sm">{{__('Kruisbaan 56, 2800 Mechelen')}}</span></dd>
                   </div>
-                  <div class="relative pl-9">
-                    <dt class="inline font-semibold text-gray-400">
-                      <!-- Heroicon name: mini/cloud-arrow-up -->
-                      <svg class="absolute top-1 left-1 h-6 w-6 color-light-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
-                      </svg>
-                      <span  class="color-white">{{__('In Brussels')}}:</span>
-                    </dt>
-                    <dd class="py-2">- <b><a href="https://www.tourtaxispadel.brussels/" class="color-light-blue" target="blank">{{__('Tour & Taxis Padel Club')}}</a></b> <span class="font-light text-sm">{{__('Tour & Taxis 88 – 1000 Bruxelles')}}</span></dd>
-                    <dd class="py-2">- <b><a href="https://tero.be/fr/houses/detail/tero-padel-club-louise/" class="color-light-blue" target="blank">{{__('Tero Louise')}}</a></b> <span class="font-light text-sm">{{__('rue du Beau Site, 26 – 1000 Bruxelles')}}</span></dd>
-                  </div>
                 </dl>
               </div>
             </div>
@@ -182,7 +162,18 @@
                       <svg class="absolute top-1 left-1 h-6 w-6 color-light-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                       </svg>
-                      <span  class="color-white">{{__('In Wallonia ')}}:</span>
+                      <span  class="color-white">{{__('In Brussels')}}:</span>
+                    </dt>
+                    <dd class="py-2">- <b><a href="https://www.tourtaxispadel.brussels/" class="color-light-blue" target="blank">{{__('Tour & Taxis Padel Club')}}</a></b> <span class="font-light text-sm">{{__('Tour & Taxis 88 – 1000 Bruxelles')}}</span></dd>
+                    <dd class="py-2">- <b><a href="https://tero.be/fr/houses/detail/tero-padel-club-louise/" class="color-light-blue" target="blank">{{__('Tero Louise')}}</a></b> <span class="font-light text-sm">{{__('rue du Beau Site, 26 – 1000 Bruxelles')}}</span></dd>
+                  </div>
+                  <div class="relative pl-9">
+                    <dt class="inline font-semibold text-gray-400">
+                      <!-- Heroicon name: mini/cloud-arrow-up -->
+                      <svg class="absolute top-1 left-1 h-6 w-6 color-light-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
+                      </svg>
+                      <span  class="color-white">{{__('In Wallonia')}}:</span>
                     </dt>
                     <dd class="py-2">- <b><a href="https://tero.be/fr/houses/detail/tero-padel-club/" class="color-light-blue" target="blank">{{__('Tero Waterloo')}}</a></b> <span class="font-light text-sm">{{__('chaussée de Tervuren 389 – 1410 Waterloo')}}</span></dd>
                     <dd class="py-2">- <b><a href="https://elevenpadel.be/" class="color-light-blue" target="blank">{{__('Eleven Nivelles')}}</a></b> <span class="font-light text-sm">{{__('rue de l’industrie 11 – 1400 Nivelles')}}</span></dd>
@@ -296,10 +287,24 @@
                       <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                     </svg>
                   </div>
-                  <a href="https://grimbergen.arenal.be"  target="blank" class="color-dark-blue"> {{__('Arenal Grimbergen')}}</a>
+                  <a href="https://mechelen.arenal.be"  target="blank" class="color-dark-blue"> {{__('Arenal Mechelen')}}</a>
                 </dt>
                 <dd class="mt-0 text-base leading-7 text-gray-600">
                   <b class="text-sm"> {{__('When')}}: </b> <span class="text-sm">{{__('Friday')}} {{__('9/5/2025')}}</span><br/>
+                  <b class="text-sm">{{__('Place')}}: </b> <span class="text-sm">{{__('Kruisbaan 56, 2800 Mechelen')}}</span> <br/><br/>
+                </dd>
+              </div>
+              <div class="relative pl-10">
+                <dt class="text-base font-semibold leading-7 text-gray-900">
+                  <div class="absolute top-0 left-0 flex h-6 w-6 items-center justify-center rounded-lg bg-dark-blue">
+                    <svg class=" h-4 w-4 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
+                    </svg>
+                  </div>
+                  <a href="https://grimbergen.arenal.be"  target="blank" class="color-dark-blue"> {{__('Arenal Grimbergen')}}</a>
+                </dt>
+                <dd class="mt-0 text-base leading-7 text-gray-600">
+                  <b class="text-sm"> {{__('When')}}: </b> <span class="text-sm">{{__('Friday')}} {{__('23/5/2025')}}</span><br/>
                   <b class="text-sm">{{__('Place')}}: </b> <span class="text-sm">{{__('Antwerpselaan 1, 1853 Grimbergen')}}</span> <br/><br/>
                 </dd>
               </div>
@@ -324,13 +329,14 @@
                       <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                     </svg>
                   </div>
-                  <a href="https://www.arenal.be "  target="blank" class="color-dark-blue"> {{__('Arenal Antwerp')}}</a>
+                  <a href="https://Geralaan 51, 8310 Sint-Kruis.arenal.be "  target="blank" class="color-dark-blue"> {{__('Arenal Brugge')}}</a>
                 </dt>
                 <dd class="mt-0 text-base leading-7 text-gray-600">
                   <b class="text-sm"> {{__('When')}}: </b> <span class="text-sm">{{__('Friday')}} {{__('6/6/2025 ')}}</span><br/>
-                  <b class="text-sm">{{__('Place')}}: </b> <span class="text-sm">{{__('Arenal Antwerp')}}</span> <br/><br/>
+                  <b class="text-sm">{{__('Place')}}: </b> <span class="text-sm">{{__('Geralaan 51, 8310 Sint-Kruis')}}</span> <br/><br/>
                 </dd>
               </div>
+
               <div class="relative pl-10">
                 <dt class="text-base font-semibold leading-7 text-gray-900">
                   <div class="absolute top-0 left-0 flex h-6 w-6 items-center justify-center rounded-lg bg-dark-blue">
@@ -353,11 +359,11 @@
                       <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                     </svg>
                   </div>
-                  <a href="https://brugge.arenal.be"  target="blank" class="color-dark-blue"> {{__('Arenal Bruges')}} </a>
+                  <a href="https://www.arenal.be"  target="blank" class="color-dark-blue"> {{__('Arenal Antwerp')}} </a>
                 </dt>
                 <dd class="mt-0 text-base leading-7 text-gray-600">
                   <b class="text-sm"> {{__('When')}}: </b> <span class="text-sm">{{__('Friday')}} {{__('20/6/2025')}}</span><br/>
-                  <b class="text-sm">{{__('Place')}}: </b> <span class="text-sm">{{__('Geralaan 51, 8310 Sint-Kruis')}}</span> <br/><br/>
+                  <b class="text-sm">{{__('Place')}}: </b> <span class="text-sm">{{__('Arenal Antwerp')}}</span> <br/><br/>
                   {{-- Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget.<br/> --}}
                 </dd>
               </div>
@@ -412,6 +418,12 @@
               </li>
               <li>
                 <a href="https://brugge.arenal.be/" target="_blank"  ><img class="mx-auto items-center justify-center mt-7 w-40 h-20" src="https://brugge.arenal.be/themes/custom/arenal/logo-new.svg" alt=""></a>
+              </li>
+              <li>
+                <a href="https://santospalaceshop.be/bruxelles/" target="_blank"  ><img class="mx-auto  max-h-20 items-center justify-center mt-7" src="{{url('/').'/images/sponsors/santos.png'}}" alt=""></a>
+              </li>
+              <li>
+                <a href="https://www.cupra.be/fr" target="_blank"  ><img class="mx-auto  max-h-24 items-center justify-center mt-7 w-72" src="https://www.cupra.be/images/logo.svg" alt=""></a>
               </li>
               <!-- More people... -->
             </ul>
