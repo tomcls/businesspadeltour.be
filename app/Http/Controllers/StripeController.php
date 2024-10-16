@@ -15,7 +15,7 @@ class StripeController extends Controller
             // retrieve JSON from POST body
             $jsonStr = file_get_contents('php://input');
             $jsonObj = json_decode($jsonStr);
-        
+            logger($jsonObj->items);
             // Create a PaymentIntent with amount and currency
             $paymentIntent = $this->stripe->paymentIntents->create([
                 'amount' => $this->calculateOrderAmount($jsonObj->items),
