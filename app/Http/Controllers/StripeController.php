@@ -11,6 +11,8 @@ class StripeController extends Controller
     public $stripe;
     public function create() {
         $this->stripe = new StripeClient(config('app.stripe_secret'));
+        logger('create');
+        logger($jsonStr = file_get_contents('php://input'));
         try {
             // retrieve JSON from POST body
             $jsonStr = file_get_contents('php://input');
