@@ -25,29 +25,59 @@
               <polygon points="0,0 90,0 50,100 0,100" />
             </svg>
     
-            <div class="relative py-32 px-6 sm:py-40 lg:py-56 lg:px-8 lg:pr-0">
-              <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
-                <h1 class="color-dark-blue text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl text-center justify-center">{{__('home.h1')}}</h1>
+            <div class=" relative py-32 px-6 sm:py-40 lg:py-56 lg:px-8 lg:pr-0  animate-fadein" >
+              <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl ">
+                <h1 class="color-dark-blue text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl text-center justify-center  ">{{__('home.h1')}}</h1>
                 {{-- <p class="mt-6 text-lg leading-8 text-gray-600 text-center justify-center">{{__('home.teaser')}}</p> --}}
 
                 <div class="flex flex-1  w-100 flex-row mt-10 items-center justify-center">
                 </div> 
-                <div class="mt-10 flex items-center justify-center gap-x-6">
-                  <a href="{{url('/').'/'.App::currentLocale().'#summary'}}" class="rounded-md bg-dark-blue px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-800">{{__('home.moreinfo')}}</a>
-                  <a href="{{url('/').'/'.App::currentLocale().'/contact'}}" class="rounded-md bg-dark-blue px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-800">{{__('menu.contactUs')}}</a>
-                </div>
+                <p class="text-center text-pretty text-xl py-10 color-dark-blue">{{__('All you need to know about the 2025 season of the Vertuoza Padel Tour?')}}</p>
+                <p class="text-center  text-pretty leading-8 text-gray-700 text-lg" >{{__("We're organizing 2 information sessions on November 8 in Bruges and November 13 in Brussels, during which we'll be unveiling the concept, the full program and the new features in the company of our partners.")}}</p>
+                
+                <p class="text-center pt-10">
+                  <a href="{{url('/').'/'.App::currentLocale().'/welcome-event'}}" class="inline-block rounded-full border-blue-900 border bg-white px-3.5 py-3 text-center text-sm/6 font-semibold text-blue-900 shadow-sm hover:bg-blue-900 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-800">
+                    {{__("I'd like to register")}}
+                    <x-icon.right class="h-4"/>
+                  </a>
+                </p>
               </div>
             </div>
           </div>
         </div>
         <div class="bg-gray-50 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-          <img alt="poster image mobile" class=" paspect-[3/2] object-cover lg:aspect-auto lg:h-full lg:w-full" src="{{url('/').'/images/section/home.jpg'}}" />
+          <img alt="poster image mobile" class="animate-fadein paspect-[3/2] object-cover lg:aspect-auto lg:h-full lg:w-full" src="{{url('/').'/images/section/home.jpg'}}" />
+        </div>
+      </div>
+      <div class="bg-white pb-20 hidden sm:block" >
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          
+          <div class="flex flex-1 items-center justify-center w-100 flex-row mt-10">
+            <ul role="list" class="items-center justify-center inline-flex space-x-10">
+              <li>
+                <a href="https://immo.vlan.be/fr"  target="_blank" > <img class="mx-auto w-50 items-center justify-center mt-7" src="{{url('/').'/images/sponsors/immovlan_mauve.png'}}" alt=""></a>
+              </li>
+              <li>
+                <a href="https://www.vertuoza.com/"  target="_blank" > <img class="mx-auto h-14 mt-4 " src="{{url('/').'/images/sponsors/Vertuoza-Logo.png'}}" alt=""></a>
+              </li>
+              <li>
+                <a href="https://wilmeyer.com/"  target="_blank" > <img class="mx-auto w-50 items-center justify-center mt-7" src="{{url('/').'/images/sponsors/wilmeyer.png'}}" alt=""></a>
+              </li>
+              <li>
+                <a href="https://brugge.arenal.be/" target="_blank"  ><img class="mx-auto items-center justify-center mt-7 w-40 h-20" src="https://brugge.arenal.be/themes/custom/arenal/logo-new.svg" alt=""></a>
+              </li>
+              <li>
+                <a href="https://www.cupra.be/fr" target="_blank"  ><img class="mx-auto  max-h-24 items-center justify-center mt-7 h-44 w-72" src="https://www.cupra.be/images/logo.svg" alt=""></a>
+              </li>
+              <!-- More people... -->
+            </ul>
+          </div>
         </div>
       </div>
       <div class="bg-black py-24 sm:py-32" id="summary">
         <div class="mx-auto max-w-7xl px-6 lg:px-4">
           <div class="mx-auto max-w-7xl sm:text-center">
-            <h2 class="text-3xl font-bold tracking-tight text-gray-200 sm:text-4xl">{{__('What is the Vertuoza Padel Tour?')}}</h2>
+            <h2 class="pb-10 animate-fadein text-gray-200 text-pretty  font-medium tracking-tight text-4xl sm:text-6xl">{{__('What is the Vertuoza Padel Tour?')}}</h2>
             <p class="mt-6 text-lg leading-8 text-gray-300 sm:text-justify">{!!__("Launched in 2023, the Vertuoza Padel Tour is a Padel competition open to all companies operating in Belgium. The competition consists of several sessions held on Friday afternoons at various Padel clubs throughout Belgium. <br>In 2025, 6 clubs will host a stage of the Vertuoza Padel Tour, with sessions in Liège, Brussels, Waterloo, Ghent, Antwerp and Nivelles, and the grand finale at Le Zoute.<br><br> The tournament is mixed, open to all, and this year we're planning two categories: Fun and Expert. <br><br><b>The aim of the Vertuoza Padel Tour is threefold: Sport + Fun + Networking</b><br><br> 80 teams were able to meet in 2023, and we hope to gather at least 250 teams for the 2025 season.")!!}</p>
           </div>
         </div>
@@ -66,7 +96,7 @@
             <img src="{{url('/').'/images/section/bg10.png'}}" alt="Product screenshot" class="hidden sm:block w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[30rem] md:-ml-4 lg:-ml-0 sm:mt-24" width="2432" height="1442">
             <div class="lg:pr-8 lg:pt-4">
               <div class="lg:max-w-lg">
-                <p class="mt-2 text-3xl font-bold tracking-tight color-light-blue sm:text-3xl">{{__('How does it work?')}}</p>
+                <p class="mt-2 animate-fadein text-pretty  font-medium tracking-tight text-4xl sm:text-6xl color-light-blue ">{{__('How does it work?')}}</p>
                 <p class="mt-6 text-lg leading-8 text-gray-900">{{__('The Vertuoza Padel Tour is open to all, but each team must be registered in the name of a company, association or organization.')}}</p>
                 <dl class="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-900 lg:max-w-none">
                   <div class="relative pl-9">
@@ -125,7 +155,7 @@
       <div class="bg-black pt-24 sm:pt-32" id="club">
         <div class="mx-auto max-w-7xl px-6 lg:px-14">
           <div class="mx-auto max-w-7xl sm:text-center">
-            <h2 class="text-3xl font-bold tracking-tight color-light-blue sm:text-4xl">{{__('The clubs')}}</h2>
+            <h2 class=" animate-fadein text-pretty  font-medium tracking-tight text-4xl sm:text-6xl color-light-blue">{{__('The clubs')}}</h2>
             <p class="mt-6 text-lg leading-8 text-gray-300 sm:text-justify">{!!__("New partnerships mean new clubs!  This year, we'll be present in 12 different clubs throughout Belgium, making the Vertuoza Padel Tour the first corporate padel competition in Belgium, and it's not impossible that other stages will be added to the program.  The partner clubs are listed below.")!!}</p>
           </div>
         </div>
@@ -400,37 +430,33 @@
       
      
       
-      <div class="bg-white py-24 sm:py-32 " id="sponsor">
+      
+      <div class="bg-white " id="sponsor">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
           <div class="mx-auto max-w-2xl lg:mx-0">
             <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{{__('home.sponsorTitle')}}</h2>
           </div>
-          <div class="flex flex-1 items-center justify-center w-100 flex-row mt-10">
-            <ul role="list" class="items-center justify-center inline-flex space-x-10">
+          <div class="flex flex-1 mt-10">
+            <ul role="list" class="sm:grid sm:grid-cols-6  sm:gap-4 sm:items-center justify-center  sm:border-t sm:border-gray-200 sm:py-5   sm:space-x-12">
               <li>
-                <a href="https://immo.vlan.be/fr"  target="_blank" > <img class="mx-auto w-50 items-center justify-center mt-7" src="{{url('/').'/images/sponsors/immovlan_mauve.png'}}" alt=""></a>
+                <a href="https://immo.vlan.be/fr" target="_blank"  ><img class="mx-auto items-center justify-center mt-7" src="{{url('/').'/images/sponsors/immovlan_mauve.png'}}"  alt=""></a>
               </li>
               <li>
-                <a href="https://www.vertuoza.com/"  target="_blank" > <img class="mx-auto h-14 mt-4 " src="{{url('/').'/images/sponsors/Vertuoza-Logo.png'}}" alt=""></a>
+                <a href="https://wilmeyer.com/"  target="_blank" ><img class="mx-auto  items-center justify-center mt-7" src="{{url('/').'/images/sponsors/Vertuoza-Logo.png'}}" alt=""></a>
               </li>
               <li>
-                <a href="https://wilmeyer.com/"  target="_blank" > <img class="mx-auto w-50 items-center justify-center mt-7" src="{{url('/').'/images/sponsors/wilmeyer.png'}}" alt=""></a>
+                <a href="https://brugge.arenal.be/" target="_blank"  ><img class="mx-auto items-center justify-center mt-7" src="{{url('/').'/images/sponsors/wilmeyer.png'}}" alt=""></a>
               </li>
               <li>
-                <a href="https://brugge.arenal.be/" target="_blank"  ><img class="mx-auto items-center justify-center mt-7 w-40 h-20" src="https://brugge.arenal.be/themes/custom/arenal/logo-new.svg" alt=""></a>
+                <a href="https://santospalaceshop.be/bruxelles/" target="_blank" ><img class="mx-auto items-center justify-center mt-7" src="https://brugge.arenal.be/themes/custom/arenal/logo-new.svg" alt=""></a>
               </li>
               <li>
-                <a href="https://santospalaceshop.be/bruxelles/" target="_blank"  ><img class="mx-auto  max-h-20 items-center justify-center mt-7" src="{{url('/').'/images/sponsors/santos.png'}}" alt=""></a>
+                <a href="https://www.cupra.be/fr" target="_blank" ><img class="mx-auto items-center justify-center mt-7 h-44 w-72" src="https://www.cupra.be/images/logo.svg" alt=""></a>
               </li>
-              <li>
-                <a href="https://www.cupra.be/fr" target="_blank"  ><img class="mx-auto  max-h-24 items-center justify-center mt-7 w-72" src="https://www.cupra.be/images/logo.svg" alt=""></a>
-              </li>
-              <!-- More people... -->
             </ul>
           </div>
         </div>
       </div>
-
       <div class="bg-white " id="sponsor">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
           <div class="mx-auto max-w-2xl lg:mx-0">
