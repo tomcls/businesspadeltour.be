@@ -12,6 +12,8 @@ services:
         volumes:
             - '.:/usr/share/nginx/html'
             - './docker/prod/nginx/sites-available:/etc/nginx/conf.d'
+            - '/data/nfs/businesspadeltour/images:/var/www/html/public/images'
+            - '/data/nfs/businesspadeltour/videos:/var/www/html/public/videos'
         networks:
             - dev-network
         depends_on:
@@ -35,6 +37,8 @@ services:
             XDEBUG_CONFIG: '${SAIL_XDEBUG_CONFIG:-client_host=host.docker.internal}'
         volumes:
             - '.:/var/www/html'
+            - '/data/nfs/businesspadeltour/images:/var/www/html/public/images'
+            - '/data/nfs/businesspadeltour/videos:/var/www/html/public/videos'
         networks:
             - dev-network
 networks: 
