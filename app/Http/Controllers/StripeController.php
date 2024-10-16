@@ -9,18 +9,15 @@ use Stripe\StripeClient;
 class StripeController extends Controller
 {
     public $stripe;
-    public function create() {
+    public function create(Request $request) {
         $this->stripe = new StripeClient(config('app.stripe_secret'));
         logger('create');
-        logger($jsonStr = file_get_contents('php://input'));
+        logger($request['items']);
         try {
-            // retrieve JSON from POST body
-            $jsonStr = file_get_contents('php://input');
-            $jsonObj = json_decode($jsonStr);
-            logger($jsonObj->items);
+          
             // Create a PaymentIntent with amount and currency
             $paymentIntent = $this->stripe->paymentIntents->create([
-                'amount' => $this->calculateOrderAmount($jsonObj->items),
+                'amount' => $this->calculateOrderAmount($request['items']),
                 'currency' => 'eur',
                 // In the latest version of the API, specifying the `automatic_payment_methods` parameter is optional because Stripe enables its functionality by default.
                 'automatic_payment_methods' => [
@@ -46,7 +43,7 @@ class StripeController extends Controller
         // people from directly manipulating the amount on the client
         $total = 0;
         foreach($items as $item) {
-          $total += $item->amount;
+          $total += $item['amount'];
         }
         return $total;
     }
