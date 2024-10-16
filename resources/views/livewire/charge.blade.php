@@ -270,7 +270,7 @@ const stripe = Stripe("{{config('app.stripe_key')}}",{
     locale: "{{App::currentLocale()}}"
 });
 // The items the customer wants to buy
-const items = [{ id: "xl-tshirt", amount: 1000 }];
+const items = [{ id: "{{$description}}", amount: {{$price * 100}} }];
 
 let elements;
 

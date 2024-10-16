@@ -13,15 +13,18 @@ class Charge extends Component
     public $eventUser;
     public $price;
     public $invoice;
+    public $description;
 
     public function mount(Request $request) {
         if (!empty($request['ueid'])) {
             $this->eventUser = EventUser::whereId($request['ueid'])->first();
             $this->price = $this->eventUser->event->price * $this->eventUser->teams * 1.21;
+            $this->description = "Event ".$this->eventUser->event->name. ' ('.$this->eventUser->teams.' '.($this->eventUser->teams>1?'teams':'teams').')';
         }
         if (!empty($request['iid'])) {
             $this->invoice = Invoice::whereId($request['iid'])->first();
             $this->price = $this->invoice->price * 1.21;
+            $description = $this->invoice->description;
         }
     }
     public function render()
