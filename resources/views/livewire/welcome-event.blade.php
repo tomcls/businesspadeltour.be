@@ -1,10 +1,21 @@
 
-<div class="space-y-10 divide-y divide-gray-900/10 px-10">
-   
+<div class="space-y-10  px-10">
+    <div class="text-center pt-10 max-w-7xl mx-auto">
+
+        <h2 class="pb-10 animate-fadein color-dark-blue text-pretty  font-medium tracking-tight text-4xl sm:text-6xl">{{__('Arenal/Tero event subscription')}}</h2>
+        <p class="pt-4 text-pretty text-slate-700">
+            {!!__("Dear partner, It gives us great pleasure to invite you to the launch of the 2025 season of Belgium's biggest inter-company Padel competition: <b>the Vertuoza Padel Tour</b>.  We offer you a unique opportunity to measure yourself against other companies on the Padel courts, while developing your professional network, all in a dynamic and relaxed atmosphere.")!!}
+        </p>
+        <p class="pt-4 text-pretty text-lg color-dark-blue font-bold">{{__("And that's not all!")}} </p>
+        <p class="pt-4 text-pretty text-slate-700">
+            {!!__("Right after the presentation, a little Padel tournament to give you a taste of the 2025 season!  Participation in the tournament costs 50 Eur per team and is fully refundable if you register for a 2025 session of the Vertuoza Padel Tour.")!!}
+        </p>
+
+    </div>
     <div class="grid grid-cols-1 gap-x-8 gap-y-8 pt-10 md:grid-cols-3 ">
       <div class="px-4 sm:px-0">
-        <h2 class="text-base font-semibold leading-7 text-gray-900">{{__('Arenal/Tero event subscription')}}</h2>
-        <p class="mt-1 text-sm leading-6 text-gray-700 py-4 font-semibold">{{__('Arenal Bruges program - November 8')}}</p>
+        <h2 class="pb-3 animate-fadein color-dark-blue text-pretty  font-medium tracking-tight text-4xl sm:text-xl">{{__('Two kick-off sessions are planned')}}</h2>
+        <p class="mt-1 text-sm leading-6 color-dark-blue py-4 font-semibold">{{__('Arenal Bruges program - November 8')}}</p>
         <ul class="mt-1 text-sm leading-6 text-gray-600 space-y-3">
             <li><x-icon.right class="w-3 h-3 text-indigo-600" />17h00: {{__('Welcoming participants')}}</li>
             <li><x-icon.right class="w-3 h-3 text-indigo-600" />17h15: {{__('Introducing the Vertuoza Padel Tour 2025')}}</li>
@@ -12,7 +23,7 @@
             <li><x-icon.right class="w-3 h-3 text-indigo-600" />18h00: {{__('Start of tournament')}}</li>
             <li><x-icon.right class="w-3 h-3 text-indigo-600" />22h00: {{__('End of tournament and closing drink')}}</li>
         </ul>
-        <p class="mt-1 text-sm leading-6 text-gray-700 py-4 font-semibold">{{__('Tero Waterloo program - November 13')}}</p>
+        <p class="mt-1 text-sm leading-6 color-dark-blue py-4 font-semibold">{{__('Tero Waterloo program - November 13')}}</p>
         <ul class="mt-1 text-sm leading-6 text-gray-600 space-y-3">
             <li><x-icon.right class="w-3 h-3 text-indigo-600" />13h00: {{__('Welcoming participants')}}</li>
             <li><x-icon.right class="w-3 h-3 text-indigo-600" />13h15: {{__('Introducing the Vertuoza Padel Tour 2025')}}</li>
@@ -135,7 +146,7 @@
                 <span>{{__('Total incl. VAT')}}</span> 
                 <span class="font-black">{{$price * $totalTeam *1.21}}€</span> 
             </div>
-          <button type="submit" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">{{__('Confirm')}}</button>
+          <button type="submit" class="rounded-md bg-blue-700 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700">{{__('Confirm')}}</button>
         </div>
       </form>
     </div>
