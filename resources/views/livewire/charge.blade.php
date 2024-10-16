@@ -266,10 +266,9 @@
 <script src="https://js.stripe.com/v3/"></script>
 <script>
     // This is your test publishable API key.
-const stripe = Stripe("pk_test_51Q67MlRuw8G7vrjJtm3rkfmS3cL1DFJJvbjW47HmWNxKitginJDKxOUIoWQjVru0Pn0t4lIgzZDXfqcgxjEAIEU9005qaonRfi",{
+const stripe = Stripe("{{config('app.stripe_key')}}",{
     locale: "{{App::currentLocale()}}"
 });
-
 // The items the customer wants to buy
 const items = [{ id: "xl-tshirt", amount: 1000 }];
 
