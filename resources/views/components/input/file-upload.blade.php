@@ -18,7 +18,7 @@
 
     <div x-data="{ focused: false }">
         <span class="ml-5 rounded-md shadow-sm">
-            <input  @focus="focused = true; console.log('focus')" @blur="focused = false; console.log('blur');"  class="sr-only" type="file" {{ $attributes }} wire:model='{{$model}}' wire:change.debounce.450ms='$emit("upload")'>
+            <input  @focus="focused = true; console.log('focus')" @blur="focused = false; console.log('blur');"  class="sr-only" type="file" {{ $attributes }} wire:model='{{$model}}' wire:change.debounce.1000ms='$emit("upload")'>
             <label for="{{ $attributes['id'] }}" :class="{ 'outline-none border-blue-300 shadow-outline-blue': focused }" class="text-center inline-block rounded-md bg-blue-800 px-3.5 py-2 text-sm/6 font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-800">
                 {{$label}}
             </label> 
