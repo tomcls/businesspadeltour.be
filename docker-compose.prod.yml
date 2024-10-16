@@ -14,6 +14,8 @@ services:
             - './docker/prod/nginx/sites-available:/etc/nginx/conf.d'
             - '/data/nfs/businesspadeltour/images:/usr/share/nginx/html/public/images'
             - '/data/nfs/businesspadeltour/videos:/usr/share/nginx/html/public/videos'
+            - '/data/volumes/businesspadeltour/livewire:/usr/share/nginx/html/storage/app/livewire'
+            - '/data/volumes/businesspadeltour/livewire-tmp:/usr/share/nginx/html/storage/app/livewire-tmp'
         networks:
             - dev-network
         depends_on:
@@ -39,6 +41,9 @@ services:
             - '.:/var/www/html'
             - '/data/nfs/businesspadeltour/images:/var/www/html/public/images'
             - '/data/nfs/businesspadeltour/videos:/var/www/html/public/videos'
+            - '/data/nfs/businesspadeltour/storage/app:/var/www/html/storage/app'
+            - '/data/volumes/businesspadeltour/livewire:/var/www/html/storage/app/livewire'
+            - '/data/volumes/businesspadeltour/livewire-tmp:/var/www/html/storage/app/livewire-tmp'
         networks:
             - dev-network
 networks: 
