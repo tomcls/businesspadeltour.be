@@ -67,6 +67,9 @@
                 <a href="https://brugge.arenal.be/" target="_blank"  ><img class="mx-auto items-center justify-center mt-7 w-40 h-20" src="https://brugge.arenal.be/themes/custom/arenal/logo-new.svg" alt=""></a>
               </li>
               <li>
+                <a href="https://santospalaceshop.be/bruxelles/" target="_blank"  ><img class="mx-auto  max-h-20 items-center justify-center mt-7" src="{{url('/').'/images/sponsors/santos.png'}}" alt=""></a>
+              </li>
+              <li>
                 <a href="https://www.cupra.be/fr" target="_blank"  ><img class="mx-auto  max-h-24 items-center justify-center mt-7 h-44 w-72" src="https://www.cupra.be/images/logo.svg" alt=""></a>
               </li>
               <!-- More people... -->
@@ -179,6 +182,7 @@
                     <dd class="py-2">- <b><a href="https://waregem.arenal.be/" class="color-light-blue" target="blank">{{__('Arenal Waregem')}}</a></b> <span class="font-light text-sm">{{__('F. Rooseveltlaan 155, 8790 Waregem')}}</span></dd>
                     <dd class="py-2">- <b><a href="https://bree.arenal.be/" class="color-light-blue" target="blank">{{__('Arenal Bree')}}</a></b> <span class="font-light text-sm">{{__('Watertorenstraat 16, 3960 Bree')}}</span></dd>
                     <dd class="py-2">- <b><a href="https://mechelen.arenal.be/" class="color-light-blue" target="blank">{{__('Arenal Mechelen')}}</a></b> <span class="font-light text-sm">{{__('Kruisbaan 56, 2800 Mechelen')}}</span></dd>
+                    <dd class="py-2">- <b><a href="https://arenal.be/" class="color-light-blue" target="blank">{{__('Arenal Antwerpen')}}</a></b> <span class="font-light text-sm">{{__('Arenal Antwerpen')}}</span></dd>
                   </div>
                 </dl>
               </div>
@@ -448,7 +452,10 @@
                 <a href="https://brugge.arenal.be/" target="_blank"  ><img class="mx-auto items-center justify-center mt-7" src="{{url('/').'/images/sponsors/wilmeyer.png'}}" alt=""></a>
               </li>
               <li>
-                <a href="https://santospalaceshop.be/bruxelles/" target="_blank" ><img class="mx-auto items-center justify-center mt-7" src="https://brugge.arenal.be/themes/custom/arenal/logo-new.svg" alt=""></a>
+                <a href="https://brugge.arenal.be" target="_blank" ><img class="mx-auto items-center justify-center mt-7" src="https://brugge.arenal.be/themes/custom/arenal/logo-new.svg" alt=""></a>
+              </li>
+              <li>
+                <a href="https://santospalaceshop.be/bruxelles/" target="_blank"  ><img class="mx-auto  max-h-20 items-center justify-center mt-7" src="{{url('/').'/images/sponsors/santos.png'}}" alt=""></a>
               </li>
               <li>
                 <a href="https://www.cupra.be/fr" target="_blank" ><img class="mx-auto items-center justify-center mt-7 h-44 w-72" src="https://www.cupra.be/images/logo.svg" alt=""></a>
