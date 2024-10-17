@@ -418,7 +418,22 @@
                   {{-- Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget.<br/> --}}
                 </dd>
               </div>
-      
+              <div class="relative pl-10">
+                <dt class="text-base font-semibold leading-7 text-gray-900">
+                  <div class="absolute top-0 left-0 flex h-6 w-6 items-center justify-center rounded-lg bg-dark-blue">
+                    <!-- Heroicon name: outline/cloud-arrow-up -->
+                    <svg class=" h-4 w-4 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
+                    </svg>
+                  </div>
+                  <a href="https://elevenpadel.be/"  target="blank" class="color-dark-blue"> {{__('The final')}}</a>
+                </dt>
+                <dd class="mt-0 text-base leading-7 text-gray-600">
+                  <b class="text-sm"> {{__('When')}}: </b> <span class="text-sm"> {{__('15-16/8/2025 ')}}</span><br/>
+                  <b class="text-sm">{{__('Place')}}: </b> <span class="text-sm">{{__('TBD')}}</span> <br/><br/>
+                  {{-- Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget.<br/> --}}
+                </dd>
+              </div>
               
             </dl>
           </div>
