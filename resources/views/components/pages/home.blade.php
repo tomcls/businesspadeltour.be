@@ -36,7 +36,7 @@
                 <p class="text-center  text-pretty leading-8 text-gray-700 text-lg" >{{__("We're organizing 2 information sessions on November 8 in Bruges and November 13 in Brussels, during which we'll be unveiling the concept, the full program and the new features in the company of our partners.")}}</p>
                 
                 <p class="text-center pt-10">
-                  <a href="{{url('/').'/'.App::currentLocale().'/welcome-event'}}" class="inline-block rounded-full border-blue-900 border bg-white px-3.5 py-3 text-center text-sm/6 font-semibold text-blue-900 shadow-sm hover:bg-blue-900 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-800">
+                  <a href="{{url('/').'/'.App::currentLocale().'/welcome-event'}}" class="inline-block rounded-full border-blue-900 border bg-white px-3.5 py-3 text-center text-base font-semibold text-blue-900 shadow-sm hover:bg-blue-900 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-800">
                     {{__("I'd like to register")}}
                     <x-icon.right class="h-4"/>
                   </a>
