@@ -33,30 +33,78 @@ import { Carousel } from 'flowbite';
 //     forceTLS: (import.meta.env.VITE_PUSHER_SCHEME ?? 'https') === 'https',
 //     enabledTransports: ['ws', 'wss'],
 // });
+function buildThresholdList() {
+    var thresholds = [];
+    var numSteps = 20.0;
+    for (var i = 1.0; i <= numSteps; i++) {
+        var ratio = i / numSteps;
+        thresholds.push(ratio);
+    }
+
+    thresholds.push(0);
+    return thresholds;
+}
 export function loadImages() {
+    //var lazyImages = [].slice.call(document.querySelectorAll(".animate-pulse"));
     var observer = new IntersectionObserver(
         (entries, observer) => {
             entries.forEach(entry => {
-                if (entry.intersectionRatio > 0.0) {
+                if (entry.isIntersecting) {
                     const img = entry.target;
-                    
-                    if (!hasClass(img,'loaded') && !hasClass(img,'logo') && img.dataset.src) {
-                          img.setAttribute('src', img.dataset.src);
-                          img.className += ' loaded';
+                    if (!hasClass(img, 'loaded') && img.dataset.src) {
+                        img.setAttribute('src', img.dataset.src);
+                        img.className += ' loaded';
+                        img.classList.remove("animate-pulse");
+                        img.classList.remove("scale-125");
+                        img.classList.add("scale-100");
+                        observer.unobserve(img);
                     }
-                }
+                } 
             });
-        },
-        {}
-    )
+        }, {
+            root: null,
+            rootMargin: "0px",
+            threshold: buildThresholdList(),
+        })
     for (let img of document.getElementsByTagName('img')) {
         observer.observe(img);
     }
 };
+export function animate() {
+    console.log('animate')
+    //var lazyImages = [].slice.call(document.querySelectorAll(".animate-pulse"));
+    var observer = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    
+                    const fadinAnimation = entry.target;
+                    if (!hasClass(fadinAnimation, 'animated') ) {
+                        fadinAnimation.className += ' animated';
+                        fadinAnimation.classList.add("animate-fadein");
+                        setTimeout(function() {
+                            fadinAnimation.classList.remove("opacity-0");
+                        },1000)
+                        observer.unobserve(fadinAnimation);
+                    }
+                } 
+
+            });
+        }, {
+            root: null,
+            rootMargin: "0px",
+            threshold: buildThresholdList(),
+        })
+   
+    for (let fadinAnimation of document.getElementsByClassName('fadinAnimation')) {
+        observer.observe(fadinAnimation);
+    }
+};
 window.loadImages = loadImages;
+window.animate = animate;
 
 export function hasClass(element, className) {
-    return (' ' + element.className + ' ').indexOf(' ' + className+ ' ') > -1;
+    return (' ' + element.className + ' ').indexOf(' ' + className + ' ') > -1;
 }
 window.hasClass = hasClass;
 

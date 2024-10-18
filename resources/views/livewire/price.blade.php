@@ -1,6 +1,6 @@
 <div class="bg-white py-24 sm:py-32" id="price">
   <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
-    <h2 class="text-pretty text-5xl font-medium tracking-tight text-gray-950 sm:text-6xl">{{__('How much is the registration?')}}</h2>
+    <h2 class="fadinAnimation opacity-0 text-pretty text-5xl font-medium tracking-tight text-gray-950 sm:text-6xl">{{__('How much is the registration?')}}</h2>
     <p class="mt-6 max-w-3xl text-xl font-medium text-gray-600 sm:text-2xl">{{__('Since the launch of the Vertuoza Padel Tour, we have strived to offer quality events on a reasonable budget, and in 2025, thanks to the renewed support of our partners and sponsors, our prices will once again remain unchanged.')}}</p>
     <p class="mt-6 font-medium leading-8 text-gray-500 "><b>{{__('In addition, each registration registered and paid before December 31, 2024 automatically entitles the holder to a 10% discount on the price.')}}</b></p>
     <p class="text-center pt-10">
@@ -14,7 +14,7 @@
     <div class="absolute inset-x-0 bottom-0 top-48 bg-[radial-gradient(circle_at_center_var(--gradient-position),#7775D6,#25243d,#030712_70%)] [--gradient-position:center] lg:[--gradient-position:150%]"></div>
     <div class="relative mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
       <div class="grid grid-cols-1 gap-10 lg:grid-cols-3">
-        <div class="-m-2 grid grid-cols-1 rounded-[2rem] shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto max-lg:w-full max-lg:max-w-md">
+        <div class="fadinAnimation opacity-0 -m-2 grid grid-cols-1 rounded-[2rem] shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto max-lg:w-full max-lg:max-w-md">
           <div class="grid grid-cols-1 rounded-[2rem] p-2 shadow-md shadow-black/5">
             <div class="rounded-3xl bg-white p-10 pb-9 shadow-2xl ring-1 ring-black/5">
               <h2 class="text-sm/5 font-semibold text-blue-800">{{__('One session')}}</h2>
@@ -91,7 +91,7 @@
             </div>
           </div>
         </div>
-        <div class="-m-2 grid grid-cols-1 rounded-[2rem] shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto max-lg:w-full max-lg:max-w-md">
+        <div class="fadinAnimation opacity-0 -m-2 grid grid-cols-1 rounded-[2rem] shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto max-lg:w-full max-lg:max-w-md">
           <div class="grid grid-cols-1 rounded-[2rem] p-2 shadow-md shadow-black/5">
             <div class="rounded-3xl bg-white p-10 pb-9 shadow-2xl ring-1 ring-black/5">
               <h2 class="text-sm/5 font-semibold text-blue-800">{{__("Five sessions")}}</h2>
@@ -168,7 +168,7 @@
             </div>
           </div>
         </div>
-        <div class="-m-2 grid grid-cols-1 rounded-[2rem] shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto max-lg:w-full max-lg:max-w-md">
+        <div class="fadinAnimation opacity-0 -m-2 grid grid-cols-1 rounded-[2rem] shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto max-lg:w-full max-lg:max-w-md">
           <div class="grid grid-cols-1 rounded-[2rem] p-2 shadow-md shadow-black/5">
             <div class="rounded-3xl bg-white p-10 pb-9 shadow-2xl ring-1 ring-black/5">
               <h2 class="text-sm/5 font-semibold text-blue-800">{{__('Ten sessions')}}</h2>

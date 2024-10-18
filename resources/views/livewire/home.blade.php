@@ -1,25 +1,4 @@
-<x-layouts.home>
-    <!-- This example requires Tailwind CSS v3.0+ -->
-<!-- This example requires Tailwind CSS v3.0+ -->
-<div class="isolate bg-white"  x-init="
-Livewire.on('loadImages', () => {
-  loadImages();
-  console.log('lllll')
-})">
-    <div class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
-      <svg class="relative left-[calc(80%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(20%-30rem)] sm:h-[42.375rem]" viewBox="0 0 1155 678" xmlns="http://www.w3.org/2000/svg">
-        <path fill="url(#45de2b6b-92d5-4d68-a6a0-9b9b2abad533)" fill-opacity=".3" d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z" />
-        <defs>
-          <linearGradient id="45de2b6b-92d5-4d68-a6a0-9b9b2abad533" x1="1155.49" x2="-78.208" y1=".177" y2="474.645" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#6fc3c3"></stop>
-            <stop offset="1" stop-color="#24335e"></stop>
-          </linearGradient>
-        </defs>
-      </svg>
-    </div>
-    <x-layouts.menu >
-                
-    </x-layouts.menu>
+<div class="isolate bg-white"  >
     <main>
       <div class="relative z-0">
         <div class="mx-auto max-w-7xl ">
@@ -31,7 +10,7 @@ Livewire.on('loadImages', () => {
     
             <div class=" relative py-32 px-6 sm:py-40 lg:py-56 lg:px-8 lg:pr-0  "  >
               <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl ">
-                <h1 class="color-dark-blue text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl text-center justify-center animation " style="display: none">{{__('home.h1')}}</h1>
+                <h1 class="color-dark-blue text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl text-center justify-center fadinAnimation opacity-0" >{{__('home.h1')}}</h1>
                 {{-- <p class="mt-6 text-lg leading-8 text-gray-600 text-center justify-center">{{__('home.teaser')}}</p> --}}
 
                 <div class="flex flex-1  w-100 flex-row mt-10 items-center justify-center">
@@ -50,7 +29,7 @@ Livewire.on('loadImages', () => {
           </div>
         </div>
         <div class="bg-gray-50 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-          <img alt="poster image mobile" class="animate-fadein paspect-[3/2] object-cover lg:aspect-auto lg:h-full lg:w-full" src="{{url('/').'/images/section/home.jpg'}}" />
+          <img alt="poster image mobile" class="fadinAnimation opacity-0 paspect-[3/2] object-cover lg:aspect-auto lg:h-full lg:w-full" src="{{url('/').'/images/section/home.jpg'}}" />
         </div>
       </div>
       <div class="bg-white pb-20 hidden sm:block" >
@@ -59,22 +38,22 @@ Livewire.on('loadImages', () => {
           <div class="flex flex-1 items-center justify-center w-100 flex-row mt-10">
             <ul role="list" class="items-center justify-center inline-flex space-x-10">
               <li>
-                <a href="https://immo.vlan.be/fr"  target="_blank" > <img class="mx-auto w-50 items-center justify-center mt-7" src="{{url('/').'/images/sponsors/immovlan_mauve.png'}}" alt=""></a>
+                <a href="https://immo.vlan.be/fr"  target="_blank" > <img class="fadinAnimation opacity-0 mx-auto w-50 items-center justify-center mt-7" src="{{url('/').'/images/sponsors/immovlan_mauve.png'}}" alt=""></a>
               </li>
               <li>
-                <a href="https://www.vertuoza.com/"  target="_blank" > <img class="mx-auto h-14 mt-4 " src="{{url('/').'/images/sponsors/Vertuoza-Logo.png'}}" alt=""></a>
+                <a href="https://www.vertuoza.com/"  target="_blank" > <img class="fadinAnimation opacity-0 mx-auto h-14 mt-4 " src="{{url('/').'/images/sponsors/Vertuoza-Logo.png'}}" alt=""></a>
               </li>
               <li>
-                <a href="https://wilmeyer.com/"  target="_blank" > <img class="mx-auto w-50 items-center justify-center mt-7" src="{{url('/').'/images/sponsors/wilmeyer.png'}}" alt=""></a>
+                <a href="https://wilmeyer.com/"  target="_blank" > <img class="fadinAnimation opacity-0 mx-auto w-50 items-center justify-center mt-7" src="{{url('/').'/images/sponsors/wilmeyer.png'}}" alt=""></a>
               </li>
               <li>
-                <a href="https://brugge.arenal.be/" target="_blank"  ><img class="mx-auto items-center justify-center mt-7 w-40 h-20" src="https://brugge.arenal.be/themes/custom/arenal/logo-new.svg" alt=""></a>
+                <a href="https://brugge.arenal.be/" target="_blank"  ><img class="fadinAnimation opacity-0 mx-auto items-center justify-center mt-7 w-40 h-20" src="https://brugge.arenal.be/themes/custom/arenal/logo-new.svg" alt=""></a>
               </li>
               <li>
-                <a href="https://santospalaceshop.be/bruxelles/" target="_blank"  ><img class="mx-auto  max-h-20 items-center justify-center mt-7" src="{{url('/').'/images/sponsors/santos.png'}}" alt=""></a>
+                <a href="https://santospalaceshop.be/bruxelles/" target="_blank"  ><img class="fadinAnimation opacity-0 mx-auto  max-h-20 items-center justify-center mt-7" src="{{url('/').'/images/sponsors/santos.png'}}" alt=""></a>
               </li>
               <li>
-                <a href="https://www.cupra.be/fr" target="_blank"  ><img class="mx-auto  max-h-24 items-center justify-center mt-7 h-44 w-72" src="https://www.cupra.be/images/logo.svg" alt=""></a>
+                <a href="https://www.cupra.be/fr" target="_blank"  ><img class="fadinAnimation opacity-0 mx-auto  max-h-24 items-center justify-center mt-7 h-44 w-72" src="https://www.cupra.be/images/logo.svg" alt=""></a>
               </li>
               <!-- More people... -->
             </ul>
@@ -84,7 +63,7 @@ Livewire.on('loadImages', () => {
       <div class="bg-black py-24 sm:py-32" id="summary">
         <div class="mx-auto max-w-7xl px-6 lg:px-4">
           <div class="mx-auto max-w-7xl sm:text-center">
-            <h2 class="pb-10 animate-fadein text-gray-200 text-pretty  font-medium tracking-tight text-4xl sm:text-6xl">{{__('What is the Vertuoza Padel Tour?')}}</h2>
+            <h2 class="pb-10 fadinAnimation opacity-0 text-gray-200 text-pretty  font-medium tracking-tight text-4xl sm:text-6xl">{{__('What is the Vertuoza Padel Tour?')}}</h2>
             <p class="mt-6 text-lg leading-8 text-gray-300 sm:text-justify">{!!__("Launched in 2023, the Vertuoza Padel Tour is a Padel competition open to all companies operating in Belgium. The competition consists of several sessions held on Friday afternoons at various Padel clubs throughout Belgium. <br>In 2025, 6 clubs will host a stage of the Vertuoza Padel Tour, with sessions in Liège, Brussels, Waterloo, Ghent, Antwerp and Nivelles, and the grand finale at Le Zoute.<br><br> The tournament is mixed, open to all, and this year we're planning two categories: Fun and Expert. <br><br><b>The aim of the Vertuoza Padel Tour is threefold: Sport + Fun + Networking</b><br><br> 80 teams were able to meet in 2023, and we hope to gather at least 250 teams for the 2025 season.")!!}</p>
           </div>
         </div>
@@ -103,7 +82,7 @@ Livewire.on('loadImages', () => {
             <img src="{{url('/').'/images/section/bg10.png'}}" alt="Product screenshot" class="hidden sm:block w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[30rem] md:-ml-4 lg:-ml-0 sm:mt-24" width="2432" height="1442">
             <div class="lg:pr-8 lg:pt-4">
               <div class="lg:max-w-lg">
-                <p class="mt-2 animate-fadein text-pretty  font-medium tracking-tight text-4xl sm:text-6xl color-light-blue ">{{__('How does it work?')}}</p>
+                <p class="mt-2 fadinAnimation opacity-0 text-pretty  font-medium tracking-tight text-4xl sm:text-6xl color-light-blue ">{{__('How does it work?')}}</p>
                 <p class="mt-6 text-lg leading-8 text-gray-900">{{__('The Vertuoza Padel Tour is open to all, but each team must be registered in the name of a company, association or organization.')}}</p>
                 <dl class="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-900 lg:max-w-none">
                   <div class="relative pl-9">
@@ -162,7 +141,7 @@ Livewire.on('loadImages', () => {
       <div class="bg-black pt-24 sm:pt-32" id="club">
         <div class="mx-auto max-w-7xl px-6 lg:px-14">
           <div class="mx-auto max-w-7xl sm:text-center">
-            <h2 class=" animate-fadein text-pretty  font-medium tracking-tight text-4xl sm:text-6xl color-light-blue">{{__('The clubs')}}</h2>
+            <h2 class=" fadinAnimation opacity-0 text-pretty  font-medium tracking-tight text-4xl sm:text-6xl color-light-blue">{{__('The clubs')}}</h2>
             <p class="mt-6 text-lg leading-8 text-gray-300 sm:text-justify">{!!__("New partnerships mean new clubs!  This year, we'll be present in 12 different clubs throughout Belgium, making the Vertuoza Padel Tour the first corporate padel competition in Belgium, and it's not impossible that other stages will be added to the program.  The partner clubs are listed below.")!!}</p>
           </div>
         </div>
@@ -179,7 +158,7 @@ Livewire.on('loadImages', () => {
                       <svg class="absolute top-1 left-1 h-6 w-6 color-light-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                       </svg>
-                      <span  class="color-white">{{__('In Flanders')}}:</span>
+                      <span  class="color-white fadinAnimation opacity-0 ">{{__('In Flanders')}}:</span>
                     </dt>
                     <dd class="py-2">- <b><a href="https://grimbergen.arenal.be/" class="color-light-blue" target="blank">{{__('Arenal Grimbergen')}}</a></b> <span class="font-light text-sm">{{__('Antwerpselaan 1, 1853 Grimbergen')}}</span></dd>
                     <dd class="py-2">- <b><a href="https://brugge.arenal.be" class="color-light-blue" target="blank">{{__('Arenal Bruges')}}</a></b> <span class="font-light text-sm">{{__('Geralaan 51, 8310 Sint-Kruis')}}</span></dd>
@@ -200,7 +179,7 @@ Livewire.on('loadImages', () => {
                       <svg class="absolute top-1 left-1 h-6 w-6 color-light-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                       </svg>
-                      <span  class="color-white">{{__('In Brussels')}}:</span>
+                      <span  class="fadinAnimation opacity-0 color-white">{{__('In Brussels')}}:</span>
                     </dt>
                     <dd class="py-2">- <b><a href="https://www.tourtaxispadel.brussels/" class="color-light-blue" target="blank">{{__('Tour & Taxis Padel Club')}}</a></b> <span class="font-light text-sm">{{__('Tour & Taxis 88 – 1000 Bruxelles')}}</span></dd>
                     <dd class="py-2">- <b><a href="https://tero.be/fr/houses/detail/tero-padel-club-louise/" class="color-light-blue" target="blank">{{__('Tero Louise')}}</a></b> <span class="font-light text-sm">{{__('rue du Beau Site, 26 – 1000 Bruxelles')}}</span></dd>
@@ -211,7 +190,7 @@ Livewire.on('loadImages', () => {
                       <svg class="absolute top-1 left-1 h-6 w-6 color-light-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                       </svg>
-                      <span  class="color-white">{{__('In Wallonia')}}:</span>
+                      <span  class="fadinAnimation opacity-0 color-white">{{__('In Wallonia')}}:</span>
                     </dt>
                     <dd class="py-2">- <b><a href="https://tero.be/fr/houses/detail/tero-padel-club/" class="color-light-blue" target="blank">{{__('Tero Waterloo')}}</a></b> <span class="font-light text-sm">{{__('chaussée de Tervuren 389 – 1410 Waterloo')}}</span></dd>
                     <dd class="py-2">- <b><a href="https://elevenpadel.be/" class="color-light-blue" target="blank">{{__('Eleven Nivelles')}}</a></b> <span class="font-light text-sm">{{__('rue de l’industrie 11 – 1400 Nivelles')}}</span></dd>
@@ -228,7 +207,7 @@ Livewire.on('loadImages', () => {
       <div class="bg-white py-24 sm:py-32" id="agenda">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
           <div class="mx-auto max-w-2xl lg:text-center">
-            <h2 class="text-pretty text-5xl font-medium tracking-tight  sm:text-6xl color-dark-blue pb-7">{{__('Agenda 2025')}}</h2>
+            <h2 class="fadinAnimation opacity-0 text-pretty text-5xl font-medium tracking-tight  sm:text-6xl color-dark-blue pb-7">{{__('Agenda 2025')}}</h2>
             <p class="mt-2 text-xl font-bold tracking-tight text-gray-700 sm:text-xl">{{__("The 2025 program is practically finalized. If anything changes, we'll be sure to let you know.")}}</p>
             <p class="mt-2 text-lg font-normal tracking-tight text-gray-700 sm:text-lg">{{__('Each session runs from +/- 1pm to 6pm.  The schedule may vary according to the number of participants and the number of available pitches. A detailed schedule will be provided to each participating team a few days before the session for which they are registered.')}}</p>
           </div>
@@ -515,5 +494,3 @@ Livewire.on('loadImages', () => {
       </div>
     </main>
   </div>
-  
-</x-layouts.home>

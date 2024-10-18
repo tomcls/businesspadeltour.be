@@ -18,11 +18,13 @@ use App\Http\Livewire\Auth\UpdatePwd;
 use App\Http\Livewire\Charge;
 use App\Http\Livewire\ChargeSuccess;
 use App\Http\Livewire\Contact;
+use App\Http\Livewire\Home;
 use App\Http\Livewire\Me\Invoice;
 use App\Http\Livewire\Me\Logo;
 use App\Http\Livewire\Me\Profile;
 use App\Http\Livewire\Photos;
 use App\Http\Livewire\Photos2024;
+use App\Http\Livewire\Price;
 use App\Http\Livewire\Upload;
 use App\Http\Livewire\Video;
 use App\Http\Livewire\WelcomeEvent;
@@ -55,9 +57,10 @@ Route::get('/register', function () {
 //     Octane::route('GET','/index',function () {return new Response((new HomeController)->index());});
 // });
 
-Route::get('/', function () {
-    return new Response((new HomeController)->index());
-});
+// Route::get('/', function () {
+//     return new Response((new HomeController)->index());
+// });
+Route::get('/', Home::class)->name('home');
 Route::get('/sitemap.xml', [SitemapXmlController::class, 'index']);
 
 Route::get('/players/download', [CSVController::class,'download'])->name('players');
@@ -88,19 +91,23 @@ Route::prefix('{locale?}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('set.
     if (in_array(app('request')->segment(1), array_keys(config('app.locales')))) {
         app()->setLocale(app('request')->segment(1));
     }
-    Route::get('/index', function () {
-        return new Response((new HomeController)->index());
-    });
-    Route::get('/', function () {
-        return new Response((new HomeController)->index());
-    })->name('home');
+    Route::get('/index', Home::class)->name('home');
+    Route::get('/', Home::class)->name('home');
+    // Route::get('/index', function () {
+    //     return new Response((new HomeController)->index());
+    // });
+    // Route::get('/', function () {
+    //     return new Response((new HomeController)->index());
+    // })->name('home');
     
-    Route::get('/tarif', function () {
-        return view('components.pages.price');
-    });
-    Route::get('/price', function () {
-        return view('components.pages.price');
-    });
+    // Route::get('/tarif', function () {
+    //     return view('components.pages.price');
+    // });
+    Route::get('/tarif', Price::class)->name('tarif');
+    Route::get('/price', Price::class)->name('price');
+    // Route::get('/price', function () {
+    //     return view('components.pages.price');
+    // });
 
     Route::get('/'. trans('route.sessions'), function () {
         return view('components.pages.sessions');

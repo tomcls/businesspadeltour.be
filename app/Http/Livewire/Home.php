@@ -4,13 +4,13 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 
-class Price extends Component
+class Home extends Component
 {
     public function mount() {
-        logger('price');
+        
     }
     public function render()
     {
-        return view('livewire.price')->layout('layouts.base');
+        return view('livewire.home')->layout('layouts.base');
     }
 }
