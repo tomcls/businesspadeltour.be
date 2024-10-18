@@ -8,7 +8,7 @@
           </a>
         </div>
         <div class="-my-2 -mr-2 md:hidden">
-          <button @click="isMobileNavOpen = !isMobileNavOpen" type="button" class="inline-flex items-center justify-center rounded-md p-2 color-dark-blue hover:bg-gray-100 hover:color-dark-blue focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
+          <button @click="isMobileNavOpen = !isMobileNavOpen" type="button" class="inline-flex items-center justify-center rounded-md p-2 color-dark-blue hover:bg-gray-100 hover:color-dark-blue focus:outline-none  focus:ring-inset " aria-expanded="false">
             <span class="sr-only">Open menu</span>
             <!-- Heroicon name: outline/bars-3 -->
             <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
@@ -19,7 +19,7 @@
         <nav class="hidden space-x-10 md:flex">
           <div x-data="{ isOpen: false }" class="relative" >
             <!-- Item active: "text-gray-900", Item inactive: "color-dark-blue" -->
-            <button @click="isOpen = !isOpen" type="button" class="color-dark-blue group inline-flex items-center rounded-md text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2" aria-expanded="false">
+            <button @click="isOpen = !isOpen" type="button" class="color-dark-blue group inline-flex items-center rounded-md text-base font-medium hover:text-gray-900 focus:outline-none   focus:ring-offset-2" aria-expanded="false">
               <span>Vertuoza Padel Tour</span>
               <svg class="color-dark-blue ml-2 h-5 w-5 group-hover:color-dark-blue" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                 <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
@@ -39,18 +39,18 @@
                 <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                   <a href="{{url('/').'/'.App::currentLocale().'#summary'}}" x-on:click="isOpen=false" class="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50">
                     <!-- Heroicon name: outline/chart-bar -->
-                    <svg class="h-6 w-6 flex-shrink-0 color-light-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <svg class="h-6 w-6 flex-shrink-0 color-dark-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"></path>
                     </svg>
                     <div class="ml-4">
                       <p class="text-base font-medium text-gray-900">Vertuoza Padel Tour</p>
-                      <p class="mt-1 text-sm color-dark-blue">{{__('menu.programTeaser')}}</p>
+                      <p class="mt-1 text-sm color-dark-blue">Sport + Fun + Networking</p>
                     </div>
                   </a>
   
                   <a href="{{url('/').'/'.App::currentLocale().'#club'}}" x-on:click="isOpen=false" class="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50">
                     <!-- Heroicon name: outline/cursor-arrow-rays -->
-                    <svg class="h-6 w-6 flex-shrink-0 color-light-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <svg class="h-6 w-6 flex-shrink-0 color-dark-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"></path>
                       <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"></path>
                     </svg>
@@ -62,7 +62,7 @@
   
                   <a href="{{url('/').'/'.App::currentLocale().'#agenda'}}" x-on:click="isOpen=false" class="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50">
                     <!-- Heroicon name: outline/shield-check -->
-                    <svg class="h-6 w-6 flex-shrink-0 color-light-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <svg class="h-6 w-6 flex-shrink-0 color-dark-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z"></path>
                     </svg>
                     <div class="ml-4">
@@ -73,7 +73,7 @@
   
                   <a href="{{url('/').'/'.App::currentLocale().'#sponsor'}}" x-on:click="isOpen=false" class="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50">
                     <!-- Heroicon name: outline/squares-2x2 -->
-                    <svg class="h-6 w-6 flex-shrink-0 color-light-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <svg class="h-6 w-6 flex-shrink-0 color-dark-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"></path>
                     </svg>
                     <div class="ml-4">
@@ -83,7 +83,7 @@
                   </a>
                   <a href="https://drive.google.com/file/d/1L5U-11OPKZBSCBiikB4vu5Eik5SoUeL0/view?usp=sharing" x-on:click="isOpen=false" class="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50">
                     <!-- Heroicon name: outline/squares-2x2 -->
-                    <svg class="h-6 w-6 flex-shrink-0 color-light-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <svg class="h-6 w-6 flex-shrink-0 color-dark-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0012 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 01-2.031.352 5.988 5.988 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.971zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 01-2.031.352 5.989 5.989 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.971z"></path>
                     </svg>
                     <div class="ml-4">
@@ -118,7 +118,7 @@
           </div>
           <div x-data="{ isOpen: false }" class="relative" >
             <!-- Item active: "text-gray-900", Item inactive: "color-dark-blue" -->
-            <button @click="isOpen = !isOpen" type="button" class="color-dark-blue group inline-flex items-center rounded-md text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2" aria-expanded="false">
+            <button @click="isOpen = !isOpen" type="button" class="color-dark-blue group inline-flex items-center rounded-md text-base font-medium hover:text-gray-900 focus:outline-none   focus:ring-offset-2" aria-expanded="false">
               <span>Photos</span>
               <!--
                 Heroicon name: mini/chevron-down
@@ -148,32 +148,32 @@
                 x-transition:leave-start="opacity-100 scale-100"
                 x-transition:leave-end="opacity-0 scale-95"
                 style="display: none"
-                class="absolute z-10 -ml-4 mt-3 w-screen max-w-xs transform px-2 sm:px-0 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2">
+                class="absolute z-10 -ml-4 mt-3  w-32 transform px-2 sm:px-0 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2">
               <div class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                 <div class="relative grid gap-6 bg-white px-5 py-3 sm:gap-4 sm:p-4">
                   <a href="{{url('/').'/'.App::currentLocale().'/photos/toursandtaxi'}}" x-on:click="isOpen=false" class="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50">
                     <div class="ml-4">
-                      <p class="text-base font-medium text-gray-900">2023</p>
+                      <p class="text-base font-bold color-dark-blue">2023</p>
                     </div>
                   </a>
                   <a href="{{url('/').'/'.App::currentLocale().'/photos2024/liege'}}" x-on:click="isOpen=false" class="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50">
                     <div class="ml-4">
-                      <p class="text-base font-medium text-gray-900">2024</p>
+                      <p class="text-base font-bold color-dark-blue">2024</p>
                     </div>
                   </a>
                 </div>
               </div>
             </div>
           </div>
-          <a href="{{url('/').'/'.App::currentLocale().'#agenda'}}" class="text-base font-bold color-light-blue hover:text-gray-900">{{__('Planning 2025')}}</a>
+          <a href="{{url('/').'/'.App::currentLocale().'#agenda'}}" class="text-base font-bold color-dark-blue hover:text-gray-900">{{__('Planning 2025')}}</a>
           <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.price')}}" class="text-base font-medium color-dark-blue hover:text-gray-900">{{__('menu.price')}}</a>
           <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.articles')}}" class="text-base font-medium color-dark-blue hover:text-gray-900">{{__('menu.news')}}</a>
         </nav>
         <div class="hidden items-center justify-end md:flex md:flex-1 lg:w-0 ">
-          <a href="{{url('/').'/'.App::currentLocale().'/welcome-event'}}" class="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-dark-blue px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700">Kickoff 2025</a>
+          <a href="{{url('/').'/'.App::currentLocale().'/welcome-event'}}" class="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-full border border-transparent bg-dark-blue px-4 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-700">Kickoff 2025</a>
           <div x-data="{ isOpen: false }" class="relative ml-3">
             <!-- Item active: "text-gray-900", Item inactive: "color-dark-blue" -->
-            <button @click="isOpen = !isOpen" type="button" class="color-dark-blue group inline-flex items-center rounded-md  text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2" aria-expanded="false">
+            <button @click="isOpen = !isOpen" type="button" class="color-dark-blue group inline-flex items-center rounded-md  text-base font-medium hover:text-gray-900 focus:outline-none   focus:ring-offset-2" aria-expanded="false">
               <span>{{App::currentLocale()}}</span>
               <!--
                 Heroicon name: mini/chevron-down
@@ -258,7 +258,7 @@
               <img class="h-8 w-auto" src="{{url('/').'/images/logo/logo.svg'}}" alt="Your Company">
             </div>
             <div class="-mr-2">
-              <button @click="isMobileNavOpen = !isMobileNavOpen" type="button" class="inline-flex items-center justify-center rounded-md p-2 color-dark-blue hover:bg-gray-100 hover:color-dark-blue focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+              <button @click="isMobileNavOpen = !isMobileNavOpen" type="button" class="inline-flex items-center justify-center rounded-md p-2 color-dark-blue hover:bg-gray-100 hover:color-dark-blue focus:outline-none  focus:ring-inset ">
                 <span class="sr-only">Close menu</span>
                 <!-- Heroicon name: outline/x-mark -->
                 <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
@@ -271,41 +271,41 @@
             <nav class="grid gap-y-8">
               <a href="{{url('/').'/'.App::currentLocale().'#agenda'}}" x-on:click="isMobileNavOpen=false" class="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50">
                 <!-- Heroicon name: outline/shield-check -->
-                <svg class="h-6 w-6 flex-shrink-0 color-light-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <svg class="h-6 w-6 flex-shrink-0 color-dark-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z"></path>
                 </svg>
                 <span class="ml-3 text-base font-medium text-gray-900">{{__('Planning 2025')}}</span>
               </a>
               <a href="{{url('/').'/'.App::currentLocale().'#price'}}" x-on:click="isMobileNavOpen=false" class="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50">
                 <!-- Heroicon name: outline/arrow-path -->
-                <svg class="h-6 w-6 flex-shrink-0 color-light-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <svg class="h-6 w-6 flex-shrink-0 color-dark-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 7.756a4.5 4.5 0 100 8.488M7.5 10.5h5.25m-5.25 3h5.25M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                 </svg>
                 <span class="ml-3 text-base font-medium text-gray-900">{{__('menu.price')}}</span>
               </a>
               <a href="{{url('/').'/'.App::currentLocale().'/photos2024/liege'}}" x-on:click="isMobileNavOpen=false" class="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50">
                 <!-- Heroicon name: outline/squares-2x2 -->
-                <svg class="h-6 w-6 flex-shrink-0 color-light-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <svg class="h-6 w-6 flex-shrink-0 color-dark-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"></path>
                 </svg>
                 <span class="ml-3 text-base font-medium text-gray-900">Photos</span>
               </a>
               <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.articles')}}" x-on:click="isMobileNavOpen=false" class="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50">
-                <svg class="h-6 w-6 flex-shrink-0 color-light-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <svg class="h-6 w-6 flex-shrink-0 color-dark-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z"></path>
                 </svg>
                 <span class="ml-3 text-base font-medium text-gray-900">{{__('menu.news')}}</span>
               </a>
               <a href="{{url('/').'/'.App::currentLocale().'#sponsor'}}" x-on:click="isMobileNavOpen=false" class="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50">
                 <!-- Heroicon name: outline/arrow-path -->
-                <svg class="h-6 w-6 flex-shrink-0 color-light-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <svg class="h-6 w-6 flex-shrink-0 color-dark-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"></path>
                 </svg>
                 <span class="ml-3 text-base font-medium text-gray-900">{{__('menu.sponsors')}}</span>
               </a>
               <a href="https://drive.google.com/file/d/1L5U-11OPKZBSCBiikB4vu5Eik5SoUeL0/view?usp=sharing" x-on:click="isMobileNavOpen=false" class="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50">
                 <!-- Heroicon name: outline/arrow-path -->
-                <svg class="h-6 w-6 flex-shrink-0 color-light-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <svg class="h-6 w-6 flex-shrink-0 color-dark-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0012 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 01-2.031.352 5.988 5.988 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.971zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 01-2.031.352 5.989 5.989 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.971z"></path>
                 </svg>
                 <span class="ml-3 text-base font-medium text-gray-900">{{__('menu.rule')}}</span>

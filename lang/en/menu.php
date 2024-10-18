@@ -3,13 +3,13 @@
 return [
 
     'program' => 'Program',
-     'programTeaser' => '6 padel sessions on 6 Friday afternoon',
+     'programTeaser' => '14 padel sessions on 6 Friday afternoon',
      'club' => 'Clubs',
-     'clubTeaser' => '3 clubs spread throughout Belgium',
+     'clubTeaser' => '12 clubs spread throughout Belgium',
      'agenda' => 'Program',
      'agendaTeaser' => 'What are the dates and places of the different sessions?',
      'sponsors' => 'Partners',
-     'sponsorsTeaser' => 'Immovlan and Vertuoza',
+     'sponsorsTeaser' => 'Immovlan, Vertuoza, Arenal, Santos Palace, Cupra',
      'ranking' => 'Rankings',
      'rankingTeaser' => 'They will be visible after the first session',
      'watchFinal' => 'Watch Final 2023',

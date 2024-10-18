@@ -14,13 +14,13 @@ return [
     */
 
     'program' => 'Programme',
-    'programTeaser' => '6 sessions de padel sur 6 vendredi apres-midi',
+    'programTeaser' => '14 sessions de padel sur 6 vendredi apres-midi',
     'club' => 'Les clubs',
-    'clubTeaser' => '6 clubs répartis dans toute la Belgique',
+    'clubTeaser' => '12 clubs répartis dans toute la Belgique',
     'agenda' => 'Le programme',
-    'agendaTeaser' => 'Quelles sont les dates et lieux des différentes sessions ?',
+    'agendaTeaser' => 'Quelles sont les dates et lieux de toutes les sessions ?',
     'sponsors' => 'Les partenaires',
-    'sponsorsTeaser' => 'Immovlan et Vertuoza',
+    'sponsorsTeaser' => 'Immovlan, Vertuoza, Arenal, Santos Palace, Cupra',
     'ranking' => 'Les classements',
     'rankingTeaser' => 'Ils seront visibles après la premiere session',
     'watchFinal' => 'Regarder la finale 2023',
