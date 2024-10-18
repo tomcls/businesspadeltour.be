@@ -438,7 +438,7 @@
             </dl>
           </div>
           <div class="mx-auto max-w-2xl lg:text-center">
-            <p class="mt-2 text-lg font-normal tracking-tight text-gray-700 sm:text-lg">{!!__('Nous allons nous efforcer de satisfaire tout le monde, mais nous sommes limités par le nombre de terrains disponibles.  <b>Premier arrivé, premier servi !</b>')!!}</p>
+            <p class="mt-2 text-lg font-normal tracking-tight text-gray-700 sm:text-lg">{!!__("We'll do our best to accommodate everyone, but we're limited by the number of plots available. First come, first served!")!!}</p>
           </div>
           <p class="text-center pt-10">
             <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}" class="inline-block rounded-md bg-blue-800 px-3.5 py-2 text-center text-sm/6 font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-800">{{__("I get it, I'm in!")}}</a>
@@ -446,9 +446,6 @@
         </div>
       </div>
       @livewire('price', key('price'))
-      
-     
-      
       
       <div class="bg-white " id="sponsor">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
