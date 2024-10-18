@@ -6,7 +6,7 @@
       </div>
       <ul role="list" class="-mt-12 space-y-12 divide-y divide-gray-200 xl:col-span-3">
         <li class="flex flex-col gap-10 pt-12 sm:flex-row">
-          <img class="aspect-[4/5] w-52 flex-none rounded-2xl object-cover" src="https://itcl.s3.eu-west-1.amazonaws.com/businesspadeltour/eric.png" alt="">
+          <img class="w-full sm:aspect-[4/5] sm:w-52 flex-none rounded-2xl object-cover" src="https://itcl.s3.eu-west-1.amazonaws.com/businesspadeltour/eric.png" alt="">
           <div class="max-w-xl flex-auto">
             <h3 class="text-lg font-semibold leading-8 tracking-tight text-gray-900">{{__("Eric")}}</h3>
             <p class="text-base leading-7 text-gray-600">{{__("The founder")}}</p>
@@ -37,7 +37,7 @@
           </div>
         </li>
         <li class="flex flex-col gap-10 pt-12 sm:flex-row">
-            <img class="aspect-[4/5] w-52 flex-none rounded-2xl object-cover" src="https://itcl.s3.eu-west-1.amazonaws.com/businesspadeltour/katia2.png" alt="">
+            <img class="w-full sm:aspect-[4/5] sm:w-52 flex-none rounded-2xl object-cover" src="https://itcl.s3.eu-west-1.amazonaws.com/businesspadeltour/katia2.png" alt="">
             <div class="max-w-xl flex-auto">
               <h3 class="text-lg font-semibold leading-8 tracking-tight text-gray-900">{{__("Katia")}}</h3>
               <p class="text-base leading-7 text-gray-600">{{__("The hard worker in the shadows (and beyond)")}}</p>
@@ -68,7 +68,7 @@
             </div>
           </li>
           <li class="flex flex-col gap-10 pt-12 sm:flex-row">
-              <img class="aspect-[4/5] w-52 flex-none rounded-2xl object-cover" src="https://itcl.s3.eu-west-1.amazonaws.com/businesspadeltour/ethan.png" alt="">
+              <img class="w-full sm:aspect-[4/5] sm:w-52 flex-none rounded-2xl object-cover" src="https://itcl.s3.eu-west-1.amazonaws.com/businesspadeltour/ethan.png" alt="">
               <div class="max-w-xl flex-auto">
                 <h3 class="text-lg font-semibold leading-8 tracking-tight text-gray-900">{{__("Ethan")}}</h3>
                 <p class="text-base leading-7 text-gray-600">{{__("The event manager")}}</p>
@@ -100,7 +100,7 @@
             </li>
          
             <li class="flex flex-col gap-10 pt-12 sm:flex-row">
-                <img class="aspect-[4/5] w-52 flex-none rounded-2xl object-cover" src="https://itcl.s3.eu-west-1.amazonaws.com/businesspadeltour/ethan.png" alt="">
+                <img class="w-full sm:aspect-[4/5] sm:w-52 flex-none rounded-2xl object-cover" src="https://itcl.s3.eu-west-1.amazonaws.com/businesspadeltour/ethan.png" alt="">
                 <div class="max-w-xl flex-auto">
                   <h3 class="text-lg font-semibold leading-8 tracking-tight text-gray-900">{{__("Bart")}}</h3>
                   <p class="text-base leading-7 text-gray-600">{{__("The business developer")}}</p>
