@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\SitemapXmlController;
 use App\Http\Controllers\StripeController;
+use App\Http\Livewire\AboutUs;
 use App\Http\Livewire\Admin\Companies;
 use App\Http\Livewire\Admin\Logos;
 use App\Http\Livewire\Admin\Sessions;
@@ -108,7 +109,7 @@ Route::prefix('{locale?}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('set.
     // Route::get('/photos/{slug?}', function ($slug) {
     //     return view('components.pages.photos');
     // });
-
+    Route::get('/about-us', AboutUs::class)->name('aboutus');
     Route::get('/contact', Contact::class)->name('contact');
     Route::get('/video', Video::class)->name('video');
     
