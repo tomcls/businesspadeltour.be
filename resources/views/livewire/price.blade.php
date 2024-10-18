@@ -1,10 +1,10 @@
 <div class="bg-white py-24 sm:py-32" id="price">
   <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
     <h2 class="fadinAnimation opacity-0 text-pretty text-5xl font-medium tracking-tight text-gray-950 sm:text-6xl">{{__('How much is the registration?')}}</h2>
-    <p class="mt-6 max-w-3xl text-xl font-medium text-gray-600 sm:text-2xl">{{__('Since the launch of the Vertuoza Padel Tour, we have strived to offer quality events on a reasonable budget, and in 2025, thanks to the renewed support of our partners and sponsors, our prices will once again remain unchanged.')}}</p>
-    <p class="mt-6 font-medium leading-8 text-gray-500 "><b>{{__('In addition, each registration registered and paid before December 31, 2024 automatically entitles the holder to a 10% discount on the price.')}}</b></p>
+    <p class="mt-6 fadinAnimation opacity-0 max-w-3xl text-xl font-medium text-gray-600 sm:text-2xl">{{__('Since the launch of the Vertuoza Padel Tour, we have strived to offer quality events on a reasonable budget, and in 2025, thanks to the renewed support of our partners and sponsors, our prices will once again remain unchanged.')}}</p>
+    <p class="mt-6 fadinAnimation opacity-0 font-medium leading-8 text-gray-500 "><b>{{__('In addition, each registration registered and paid before December 31, 2024 automatically entitles the holder to a 10% discount on the price.')}}</b></p>
     <p class="text-center pt-10">
-      <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}"  class="inline-block rounded-full border-blue-900 border bg-white px-3.5 py-3 text-center text-base font-semibold text-blue-900 shadow-sm hover:bg-blue-900 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-800">
+      <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}"  class="fadinAnimation opacity-0 inline-block rounded-full border-blue-900 border bg-white px-3.5 py-3 text-center text-base font-semibold text-blue-900 shadow-sm hover:bg-blue-900 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-800">
         {{__("It's Christmas before time, I'm in!")}}
         <x-icon.right class="h-4"/>
       </a>
@@ -181,7 +181,7 @@
                 </div>
               </div>
               <div class="mt-8">
-                <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}"  class="inline-block rounded-md bg-blue-800 px-3.5 py-2 text-center text-sm/6 font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-800">{{__("I'd like to register")}}</a>
+                <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}"  class="fadinAnimation opacity-0 inline-block rounded-md bg-blue-800 px-3.5 py-2 text-center text-sm/6 font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-800">{{__("I'd like to register")}}</a>
               </div>
               <div class="mt-8">
                 <h3 class="text-sm/6 font-medium text-gray-950">{{__('This price includes')}}:</h3>
