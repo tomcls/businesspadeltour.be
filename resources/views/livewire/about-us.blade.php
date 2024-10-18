@@ -3,6 +3,24 @@
       <div class="max-w-2xl xl:col-span-2">
         <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{{__("About the team")}}</h2>
         <p class="mt-6  leading-8 text-gray-600 text-pretty font-light text-base">{!!__("The Business Padel Tour was originally the brainchild of Eric Spitzer, CEO of Immovlan.be, who had the idea of creating an Immo Padel Tour, a sort of padel championship for real estate professionals.It is said that he had a real revelation after attending the Brussels Open in April 2022.  After discussions with potential partners, it was decided to extend the concept to all business sectors, resulting in the Business Padel Tour.Launched in March 2023, the Business Padel Tour finally attracted 80 teams over 3 sessions (Brussels, Liège and Nivelles) + the final in Knokke, which can clearly be described as a success for a first edition, launched virtually without marketing and with a very small team.At the beginning of 2024, Vertuoza, freshly elected scale-up company of the year, decided to associate its name with this competition, hence the evolution to the Vertuoza Padel Tour.  The number of sessions has risen to 5, with Antwerp and Waterloo in addition to Brussels, Liège and Nivelles.  For its part, the Arenal group, which operates a dozen padel clubs in Flanders, launched its Vandelanotte Business Cup, a concept very similar to the Vertuoza Padel Tour, which brought together nearly 60 teams in Flanders.The two organizations have just signed a strategic agreement to join forces under the Vertuoza Padel Tour banner, with a single objective: to become the biggest inter-company padel competition in Belgium.")!!}</p>
+        <h2 class="text-pretty font-bold text-xl pt-10">{{__("The Vertuoza Padel Tour in 2025 means")}}</h2>
+        <ul role="list" class="mt-6 text-sm leading-7 text-gray-600">
+            <li>
+             - {{__("12 sessions in Belgium, in 12 different clubs")}}
+            </li>
+            <li>
+             - {{__("1 session in Tenerife (Spain)")}}
+            </li>
+            <li>
+             - {{__("A target of 400 companies")}}
+            </li>
+            <li>
+             - {{__("An expanded team")}}
+            </li>
+            <li>
+             - {{__("New partners and new resources")}}
+            </li>
+          </ul>
       </div>
       <ul role="list" class="-mt-12 space-y-12 divide-y divide-gray-200 xl:col-span-3">
         <li class="flex flex-col gap-10 pt-12 sm:flex-row">
