@@ -8,6 +8,7 @@
           <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           
             <div class="text-center">
+              <h2 class="fadinAnimation opacity-0 text-balance text-2xl font-bold tracking-tight text-white sm:text-4xl pb-3">Vertuoza, Arenal, Immovlan</h2>
               <h1 class="fadinAnimation opacity-0 text-balance text-4xl font-bold tracking-tight text-white sm:text-6xl">{{__('home.h1')}}</h1>
               <p class="fadinAnimation opacity-0 mt-6 text-lg leading-8 text-gray-300 px-6">{{__('All you need to know about the 2025 season of the Vertuoza Padel Tour?')}}</p>
               <p class="fadinAnimation opacity-0 mt-6 text-lg leading-8 text-gray-300 px-6">{{__("We're organizing 2 information sessions on November 8 in Bruges and November 13 in Brussels, during which we'll be unveiling the concept, the full program and the new features in the company of our partners.")}}</p>
