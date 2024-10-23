@@ -1,6 +1,7 @@
 <?php
 
 use App\Jobs\CampaignJob;
+use App\Jobs\WelcomeEvent2025Job;
 use Illuminate\Foundation\Inspiring;
 use Illuminate\Support\Facades\Artisan;
 
@@ -18,3 +19,7 @@ use Illuminate\Support\Facades\Artisan;
 Artisan::command('campaign', function () {
     CampaignJob::dispatch()->onQueue('default');
 })->purpose('campaignJob');
+
+Artisan::command('welcome-event', function () {
+    WelcomeEvent2025Job::dispatch()->onQueue('default');
+})->purpose('welcome-event');

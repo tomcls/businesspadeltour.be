@@ -34,7 +34,10 @@ class WelcomeEvent2025Job implements ShouldQueue
         $mailchimp = new \MailchimpTransactional\ApiClient();
         $mailchimp->setApiKey(env('MAILCHIMP_APIKEY'));
         $cpt =0;
-        $users = User::get();
+       // $users = User::get();
+        $users = User::where('email', '=', 'tomclassius@gmail.com')->get();
+
+        logger($users);
         foreach ($users as $key => $user) {
             // player one
             $template_content = array(
