@@ -13,7 +13,7 @@
               <p class="fadinAnimation opacity-0 mt-6 text-lg leading-8 text-gray-300 px-6">{{__('All you need to know about the 2025 season of the Vertuoza Padel Tour?')}}</p>
               <p class="fadinAnimation opacity-0 mt-6 text-lg leading-8 text-gray-300 px-6">{{__("We're organizing 2 information sessions on November 8 in Bruges and November 13 in Brussels, during which we'll be unveiling the concept, the full program and the new features in the company of our partners.")}}</p>
               <div class="mt-10 flex items-center justify-center gap-x-6">
-                <a href="{{url('/').'/'.App::currentLocale().'/welcome-event'}}" class="fadinAnimation opacity-0 inline-block rounded-full border-blue-500 border bg-transparent px-3.5 py-3 text-center text-base font-semibold text-blue-400 shadow-sm hover:bg-blue-900 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-800">
+                <a href="{{url('/').'/'.App::currentLocale().'/welcome-event'}}" class="fadinAnimation opacity-0 inline-block rounded-full border-blue-500 border  px-3.5 py-3 text-center text-base font-semibold bg-blue-900 text-white hover:text-blue-400 hover:bg-transparent shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-800">
                   {{__("I'd like to register")}}
                   <x-icon.right class="h-4"/>
                 </a>
