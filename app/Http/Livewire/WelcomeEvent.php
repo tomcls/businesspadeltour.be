@@ -191,7 +191,12 @@ class WelcomeEvent extends Component
         } else {
             
             // player one
-            $template_content = array();
+            $template_content = array(
+                array(
+                    'name' => 'event_name',
+                    'content' => $event->name
+                ),
+            );
             $to = [];
             array_push($to, [
                 "email" =>  $user->email,

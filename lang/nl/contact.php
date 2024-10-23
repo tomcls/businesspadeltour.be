@@ -9,7 +9,7 @@ return [
     'lastname' => 'Naam',
     'phone' => 'Telefoon',
     'companyname' => 'Bedrijfsnaam',
-    'companyvat' => 'BTW-nummer',
+    'companyvat' => 'BTW nummer',
     'signup' => 'registreren',
     'success'=>'Dank u!',
     'successTeaser'=>'We houden je op de hoogte via e-mail',

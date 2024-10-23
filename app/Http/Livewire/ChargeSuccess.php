@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Event;
 use App\Models\EventUser;
 use App\Models\Invoice;
 use Illuminate\Http\Request;
@@ -32,10 +33,16 @@ class ChargeSuccess extends Component
                 $mailchimp = new \MailchimpTransactional\ApiClient();
                 $mailchimp->setApiKey(env('MAILCHIMP_APIKEY'));
                 // player one
+                $event = Event::whereId($this->eventUser->event_id)->first();
+                
                 $template_content = array(
                     array(
                         'name' => 'url',
                         'content' => route('invoice',['id'=>$this->invoice->id,'t'=>$this->invoice->intent])
+                    ),
+                    array(
+                        'name' => 'event_name',
+                        'content' => $event->name
                     ));
                 $to = [];
                 array_push($to,[

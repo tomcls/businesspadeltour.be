@@ -35,7 +35,7 @@ class WelcomeEvent2025Job implements ShouldQueue
         $mailchimp->setApiKey(env('MAILCHIMP_APIKEY'));
         $cpt =0;
        // $users = User::get();
-        $users = User::where('email', '=', 'tomclassius@gmail.com')->get();
+        $users = User::whereLang('fr')->get();
 
         logger($users);
         foreach ($users as $key => $user) {
@@ -56,7 +56,7 @@ class WelcomeEvent2025Job implements ShouldQueue
             $message = [
                 "from_email" => "info@businesspadeltour.be",
                 'from_name'  => 'Vertuoza padel tour',
-                "subject" => 'Le Vertuoza Padel Tour 2024 à rendu son verdict.',
+                "subject" => 'Vertuoza Padel Tour 2025, demandez le programme!',
                 "to" => $to,
                 "headers" => ["Reply-To" => "info@businesspadeltour.be"],
                 'global_merge_vars' => $template_content

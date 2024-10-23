@@ -3,7 +3,7 @@
 return [
 
     "title" => "Inschrijving voor een sessie",
-    "teaser" => "Inschrijving is: ",
+    "teaser" => "Inschrijvingsprijs per sessie: ",
     'teaser250' => '- 250 Eur excl. BTW per team per sessie',
     'teaser215' => '- 215 Eur excl. BTW per team voor 5 sessies of meer',
     'teaser195' => '- 195 Eur excl. BTW per team voor 10 sessies of meer',
@@ -13,7 +13,7 @@ return [
     "lastname" => "Naam",
     'phone' => 'Telefoon',
     "companyname" => "Naam van uw bedrijf",
-    "companyvat" => "BTW-nummer",
+    "companyvat" => "BTW nummer",
     "select" => "Selecteer een sessie",
     "signup" => "Registreer",
     "success" => "Bedankt voor uw registratie",
@@ -44,7 +44,7 @@ return [
     "city" => "Stad",
     "zipPlaceholder" => "ex: 1000",
     "cityPlaceholder" => "ex: Brussel",
-    "promo" => "Promotie code",
+    "promo" => "Promotiecode",
     "Player" => "Speler",
     "Session" => "Sessie",
     "Place" => "Plaats",

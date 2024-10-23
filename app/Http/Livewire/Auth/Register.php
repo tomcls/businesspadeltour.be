@@ -33,14 +33,15 @@ class Register extends Component
             'company.email' => 'required|email',
             'company.phone' => 'required',
             'company.address' => 'required',
-            'company.zip' => 'required',
+            'company.zip' => 'required|max:4',
             'company.city' => 'required',
         ];
     }
     public function mount()
     {
-        $this->sessions = Session::where('startdate', '>=', '2025-01-01')->get();
+        $this->sessions = Session::where('startdate', '>=', '2025-01-01')->orderBy('startdate','asc')->get();
         $this->company['vat'] = 'BE 0';
+        logger('aaaa');
     }
 
     public function onTotalTeamChanged($total)
@@ -58,7 +59,6 @@ class Register extends Component
        
         $this->totalTeamsValidated[$team['number']] = $team;
         if (count($this->totalTeamsValidated) == $this->totalTeam) {
-            logger('onTeamValidated' . $this->totalTeam);
             // $this->saved = true;
             $company = new Company();
             $company->firstname = $this->company['firstname'];
@@ -66,19 +66,22 @@ class Register extends Component
             $company->name = $this->company['name'];
             $company->vat = $this->company['vat'];
             $company->email = $this->company['email'];
-            $company->address = $this->company['address'].", ".$this->company['zip']." ".$this->company['city'];
+            $company->address = $this->company['address'].", ".$this->company['city'];
             $company->phone = $this->company['phone'];
+            $company->zip = $this->company['zip'];
             try {
                 $company->save();
             } catch (\Throwable $th) {
+                logger($th->getMessage());
                 $company = Company::whereEmail($this->company['email'])->first();
                 $company->firstname = $this->company['firstname'];
                 $company->lastname = $this->company['lastname'];
                 $company->name = $this->company['name'];
                 $company->vat = $this->company['vat'];
                 $company->email = $this->company['email'];
-                $company->address = $this->company['address'];
+                $company->address = $this->company['address'].", ".$this->company['city'];
                 $company->phone = $this->company['phone'];
+                $company->zip = $this->company['zip'];
                 $company->update();
             }   
             $user = new User();
@@ -88,6 +91,7 @@ class Register extends Component
             $user->phone = $this->company['phone'];
             $user->lang = App::currentLocale();
             $user->password =  Hash::make('PadelUser4ever$');
+            $user->company_id = $company->id;
 
             try {
                 $user->save();

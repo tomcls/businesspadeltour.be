@@ -32,6 +32,8 @@ class Upload extends Component
             $this->invoice = Invoice::whereId($request['iid'])->first();
             $this->user = User::whereId($this->invoice->user_id)->first();
             $this->company = Company::whereId($this->user->company_id)->first();
+            logger('zzzzz');
+            logger($this->user);
         }
     }
 
@@ -40,7 +42,6 @@ class Upload extends Component
         if ($this->upload) {
            
             $destPathLogo = storage_path('app/logos');
-            logger($destPathLogo);
             $this->notify(['message' => 'Start processing documents(s)... please wait', 'type' => 'alert']);
             try {
                 File::makeDirectory($destPathLogo, 0777, false, false);
@@ -54,8 +55,6 @@ class Upload extends Component
             }
             
             $this->notify(['message' => 'Start processing image(s)... please wait', 'type' => 'alert']);
-            logger('logos/' . $this->company->id);
-            logger($this->upload->getClientOriginalName());
             $this->upload->storeAs('logos/' . $this->company->id, $this->upload->getClientOriginalName());
 
             Logo::create([

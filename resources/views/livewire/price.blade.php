@@ -23,11 +23,11 @@
                 <div class="text-5xl font-medium text-gray-950">250</div>
                 <div class="text-sm/5 text-gray-600">
                   <p>EUR</p>
-                  <p>HTVA</p>
+                  <p>{{__('ex VAT')}}</p>
                 </div>
               </div>
               <div class="mt-8">
-                <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}"  class="inline-block rounded-md bg-blue-800 px-3.5 py-2 text-center text-sm/6 font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-800">{{__("I'd like to register")}}</a>
+                <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}"  class="inline-block rounded-md bg-blue-800 px-3.5 py-2 text-center text-sm/6 font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-800">{{__("Start your padel adventure now!")}}</a>
               </div>
               <div class="mt-8">
                 <h3 class="text-sm/6 font-medium text-gray-950">{{__('This price includes')}}:</h3>
@@ -100,11 +100,11 @@
                 <div class="text-5xl font-medium text-gray-950">215</div>
                 <div class="text-sm/5 text-gray-600">
                   <p>EUR</p>
-                  <p>HTVA</p>
+                  <p>{{__('ex VAT')}}</p>
                 </div>
               </div>
               <div class="mt-8">
-                <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}"  class="inline-block rounded-md bg-blue-800 px-3.5 py-2 text-center text-sm/6 font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-800">{{__("I'd like to register")}}</a>
+                <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}"  class="inline-block rounded-md bg-blue-800 px-3.5 py-2 text-center text-sm/6 font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-800">{{__("Start your padel adventure now!")}}</a>
               </div>
               <div class="mt-8">
                 <h3 class="text-sm/6 font-medium text-gray-950">{{__('This price includes')}}:</h3>
@@ -177,11 +177,11 @@
                 <div class="text-5xl font-medium text-gray-950">195</div>
                 <div class="text-sm/5 text-gray-600">
                   <p>EUR</p>
-                  <p>HTVA</p>
+                  <p>{{__('ex VAT')}}</p>
                 </div>
               </div>
               <div class="mt-8">
-                <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}"  class="fadinAnimation opacity-0 inline-block rounded-md bg-blue-800 px-3.5 py-2 text-center text-sm/6 font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-800">{{__("I'd like to register")}}</a>
+                <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}"  class="fadinAnimation opacity-0 inline-block rounded-md bg-blue-800 px-3.5 py-2 text-center text-sm/6 font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-800">{{__("Start your padel adventure now!")}}</a>
               </div>
               <div class="mt-8">
                 <h3 class="text-sm/6 font-medium text-gray-950">{{__('This price includes')}}:</h3>

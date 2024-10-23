@@ -180,7 +180,7 @@
                <div class="flex flex-col">
                  <div class="flex justify-between"  >
                    <!-- Selected: "font-semibold", Not Selected: "font-normal" -->
-                   <p class="font-normal text-xs"><b>FUN: </b>{{__('le classement total de l’équipe ne dépasse pas P200')}}</p>
+                   <p class="font-normal text-xs"><b>FUN: </b>{{__('total team ranking does not exceed P200')}}</p>
                    <!--
                      Checkmark, only display for selected option.
        
@@ -216,7 +216,7 @@
               <div class="flex flex-col">
                 <div class="flex justify-between"  >
                   <!-- Selected: "font-semibold", Not Selected: "font-normal" -->
-                  <p class="font-normal text-xs"><b>Expert: </b>{{__('le classement total de l’équipe dépasse P600')}}</p>
+                  <p class="font-normal text-xs"><b>Expert: </b>{{__('total team ranking exceeds P600')}}</p>
                   <!--
                     Checkmark, only display for selected option.
       

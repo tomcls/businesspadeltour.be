@@ -39,7 +39,7 @@
      </x-table>
      <div class="text-center">
         <a href="{{url('/').'/'.App::currentLocale().'/charge?iid='.$invoice->id}}" class="text-blue-800 font-bold text-sm">{{__("I don't have the logo yet, I skip this step")}}</a>
-        <a href="{{url('/').'/'.App::currentLocale().'/charge?iid='.$invoice->id}}" class="inline-block rounded-md bg-blue-800 px-3.5 py-2 text-center text-sm/6 font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-800">{{__("Continuer")}}</a>
+        <a href="{{url('/').'/'.App::currentLocale().'/charge?iid='.$invoice->id}}" class="inline-block rounded-md bg-blue-800 px-3.5 py-2 text-center text-sm/6 font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-800">{{__("Continue")}}</a>
      </div>
  </div>
  </div>

@@ -87,7 +87,7 @@
     "Each session runs from +/- 1pm to 6pm.  The schedule may vary according to the number of participants and the number of available pitches. A detailed schedule will be provided to each participating team a few days before the session for which they are registered.":"Chaque session est prévue de +/- 13h à 18h.  Le planning peut varier en fonction du nombre de participants et du nombre de terrains disponible. Un horaire détaillé sera fourni à chaque équipe participante quelques jours avant la session pour laquelle elle est inscrite.",
     "When":"Quand",
     "Place":"Lieu",
-    "Friday":"Vendredi",
+    "Friday":"vendredi",
     "find out more about this session":"en savoir plus sur cette session",
     "From 2/4/2025 to 6/4/2025":"Du 2/4/2025 au 6/4/2025",
     "Arenal Antwerp":"Arenal Anvers",
@@ -152,5 +152,9 @@
     "His quality: an excellent business developer, especially in Flanders":"Sa qualité : excellent développeur de business, surtout en Flandre",
     "Downside: does his job too well in Flanders, giving the founder and his excellent right-hand man extra work on their bread and butter":"Son défaut : développe trop de business en Flandre, ça donne du travail en plus au fondateur et à son excellent bras droit.",
     "His motto: “We are doing well with bizdev in Flanders.”":"Sa maxime : « we zijn goed bezig met bizdev in Vlaanderen »",
-    "Confirm":"Confirmer"
+    "Confirm":"Confirmer",
+    "ex VAT" : "HTVA",
+    "Start your padel adventure now!":"Commencez votre aventure padel dès maintenant !",
+    "Continue":"Continuer",
+    "Photos":"Photos"
 }

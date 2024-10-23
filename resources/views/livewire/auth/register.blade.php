@@ -245,12 +245,12 @@
                   @livewire('team', ['teamNumber' => $i+1, 'sessions' => $sessions], key('team'.$i+1))
                 @endfor
               </div>
-              <div class="flex-1 w-full pt-3">
+              {{-- <div class="flex-1 w-full pt-3">
                 <p class="text-slate-700 text-sm">{!!__('signup.funTeaser')!!}</p>
               </div>
               <div class="flex-1 w-full pt-3">
                 <p class="text-slate-700 text-sm">{!!__('signup.expertTeaser')!!}</p>
-              </div>
+              </div> --}}
               <div class="flex-1 w-full pt-3">
                 <p class="text-slate-700 text-sm">{!!__('signup.levelTeaser')!!}</p>
               </div>

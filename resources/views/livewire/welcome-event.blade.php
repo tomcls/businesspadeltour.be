@@ -18,19 +18,19 @@
         <h2 class="pb-3 animate-fadein color-dark-blue text-pretty  font-medium tracking-tight text-4xl sm:text-xl">{{__('Two kick-off sessions are planned')}}</h2>
         <p class="mt-1 text-sm leading-6 color-dark-blue py-4 font-semibold">{{__('Arenal Bruges program - November 8')}}</p>
         <ul class="mt-1 text-sm leading-6 text-gray-600 space-y-3">
-            <li><x-icon.right class="w-3 h-3 text-blue-600" />17h00: {{__('Welcoming participants')}}</li>
-            <li><x-icon.right class="w-3 h-3 text-blue-600" />17h15: {{__('Introducing the Vertuoza Padel Tour 2025')}}</li>
-            <li><x-icon.right class="w-3 h-3 text-blue-600" />17h45: {{__('Tournament briefing')}}</li>
-            <li><x-icon.right class="w-3 h-3 text-blue-600" />18h00: {{__('Start of tournament')}}</li>
-            <li><x-icon.right class="w-3 h-3 text-blue-600" />22h00: {{__('End of tournament and closing drink')}}</li>
+            <li><x-icon.right class="w-3 h-3 text-blue-600" />17:00: {{__('Welcoming participants')}}</li>
+            <li><x-icon.right class="w-3 h-3 text-blue-600" />17:15: {{__('Introducing the Vertuoza Padel Tour 2025')}}</li>
+            <li><x-icon.right class="w-3 h-3 text-blue-600" />17:45: {{__('Tournament briefing')}}</li>
+            <li><x-icon.right class="w-3 h-3 text-blue-600" />18:00: {{__('Start of tournament')}}</li>
+            <li><x-icon.right class="w-3 h-3 text-blue-600" />22:00: {{__('End of tournament and closing drink')}}</li>
         </ul>
         <p class="mt-1 text-sm leading-6 color-dark-blue py-4 font-semibold">{{__('Tero Waterloo program - November 13')}}</p>
         <ul class="mt-1 text-sm leading-6 text-gray-600 space-y-3">
-            <li><x-icon.right class="w-3 h-3 text-blue-600" />13h00: {{__('Welcoming participants')}}</li>
-            <li><x-icon.right class="w-3 h-3 text-blue-600" />13h15: {{__('Introducing the Vertuoza Padel Tour 2025')}}</li>
-            <li><x-icon.right class="w-3 h-3 text-blue-600" />13h45: {{__('Tournament briefing')}}</li>
-            <li><x-icon.right class="w-3 h-3 text-blue-600" />14h00: {{__('Start of tournament')}}</li>
-            <li><x-icon.right class="w-3 h-3 text-blue-600" />17h30: {{__('End of tournament and closing drink')}}</li>
+            <li><x-icon.right class="w-3 h-3 text-blue-600" />12:30: {{__('Welcoming participants')}}</li>
+            <li><x-icon.right class="w-3 h-3 text-blue-600" />13:15: {{__('Introducing the Vertuoza Padel Tour 2025')}}</li>
+            <li><x-icon.right class="w-3 h-3 text-blue-600" />13:45: {{__('Tournament briefing')}}</li>
+            <li><x-icon.right class="w-3 h-3 text-blue-600" />14:00: {{__('Start of tournament')}}</li>
+            <li><x-icon.right class="w-3 h-3 text-blue-600" />17:30: {{__('End of tournament and closing drink')}}</li>
         </ul>
       </div>
       <form class="bg-white max-w-2xl shadow-sm ring-1 ring-gray-900/5 sm:rounded-xl md:col-span-2" wire:submit.prevent="validateCompany"  >
@@ -112,18 +112,7 @@
                 </div>
                 <div class="ml-3 text-sm leading-6">
                   <label for="event" class="font-medium text-gray-900">{{__('I would like to take part in the event at Arenal but I do not wish to take part in the padel tournament.')}}</label>
-                  <p id="event-description" class="text-gray-500">{{__('Arenal Bruge, November 8 from 17.00')}}</p>
-                </div>
-              </div>
-        </div>
-        <div class="sm:col-span-full">
-            <div class="relative flex items-start">
-                <div class="flex h-6 items-center">
-                  <input  id="padel-event-1" aria-describedby="padel-event-1-description" name="event" wire:model="eventId" value='2' type="radio" class="h-4 w-4 rounded-full border-gray-300 text-blue-600 focus:ring-blue-600">
-                </div>
-                <div class="ml-3 text-sm leading-6">
-                  <label for="padel-event-1" class="font-medium text-gray-900">{{__('I would like to take part in the event at the Tero but I do not wish to take part in the padel tournament.')}}</label>
-                  <p id="padel-event-1-description" class="text-gray-500">{{__('Tero Waterloo, November 13 from 13.00')}}</p>
+                  <p id="event-description" class="text-gray-500">{!!__('Arenal Bruge, November 8 from 17.00')!!}</p>
                 </div>
               </div>
         </div>
@@ -134,7 +123,18 @@
                 </div>
                 <div class="ml-3 text-sm leading-6">
                   <label for="drink-event-2" class="font-medium text-gray-900">{{__('I would like to take part in the Arenal event and the padel tournament')}}</label>
-                  <p id="drink-event-2-description" class="text-gray-500">{{__('Arenal Bruge, November 8 from 17.00')}}</p>
+                  <p id="drink-event-2-description" class="text-gray-500">{!!__('Arenal Bruge, November 8 from 17.00')!!}</p>
+                </div>
+              </div>
+        </div>
+        <div class="sm:col-span-full">
+            <div class="relative flex items-start">
+                <div class="flex h-6 items-center">
+                  <input  id="padel-event-1" aria-describedby="padel-event-1-description" name="event" wire:model="eventId" value='2' type="radio" class="h-4 w-4 rounded-full border-gray-300 text-blue-600 focus:ring-blue-600">
+                </div>
+                <div class="ml-3 text-sm leading-6">
+                  <label for="padel-event-1" class="font-medium text-gray-900">{{__('I would like to take part in the event at the Tero but I do not wish to take part in the padel tournament.')}}</label>
+                  <p id="padel-event-1-description" class="text-gray-500">{!!__('Tero Waterloo, November 13 from 13.00')!!}</p>
                 </div>
               </div>
         </div>
@@ -145,7 +145,7 @@
                 </div>
                 <div class="ml-3 text-sm leading-6">
                   <label for="padel-event-2" class="font-medium text-gray-900">{{__('I would like to take part in the Tero event and the padel tournament')}}</label>
-                  <p id="padel-event-2-description" class="text-gray-500">{{__('Tero Waterloo, November 13 from 13.00')}}</p>
+                  <p id="padel-event-2-description" class="text-gray-500">{!!__('Tero Waterloo, November 13 from 13.00')!!}</p>
                 </div>
               </div>
         </div>

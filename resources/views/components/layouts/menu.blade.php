@@ -119,7 +119,7 @@
           <div x-data="{ isOpen: false }" class="relative" >
             <!-- Item active: "text-gray-900", Item inactive: "color-dark-blue" -->
             <button @click="isOpen = !isOpen" type="button" class="color-dark-blue group inline-flex items-center rounded-md text-base font-medium hover:text-gray-900 focus:outline-none   focus:ring-offset-2" aria-expanded="false">
-              <span>Photos</span>
+              <span>{{__('Photos')}}</span>
               <!--
                 Heroicon name: mini/chevron-down
   
@@ -170,7 +170,7 @@
           <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.articles')}}" class="text-base font-medium color-dark-blue hover:text-gray-900">{{__('menu.news')}}</a>
         </nav>
         <div class="hidden items-center justify-end md:flex md:flex-1 lg:w-0 ">
-          <a href="{{url('/').'/'.App::currentLocale().'/welcome-event'}}" class="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-full border border-transparent bg-dark-blue px-4 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-700">Kickoff 2025</a>
+          <a href="{{url('/').'/'.App::currentLocale().'/welcome-event'}}" class="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-full border border-transparent bg-dark-blue px-4 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-700">Kick-off 2025</a>
           <div x-data="{ isOpen: false }" class="relative ml-3">
             <!-- Item active: "text-gray-900", Item inactive: "color-dark-blue" -->
             <button @click="isOpen = !isOpen" type="button" class="color-dark-blue group inline-flex items-center rounded-md  text-base font-medium hover:text-gray-900 focus:outline-none   focus:ring-offset-2" aria-expanded="false">
@@ -288,7 +288,7 @@
                 <svg class="h-6 w-6 flex-shrink-0 color-dark-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"></path>
                 </svg>
-                <span class="ml-3 text-base font-medium text-gray-900">Photos</span>
+                <span class="ml-3 text-base font-medium text-gray-900">{{__('Photos')}}</span>
               </a>
               <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.articles')}}" x-on:click="isMobileNavOpen=false" class="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50">
                 <svg class="h-6 w-6 flex-shrink-0 color-dark-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">

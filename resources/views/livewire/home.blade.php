@@ -8,10 +8,14 @@
           <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           
             <div class="text-center">
-              <h2 class="fadinAnimation opacity-0 text-balance text-2xl font-bold tracking-tight text-white sm:text-4xl pb-3">Vertuoza + Arenal + Immovlan <x-icon.bars2 class="h-7" /> </h2>
+              <div class="flex flex-row content-center justify-center">
+                <div class="fadinAnimation opacity-0 text-balance text-2xl font-bold tracking-tight text-white sm:text-4xl pb-3">Vertuoza + Arenal + Immovlan </div>  
+                <div class=" fadinAnimation opacity-0 text-balance text-2xl font-bold tracking-tight text-white sm:text-4xl pt-1 pl-1">=</div>
+              </div>
+              
               <h1 class="fadinAnimation opacity-0 text-balance text-4xl font-bold tracking-tight text-white sm:text-6xl">{{__('home.h1')}}</h1>
               <p class="fadinAnimation opacity-0 mt-6 text-lg leading-8 text-gray-300 px-6">{{__('All you need to know about the 2025 season of the Vertuoza Padel Tour?')}}</p>
-              <p class="fadinAnimation opacity-0 mt-6 text-lg leading-8 text-gray-300 px-6">{{__("We're organizing 2 information sessions on November 8 in Bruges and November 13 in Brussels, during which we'll be unveiling the concept, the full program and the new features in the company of our partners.")}}</p>
+              <p class="fadinAnimation opacity-0 mt-6 text-lg leading-8 text-gray-300 px-6">{!!__("We're organizing 2 information sessions on November 8 in Bruges and November 13 in Brussels, during which we'll be unveiling the concept, the full program and the new features in the company of our partners.")!!}</p>
               <div class="mt-10 flex items-center justify-center gap-x-6">
                 <a href="{{url('/').'/'.App::currentLocale().'/welcome-event'}}" class="fadinAnimation opacity-0 inline-block rounded-full border-blue-500 border  px-3.5 py-3 text-center text-base font-semibold bg-blue-900 text-white hover:text-blue-400 hover:bg-transparent shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-800">
                   {{__("I'd like to register")}}
@@ -62,16 +66,16 @@
           <div class="flex flex-1 items-center justify-center w-100 flex-row mt-10">
             <ul role="list" class="items-center justify-center inline-flex space-x-10">
               <li>
-                <a href="https://immo.vlan.be/fr"  target="_blank" > <img class="fadinAnimation opacity-0 mx-auto w-50 items-center justify-center mt-7" src="{{url('/').'/images/sponsors/immovlan_mauve.png'}}" alt=""></a>
-              </li>
-              <li>
                 <a href="https://www.vertuoza.com/"  target="_blank" > <img class="fadinAnimation opacity-0 mx-auto h-10 mt-4 " src="{{url('/').'/images/sponsors/Vertuoza-Logo.png'}}" alt=""></a>
               </li>
               <li>
-                <a href="https://wilmeyer.com/"  target="_blank" > <img class="fadinAnimation opacity-0 mx-auto w-50 items-center justify-center mt-7" src="{{url('/').'/images/sponsors/wilmeyer.png'}}" alt=""></a>
+                <a href="https://brugge.arenal.be/" target="_blank"  ><img class="fadinAnimation opacity-0 mx-auto items-center justify-center mt-7 w-40 h-20" src="https://brugge.arenal.be/themes/custom/arenal/logo-new.svg" alt=""></a>
               </li>
               <li>
-                <a href="https://brugge.arenal.be/" target="_blank"  ><img class="fadinAnimation opacity-0 mx-auto items-center justify-center mt-7 w-40 h-20" src="https://brugge.arenal.be/themes/custom/arenal/logo-new.svg" alt=""></a>
+                <a href="https://immo.vlan.be/fr"  target="_blank" > <img class="fadinAnimation opacity-0 mx-auto w-50 items-center justify-center mt-7" src="{{url('/').'/images/sponsors/immovlan_mauve.png'}}" alt=""></a>
+              </li>
+              <li>
+                <a href="https://wilmeyer.com/"  target="_blank" > <img class="fadinAnimation opacity-0 mx-auto w-50 items-center justify-center mt-7" src="{{url('/').'/images/sponsors/wilmeyer.png'}}" alt=""></a>
               </li>
               <li>
                 <a href="https://santospalaceshop.be/bruxelles/" target="_blank"  ><img class="fadinAnimation opacity-0 mx-auto  max-h-20 items-center justify-center mt-7" src="{{url('/').'/images/sponsors/santos.png'}}" alt=""></a>
@@ -104,7 +108,7 @@
           <div class="w-full flex-auto">
             <div class="lg:max-w-lg">
               <p class="mt-2 fadinAnimation opacity-0 text-pretty  font-medium tracking-tight text-4xl sm:text-6xl color-light-blue ">{{__('How does it work?')}}</p>
-              <p class="mt-6 text-lg leading-8 text-gray-900">{{__('The Vertuoza Padel Tour is open to all, but each team must be registered in the name of a company, association or organization.')}}</p>
+              <p class="mt-6 text-lg leading-8 text-gray-900">{!!__('The Vertuoza Padel Tour is open to all, but each team must be registered in the name of a company, association or organization.')!!}</p>
               <dl class="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-900 lg:max-w-none">
                 <div class="relative pl-9">
                   <dt class="inline font-semibold text-gray-400">
@@ -141,7 +145,7 @@
                       <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                     </svg>
                   </dt>
-                  <dd class="inline">{{__('We ask participants to take their actual level into account to ensure fairness.  An unclassified player with a P300 level should register for Advanced rather than Fun. ')}}</dd>
+                  <dd class="inline">{!!__('We ask participants to take their actual level into account to ensure fairness.  An unclassified player with a P300 level should register for Advanced rather than Fun. ')!!}</dd>
                 </div>
                 <div class="relative pl-9 fadinAnimation opacity-0">
                   <dt class="inline font-semibold text-gray-400">
@@ -343,11 +347,11 @@
                       <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                     </svg>
                   </div>
-                  <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}"  target="blank" class="color-dark-blue"> {{__('Arenal Grimbergen')}}</a>
+                  <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}"  target="blank" class="color-dark-blue"> {{__('Tero Waterloo')}}</a>
                 </dt>
                 <dd class="mt-0 text-base leading-7 text-gray-600">
-                  <b class="text-sm"> {{__('When')}}: </b> <span class="text-sm">{{__('Friday')}} {{__('23/5/2025')}}</span><br/>
-                  <b class="text-sm">{{__('Place')}}: </b> <span class="text-sm">{{__('Antwerpselaan 1, 1853 Grimbergen')}}</span> <br/><br/>
+                  <b class="text-sm"> {{__('When')}}: </b> <span class="text-sm">{{__('Friday')}} {{__('16/5/2025')}}</span><br/>
+                  <b class="text-sm">{{__('Place')}}: </b> <span class="text-sm">{{__('chaussée de Tervuren 389 – 1410 Waterloo')}}</span> <br/><br/>
                 </dd>
               </div>
               <div class="relative pl-10">
@@ -357,11 +361,11 @@
                       <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                     </svg>
                   </div>
-                  <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}"  target="blank" class="color-dark-blue"> {{__('Tero Waterloo')}}</a>
+                  <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}"  target="blank" class="color-dark-blue"> {{__('Arenal Grimbergen')}}</a>
                 </dt>
                 <dd class="mt-0 text-base leading-7 text-gray-600">
-                  <b class="text-sm"> {{__('When')}}: </b> <span class="text-sm">{{__('Friday')}} {{__('16/5/2025')}}</span><br/>
-                  <b class="text-sm">{{__('Place')}}: </b> <span class="text-sm">{{__('chaussée de Tervuren 389 – 1410 Waterloo')}}</span> <br/><br/>
+                  <b class="text-sm"> {{__('When')}}: </b> <span class="text-sm">{{__('Friday')}} {{__('23/5/2025')}}</span><br/>
+                  <b class="text-sm">{{__('Place')}}: </b> <span class="text-sm">{{__('Antwerpselaan 1, 1853 Grimbergen')}}</span> <br/><br/>
                 </dd>
               </div>
               <div class="relative pl-10">
