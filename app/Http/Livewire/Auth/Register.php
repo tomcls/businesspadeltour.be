@@ -129,7 +129,7 @@ class Register extends Component
                 if($this->promo == "antwerp1705") {
                     $price = 0 * $this->totalTeam;
                 }
-                if(Carbon::now()->lte(Carbon::create(2024,12,31,23,59,59)) ){
+                if(strtolower($this->promo) == strtolower("EARLYBIRD") ){
                     $price = $price - ($price/100*10);
                 }
 
@@ -194,6 +194,9 @@ class Register extends Component
                         $content .="<br/><b>".__('signup.Price')." Promo code ".$this->promo."</b>: ".$price." € + TVA";
                     }
                     if(strtolower($this->promo) == strtolower("antwerp1705")) {
+                        $content .="<br/><b>".__('signup.Price')." Promo code ".$this->promo."</b>: ".$price." € + TVA";
+                    }
+                    if(strtolower($this->promo) == strtolower("EARLYBIRD")) {
                         $content .="<br/><b>".__('signup.Price')." Promo code ".$this->promo."</b>: ".$price." € + TVA";
                     }
 
