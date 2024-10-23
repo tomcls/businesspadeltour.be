@@ -43,7 +43,7 @@ class WelcomeEvent2025Job implements ShouldQueue
             $template_content = array(
                 array(
                     'name' => 'url',
-                    'content' => route('welcome.event',['id'=>$user->id,'token'=>Hash::make($user->email)])
+                    'content' => 'https://businesspadeltour.be/'.$user->lang.'/welcome-event?id='.$user->id
                 )
             );
             $to = [];
