@@ -476,7 +476,7 @@
                 <a href="https://brugge.arenal.be/" target="_blank"  ><img class="mx-auto items-center justify-center mt-7 h-28" src="https://brugge.arenal.be/themes/custom/arenal/logo-new.svg" alt=""></a>
               </li>
               <li>
-                <a href="https://immo.vlan.be/fr" target="_blank"  ><img class="mx-auto items-center justify-center mt-7 h-14" src="{{url('/').'/images/sponsors/immovlan_mauve.png'}}"  alt=""></a>
+                <a href="/" target="_blank"  ><img class="mx-auto items-center justify-center mt-7 h-28" src="https://itcl.s3.eu-west-1.amazonaws.com/businesspadeltour/bpt-logo.png"  alt=""></a>
               </li>
             </ul>
           </div>
