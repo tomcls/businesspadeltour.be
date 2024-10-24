@@ -61,12 +61,12 @@
         </div>
       </div> --}}
       <div class="bg-white pb-20 hidden sm:block" >
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-full px-6 lg:px-8">
           
           <div class="flex flex-1 items-center justify-center w-100 flex-row mt-10">
             <ul role="list" class="items-center justify-center inline-flex space-x-10">
               <li>
-                <a href="https://www.vertuoza.com/"  target="_blank" > <img class="fadinAnimation opacity-0 mx-auto h-10 mt-4 " src="{{url('/').'/images/sponsors/Vertuoza-Logo.png'}}" alt=""></a>
+                <a href="https://www.vertuoza.com/"  target="_blank" > <img class="fadinAnimation opacity-0 mx-auto h-8 mt-4 " src="{{url('/').'/images/sponsors/Vertuoza-Logo.png'}}" alt=""></a>
               </li>
               <li>
                 <a href="https://brugge.arenal.be/" target="_blank"  ><img class="fadinAnimation opacity-0 mx-auto items-center justify-center mt-7 w-40 h-20" src="https://brugge.arenal.be/themes/custom/arenal/logo-new.svg" alt=""></a>
@@ -82,6 +82,9 @@
               </li>
               <li>
                 <a href="https://www.cupra.be/fr" target="_blank"  ><img class="fadinAnimation opacity-0 mx-auto  max-h-24 items-center justify-center mt-7 h-44 w-72" src="https://www.cupra.be/images/logo.svg" alt=""></a>
+              </li>
+              <li>
+                <a href="https://www.vandelanotte.be/" target="_blank"  ><img class="fadinAnimation opacity-0 mx-auto  max-h-10 items-center justify-center mt-7 h-44" src="https://itcl.s3.eu-west-1.amazonaws.com/businesspadeltour/vandelanotte.png" alt=""></a>
               </li>
               <!-- More people... -->
             </ul>
@@ -488,7 +491,7 @@
             <h2 class="fadinAnimation opacity-0 text-pretty text-5xl font-medium tracking-tight  sm:text-6xl color-dark-blue pb-7">{{__('In partnership with')}}</h2>
           </div>
           <div class="flex flex-1 mt-10">
-            <ul role="list" class="sm:grid sm:grid-cols-4  sm:gap-4 sm:items-center justify-center  sm:border-t sm:border-gray-200 sm:py-5   sm:space-x-12 fadinAnimation opacity-0">
+            <ul role="list" class="sm:grid sm:grid-cols-5  sm:gap-4 sm:items-center justify-center  sm:border-t sm:border-gray-200 sm:py-5   sm:space-x-12 fadinAnimation opacity-0">
               <li>
                 <a href="https://wilmeyer.com/" target="_blank"  ><img class="mx-auto items-center justify-center mt-7" src="{{url('/').'/images/sponsors/wilmeyer.png'}}" alt=""></a>
               </li>
@@ -500,6 +503,9 @@
               </li>
               <li>
                 <a href="https://www.cupra.be/fr" target="_blank" ><img class="mx-auto items-center justify-center mt-7 h-44 w-72" src="https://www.cupra.be/images/logo.svg" alt=""></a>
+              </li>
+              <li>
+                <a href="https://www.vandelanotte.be/" target="_blank"  ><img class="mx-auto items-center justify-center mt-7 h-10" src="https://itcl.s3.eu-west-1.amazonaws.com/businesspadeltour/vandelanotte.png" alt=""></a>
               </li>
             </ul>
           </div>
