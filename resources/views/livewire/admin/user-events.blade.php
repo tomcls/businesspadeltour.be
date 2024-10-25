@@ -11,6 +11,7 @@
                 <x-table.heading >{{__('Event name')}}</x-table.heading>
                 <x-table.heading >{{__('Total teams')}}</x-table.heading>
                 <x-table.heading >{{__('Invoice')}}</x-table.heading>
+                <x-table.heading >{{__('Date')}}</x-table.heading>
             </x-slot>
     
             <x-slot name="body">
@@ -23,11 +24,15 @@
                         {{ $row->id }}
                     </x-table.cell>
                     <x-table.cell >
-                        <div class="text-xs">{{ $row->user->company->name ?? null }}</div> 
-                        <span class="text-xs">{{ $row->user->company->email ?? null }}</span> 
+                        @if (!empty($row->user->company->id))
+                            <div class="text-xs">{{$row->user->company->id.'# '. $row->user->company->name ?? null }}</div> 
+                            <span class="text-xs">{{ $row->user->company->email ?? null }}</span> 
+                        @else
+                            -
+                        @endif
                     </x-table.cell>
                     <x-table.cell >
-                       <div class="text-xs">{{ $row->user->email }}</div> 
+                       <div class="text-xs">{{ $row->user->id.'# '. $row->user->email }}</div> 
                        <span class="text-xs">{{ $row->user->firstname.' '.$row->user->lastname }}</span> 
                     </x-table.cell>
                     <x-table.cell class="cursor-pointer font-bold" >
@@ -50,6 +55,9 @@
                             @endif
                         @endif
                         
+                    </x-table.cell>
+                    <x-table.cell >
+                        {{ $row->created_at }}
                     </x-table.cell>
                 </x-table.row>
                 @empty

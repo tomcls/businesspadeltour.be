@@ -104,8 +104,8 @@ class Login extends Component
 
         ]);
         auth()->login($user);
-        $this->notify(['message' => __('Thanks for signing in and welcome on Vacancesweb'), 'type' => 'success']);
-        $this->message = __('Thanks for signing in and welcome on Vacancesweb');
+        $this->notify(['message' => __('Thanks for signing in and welcome on Business padel tour'), 'type' => 'success']);
+        $this->message = __('Thanks for signing in and welcome on Business padel tour');
         $this->emit('onWelcome');
     }
     public function welcome()
