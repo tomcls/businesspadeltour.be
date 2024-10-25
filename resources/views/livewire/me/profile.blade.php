@@ -71,9 +71,9 @@
             <x-input.checkbox wire:model="withVat"   id="withVat"/> 
             <div class="text-base font-medium text-gray-600  "> {{__('With a company')}}</div>
         </div>
-        @if ($withVat)
+        {{-- @if ($withVat)
             @livewire('me.company', ['user' => auth()->user()], key('company'))
-        @endif
+        @endif --}}
 
         <div class="mt-8 border-t border-gray-200 pt-5">
             <div class="space-x-3 flex justify-end items-center">

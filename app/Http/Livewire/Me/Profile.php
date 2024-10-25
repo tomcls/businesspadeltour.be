@@ -6,6 +6,7 @@ use App\Models\Company;
 use App\Models\User;
 use Livewire\Component;
 use Livewire\WithFileUploads;
+use Illuminate\Support\Facades\Hash;
 
 class Profile extends Component
 {
@@ -70,7 +71,7 @@ class Profile extends Component
 
        
         if ($this->changePassword) {
-            $this->user->password = User::hashWithSalt($this->password, User::randomString(10));
+            $this->user->password = Hash::make($this->password);
             $this->notify(['message' => 'Password well updated', 'type' => 'success']);
         }
 
