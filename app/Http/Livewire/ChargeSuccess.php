@@ -29,6 +29,8 @@ class ChargeSuccess extends Component
                 $this->invoice->intent = $request['payment_intent'];
                 $this->invoice->date_payed = now();
                 $this->invoice->save();
+                $this->eventUser->invoice_id = $this->invoice->id;
+                $this->eventUser->save();
                 $user = $this->invoice->user;
                 $mailchimp = new \MailchimpTransactional\ApiClient();
                 $mailchimp->setApiKey(env('MAILCHIMP_APIKEY'));

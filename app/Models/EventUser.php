@@ -12,4 +12,12 @@ class EventUser extends Model
     public function event():BelongsTo {
         return $this->belongsTo(Event::class,'event_id');
     }
+    
+    public function user():BelongsTo {
+        return $this->belongsTo(User::class,'user_id');
+    }
+
+    public function invoice():BelongsTo {
+        return $this->belongsTo(Invoice::class,'invoice_id');
+    }
 }

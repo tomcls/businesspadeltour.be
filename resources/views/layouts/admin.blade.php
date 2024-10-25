@@ -118,28 +118,50 @@
                                 </li>
                                 <li>
                                     <a href="{{route('admin.companies')}}" :class="{ 'text-white  bg-gray-800': current=='admin.companies', 'text-gray-400 ': current!='admin.companies' }"class="hover:bg-gray-800  group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold text-gray-400 hover:text-white">
-                                        <x-icon.user class=" h-6 w-6 text-sky-500 group-focus:text-sky-300 transition ease-in-out duration-150"/>
+                                        <x-icon.house class=" h-6 w-6 text-sky-500 group-focus:text-sky-300 transition ease-in-out duration-150"/>
                                         {{__('Companies')}}
                                     </a>
                                 </li>
                                 <li>
                                     <a href="{{route('admin.teams')}}" :class="{ 'text-white  bg-gray-800': current=='admin.teams', 'text-gray-400 ': current!='admin.teams' }"class="hover:bg-gray-800  group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold text-gray-400 hover:text-white">
-                                        <x-icon.user class=" h-6 w-6 text-sky-500 group-focus:text-sky-300 transition ease-in-out duration-150"/>
+                                        <x-icon.users class=" h-6 w-6 text-sky-500 group-focus:text-sky-300 transition ease-in-out duration-150"/>
                                         {{__('Teams')}}
                                     </a>
                                 </li>
                                 <li>
                                     <a href="{{route('admin.sessions')}}" :class="{ 'text-white  bg-gray-800': current=='admin.sessions', 'text-gray-400 ': current!='admin.sessions' }"class="hover:bg-gray-800  group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold text-gray-400 hover:text-white">
-                                        <x-icon.user class=" h-6 w-6 text-sky-500 group-focus:text-sky-300 transition ease-in-out duration-150"/>
+                                        <x-icon.list class=" h-6 w-6 text-sky-500 group-focus:text-sky-300 transition ease-in-out duration-150"/>
                                       Sessions
                                     </a>
                                 </li>
                                 <li>
                                     <a href="{{route('admin.logos')}}" :class="{ 'text-white  bg-gray-800': current=='admin.logos', 'text-gray-400 ': current!='admin.logos' }"class="hover:bg-gray-800  group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold text-gray-400 hover:text-white">
-                                        <x-icon.user class=" h-6 w-6 text-sky-500 group-focus:text-sky-300 transition ease-in-out duration-150"/>
+                                        <x-icon.image class=" h-6 w-6 text-sky-500 group-focus:text-sky-300 transition ease-in-out duration-150"/>
                                       Logos
                                     </a>
                                 </li>
+                                <li>
+                                    <a href="{{route('admin.event.users')}}" :class="{ 'text-white  bg-gray-800': current=='admin.event.users', 'text-gray-400 ': current!='admin.event.users' }"class="hover:bg-gray-800  group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold text-gray-400 hover:text-white">
+                                        <x-icon.list class=" h-6 w-6 text-sky-500 group-focus:text-sky-300 transition ease-in-out duration-150"/>
+                                      Event subscriptions
+                                    </a>
+                                </li>
+
+                                <li class="-mx-6 mt-auto">
+                                    <a href="{{route('me.profile')}}" class="flex items-center gap-x-4 px-6 py-3 text-sm font-semibold leading-6 text-white hover:bg-gray-800">
+                                        <img class="h-8 w-8 rounded-full bg-gray-800" src="{{ auth()->user()->avatarUrl() }}" alt="">
+                                        <span class="text-sm leading-5 font-medium text-white">
+                                            {{ auth()->user()->firstname }}  {{ auth()->user()->lastname }}
+                                        </span>
+                                    </a>
+                                    <a rel="nofollow" href="{{route('logout')}}" x-on:click="isOpen=false" class="flex items-center gap-x-4 px-6 py-3 text-sm font-semibold leading-6 text-white hover:bg-gray-800">
+                                        <!-- Heroicon name: outline/shield-check -->
+                                        <x-icon.active  class="ml-2 h-4 w-4 flex-shrink-0 text-pink-600"/>
+                                        <div class="ml-4">
+                                          <p class="font-medium text-gray-400 text-xs">{{__('Logout')}}</p>
+                                        </div>
+                                      </a>
+                                  </li>
                             </ul>
                           </li>
                         </ul>

@@ -11,6 +11,7 @@ use App\Http\Livewire\Admin\Companies;
 use App\Http\Livewire\Admin\Logos;
 use App\Http\Livewire\Admin\Sessions;
 use App\Http\Livewire\Admin\Teams;
+use App\Http\Livewire\Admin\UserEvents;
 use App\Http\Livewire\Admin\Users;
 use App\Http\Livewire\Auth\Login;
 use App\Http\Livewire\Auth\RequestPwd;
@@ -160,4 +161,11 @@ Route::group(['middleware' => ['auth', 'can:admin']], function () {
     Route::get('/admin/companies', Companies::class)->name('admin.companies');
     Route::get('/admin/sessions', Sessions::class)->name('admin.sessions');
     Route::get('/admin/logos', Logos::class)->name('admin.logos');
+    Route::get('/admin/event-users', UserEvents::class)->name('admin.event.users');
 });
+
+Route::get('users/logout', function () {
+    //  phpinfo(); 
+      auth()->logout();
+      return redirect('/');
+  })->name('logout');

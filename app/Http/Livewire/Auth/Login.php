@@ -123,6 +123,9 @@ class Login extends Component
         $credentials = $this->validate();
         if(auth()->attempt($credentials, $this->remember)) {
             $user = auth()->user();
+            if($user->isAdmin()) {
+                return redirect()->route('admin.users');
+            }
             return redirect()->route('me.profile');
         } else {
           return  $this->addError('email', trans('auth.failed'));

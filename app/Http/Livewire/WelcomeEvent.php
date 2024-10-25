@@ -120,6 +120,9 @@ class WelcomeEvent extends Component
         $eventUser = new EventUser();
         $eventUser->user_id = $user->id;
         $eventUser->event_id = $this->eventId;
+        if($this->eventId<3) {
+            $this->totalTeam = 0;
+        }
         $eventUser->teams = $this->totalTeam;
         $eventUser->save();
 
