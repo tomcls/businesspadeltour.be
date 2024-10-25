@@ -50,7 +50,7 @@
                             <div class="text-xs">{{ $row->invoice->id .'# '.$row->invoice->price.'€ '}} {{ $row->invoice->description }}</div> 
                             <span class="text-xs">{{ $row->invoice->intent }}</span> 
                         @else
-                            @if ($row->event->id < 3)
+                            @if ($row->event->id > 2)
                             <a class="text-blue-600 cursor-pointer" target="_blank" href="{{url('/').'/'.App::currentLocale().'/charge?ueid='.$row->id}}"><x-icon.link /></a> 
                             @endif
                         @endif
