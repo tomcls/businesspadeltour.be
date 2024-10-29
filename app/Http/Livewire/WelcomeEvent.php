@@ -85,7 +85,7 @@ class WelcomeEvent extends Component
         try {
             $company->save();
         } catch (\Throwable $th) {
-            
+
             $company = Company::whereEmail($this->user['email'])->first();
             $company->firstname = $this->user['firstname'];
             $company->lastname = $this->user['lastname'];
@@ -120,7 +120,7 @@ class WelcomeEvent extends Component
         $eventUser = new EventUser();
         $eventUser->user_id = $user->id;
         $eventUser->event_id = $this->eventId;
-        if($this->eventId<3) {
+        if ($this->eventId < 3) {
             $this->totalTeam = 0;
         }
         $eventUser->teams = $this->totalTeam;
@@ -166,7 +166,7 @@ class WelcomeEvent extends Component
             ),
             array(
                 'name' => 'content',
-                'content' => 'Subscription event Vertuoza Padel Tour <br>'.$event->name
+                'content' => 'Subscription event Vertuoza Padel Tour <br>' . $event->name
             )
         );
         $to = [];
@@ -174,16 +174,17 @@ class WelcomeEvent extends Component
             "email" =>  'info@businesspadeltour.be',
             "type" => "to"
         ]);
-
-        array_push($to, [
-            "email" => "bart@arenal.be",
-            "type" => "cc",
-        ]);
+        if ($this->eventId == 1 || $this->eventId == 3) {
+            array_push($to, [
+                "email" => "bart@arenal.be",
+                "type" => "cc",
+            ]);
+        }
 
         $message = [
             "from_email" => "info@businesspadeltour.be",
             'from_name'  => 'Vertuoza padel tour',
-            "subject" => 'Business Padel Tour: Event subscription '.$event->name.' Total teams:'.$this->totalTeam,
+            "subject" => 'Business Padel Tour: Event subscription ' . $event->name . ' Total teams:' . $this->totalTeam,
             "to" => $to,
             "headers" => ["Reply-To" => "info@businesspadeltour.be"],
             'global_merge_vars' => $template_content
@@ -198,7 +199,7 @@ class WelcomeEvent extends Component
         if ($this->eventId > 2) {
             redirect('/' . App::currentLocale() . '/charge?ueid=' . $eventUser->id);
         } else {
-            
+
             // player one
             $template_content = array(
                 array(
