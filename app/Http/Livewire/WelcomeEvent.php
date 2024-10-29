@@ -133,40 +133,36 @@ class WelcomeEvent extends Component
         // player one
         $template_content = array(
             array(
-                'name' => 'companyFirstname',
+                'name' => 'firstname',
                 'content' => $company->firstname
             ),
             array(
-                'name' => 'companyLastname',
+                'name' => 'lastname',
                 'content' => $company->lastname
             ),
             array(
-                'name' => 'companyName',
+                'name' => 'company_name',
                 'content' => $company->name
             ),
             array(
-                'name' => 'companyVAT',
+                'name' => 'company_vat',
                 'content' => $company->vat
             ),
             array(
-                'name' => 'companyEmail',
+                'name' => 'email',
                 'content' => $company->email
             ),
             array(
-                'name' => 'companyPhone',
+                'name' => 'phone',
                 'content' => $company->phone
             ),
             array(
-                'name' => 'CompanyAddress',
-                'content' => $company->address
-            ),
-            array(
-                'name' => 'totalTeams',
+                'name' => 'total_teams',
                 'content' => $this->totalTeam
             ),
             array(
-                'name' => 'content',
-                'content' => 'Subscription event Vertuoza Padel Tour <br>' . $event->name
+                'name' => 'event_name',
+                'content' => $event->name
             )
         );
         $to = [];
@@ -174,10 +170,12 @@ class WelcomeEvent extends Component
             "email" =>  'info@businesspadeltour.be',
             "type" => "to"
         ]);
+
         if ($this->eventId == 1 || $this->eventId == 3) {
+            logger("aaaa".$this->totalTeam);
             array_push($to, [
                 "email" => "bart@arenal.be",
-                "type" => "cc",
+                "type" => "to",
             ]);
         }
 
@@ -190,7 +188,7 @@ class WelcomeEvent extends Component
             'global_merge_vars' => $template_content
         ];
         $response = $mailchimp->messages->sendTemplate([
-            "template_name" => "bpt_signup_admin",
+            "template_name" => "bpt_signup_event_admin",
             "template_content" => $template_content,
             "message" => $message,
         ]);
