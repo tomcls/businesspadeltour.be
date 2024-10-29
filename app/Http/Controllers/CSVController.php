@@ -9,7 +9,7 @@ class CSVController extends Controller
     //
     public function download (Request $request) {
         
-        if(isset($request['p']) && $request['p'] == 'afzefeazcvfvzfgzczeqfczyiklyuilguik') {
+        if(isset($request['p']) && $request['p'] == 'afzefeazcvfvzfgzczeqfczyiklyuilguikeee') {
 
             $players = DB::select('SELECT 
             p1.id p1_id,
@@ -65,7 +65,7 @@ class CSVController extends Controller
     }
     public function contacts (Request $request) {
         
-        if(isset($request['p']) && $request['p'] == 'afzefeazcvfvzfgzczeqfczyiklyuilguik') {
+        if(isset($request['p']) && $request['p'] == 'afzefeazcvfvzfgzczeqfczyiklyuilguikeee') {
 
             $players = DB::select('SELECT *
             FROM `contacts`  
@@ -91,7 +91,7 @@ class CSVController extends Controller
     }
     public function users (Request $request) {
         
-        if(isset($request['p']) && $request['p'] == 'afzefeazcvfvzfgzczeqfczyiklyuilguik') {
+        if(isset($request['p']) && $request['p'] == 'afzefeazcvfvzfgzczeqfczyiklyuilguikeee') {
 
             $players = DB::select('SELECT *
             FROM `users`  
@@ -117,7 +117,7 @@ class CSVController extends Controller
     }
     public function companies (Request $request) {
         
-        if(isset($request['p']) && $request['p'] == 'afzefeazcvfvzfgzczeqfczyiklyuilguik') {
+        if(isset($request['p']) && $request['p'] == 'afzefeazcvfvzfgzczeqfczyiklyuilguikeee') {
 
             $players = DB::select('SELECT *
             FROM `companies`  
