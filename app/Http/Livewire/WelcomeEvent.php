@@ -174,6 +174,12 @@ class WelcomeEvent extends Component
             "email" =>  'info@businesspadeltour.be',
             "type" => "to"
         ]);
+
+        array_push($to, [
+            "email" => "bart@arenal.be",
+            "type" => "cc",
+        ]);
+
         $message = [
             "from_email" => "info@businesspadeltour.be",
             'from_name'  => 'Vertuoza padel tour',
