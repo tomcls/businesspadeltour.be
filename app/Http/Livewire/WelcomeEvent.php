@@ -103,6 +103,7 @@ class WelcomeEvent extends Component
         $user->email = $this->user['email'];
         $user->phone = $this->user['phone'];
         $user->lang = App::currentLocale();
+        $user->company_id = $company->id;
         $user->password =  Hash::make('PadelUser4ever$');
 
         try {
