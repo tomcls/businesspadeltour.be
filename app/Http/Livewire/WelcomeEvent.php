@@ -150,6 +150,10 @@ class WelcomeEvent extends Component
                 'content' => $company->vat
             ),
             array(
+                'name' => 'company_address',
+                'content' => $company->address . ' '.$company->zip
+            ),
+            array(
                 'name' => 'email',
                 'content' => $company->email
             ),
