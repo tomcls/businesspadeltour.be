@@ -127,28 +127,6 @@
                 </div>
               </div>
         </div>
-        <div class="sm:col-span-full">
-            <div class="relative flex items-start">
-                <div class="flex h-6 items-center">
-                  <input  id="padel-event-1" aria-describedby="padel-event-1-description" name="event" wire:model="eventId" value='2' type="radio" class="h-4 w-4 rounded-full border-gray-300 text-blue-600 focus:ring-blue-600">
-                </div>
-                <div class="ml-3 text-sm leading-6">
-                  <label for="padel-event-1" class="font-medium text-gray-900">{{__('I would like to take part in the event at the Tero but I do not wish to take part in the padel tournament.')}}</label>
-                  <p id="padel-event-1-description" class="text-gray-500">{!!__('Tero Waterloo, November 13 from 13.00')!!}</p>
-                </div>
-              </div>
-        </div>
-        <div class="sm:col-span-full">
-            <div class="relative flex items-start">
-                <div class="flex h-6 items-center">
-                  <input  id="padel-event-2" aria-describedby="padel-event-2-description" name="event" wire:model="eventId" value='4' type="radio" class="h-4 w-4 rounded-full border-gray-300 text-blue-600 focus:ring-blue-600">
-                </div>
-                <div class="ml-3 text-sm leading-6">
-                  <label for="padel-event-2" class="font-medium text-gray-900">{{__('I would like to take part in the Tero event and the padel tournament')}}</label>
-                  <p id="padel-event-2-description" class="text-gray-500">{!!__('Tero Waterloo, November 13 from 13.00')!!}</p>
-                </div>
-              </div>
-        </div>
 
         <div class="col-span-4 {{$eventId == 3 || $eventId==4 ? '': 'hidden'}}">
             <label for="totalTeam" class="block text-sm font-medium leading-6 text-gray-900">{{__('Number of teams')}}</label>

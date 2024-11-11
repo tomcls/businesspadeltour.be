@@ -228,6 +228,7 @@
                     <dd class="py-2">- <b><a href="https://elevenpadel.be/" class=" color-light-blue" target="blank">{{__('Eleven Nivelles')}}</a></b> <span class=" font-light text-sm">{{__('rue de l’industrie 11 – 1400 Nivelles')}}</span></dd>
                     <dd class="py-2">- <b><a href="https://planetpadel.be/" class=" color-light-blue" target="blank">{{__('Planet Padel')}}</a></b> <span class=" font-light text-sm">{{__('rue de la Vallée 10 – 4470 Saint-Georges-sur Meuse')}}</span></dd>
                     <dd class="py-2">- <b><a href="https://www.mokkopadelproject.be" class=" color-light-blue" target="blank">{{__('Mokko Padel')}}</a></b> <span class=" font-light text-sm">{{__('rue de la Glacerie 11 – 5150 Floreffe')}}</span></dd>
+                    <dd class="py-2">- <b><a href="https://www.welpadel.be" class=" color-light-blue" target="blank">{{__('Welpadel')}}</a></b> <span class=" font-light text-sm">{{__('Rue Chant des Oiseaux 13, 4840 Welkenraedt')}}</span></dd>
                   </div>
                  
                 </dl>
@@ -245,6 +246,20 @@
           </div>
           <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
             <dl class="grid max-w-xl grid-cols-1 gap-y-5 gap-x-8 lg:max-w-none lg:grid-cols-2 lg:gap-y-2 fadinAnimation opacity-0">
+              <div class="relative pl-10">
+                <dt class="text-base font-semibold leading-7 text-gray-900">
+                  <div class="absolute top-0 left-0 flex h-6 w-6 items-center justify-center rounded-lg bg-dark-blue">
+                    <svg class=" h-4 w-4 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
+                    </svg>
+                  </div>
+                  <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}"  target="blank" class="color-dark-blue"> {{__('Welpadel Welkenraedt')}}</a>
+                </dt>
+                <dd class="mt-0 text-base leading-7 text-gray-600">
+                  <b class="text-sm"> {{__('When')}}: </b> <span class="text-sm">{{__('Friday')}} {{__('17/3/2025')}}</span><br/>
+                  <b class="text-sm">{{__('Place')}}: </b> <span class="text-sm">{{__('Rue Chant des Oiseaux 13, 4840 Welkenraedt')}}</span> <br/><br/>
+                </dd>
+              </div>
               <div class="relative pl-10">
                 <dt class="text-base font-semibold leading-7 text-gray-900">
                   <div class="absolute top-0 left-0 flex h-6 w-6 items-center justify-center rounded-lg bg-dark-blue">
