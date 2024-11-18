@@ -19,6 +19,9 @@ class ChargeSuccess extends Component
         if (!empty($request['ueid'])) {
             $this->eventUser = EventUser::whereId($request['ueid'])->first();
             $this->price = $this->eventUser->event->price * $this->eventUser->teams ;
+            if (!empty($request['withHotel'])) {
+                $this->price += 440;
+            }
             $this->invoice = Invoice::whereIntent($request['payment_intent'])->first();
             if(!$this->invoice) {
                 $this->invoice = new Invoice();

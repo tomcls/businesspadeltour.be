@@ -67,7 +67,73 @@
      
       <form class="bg-white max-w-lg  sm:rounded-xl md:col-span-2 mx-auto mb-10" wire:submit.prevent="validateCompany"  >
         
+        <div class="sm:col-span-3">
+          <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">{{__('Firstname')}}</label>
+          <div class="mt-2">
+            <input type="text" wire:model="user.firstname" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6">
+            @error('user.firstname') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
+          </div>
+        </div>
 
+        <div class="sm:col-span-3">
+          <label for="last-name" class="block text-sm font-medium leading-6 text-gray-900">{{__('Lastname')}}</label>
+          <div class="mt-2">
+            <input type="text" wire:model="user.lastname" name="last-name" id="last-name" autocomplete="family-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6">
+            @error('user.lastname') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
+          </div>
+        </div>
+
+        <div class="sm:col-span-3">
+          <label for="email" class="block text-sm font-medium leading-6 text-gray-900">{{__('Email address')}}</label>
+          <div class="mt-2">
+            <input id="email" wire:model="user.email" name="email" type="email" autocomplete="email" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6">
+            @error('user.email') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
+          </div>
+        </div>
+        <div class="sm:col-span-3">
+          <label for="email" class="block text-sm font-medium leading-6 text-gray-900">{{__('Phone')}}</label>
+          <div class="mt-2">
+            <input id="phone" wire:model="user.phone" name="phone" type="text" autocomplete="phone" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6">
+            @error('user.phone') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
+          </div>
+        </div>
+        <div class="sm:col-span-3">
+            <label for="companyName" class="block text-sm font-medium leading-6 text-gray-900">{{__('Company name')}}</label>
+            <div class="mt-2">
+              <input type="text" wire:model="company.name" name="companyName" id="companyName" autocomplete="given-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6">
+              @error('company.name') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
+            </div>
+        </div>
+        <div class="sm:col-span-3">
+            <label for="companyVAT" class="block text-sm font-medium leading-6 text-gray-900">{{__('Company VAT')}}</label>
+            <div class="mt-2">
+              <input type="text" wire:model="company.vat" name="companyVAT" id="companyVAT" autocomplete="given-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+              @error('company.vat') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
+            </div>
+        </div>
+        <div class="sm:col-span-3">
+          <label for="street-address" class="block text-sm font-medium leading-6 text-gray-900">{{__('Address')}}</label>
+          <div class="mt-2">
+            <input type="text" wire:model="company.address" name="street-address" id="street-address" autocomplete="street-address" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            @error('company.address') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
+          </div>
+        </div>
+
+        <div class="sm:col-span-1">
+          <label for="postal-code" class="block text-sm font-medium leading-6 text-gray-900">{{__('Zip')}}</label>
+          <div class="mt-2">
+            <input type="text" wire:model="company.zip"  name="postal-code" id="postal-code" autocomplete="postal-code" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            @error('company.zip') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
+            </div>
+        </div>
+        <div class="sm:col-span-2">
+            <label for="city" class="block text-sm font-medium leading-6 text-gray-900">{{__('City')}}</label>
+            <div class="mt-2">
+                <input type="text" wire:model="company.city"  name="city" id="city" autocomplete="city" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                @error('company.city') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
+            </div>
+        </div>
+      </div>
         <div class="flex items-center justify-center gap-x-6  px-4 py-4 sm:px-8 ">
             <div {{$eventId == 3 || $eventId==4 ? '': 'hidden'}}>
                 <span>{{__('Total incl. VAT')}}</span> 
