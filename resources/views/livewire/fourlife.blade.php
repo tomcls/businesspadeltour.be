@@ -4,17 +4,7 @@
     <main class="isolate">
       <!-- Hero section -->
       <div class="relative isolate -z-10">
-        <svg class="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-gray-200 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]" aria-hidden="true">
-          <defs>
-            <pattern id="1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84" width="200" height="200" x="50%" y="-1" patternUnits="userSpaceOnUse">
-              <path d="M.5 200V.5H200" fill="none" />
-            </pattern>
-          </defs>
-          <svg x="50%" y="-1" class="overflow-visible fill-gray-50">
-            <path d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z" stroke-width="0" />
-          </svg>
-          <rect width="100%" height="100%" stroke-width="0" fill="url(#1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84)" />
-        </svg>
+        
         <div class="absolute left-1/2 right-0 top-0 -z-10 -ml-24 transform-gpu overflow-hidden blur-3xl lg:ml-24 xl:ml-48" aria-hidden="true">
           <div class="aspect-[801/1036] w-[50.0625rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30" style="clip-path: polygon(63.1% 29.5%, 100% 17.1%, 76.6% 3%, 48.4% 0%, 44.6% 4.7%, 54.5% 25.3%, 59.8% 49%, 55.2% 57.8%, 44.4% 57.2%, 27.8% 47.9%, 35.1% 81.5%, 0% 97.7%, 39.2% 100%, 35.2% 81.4%, 97.2% 52.8%, 63.1% 29.5%)"></div>
         </div>
@@ -22,13 +12,18 @@
           <div class="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32">
             <div class="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
               <div class="relative w-full lg:max-w-xl lg:shrink-0 xl:max-w-2xl">
-                <h1 class="text-pretty text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">Padel 4 life</h1>
+                <h1 class="text-pretty text-5xl font-semibold tracking-tight text-gray-900 sm:text-5xl">Tournoi Padel 4 Life au profit de Viva for Life !</h1>
                 <p class="mt-8 text-pretty text-lg font-medium text-gray-500 sm:max-w-md sm:text-xl/8 lg:max-w-none">
-                    Le premier tournoi PADEL 4 LIFE aura lieu de 14/12<br/>
-                    Toutes les recettes seront reversées au bénéfice de Viva for Life<br/>
-                    Ca se passe à Tour & Taxis (merci Vincent) de 15h à jennsaipakelleur <br/>
+                  Chers amis et partenaires,<br/><br/>
+                  Nous avons le plaisir de vous inviter à participer à un tournoi de padel exceptionnel, organisé dans le but de récolter des fonds pour la lutte contre la pauvreté. Cet événement se déroulera au Tour & Taxis Padel Club de Bruxelles le samedi 14 décembre prochain à partir de 15heures et sera suivi d’une soirée, et nous serions ravis de vous compter parmi nous !
                 </p>
-                <p class="mt-8 text-pretty text-lg font-bold text-gray-500 sm:max-w-md sm:text-xl/8 lg:max-w-none">Objectif : 5000 Eur (et c’est un minimum!)</p>
+                <p class="mt-8 text-pretty text-lg font-medium text-gray-500 sm:max-w-md sm:text-xl/8 lg:max-w-none">
+                  Le tournoi est ouvert à toutes et tous, quel que soit votre niveau. Vous pouvez inscrire une équipe, venir seul (dans ce cas on vous trouvera un partenaire de votre niveau) ou venir en simple accompagnant.
+                </p>
+                <p class="mt-8 text-pretty text-lg font-medium text-gray-500 sm:max-w-md sm:text-xl/8 lg:max-w-none">
+                  L’entièreté des bénéfices du tournoi seront reversés à Viva for Life, qui lutte depuis des années contre la pauvreté
+                </p>
+
 
               </div>
               <div class="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
@@ -60,13 +55,68 @@
                 </div>
               </div>
             </div>
+
+            <div>
+              <h2 class="text-pretty text-5xl font-semibold tracking-tight text-gray-900 sm:text-4xl">Détails de l'événement</h2>
+             
+              <p class="mt-8 text-pretty text-lg font-medium text-gray-500 sm:max-w-md sm:text-xl/8 lg:max-w-none">
+                <b class="text-black">Date :</b> le samedi 14 décembre 2024
+              </p>
+              <p class="mt-8 text-pretty text-lg  text-black font-bold sm:max-w-md sm:text-xl/8 lg:max-w-none">
+                Planning de la journée :
+              </p>
+              <p class="mt-8 text-pretty text-lg font-medium text-gray-500 sm:max-w-md sm:text-xl/8 lg:max-w-none">
+               <ul>
+                  <li>
+                    - 14h accueil des participants et briefing du tournoi
+                  </li>
+                  <li>
+                  - 15h début du tournoi
+                  </li>
+                  <li>
+                - 22h fin du tournoi et remise des prix
+                  </li>
+                  <li>
+                - 22h30 début de la soirée
+                  </li>
+               </ul>
+              </p>
+              <p class="mt-8 text-pretty text-lg font-medium text-gray-500 sm:max-w-md sm:text-xl/8 lg:max-w-none">
+                <b class="text-black">Lieu :</b>  Tour & Taxis Padel Club, Tour & Taxis, Bruxelles
+              </p>
+              <p class="mt-8 text-pretty text-lg font-bold text-black sm:max-w-md sm:text-xl/8 lg:max-w-none">
+                Mais aussi
+              </p>
+
+              <ul>
+                <li>
+                  - Diverses animations prévues en cours de journée
+                </li>
+                <li>
+                  - Match exhibition avec des joueurs professionnels
+                </li>
+                <li>
+                  - Présence de célébrités qui viendront soutenir la cause
+                </li>
+                <li>
+                  - Tombola avec des lots exceptionnels à gagner
+                </li>
+             </ul>
+             <p class="mt-8 text-pretty text-lg font-medium text-gray-500 sm:max-w-md sm:text-xl/8 lg:max-w-none">
+              <b class="text-black">Inscription :</b> <br/>  Le montant de l’inscription est de 10 Eur pour un accompagnant, 25 Eur pour un joueur seul et de 50 Eur pour une équipe de 2 joueurs.
+            </p>
+            <p class="mt-8 text-pretty text-lg font-medium text-gray-500 sm:max-w-md sm:text-xl/8 lg:max-w-none">
+              Nous espérons vous voir nombreux pour soutenir cette belle cause tout en passant un moment convivial et sportif !
+            </p>
+            </div>
           </div>
         </div>
       </div>
   
      
-      <form class="bg-white max-w-lg  sm:rounded-xl md:col-span-2 mx-auto mb-10" wire:submit.prevent="validateCompany"  >
+      <form class="bg-white max-w-2xl shadow-sm ring-1 ring-gray-900/5 sm:rounded-xl md:col-span-2 mx-auto my-10 px-5 py-4" wire:submit.prevent="validateCompany"  >
         
+        <div class="grid max-w-2xl grid-cols-1 gap-x-6 sm:gap-y-8  gap-y-2 sm:grid-cols-6">
         <div class="sm:col-span-3">
           <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">{{__('Firstname')}}</label>
           <div class="mt-2">
@@ -133,6 +183,39 @@
                 @error('company.city') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
             </div>
         </div>
+      </div>
+      <div class="sm:col-span-full pt-5">
+        <div class="relative flex items-start">
+            <div class="flex h-6 items-center">
+              <input  id="drink-event-2" aria-describedby="drink-event-2-description" name="event" wire:model="customPrice" value='10' type="radio" class="h-4 w-4 rounded-full border-gray-300 text-blue-600 focus:ring-blue-600">
+            </div>
+            <div class="ml-3 text-sm leading-6">
+              <label for="drink-event-2" class="font-medium text-gray-900">{{__('Je ne joue pas au padel')}}</label>
+              <p id="drink-event-2-description" class="text-gray-500">{!!__('Je suis un accompagant (10€)')!!}</p>
+            </div>
+          </div>
+      </div>
+      <div class="sm:col-span-full pt-5">
+        <div class="relative flex items-start">
+            <div class="flex h-6 items-center">
+              <input  id="drink-event-2" aria-describedby="drink-event-2-description" name="event" wire:model="customPrice" value='25' type="radio" class="h-4 w-4 rounded-full border-gray-300 text-blue-600 focus:ring-blue-600">
+            </div>
+            <div class="ml-3 text-sm leading-6">
+              <label for="drink-event-2" class="font-medium text-gray-900">{{__('Je joue au padel mais je viens seul')}}</label>
+              <p id="drink-event-2-description" class="text-gray-500">{!!__('Vous serai assigné à une équipe (25€)')!!}</p>
+            </div>
+          </div>
+      </div>
+      <div class="sm:col-span-full pt-5">
+        <div class="relative flex items-start">
+            <div class="flex h-6 items-center">
+              <input  id="drink-event-2" aria-describedby="drink-event-2-description" name="event" wire:model="customPrice" value='50' type="radio" class="h-4 w-4 rounded-full border-gray-300 text-blue-600 focus:ring-blue-600">
+            </div>
+            <div class="ml-3 text-sm leading-6">
+              <label for="drink-event-2" class="font-medium text-gray-900">{{__('Je joue au padel en équipe')}}</label>
+              <p id="drink-event-2-description" class="text-gray-500">{!!__(' 50€ pour 2 personnes')!!}</p>
+            </div>
+          </div>
       </div>
         <div class="flex items-center justify-center gap-x-6  px-4 py-4 sm:px-8 ">
             <div {{$eventId == 3 || $eventId==4 ? '': 'hidden'}}>

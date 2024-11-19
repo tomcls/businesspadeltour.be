@@ -19,8 +19,17 @@ class ChargeSuccess extends Component
         if (!empty($request['ueid'])) {
             $this->eventUser = EventUser::whereId($request['ueid'])->first();
             $this->price = $this->eventUser->event->price * $this->eventUser->teams ;
-            if (!empty($request['withHotel'])) {
-                $this->price += 440;
+            $subscriptionType = null;
+            if (!empty($request['custom_price'])) {
+                $this->price = $request['custom_price'];
+                // player one
+                if ($request['custom_price'] == 10) {
+                    $subscriptionType = "Je suis un accompagant (10€)";
+                } else if ($request['custom_price'] == 25) {
+                    $subscriptionType = "Je joue au padel seul (25€)";
+                } else if ($request['custom_price'] == 25) {
+                    $subscriptionType = "Je joue au padel équipe (50€)";
+                }
             }
             $this->invoice = Invoice::whereIntent($request['payment_intent'])->first();
             if(!$this->invoice) {
@@ -28,9 +37,13 @@ class ChargeSuccess extends Component
                 $this->invoice->user_id = $this->eventUser->user_id;
                 $this->invoice->invoice_num = Invoice::newInvoiceNumber();
                 $this->invoice->price = $this->price;
-                $this->invoice->description = "Event ".$this->eventUser->event->name. ' ('.$this->eventUser->teams.' '.($this->eventUser->teams>1?'teams':'teams').')';
+                $this->invoice->description = "Event ".$this->eventUser->event->name. ' '.$subscriptionType;
                 $this->invoice->intent = $request['payment_intent'];
                 $this->invoice->date_payed = now();
+
+                if (!empty($request['ueid']) && $request['ueid']==6) {
+                    $this->invoice->vat =false;
+                }
                 $this->invoice->save();
                 $this->eventUser->invoice_id = $this->invoice->id;
                 $this->eventUser->save();

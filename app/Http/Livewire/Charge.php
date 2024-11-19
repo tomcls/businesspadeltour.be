@@ -14,9 +14,14 @@ class Charge extends Component
     public $price = 0;
     public $invoice;
     public $description;
-
+    public $customPrice;
+    public $returnUrl;
     public function mount(Request $request) {
-        if (!empty($request['ueid'])) {
+        if (!empty($request['ueid']) && !empty($request['customPrice'])) {
+            $this->eventUser = EventUser::whereId($request['ueid'])->first();
+            $this->price = $request['customPrice'];    
+            $this->customPrice = $this->price;         
+        } else if (!empty($request['ueid']) && empty($request['customPrice'])) {
             $this->eventUser = EventUser::whereId($request['ueid'])->first();
             if (!empty($request['withHotel'])) {
                 $this->price += 440;
@@ -28,8 +33,8 @@ class Charge extends Component
         if (!empty($request['iid'])) {
             $this->invoice = Invoice::whereId($request['iid'])->first();
             $this->price = $this->invoice->price * 1.21;
-            $description = $this->invoice->description;
         }
+        $this->returnUrl = route('charge.success',['ueid'=>$this->eventUser->id ?? null,'iid'=>$this->invoice->id ?? null,'custom_price'=>$this->customPrice ?? null]);
     }
     public function render()
     {

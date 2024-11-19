@@ -67,7 +67,12 @@
         </tr>
         <tr style=" font-size:19px; text-align: left">
             <td style="font-size:19px;width:680px;background-color:white; text-align: left "><b>Total</b></td>
-            <td  style="font-size:19px;width: 280px;  text-align: left">€{{ $invoice->price * 1.21  }} {{__('Total incl. VAT')}} (21%: €{{ number_format($invoice->price ,2) }})</td>
+            <td  style="font-size:19px;width: 280px;  text-align: left">
+                €{{ $invoice->price * ($invoice->vat ? 1.21 : 1)  }} 
+                @if ($invoice->vat)
+                {{__('Total incl. VAT')}} (21%: €{{ number_format($invoice->price ,2) }})
+                @endif
+            </td>
         </tr>
     </table>
     <br/>
