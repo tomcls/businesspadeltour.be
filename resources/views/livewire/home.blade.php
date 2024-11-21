@@ -197,7 +197,7 @@
                     <dd class="py-2">- <b><a href="https://waregem.arenal.be/" class=" color-light-blue" target="blank">{{__('Arenal Waregem')}}</a></b> <span class=" font-light text-sm">{{__('F. Rooseveltlaan 155, 8790 Waregem')}}</span></dd>
                     <dd class="py-2">- <b><a href="https://bree.arenal.be/" class=" color-light-blue" target="blank">{{__('Arenal Bree')}}</a></b> <span class=" font-light text-sm">{{__('Watertorenstraat 16, 3960 Bree')}}</span></dd>
                     <dd class="py-2">- <b><a href="https://mechelen.arenal.be/" class=" color-light-blue" target="blank">{{__('Arenal Mechelen')}}</a></b> <span class=" font-light text-sm">{{__('Kruisbaan 56, 2800 Mechelen')}}</span></dd>
-                    <dd class="py-2">- <b><a href="https://arenal.be/" class=" color-light-blue" target="blank">{{__('Arenal Antwerpen')}}</a></b> <span class=" font-light text-sm">{{__('Arenal Antwerpen')}}</span></dd>
+                    <dd class="py-2">- <b><a href="https://arenal.be/" class=" color-light-blue" target="blank">{{__('Arenal Antwerpen')}}</a></b> <span class=" font-light text-sm">{{__('New location')}}</span></dd>
                   </div>
                 </dl>
               </div>
@@ -412,7 +412,7 @@
                 </dt>
                 <dd class="mt-0 text-base leading-7 text-gray-600">
                   <b class="text-sm"> {{__('When')}}: </b> <span class="text-sm">{{__('Friday')}} {{__('13/6/2025')}}</span><br/>
-                  <b class="text-sm">{{__('Place')}}: </b> <span class="text-sm">{{__('hWatertorenstraat 16, 3960 Bree')}}</span> <br/><br/>
+                  <b class="text-sm">{{__('Place')}}: </b> <span class="text-sm">{{__('Watertorenstraat 16, 3960 Bree')}}</span> <br/><br/>
                 </dd>
               </div>
               <div class="relative pl-10">

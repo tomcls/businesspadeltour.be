@@ -386,7 +386,7 @@ Livewire.on('loadImages', () => {
                 </dt>
                 <dd class="mt-0 text-base leading-7 text-gray-600">
                   <b class="text-sm"> {{__('When')}}: </b> <span class="text-sm">{{__('Friday')}} {{__('13/6/2025')}}</span><br/>
-                  <b class="text-sm">{{__('Place')}}: </b> <span class="text-sm">{{__('hWatertorenstraat 16, 3960 Bree')}}</span> <br/><br/>
+                  <b class="text-sm">{{__('Place')}}: </b> <span class="text-sm">{{__('Watertorenstraat 16, 3960 Bree')}}</span> <br/><br/>
                 </dd>
               </div>
               <div class="relative pl-10">
