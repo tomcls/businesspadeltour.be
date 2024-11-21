@@ -42,7 +42,7 @@ class Charge extends Component
             'custom_price'=> $this->customPrice ?? null,
             'total_alone'=> $request['totalAlone'] ?? null,
             'total_team'=> $request['totalTeam'] ?? null,
-            'total_player'=> $request['totalPlayer'] ?? null,
+            'price_player'=> $request['pricePlayer'] ?? null,
             'level_player'=> $request['levelPlayer'] ?? null,
             'level_team'=> $request['levelPlayer'] ?? null
         ]);

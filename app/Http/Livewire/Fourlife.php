@@ -117,14 +117,14 @@ class Fourlife extends Component
 
         if ($this->priceAlone) {
             logger('priceAlone='.$this->priceAlone);
-            $subscriptionType =  ($this->totalAlone ?? 1). "accompagant(s)";
+            $subscriptionType =  ($this->totalAlone ?? 1). " accompagant(s)";
             $this->totalAlone = $this->totalAlone ?? 1;
             $this->customPrice = $this->totalAlone * 10;
             $wh .= '&totalAlone='.$this->totalAlone;
         } 
         if ($this->pricePlayer) {
             logger('pricePlayer='.$this->pricePlayer);
-            $subscriptionType .=' <br/> '.  "- 1 joueur";
+            $subscriptionType .=' <br/> '.  "- 1 joueur, level:".$this->levelPlayer;
             $this->customPrice += 25;
             $wh .= '&pricePlayer=25&levelPlayer='.$this->levelPlayer;;
         } 
@@ -132,8 +132,8 @@ class Fourlife extends Component
             logger('priceTeam='.$this->priceTeam);
             $this->totalTeam = $this->totalTeam ?? 1;
             $this->customPrice += $this->totalTeam * 50;
-            $subscriptionType .=' <br/> - '. $this->totalTeam." team(s)";
-            $wh .= '&totalTeam='.$this->totalTeam.'&levelTeam='.$this->levelPlayer;
+            $subscriptionType .=' <br/> - '. $this->totalTeam." team(s), level:".$this->levelTeam;
+            $wh .= '&totalTeam='.$this->totalTeam.'&levelTeam='.$this->levelTeam;
         }
         $template_content = array(
             array(
