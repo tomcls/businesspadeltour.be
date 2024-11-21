@@ -177,7 +177,6 @@ class WelcomeEvent extends Component
         ]);
 
         if ($this->eventId == 1 || $this->eventId == 3) {
-            logger("aaaa".$this->totalTeam);
             array_push($to, [
                 "email" => "bart@arenal.be",
                 "type" => "to",

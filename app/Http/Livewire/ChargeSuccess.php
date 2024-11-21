@@ -19,15 +19,44 @@ class ChargeSuccess extends Component
         if (!empty($request['ueid'])) {
             $this->eventUser = EventUser::whereId($request['ueid'])->first();
             $this->price = $this->eventUser->event->price * $this->eventUser->teams ;
+            $subscriptionType = null;
+            if (!empty($request['custom_price'])) {
+                $this->price = $request['custom_price'];
+                // player one
+                if ($request['totalAlone']) {
+                    logger('totalAlone='.$this->priceAlone);
+                    $subscriptionType =  ($this->totalAlone ?? 1). "accompagant(s)";
+                    $this->totalAlone = $this->totalAlone ?? 1;
+                    $this->customPrice = $this->totalAlone * 10;
+                    $wh .= '&totalAlone='.$this->totalAlone;
+                } 
+                if ($request['totalPlayer']) {
+                    logger('pricePlayer='.$this->pricePlayer);
+                    $subscriptionType .=' <br/> '.  "- 1 joueur";
+                    $this->customPrice += 25;
+                    $wh .= '&pricePlayer=25&levelPlayer='.$this->levelPlayer;;
+                } 
+                if ($request['totalTeam']) {
+                    logger('priceTeam='.$this->priceTeam);
+                    $this->totalTeam = $this->totalTeam ?? 1;
+                    $this->customPrice += $this->totalTeam * 50;
+                    $subscriptionType .=' <br/> - '. $this->totalTeam." team(s)";
+                    $wh .= '&totalTeam='.$this->totalTeam.'&levelTeam='.$this->levelPlayer;
+                }
+            }
             $this->invoice = Invoice::whereIntent($request['payment_intent'])->first();
             if(!$this->invoice) {
                 $this->invoice = new Invoice();
                 $this->invoice->user_id = $this->eventUser->user_id;
                 $this->invoice->invoice_num = Invoice::newInvoiceNumber();
                 $this->invoice->price = $this->price;
-                $this->invoice->description = "Event ".$this->eventUser->event->name. ' ('.$this->eventUser->teams.' '.($this->eventUser->teams>1?'teams':'teams').')';
+                $this->invoice->description = "Event ".$this->eventUser->event->name. ' '.$subscriptionType;
                 $this->invoice->intent = $request['payment_intent'];
                 $this->invoice->date_payed = now();
+
+                if (!empty($request['ueid']) && $request['ueid']==6) {
+                    $this->invoice->vat =false;
+                }
                 $this->invoice->save();
                 $this->eventUser->invoice_id = $this->invoice->id;
                 $this->eventUser->save();

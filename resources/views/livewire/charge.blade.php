@@ -302,12 +302,12 @@ async function initialize() {
 async function handleSubmit(e) {
   e.preventDefault();
   setLoading(true);
-
+ 
   const { error } = await stripe.confirmPayment({
     elements,
     confirmParams: {
       // Make sure to change this to your payment completion page
-      return_url: "{{route('charge.success',['ueid'=>$eventUser->id ?? null,'iid'=>$invoice->id ?? null])}}",
+      return_url: '{!!$returnUrl!!}',
     },
   });
 

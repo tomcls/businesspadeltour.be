@@ -19,6 +19,7 @@ use App\Http\Livewire\Auth\UpdatePwd;
 use App\Http\Livewire\Charge;
 use App\Http\Livewire\ChargeSuccess;
 use App\Http\Livewire\Contact;
+use App\Http\Livewire\Fourlife;
 use App\Http\Livewire\Home;
 use App\Http\Livewire\Me\Invoice;
 use App\Http\Livewire\Me\Logo;
@@ -26,6 +27,7 @@ use App\Http\Livewire\Me\Profile;
 use App\Http\Livewire\Photos;
 use App\Http\Livewire\Photos2024;
 use App\Http\Livewire\Price;
+use App\Http\Livewire\Tenerife;
 use App\Http\Livewire\Upload;
 use App\Http\Livewire\Video;
 use App\Http\Livewire\WelcomeEvent;
@@ -151,6 +153,8 @@ Route::prefix('{locale?}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('set.
     Route::get('/charge-success', ChargeSuccess::class)->name('charge.success');
     Route::get('/welcome-event', WelcomeEvent::class)->name('welcome.event');
     Route::get('/welcome-event-success', WelcomeEventSuccess::class)->name('welcome.event.success');
+    Route::get('/tenerife', Tenerife::class)->name('tenerife');
+    Route::get('/vivaforlife', Fourlife::class)->name('vivaforlife');
    
    // Route::get('/' . trans('route.article', []).'/{slug}', 'ArticleController@show')->name('article');
     // Octane::route('GET','/en/index',function () {return new Response((new HomeController)->index());});

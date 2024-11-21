@@ -170,7 +170,7 @@
           <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.articles')}}" class="text-base font-medium color-dark-blue hover:text-gray-900">{{__('menu.news')}}</a>
         </nav>
         <div class="hidden items-center justify-end md:flex md:flex-1 lg:w-0 ">
-          <a href="{{url('/').'/'.App::currentLocale().'/welcome-event'}}" class="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-full border border-transparent bg-dark-blue px-4 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-700">Kick-off 2025</a>
+          <a href="{{url('/').'/'.App::currentLocale().'/vivaforlife'}}" class="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-full border border-transparent bg-dark-blue px-4 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-700">Padel 4 Life</a>
           <div x-data="{ isOpen: false }" class="relative ml-3">
             <!-- Item active: "text-gray-900", Item inactive: "color-dark-blue" -->
             <button @click="isOpen = !isOpen" type="button" class="color-dark-blue group inline-flex items-center rounded-md  text-base font-medium hover:text-gray-900 focus:outline-none   focus:ring-offset-2" aria-expanded="false">
@@ -298,8 +298,8 @@
               </a>
               <a href="{{url('/').'/'.App::currentLocale().'#sponsor'}}" x-on:click="isMobileNavOpen=false" class="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50">
                 <!-- Heroicon name: outline/arrow-path -->
-                <svg class="h-6 w-6 flex-shrink-0 color-dark-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"></path>
+                <svg class="h-6 w-6 flex-shrink-0 color-dark-blue" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z"></path>
                 </svg>
                 <span class="ml-3 text-base font-medium text-gray-900">{{__('menu.sponsors')}}</span>
               </a>
@@ -309,6 +309,13 @@
                   <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0012 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 01-2.031.352 5.988 5.988 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.971zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 01-2.031.352 5.989 5.989 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.971z"></path>
                 </svg>
                 <span class="ml-3 text-base font-medium text-gray-900">{{__('menu.rule')}}</span>
+              </a>
+              <a href="{{url('/').'/'.App::currentLocale().'/vivaforlife'}}" x-on:click="isMobileNavOpen=false" class="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50">
+                <svg class="h-6 w-6 flex-shrink-0 text-pink-600" data-slot="icon" fill="#eb4d5c" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"></path>
+                </svg>
+                
+                <span class="ml-3 text-base font-medium text-gray-900">{{__('Padel 4 Life')}}</span>
               </a>
             </nav>
           </div>

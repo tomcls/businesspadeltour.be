@@ -10,13 +10,23 @@ use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Hash;
 use Livewire\Component;
 
-class Tenerife extends Component
+class Fourlife extends Component
 {
-    public $eventId = 5;
-    public $price = 550;
-    public $withHotel = 0;
+
+    public $eventId = 6;
+    public $customPrice = 10;
     public $user;
     public $company;
+    public $totalTeam;
+    public $totalAlone;
+
+    public $levelPlayer='fun';
+    public $levelTeam='fun';
+
+    public $priceAlone;
+    public $priceTeam;
+    public $pricePlayer;
+
     protected function rules()
     {
         return [
@@ -38,6 +48,7 @@ class Tenerife extends Component
     }
     public function validateCompany()
     {
+
         $this->user['lang'] = App::currentLocale();
         $this->validate();
 
@@ -90,15 +101,40 @@ class Tenerife extends Component
         $eventUser = new EventUser();
         $eventUser->user_id = $user->id;
         $eventUser->event_id = $this->eventId;
-        
+
         $eventUser->teams = 1;
         $eventUser->save();
 
         $mailchimp = new \MailchimpTransactional\ApiClient();
         $mailchimp->setApiKey(env('MAILCHIMP_APIKEY'));
-
+        $subscriptionType = null;
         $event = Event::whereId($this->eventId)->first();
         // player one
+        $wh = '';
+        
+        
+        
+
+        if ($this->priceAlone) {
+            logger('priceAlone='.$this->priceAlone);
+            $subscriptionType =  ($this->totalAlone ?? 1). "accompagant(s)";
+            $this->totalAlone = $this->totalAlone ?? 1;
+            $this->customPrice = $this->totalAlone * 10;
+            $wh .= '&totalAlone='.$this->totalAlone;
+        } 
+        if ($this->pricePlayer) {
+            logger('pricePlayer='.$this->pricePlayer);
+            $subscriptionType .=' <br/> '.  "- 1 joueur";
+            $this->customPrice += 25;
+            $wh .= '&pricePlayer=25&levelPlayer='.$this->levelPlayer;;
+        } 
+        if ($this->priceTeam) {
+            logger('priceTeam='.$this->priceTeam);
+            $this->totalTeam = $this->totalTeam ?? 1;
+            $this->customPrice += $this->totalTeam * 50;
+            $subscriptionType .=' <br/> - '. $this->totalTeam." team(s)";
+            $wh .= '&totalTeam='.$this->totalTeam.'&levelTeam='.$this->levelPlayer;
+        }
         $template_content = array(
             array(
                 'name' => 'firstname',
@@ -118,7 +154,7 @@ class Tenerife extends Component
             ),
             array(
                 'name' => 'company_address',
-                'content' => $company->address . ' '.$company->zip
+                'content' => $company->address . ' ' . $company->zip
             ),
             array(
                 'name' => 'email',
@@ -129,8 +165,12 @@ class Tenerife extends Component
                 'content' => $company->phone
             ),
             array(
-                'name' => 'total_teams',
-                'content' => 1
+                'name' => 'subscription_type',
+                'content' => $subscriptionType
+            ),
+            array(
+                'name' => 'type',
+                'content' => $subscriptionType
             ),
             array(
                 'name' => 'event_name',
@@ -146,7 +186,7 @@ class Tenerife extends Component
         $message = [
             "from_email" => "info@businesspadeltour.be",
             'from_name'  => 'Vertuoza padel tour',
-            "subject" => 'Business Padel Tour: Tenerife here we come ' ,
+            "subject" => 'Business Padel Tour: Viva for Life ',
             "to" => $to,
             "headers" => ["Reply-To" => "info@businesspadeltour.be"],
             'global_merge_vars' => $template_content
@@ -156,14 +196,12 @@ class Tenerife extends Component
             "template_content" => $template_content,
             "message" => $message,
         ]);
-        if($this->withHotel) {
-            $wh = '&withHotel=true';
-        }
-        redirect('/' . App::currentLocale() . '/charge?ueid=' . $eventUser->id.$wh);
+        
+        $wh .= '&customPrice=' . $this->customPrice;
+        redirect('/' . App::currentLocale() . '/charge?ueid=' . $eventUser->id . $wh);
     }
     public function render()
     {
-        return view('livewire.tenerife')->layout('layouts.base');
+        return view('livewire.fourlife')->layout('layouts.base');
     }
-
 }

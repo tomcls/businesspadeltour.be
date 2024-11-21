@@ -11,8 +11,7 @@ class StripeController extends Controller
     public $stripe;
     public function create(Request $request) {
         $this->stripe = new StripeClient(config('app.stripe_secret'));
-        logger('create');
-        logger($request['items']);
+       
         try {
           
             // Create a PaymentIntent with amount and currency
