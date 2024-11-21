@@ -170,7 +170,12 @@
           <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.articles')}}" class="text-base font-medium color-dark-blue hover:text-gray-900">{{__('menu.news')}}</a>
         </nav>
         <div class="hidden items-center justify-end md:flex md:flex-1 lg:w-0 ">
+          @if (App::currentLocale() == 'fr')
           <a href="{{url('/').'/'.App::currentLocale().'/vivaforlife'}}" class="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-full border border-transparent bg-dark-blue px-4 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-700">Padel 4 Life</a>
+          @else
+          <a  href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}" class="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-full border border-transparent bg-dark-blue px-4 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-700">{{__("Sign up now!")}}</a>   
+          @endif
+          
           <div x-data="{ isOpen: false }" class="relative ml-3">
             <!-- Item active: "text-gray-900", Item inactive: "color-dark-blue" -->
             <button @click="isOpen = !isOpen" type="button" class="color-dark-blue group inline-flex items-center rounded-md  text-base font-medium hover:text-gray-900 focus:outline-none   focus:ring-offset-2" aria-expanded="false">
@@ -310,6 +315,7 @@
                 </svg>
                 <span class="ml-3 text-base font-medium text-gray-900">{{__('menu.rule')}}</span>
               </a>
+              @if (App::currentLocale() == 'fr')
               <a href="{{url('/').'/'.App::currentLocale().'/vivaforlife'}}" x-on:click="isMobileNavOpen=false" class="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50">
                 <svg class="h-6 w-6 flex-shrink-0 text-pink-600" data-slot="icon" fill="#eb4d5c" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"></path>
@@ -317,6 +323,7 @@
                 
                 <span class="ml-3 text-base font-medium text-gray-900">{{__('Padel 4 Life')}}</span>
               </a>
+              @endif
             </nav>
           </div>
         </div>
