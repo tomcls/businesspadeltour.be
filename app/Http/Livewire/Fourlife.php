@@ -17,6 +17,15 @@ class Fourlife extends Component
     public $customPrice = 10;
     public $user;
     public $company;
+    public $totalTeam;
+    public $totalAlone;
+
+    public $levelPlayer='fun';
+    public $levelTeam='fun';
+
+    public $priceAlone;
+    public $priceTeam;
+    public $pricePlayer;
 
     protected function rules()
     {
@@ -101,12 +110,30 @@ class Fourlife extends Component
         $subscriptionType = null;
         $event = Event::whereId($this->eventId)->first();
         // player one
-        if ($this->customPrice == 10) {
-            $subscriptionType = "Je suis un accompagant (10€)";
-        } else if ($this->customPrice == 25) {
-            $subscriptionType = "Je joue au padel seul (25€)";
-        } else if ($this->customPrice == 50) {
-            $subscriptionType = "Je joue au padel équipe (50€)";
+        $wh = '';
+        
+        
+        
+
+        if ($this->priceAlone) {
+            logger('priceAlone='.$this->priceAlone);
+            $subscriptionType =  ($this->totalAlone ?? 1). "accompagant(s)";
+            $this->totalAlone = $this->totalAlone ?? 1;
+            $this->customPrice = $this->totalAlone * 10;
+            $wh .= '&totalAlone='.$this->totalAlone;
+        } 
+        if ($this->pricePlayer) {
+            logger('pricePlayer='.$this->pricePlayer);
+            $subscriptionType .=' <br/> '.  "- 1 joueur";
+            $this->customPrice += 25;
+            $wh .= '&pricePlayer=25&levelPlayer='.$this->levelPlayer;;
+        } 
+        if ($this->priceTeam) {
+            logger('priceTeam='.$this->priceTeam);
+            $this->totalTeam = $this->totalTeam ?? 1;
+            $this->customPrice += $this->totalTeam * 50;
+            $subscriptionType .=' <br/> - '. $this->totalTeam." team(s)";
+            $wh .= '&totalTeam='.$this->totalTeam.'&levelTeam='.$this->levelPlayer;
         }
         $template_content = array(
             array(
@@ -169,9 +196,8 @@ class Fourlife extends Component
             "template_content" => $template_content,
             "message" => $message,
         ]);
-        if ($this->customPrice) {
-            $wh = '&customPrice=' . $this->customPrice;
-        }
+        
+        $wh .= '&customPrice=' . $this->customPrice;
         redirect('/' . App::currentLocale() . '/charge?ueid=' . $eventUser->id . $wh);
     }
     public function render()

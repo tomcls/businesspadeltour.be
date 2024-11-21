@@ -23,12 +23,25 @@ class ChargeSuccess extends Component
             if (!empty($request['custom_price'])) {
                 $this->price = $request['custom_price'];
                 // player one
-                if ($request['custom_price'] == 10) {
-                    $subscriptionType = "Je suis un accompagant (10€)";
-                } else if ($request['custom_price'] == 25) {
-                    $subscriptionType = "Je joue au padel seul (25€)";
-                } else if ($request['custom_price'] == 25) {
-                    $subscriptionType = "Je joue au padel équipe (50€)";
+                if ($request['totalAlone']) {
+                    logger('totalAlone='.$this->priceAlone);
+                    $subscriptionType =  ($this->totalAlone ?? 1). "accompagant(s)";
+                    $this->totalAlone = $this->totalAlone ?? 1;
+                    $this->customPrice = $this->totalAlone * 10;
+                    $wh .= '&totalAlone='.$this->totalAlone;
+                } 
+                if ($request['totalPlayer']) {
+                    logger('pricePlayer='.$this->pricePlayer);
+                    $subscriptionType .=' <br/> '.  "- 1 joueur";
+                    $this->customPrice += 25;
+                    $wh .= '&pricePlayer=25&levelPlayer='.$this->levelPlayer;;
+                } 
+                if ($request['totalTeam']) {
+                    logger('priceTeam='.$this->priceTeam);
+                    $this->totalTeam = $this->totalTeam ?? 1;
+                    $this->customPrice += $this->totalTeam * 50;
+                    $subscriptionType .=' <br/> - '. $this->totalTeam." team(s)";
+                    $wh .= '&totalTeam='.$this->totalTeam.'&levelTeam='.$this->levelPlayer;
                 }
             }
             $this->invoice = Invoice::whereIntent($request['payment_intent'])->first();
