@@ -256,7 +256,7 @@
                   <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}"  target="blank" class="color-dark-blue"> {{__('Welpadel Welkenraedt')}}</a>
                 </dt>
                 <dd class="mt-0 text-base leading-7 text-gray-600">
-                  <b class="text-sm"> {{__('When')}}: </b> <span class="text-sm">{{__('Friday')}} {{__('17/3/2025')}}</span><br/>
+                  <b class="text-sm"> {{__('When')}}: </b> <span class="text-sm">{{__('Friday')}} {{__('14/3/2025')}}</span><br/>
                   <b class="text-sm">{{__('Place')}}: </b> <span class="text-sm">{{__('Rue Chant des Oiseaux 13, 4840 Welkenraedt')}}</span> <br/><br/>
                 </dd>
               </div>
@@ -271,7 +271,7 @@
                 </dt>
                 <dd class="mt-0 text-base leading-7 text-gray-600">
                   <b class="text-sm"> {{__('When')}}: </b> <span class="text-sm">{{__('Friday')}} {{__('21/3/2025')}}</span><br/>
-                  <b class="text-sm">{{__('Place')}}: </b> <span class="text-sm">{{__('Antwerpselaan 1, 1853 Grimbergen')}}</span> <br/><br/>
+                  <b class="text-sm">{{__('Place')}}: </b> <span class="text-sm">{{__('Franklin Rooseveltlaan 155, 8790 Waregem')}}</span> <br/><br/>
                 </dd>
               </div>
               <div class="relative pl-10">
