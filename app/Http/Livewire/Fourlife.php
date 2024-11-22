@@ -20,8 +20,8 @@ class Fourlife extends Component
     public $totalTeam;
     public $totalAlone;
 
-    public $levelPlayer='fun';
-    public $levelTeam='fun';
+    public $levelPlayer = 'fun';
+    public $levelTeam = 'fun';
 
     public $priceAlone;
     public $priceTeam;
@@ -69,8 +69,8 @@ class Fourlife extends Component
             $company = Company::whereEmail($this->user['email'])->first();
             $company->firstname = $this->user['firstname'];
             $company->lastname = $this->user['lastname'];
-            $company->name = $this->company['name'];
-            $company->vat = $this->company['vat'];
+            $company->name = $this->company['name'] ?? ' - ';
+            $company->vat = $this->company['vat'] ?? ' - ';
             $company->email = $this->user['email'];
             $company->address = $this->company['address'] . ', ' . $this->company['city'];
             $company->zip = $this->company['zip'];
@@ -111,26 +111,26 @@ class Fourlife extends Component
         $event = Event::whereId($this->eventId)->first();
         // player one
         $wh = '';
-        
-        
-        
+
+
+
 
         if ($this->priceAlone) {
-            $subscriptionType = '"<br/>'.  ($this->totalAlone ?? 1). " accompagant(s)";
+            $subscriptionType = '"<br/>' .  ($this->totalAlone ?? 1) . " accompagant(s)";
             $this->totalAlone = $this->totalAlone ?? 1;
             $this->customPrice = $this->totalAlone * 10;
-            $wh .= '&totalAlone='.$this->totalAlone;
-        } 
+            $wh .= '&totalAlone=' . $this->totalAlone;
+        }
         if ($this->pricePlayer) {
-            $subscriptionType .=' <br/> '.  "- 1 joueur, level:".$this->levelPlayer;
+            $subscriptionType .= ' <br/> ' .  "- 1 joueur, level:" . $this->levelPlayer;
             $this->customPrice += 25;
-            $wh .= '&pricePlayer=25&levelPlayer='.$this->levelPlayer;;
-        } 
+            $wh .= '&pricePlayer=25&levelPlayer=' . $this->levelPlayer;;
+        }
         if ($this->priceTeam) {
             $this->totalTeam = $this->totalTeam ?? 1;
             $this->customPrice += $this->totalTeam * 50;
-            $subscriptionType .=' <br/> - '. $this->totalTeam." team(s), level:".$this->levelTeam;
-            $wh .= '&totalTeam='.$this->totalTeam.'&levelTeam='.$this->levelTeam;
+            $subscriptionType .= ' <br/> - ' . $this->totalTeam . " team(s), level:" . $this->levelTeam;
+            $wh .= '&totalTeam=' . $this->totalTeam . '&levelTeam=' . $this->levelTeam;
         }
         $template_content = array(
             array(
@@ -193,7 +193,7 @@ class Fourlife extends Component
             "template_content" => $template_content,
             "message" => $message,
         ]);
-        
+
         $wh .= '&customPrice=' . $this->customPrice;
         redirect('/' . App::currentLocale() . '/charge?ueid=' . $eventUser->id . $wh);
     }
