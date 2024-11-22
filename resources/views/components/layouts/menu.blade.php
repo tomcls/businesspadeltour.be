@@ -116,55 +116,7 @@
               </div>
             </div>
           </div>
-          <div x-data="{ isOpen: false }" class="relative" >
-            <!-- Item active: "text-gray-900", Item inactive: "color-dark-blue" -->
-            <button @click="isOpen = !isOpen" type="button" class="color-dark-blue group inline-flex items-center rounded-md text-base font-medium hover:text-gray-900 focus:outline-none   focus:ring-offset-2" aria-expanded="false">
-              <span>{{__('Photos')}}</span>
-              <!--
-                Heroicon name: mini/chevron-down
-  
-                Item active: "text-gray-600", Item inactive: "color-dark-blue"
-              -->
-              <svg class="color-dark-blue ml-2 h-5 w-5 group-hover:color-dark-blue" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
-              </svg>
-            </button>
-            <!--
-              'Solutions' flyout menu, show/hide based on flyout menu state.
-  
-              Entering: "transition ease-out duration-200"
-                From: "opacity-0 translate-y-1"
-                To: "opacity-100 translate-y-0"
-              Leaving: "transition ease-in duration-150"
-                From: "opacity-100 translate-y-0"
-                To: "opacity-0 translate-y-1"
-            -->
-            <div x-show="isOpen"
-                @click.outside="isOpen = false"
-                x-transition:enter="transition ease-out duration-100 transform"
-                x-transition:enter-start="opacity-0 scale-95"
-                x-transition:enter-end="opacity-100 scale-100"
-                x-transition:leave="transition ease-in duration-75 transform"
-                x-transition:leave-start="opacity-100 scale-100"
-                x-transition:leave-end="opacity-0 scale-95"
-                style="display: none"
-                class="absolute z-10 -ml-4 mt-3  w-32 transform px-2 sm:px-0 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2">
-              <div class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-                <div class="relative grid gap-6 bg-white px-5 py-3 sm:gap-4 sm:p-4">
-                  <a href="{{url('/').'/'.App::currentLocale().'/photos/toursandtaxi'}}" x-on:click="isOpen=false" class="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50">
-                    <div class="ml-4">
-                      <p class="text-base font-bold color-dark-blue">2023</p>
-                    </div>
-                  </a>
-                  <a href="{{url('/').'/'.App::currentLocale().'/photos2024/liege'}}" x-on:click="isOpen=false" class="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50">
-                    <div class="ml-4">
-                      <p class="text-base font-bold color-dark-blue">2024</p>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+          <a href="{{url('/').'/'.App::currentLocale().'/photos'}}" class="text-base font-bold color-dark-blue hover:text-gray-900">{{__('Photos')}}</a>
           <a href="{{url('/').'/'.App::currentLocale().'#agenda'}}" class="text-base font-bold color-dark-blue hover:text-gray-900">{{__('Planning 2025')}}</a>
           <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.price')}}" class="text-base font-medium color-dark-blue hover:text-gray-900">{{__('menu.price')}}</a>
           <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.articles')}}" class="text-base font-medium color-dark-blue hover:text-gray-900">{{__('menu.news')}}</a>
@@ -288,7 +240,7 @@
                 </svg>
                 <span class="ml-3 text-base font-medium text-gray-900">{{__('menu.price')}}</span>
               </a>
-              <a href="{{url('/').'/'.App::currentLocale().'/photos2024/liege'}}" x-on:click="isMobileNavOpen=false" class="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50">
+              <a href="{{url('/').'/'.App::currentLocale().'/photos'}}" x-on:click="isMobileNavOpen=false" class="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50">
                 <!-- Heroicon name: outline/squares-2x2 -->
                 <svg class="h-6 w-6 flex-shrink-0 color-dark-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"></path>
