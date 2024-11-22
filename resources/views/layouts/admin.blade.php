@@ -39,11 +39,7 @@
                         </button>
                     </div>
                     <div class="flex-1 h-0 pt-5 pb-4 overflow-y-auto">
-                        <div class="flex-shrink-0 flex items-center px-1">
-                            <a href="{{route('home')}}">
-                                <x-icon.vertuoza class="w-44 " />
-                            </a> 
-                        </div>
+                        
                         <nav class="flex flex-1 flex-col mt-5 px-2 space-y-1">
                             <ul role="list" class="flex flex-1 flex-col gap-y-7">
                               <li>
@@ -102,7 +98,7 @@
                 <div class="flex grow flex-col gap-y-5 overflow-y-auto border-r border-gray-200  px-6">
                     <div class="flex items-center flex-shrink-0 px-1 py-1 pt-5">
                         <a href="{{route('home')}}">
-                            <x-icon.vertuoza class="w-full " />
+                            <img class="w-full " src="https://itcl.s3.eu-west-1.amazonaws.com/businesspadeltour/bpt-logo-arenal3.png"/>
                         </a> 
                     </div>
                     <!-- Sidebar component, swap this element with another sidebar if you like -->

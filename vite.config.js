@@ -10,7 +10,14 @@ export default defineConfig({
     },
     plugins: [
         laravel({
-            input: ['resources/js/app.js','resources/js/te.js','resources/scss/app.scss'],
+            input: [
+                'resources/scss/app.scss',
+                'node_modules/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css',
+                'node_modules/filepond/dist/filepond.min.css',
+                'resources/js/te.js',
+                'resources/js/filepond.js',
+                'resources/js/app.js'
+            ],
             refresh: true,
         }),
     ],

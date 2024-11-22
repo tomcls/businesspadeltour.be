@@ -9,6 +9,7 @@ use App\Http\Controllers\StripeController;
 use App\Http\Livewire\AboutUs;
 use App\Http\Livewire\Admin\Companies;
 use App\Http\Livewire\Admin\Logos;
+use App\Http\Livewire\Admin\Photos as AdminPhotos;
 use App\Http\Livewire\Admin\Sessions;
 use App\Http\Livewire\Admin\Teams;
 use App\Http\Livewire\Admin\UserEvents;
@@ -122,7 +123,6 @@ Route::prefix('{locale?}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('set.
     Route::get('/about-us', AboutUs::class)->name('aboutus');
     Route::get('/contact', Contact::class)->name('contact');
     Route::get('/video', Video::class)->name('video');
-    
     Route::get('/photos/{slug?}', Photos::class)->name('photos');
     Route::get('/photos2024/{slug?}', Photos2024::class)->name('photos2024');
 
@@ -160,6 +160,7 @@ Route::prefix('{locale?}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('set.
     // Octane::route('GET','/en/index',function () {return new Response((new HomeController)->index());});
 });
 Route::group(['middleware' => ['auth', 'can:admin']], function () {
+    Route::get('/admin/photos', AdminPhotos::class)->name('admin.photos');
     Route::get('/admin/users', Users::class)->name('admin.users');
     Route::get('/admin/teams', Teams::class)->name('admin.teams');
     Route::get('/admin/companies', Companies::class)->name('admin.companies');

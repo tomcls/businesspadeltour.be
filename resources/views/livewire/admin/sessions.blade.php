@@ -37,6 +37,10 @@
                     <x-table.cell >
                         {{ $row->city }}
                     </x-table.cell>
+                    <x-table.cell >
+                        <a href="{{route('admin.photos',['session_id'=>$row->id])}}" class="cursor-pointer"> <x-icon.image class="text-pink-600 h-6 w-6"/></a>
+                       
+                    </x-table.cell>
                 </x-table.row>
                 @empty
                 <x-table.row>

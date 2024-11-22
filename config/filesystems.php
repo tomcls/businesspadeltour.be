@@ -49,6 +49,12 @@ return [
             'url' => env('APP_URL').'/logos',
             'visibility' => 'public',
         ],
+        'sessionImages' => [
+            'driver' => 'local',
+            'root' => storage_path('app/sessions/images'),
+            'url' => env('APP_URL').'/sessions/images',
+            'visibility' => 'public',
+        ],
 
         's3' => [
             'driver' => 's3',
