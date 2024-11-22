@@ -189,11 +189,11 @@
         <div class="sm:col-span-full pt-5 ">
           <div class="relative flex items-start">
               <div class="flex h-6 items-center">
-                <input  id="drink-event-2" aria-describedby="drink-event-2-description"  wire:model="priceTeam" value='50' type="checkbox" class="h-7 w-7 rounded-md border-gray-300 text-blue-600 focus:ring-blue-600">
+                <input  id="chkTeam"  wire:model="priceTeam" value='50' type="checkbox" class="h-7 w-7 rounded-md border-gray-300 text-blue-600 focus:ring-blue-600">
               </div>
               <div class="ml-3 text-sm leading-6">
-                <label for="drink-event-2" class="font-bold text-gray-900">{{__('Je joue au padel en équipe')}}</label>
-                <p id="drink-event-2-description" class="text-gray-500">{!!__(' 50€ pour 2 personnes, par équipe')!!}</p>
+                <label for="chkTeam" class="font-bold text-gray-900">{{__('Je joue au padel en équipe')}}</label>
+                <p  class="text-gray-500">{!!__(' 50€ pour 2 personnes, par équipe')!!}</p>
               </div>
             </div>
             
@@ -210,7 +210,7 @@
             <div class="flex flex-row pt-2 space-x-2">
               <div class="relative flex items-start">
                 <div class="flex h-6 items-center">
-                  <input  id="team-fun" aria-describedby="drink-event-2-description"  wire:model="levelTeam" value='fun' type="radio" class="h-4 w-4 rounded-full border-gray-300 text-blue-600 focus:ring-blue-600">
+                  <input  id="team-fun"   wire:model="levelTeam" value='fun' type="radio" class="h-4 w-4 rounded-full border-gray-300 text-blue-600 focus:ring-blue-600">
                 </div>
                 <div class="ml-3 text-sm leading-6">
                   <label for="team-fun" class="font-medium text-gray-900">{{__('Fun')}}</label>
@@ -218,7 +218,7 @@
               </div>
               <div class="relative flex items-start">
                 <div class="flex h-6 items-center">
-                  <input  id="team-advanced" aria-describedby="drink-event-2-description"  wire:model="levelTeam" value='advanced' type="radio" class="h-4 w-4 rounded-full border-gray-300 text-blue-600 focus:ring-blue-600">
+                  <input  id="team-advanced"   wire:model="levelTeam" value='advanced' type="radio" class="h-4 w-4 rounded-full border-gray-300 text-blue-600 focus:ring-blue-600">
                 </div>
                 <div class="ml-3 text-sm leading-6">
                   <label  for="team-advanced" for="drink-event-2" class="font-medium text-gray-900">{{__('Advanced')}}</label>
@@ -226,7 +226,7 @@
               </div>
               <div class="relative flex items-start">
                 <div class="flex h-6 items-center">
-                  <input  id="team-expert" aria-describedby="drink-event-2-description"  wire:model="levelTeam" value='expert' type="radio" class="h-4 w-4 rounded-full border-gray-300 text-blue-600 focus:ring-blue-600">
+                  <input  id="team-expert"   wire:model="levelTeam" value='expert' type="radio" class="h-4 w-4 rounded-full border-gray-300 text-blue-600 focus:ring-blue-600">
                 </div>
                 <div class="ml-3 text-sm leading-6">
                   <label for="team-expert" class="font-medium text-gray-900" for="">{{__('Expert')}}</label>
@@ -242,11 +242,11 @@
       <div class="sm:col-span-full pt-5 pb-4">
         <div class="relative flex items-start">
             <div class="flex h-6 items-center">
-              <input  id="drink-event-2" aria-describedby="drink-event-2-description"  wire:model="pricePlayer" value="25" type="checkbox" class="h-7 w-7 rounded-md border-gray-300 text-blue-600 focus:ring-blue-600">
+              <input  id="chkplayer" aria-describedby="chkplayer"  wire:model="pricePlayer" value="25" type="checkbox" class="h-7 w-7 rounded-md border-gray-300 text-blue-600 focus:ring-blue-600">
             </div>
             <div class="ml-3 text-sm leading-6">
-              <label for="drink-event-2" class="font-bold text-gray-900">{{__('Je joue au padel mais je viens seul')}}</label>
-              <p id="drink-event-2-description" class="text-gray-500">{!!__('Vous serai assigné à une équipe (25€)')!!}</p>
+              <label for="chkplayer" class="font-bold text-gray-900">{{__('Je joue au padel mais je viens seul')}}</label>
+              <p id="chkplayer" class="text-gray-500">{!!__('Vous serai assigné à une équipe (25€)')!!}</p>
             </div>
           </div>
           <div class="pl-10 pt-2">
@@ -254,7 +254,7 @@
             <div class="flex flex-row pt-2 space-x-2">
               <div class="relative flex items-start">
                 <div class="flex h-6 items-center">
-                  <input  id="player-fun" aria-describedby="drink-event-2-description"  wire:model="levelPlayer" value='fun' type="radio" class="h-4 w-4 rounded-full border-gray-300 text-blue-600 focus:ring-blue-600">
+                  <input  id="player-fun" aria-describedby="drink-event-2"  wire:model="levelPlayer" value='fun' type="radio" class="h-4 w-4 rounded-full border-gray-300 text-blue-600 focus:ring-blue-600">
                 </div>
                 <div class="ml-3 text-sm leading-6">
                   <label for="player-fun" class="font-medium text-gray-900">{{__('Fun')}}</label>
@@ -262,7 +262,7 @@
               </div>
               <div class="relative flex items-start">
                 <div class="flex h-6 items-center">
-                  <input  id="player-advanced" aria-describedby="drink-event-2-description"  wire:model="levelPlayer" value='advanced' type="radio" class="h-4 w-4 rounded-full border-gray-300 text-blue-600 focus:ring-blue-600">
+                  <input  id="player-advanced" aria-describedby="drink-event-2"  wire:model="levelPlayer" value='advanced' type="radio" class="h-4 w-4 rounded-full border-gray-300 text-blue-600 focus:ring-blue-600">
                 </div>
                 <div class="ml-3 text-sm leading-6">
                   <label for="player-advanced" class="font-medium text-gray-900">{{__('Advanced')}}</label>
@@ -270,7 +270,7 @@
               </div>
               <div class="relative flex items-start">
                 <div class="flex h-6 items-center">
-                  <input  id="player-expert" aria-describedby="drink-event-2-description"  wire:model="levelPlayer" value='expert' type="radio" class="h-4 w-4 rounded-full border-gray-300 text-blue-600 focus:ring-blue-600">
+                  <input  id="player-expert" aria-describedby="drink-event-2"  wire:model="levelPlayer" value='expert' type="radio" class="h-4 w-4 rounded-full border-gray-300 text-blue-600 focus:ring-blue-600">
                 </div>
                 <div class="ml-3 text-sm leading-6">
                   <label for="player-expert" for="drink-event-2" class="font-medium text-gray-900">{{__('Expert')}}</label>
@@ -284,11 +284,11 @@
       <div class="sm:col-span-full pt-5">
         <div class="relative flex items-start">
             <div class="flex h-6 items-center">
-              <input  id="drink-event-2" aria-describedby="drink-event-2-description"  wire:model="priceAlone" value='10' type="checkbox" class="h-7 w-7 rounded-md border-gray-300 text-blue-600 focus:ring-blue-600">
+              <input  id="check-alone" aria-describedby="check-alone"  wire:model="priceAlone" value='10' type="checkbox" class="h-7 w-7 rounded-md border-gray-300 text-blue-600 focus:ring-blue-600">
             </div>
             <div class="ml-3 text-sm leading-6">
-              <label for="drink-event-2" class="font-bold text-gray-900">{{__('Je ne joue pas au padel')}}</label>
-              <p id="drink-event-2-description" class="text-gray-500">{!!__('Je suis un accompagnant (10€)')!!}</p>
+              <label for="check-alone" class="font-bold text-gray-900">{{__('Je ne joue pas au padel')}}</label>
+              <p id="check-alone" class="text-gray-500">{!!__('Je suis un accompagnant (10€)')!!}</p>
             </div>
           </div>
       </div>

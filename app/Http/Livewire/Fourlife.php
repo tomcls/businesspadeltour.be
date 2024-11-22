@@ -48,15 +48,15 @@ class Fourlife extends Component
     }
     public function validateCompany()
     {
-        logger($this->priceTeam." - ".$this->pricePlayer." - ".$this->priceTeam);
-
+        logger('validateCompany');
+        $this->user['lang'] = App::currentLocale();
+            $this->validate();
         if(!$this->priceTeam && !$this->pricePlayer && !$this->priceTeam) {
             $this->notify(['message' => "Veuillez sélectionner au moins un type d'inscription svp", 'type' => 'alert']);
         } else {
 
-            $this->user['lang'] = App::currentLocale();
-            $this->validate();
-    
+            
+            logger('validateCompany!!!!!');
             $company = new Company();
             $company->firstname = $this->user['firstname'];
             $company->lastname = $this->user['lastname'];
