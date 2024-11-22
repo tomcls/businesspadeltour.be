@@ -124,6 +124,7 @@ Route::prefix('{locale?}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('set.
     Route::get('/contact', Contact::class)->name('contact');
     Route::get('/video', Video::class)->name('video');
     Route::get('/photos/{slug?}', Photos::class)->name('photos');
+    Route::get('/photos', Photos::class)->name('photos');
     Route::get('/photos2024/{slug?}', Photos2024::class)->name('photos2024');
 
     Route::get('/news', function () {

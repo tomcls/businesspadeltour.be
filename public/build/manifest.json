@@ -1,8 +1,23 @@
 {
+  "node_modules/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css": {
+    "file": "assets/filepond-plugin-image-preview-7c77a428.css",
+    "isEntry": true,
+    "src": "node_modules/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css"
+  },
+  "node_modules/filepond/dist/filepond.min.css": {
+    "file": "assets/filepond.min-d181279b.css",
+    "isEntry": true,
+    "src": "node_modules/filepond/dist/filepond.min.css"
+  },
   "resources/js/app.js": {
     "file": "assets/app-f71ac198.js",
     "isEntry": true,
     "src": "resources/js/app.js"
+  },
+  "resources/js/filepond.js": {
+    "file": "assets/filepond-12eed646.js",
+    "isEntry": true,
+    "src": "resources/js/filepond.js"
   },
   "resources/js/te.js": {
     "file": "assets/te-a5731ae3.js",
@@ -10,7 +25,7 @@
     "src": "resources/js/te.js"
   },
   "resources/scss/app.scss": {
-    "file": "assets/app-63d8707b.css",
+    "file": "assets/app-f36d004b.css",
     "isEntry": true,
     "src": "resources/scss/app.scss"
   }
