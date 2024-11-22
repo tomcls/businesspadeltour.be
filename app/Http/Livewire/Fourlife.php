@@ -39,8 +39,8 @@ class Fourlife extends Component
             // 'user.address' => 'required',
             // 'user.zip' => 'required',
             //'user.city' => 'required',
-            'company.name' => 'required',
-            'company.vat' => 'required',
+            'company.name' => 'sometimes',
+            'company.vat' => 'sometimes',
             'company.address' => 'required',
             'company.zip' => 'required|max:4',
             'company.city' => 'required',
@@ -55,8 +55,8 @@ class Fourlife extends Component
         $company = new Company();
         $company->firstname = $this->user['firstname'];
         $company->lastname = $this->user['lastname'];
-        $company->name = $this->company['name'];
-        $company->vat = $this->company['vat'];
+        $company->name = $this->company['name'] ?? ' - ';
+        $company->vat = $this->company['vat'] ?? ' - ';
         $company->email = $this->user['email'];
         $company->zip = $this->company['zip'];
         $company->address = $this->company['address'] . ', ' . $this->company['city'];
