@@ -98,7 +98,7 @@ class Photos extends Component
     public function rotate($id)
     {
         $name = Str::random(30);
-        $destinationPathThumbnail = storage_path('app/sessions') . '/' . $this->sessionId;
+        $destinationPathThumbnail = storage_path('app/sessions/images') . '/' . $this->sessionId;
         foreach ([ 'large','medium', 'small']  as $size) {
             
             $image = SessionPhotos::find($id);
