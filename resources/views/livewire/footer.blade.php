@@ -17,7 +17,7 @@ Livewire.on('loadImages', () => {
                 <a href="https://brugge.arenal.be/" target="_blank"  ><img class="mx-auto items-center justify-center mt-7 h-28" src="https://brugge.arenal.be/themes/custom/arenal/logo-new.svg" alt=""></a>
               </li>
               <li>
-                <a href="/" target="_blank"  ><img class="mx-auto items-center justify-center mt-7 h-28" src="https://itcl.s3.eu-west-1.amazonaws.com/businesspadeltour/bpt-logo.png"  alt=""></a>
+                <a href="/" target="_blank"  ><img class="mx-auto items-center justify-center mt-7 h-48" src="{{env('APP_URL').'/images/logo/logo-img.png'}}"  alt=""></a>
               </li>
             </ul>
           </div>
@@ -43,7 +43,7 @@ Livewire.on('loadImages', () => {
                 <a href="https://www.cupra.be/fr" target="_blank" ><img class="mx-auto items-center justify-center mt-7 h-44 w-72" src="https://www.cupra.be/images/logo.svg" alt=""></a>
               </li>
               <li>
-                <a href="https://www.vandelanotte.be/" target="_blank"  ><img class="mx-auto items-center justify-center mt-7 h-32" src="{{env('APP_URL').'/images/logo/logo-img.png'}}" alt=""></a>
+                <a href="https://www.vandelanotte.be/" target="_blank"  ><img class="mx-auto items-center justify-center mt-7 h-16" src="https://itcl.s3.eu-west-1.amazonaws.com/businesspadeltour/vandelanotte.png" alt=""></a>
               </li>
             </ul>
           </div>
