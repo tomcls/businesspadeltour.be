@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('session_photos', function (Blueprint $table) {
+        Schema::table('sessions', function (Blueprint $table) {
             $table->string('zip_file')->nullable();
         });
     }
@@ -25,7 +25,7 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('session_photos', function (Blueprint $table) {
+        Schema::table('sessions', function (Blueprint $table) {
             //
         });
     }
