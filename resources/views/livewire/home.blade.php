@@ -95,9 +95,15 @@
         <h2 class="pb-10 fadinAnimation opacity-0 text-gray-200 text-pretty  font-medium tracking-tight text-4xl sm:text-6xl">{{__('What is the Vertuoza Padel Tour?')}}</h2>
         <p class="mx-auto mt-6 max-w-5xl text-lg leading-8 text-gray-300 text-justify">{!!__("Launched in 2023, the Vertuoza Padel Tour is a Padel competition open to all companies operating in Belgium. The competition consists of several sessions held on Friday afternoons at various Padel clubs throughout Belgium. <br>In 2025, 6 clubs will host a stage of the Vertuoza Padel Tour, with sessions in Liège, Brussels, Waterloo, Ghent, Antwerp and Nivelles, and the grand finale at Le Zoute.<br><br> The tournament is mixed, open to all, and this year we're planning two categories: Fun and Expert. <br><br><b>The aim of the Vertuoza Padel Tour is threefold: Sport + Fun + Networking</b><br><br> 80 teams were able to meet in 2023, and we hope to gather at least 250 teams for the 2025 season.")!!}</p>
         <div class="mx-auto max-w-6xl  pt-10 lg:px-8 sm:text-center items-center content-center justify-center">
+          @if (App::currentLocale() == 'nl')
+          <video  id="heroVideo" controls   class="fadinAnimation opacity-0 sm:block  w-full max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10  md:-ml-4 lg:-ml-0">
+            <source src="https://itcl.s3.eu-west-1.amazonaws.com/businesspadeltour/videos/arenal-waregem-bc-2024.mp4" type="video/mp4"  />
+          </video>
+          @else
           <video  id="heroVideo" controls   class="fadinAnimation opacity-0 sm:block  w-full max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10  md:-ml-4 lg:-ml-0">
             <source src="https://itcl.s3.eu-west-1.amazonaws.com/businesspadeltour/padel_compressed.mp4" type="video/mp4"  />
           </video>
+          @endif
         </div>
         <div class="absolute -top-24 right-0 -z-10 transform-gpu blur-3xl" aria-hidden="true">
           <div class="aspect-[1404/767] w-[87.75rem] bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-25" style="clip-path: polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)"></div>
