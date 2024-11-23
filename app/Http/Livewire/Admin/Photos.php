@@ -121,7 +121,6 @@ class Photos extends Component
     public function delete($id)
     {
         $image = SessionPhotos::find($id);
-        logger($image);
         foreach (['large', 'medium', 'small']  as $size) {
             
             if (File::exists($image->path($size))) {
