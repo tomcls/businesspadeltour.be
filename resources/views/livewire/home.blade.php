@@ -259,7 +259,7 @@
                       <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                     </svg>
                   </div>
-                  <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}"  target="blank" class="color-dark-blue"> {{__('Welpadel Welkenraedt')}}</a>
+                  <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}"  target="blank" class="color-dark-blue"> {{__('Welpadel Welkenraedt')}} <x-icon.cart class="text-pink-600 h-7 w-7 inline" /> </a>
                 </dt>
                 <dd class="mt-0 text-base leading-7 text-gray-600">
                   <b class="text-sm"> {{__('When')}}: </b> <span class="text-sm">{{__('Friday')}} {{__('14/3/2025')}}</span><br/>
@@ -273,7 +273,7 @@
                       <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                     </svg>
                   </div>
-                  <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}"  target="blank" class="color-dark-blue"> {{__('Arenal Waregem')}}</a>
+                  <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}"  target="blank" class="color-dark-blue"> {{__('Arenal Waregem')}}<x-icon.cart class="text-pink-600 h-7 w-7 inline" /> </a>
                 </dt>
                 <dd class="mt-0 text-base leading-7 text-gray-600">
                   <b class="text-sm"> {{__('When')}}: </b> <span class="text-sm">{{__('Friday')}} {{__('21/3/2025')}}</span><br/>
@@ -287,7 +287,7 @@
                       <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                     </svg>
                   </div>
-                  <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}"  target="blank" class="color-dark-blue"> {{__('Tero Louise')}}</a>
+                  <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}"  target="blank" class="color-dark-blue"> {{__('Tero Louise')}}<x-icon.cart class="text-pink-600 h-7 w-7 inline" /> </a>
                 </dt>
                 <dd class="mt-0 text-base leading-7 text-gray-600">
                   <b class="text-sm"> {{__('When')}}: </b> <span class="text-sm">{{__('Friday')}} {{__('28/3/2025')}}</span><br/>
@@ -301,7 +301,7 @@
                       <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                     </svg>
                   </div>
-                  <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}"  target="blank" class="color-dark-blue"> Tenerife ({{__('find out more about this session')}})</a>
+                  <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}"  target="blank" class="color-dark-blue"> Tenerife ({{__('find out more about this session')}})<x-icon.cart class="text-pink-600 h-7 w-7 inline" /> </a>
                 </dt>
                 <dd class="mt-0 text-base leading-7 text-gray-600">
                   <b class="text-sm"> {{__('When')}}: </b> <span class="text-sm">{{__('From 2/4/2025 to 6/4/2025')}}</span><br/>
@@ -315,7 +315,7 @@
                       <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                     </svg>
                   </div>
-                  <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}"  target="blank" class="color-dark-blue"> {{__('Planet Padel')}} </a>
+                  <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}"  target="blank" class="color-dark-blue"> {{__('Planet Padel')}} <x-icon.cart class="text-pink-600 h-7 w-7 inline" /> </a>
                 </dt>
                 <dd class="mt-0 text-base leading-7 text-gray-600">
                   <b class="text-sm"> {{__('When')}}: </b> <span class="text-sm">{{__('Friday')}} {{__('11/4/2025')}}</span><br/>
@@ -329,7 +329,7 @@
                       <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                     </svg>
                   </div>
-                  <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}"  target="blank" class="color-dark-blue"> {{__('Mokko Padel')}} </a>
+                  <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}"  target="blank" class="color-dark-blue"> {{__('Mokko Padel')}} <x-icon.cart class="text-pink-600 h-7 w-7 inline" /> </a>
                 </dt>
                 <dd class="mt-0 text-base leading-7 text-gray-600">
                   <b class="text-sm"> {{__('When')}}: </b> <span class="text-sm">{{__('Friday')}} {{__('18/4/2025 ')}}</span><br/>
@@ -343,7 +343,7 @@
                       <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                     </svg>
                   </div>
-                  <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}"  target="blank" class="color-dark-blue"> {{__('Tour & Taxis Padel Club')}}</a>
+                  <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}"  target="blank" class="color-dark-blue"> {{__('Tour & Taxis Padel Club')}} <x-icon.cart class="text-pink-600 h-7 w-7 inline" /> </a>
                 </dt>
                 <dd class="mt-0 text-base leading-7 text-gray-600">
                   <b class="text-sm"> {{__('When')}}: </b> <span class="text-sm">{{__('Friday')}} {{__('25/4/2025 ')}}</span><br/>
@@ -357,7 +357,7 @@
                       <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                     </svg>
                   </div>
-                  <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}"  target="blank" class="color-dark-blue"> {{__('Arenal Mechelen')}}</a>
+                  <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}"  target="blank" class="color-dark-blue"> {{__('Arenal Mechelen')}} <x-icon.cart class="text-pink-600 h-7 w-7 inline" /> </a>
                 </dt>
                 <dd class="mt-0 text-base leading-7 text-gray-600">
                   <b class="text-sm"> {{__('When')}}: </b> <span class="text-sm">{{__('Friday')}} {{__('9/5/2025')}}</span><br/>
@@ -371,7 +371,7 @@
                       <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                     </svg>
                   </div>
-                  <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}"  target="blank" class="color-dark-blue"> {{__('Tero Waterloo')}}</a>
+                  <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}"  target="blank" class="color-dark-blue"> {{__('Tero Waterloo')}} <x-icon.cart class="text-pink-600 h-7 w-7 inline" /> </a>
                 </dt>
                 <dd class="mt-0 text-base leading-7 text-gray-600">
                   <b class="text-sm"> {{__('When')}}: </b> <span class="text-sm">{{__('Friday')}} {{__('16/5/2025')}}</span><br/>
@@ -385,7 +385,7 @@
                       <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                     </svg>
                   </div>
-                  <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}"  target="blank" class="color-dark-blue"> {{__('Arenal Grimbergen')}}</a>
+                  <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}"  target="blank" class="color-dark-blue"> {{__('Arenal Grimbergen')}} <x-icon.cart class="text-pink-600 h-7 w-7 inline" /> </a>
                 </dt>
                 <dd class="mt-0 text-base leading-7 text-gray-600">
                   <b class="text-sm"> {{__('When')}}: </b> <span class="text-sm">{{__('Friday')}} {{__('23/5/2025')}}</span><br/>
@@ -399,7 +399,7 @@
                       <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                     </svg>
                   </div>
-                  <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}"  target="blank" class="color-dark-blue"> {{__('Arenal Brugge')}}</a>
+                  <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}"  target="blank" class="color-dark-blue"> {{__('Arenal Brugge')}} <x-icon.cart class="text-pink-600 h-7 w-7 inline" /> </a>
                 </dt>
                 <dd class="mt-0 text-base leading-7 text-gray-600">
                   <b class="text-sm"> {{__('When')}}: </b> <span class="text-sm">{{__('Friday')}} {{__('6/6/2025 ')}}</span><br/>
@@ -414,7 +414,7 @@
                       <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                     </svg>
                   </div>
-                  <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}"  target="blank" class="color-dark-blue"> {{__('Arenal Bree')}} </a>
+                  <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}"  target="blank" class="color-dark-blue"> {{__('Arenal Bree')}} <x-icon.cart class="text-pink-600 h-7 w-7 inline" /> </a>
                 </dt>
                 <dd class="mt-0 text-base leading-7 text-gray-600">
                   <b class="text-sm"> {{__('When')}}: </b> <span class="text-sm">{{__('Friday')}} {{__('13/6/2025')}}</span><br/>
@@ -429,7 +429,7 @@
                       <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                     </svg>
                   </div>
-                  <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}"  target="blank" class="color-dark-blue"> {{__('Arenal Antwerp')}} </a>
+                  <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}"  target="blank" class="color-dark-blue"> {{__('Arenal Antwerp')}} <x-icon.cart class="text-pink-600 h-7 w-7 inline" /> </a>
                 </dt>
                 <dd class="mt-0 text-base leading-7 text-gray-600">
                   <b class="text-sm"> {{__('When')}}: </b> <span class="text-sm">{{__('Friday')}} {{__('20/6/2025')}}</span><br/>
@@ -446,7 +446,7 @@
                       <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                     </svg>
                   </div>
-                  <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}"  target="blank" class="color-dark-blue"> {{__('Eleven Nivelles')}}</a>
+                  <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}"  target="blank" class="color-dark-blue"> {{__('Eleven Nivelles')}}<x-icon.cart class="text-pink-600 h-7 w-7 inline" /> </a>
                 </dt>
                 <dd class="mt-0 text-base leading-7 text-gray-600">
                   <b class="text-sm"> {{__('When')}}: </b> <span class="text-sm">{{__('Friday')}} {{__('20/6/2025 ')}}</span><br/>
@@ -462,7 +462,7 @@
                       <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
                     </svg>
                   </div>
-                  <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}"  target="blank" class="color-dark-blue"> {{__('The final')}}</a>
+                  <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}"  target="blank" class="color-dark-blue"> {{__('The final')}} <x-icon.cart class="text-pink-600 h-7 w-7 inline" /> </a>
                 </dt>
                 <dd class="mt-0 text-base leading-7 text-gray-600">
                   <b class="text-sm"> {{__('When')}}: </b> <span class="text-sm"> {{__('15-16/8/2025 ')}}</span><br/>

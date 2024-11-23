@@ -252,5 +252,4 @@
     </div>
   </div>
   
-  @livewire('footer', key('footer'))
 </div>
