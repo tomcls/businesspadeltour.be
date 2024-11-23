@@ -93,7 +93,7 @@
     <h1 class="text-3xl font-bold tracking-tight color-dark-blue sm:text-4xl mb-10">{{$this->session->club_name}} {{\Carbon\Carbon::parse($this->session->startdate)->format('d-m-Y')}}</h1>
     @if ($this->session->zip_file)
     <div class=" py-4 ">
-      <a target="_blank" class="font-bold text-md  color-light-blue" href="https://itcl.s3.eu-west-1.amazonaws.com/businesspadeltour/zips/{{$this->session->zip_file}}">{{__('Download All')}}</a>
+      <a target="_blank" class="font-bold text-md  color-light-blue" href="https://itcl.s3.eu-west-1.amazonaws.com/businesspadeltour/zips/{{$this->session->zip_file}}">{{__('Download all')}}</a>
     </div>
         
     @endif
