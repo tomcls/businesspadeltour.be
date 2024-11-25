@@ -22,20 +22,26 @@
     
                     focusAfter && focusAfter.focus()
                 },
-                session: '{{__('signup.select')}}'
+                session: '{{$selectSessionString}}',
+                setSessionId(id) {
+                  if(id) {
+                    Livewire.emit('onSetSession',id);
+                    console.log('session session');
+                  }
+                }
             }"
             x-on:keydown.escape.prevent.stop="close($refs.button)"
             x-on:focusin.window="! $refs.panel.contains($event.target) && close()"
             x-id="['dropdown-button']"
-            class="relative w-full mt-2">
-          <label  id="listbox-label" class="sr-only"> Change published status </label>
+            class="relative w-full mt-2"
+            x-init="setSessionId({{$sessionId}})">
           <div class="relative w-full">
             <div class="inline-flex divide-x divide-blue-900 rounded-md shadow-sm w-full">
               <div class="inline-flex divide-x divide-blue-900 rounded-md shadow-sm w-full">
                 <div class="inline-flex items-center rounded-l-md border border-transparent bg-dark-blue py-2 pl-3 pr-4 text-white shadow-sm w-full">
                   <!-- Heroicon name: mini/check -->
                   
-                  <p class="ml-2.5 text-sm font-medium" x-html="session">{{__('signup.select')}}</p>
+                  <p class="ml-2.5 text-sm font-medium" x-html="session">{{ $this->session ? ($this->session->city.': '.\Carbon\Carbon::parse($this->session->startdate)->format('d-m-Y')): __('signup.select') }}</p>
                 </div>
                 <button 
                 x-ref="button"
@@ -43,7 +49,6 @@
                 :aria-expanded="open"
                 :aria-controls="$id('dropdown-button')"
                   type="button" class="inline-flex items-center rounded-l-none rounded-r-md bg-dark-blue p-2 text-sm font-medium text-white hover:bg-light-blue focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-50" aria-haspopup="listbox" aria-expanded="true" aria-labelledby="listbox-label">
-                  <span class="sr-only">Change published status</span>
                   <!-- Heroicon name: mini/chevron-down -->
                   <svg class="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />

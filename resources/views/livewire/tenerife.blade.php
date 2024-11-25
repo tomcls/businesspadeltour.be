@@ -69,7 +69,7 @@
           <h2 class="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">Quand?</h2>
           <div class="mt-6 flex flex-col gap-x-8 gap-y-20 lg:flex-row">
             <div class="lg:w-full lg:max-w-2xl lg:flex-auto">
-              <p class="text-xl/8 text-gray-600">Nous vous proposons un séjour de 5 jours / 4 nuits sur l’île, du mercredi 2 au dimanche 6 avril 202 encadré par notre partenaire belge Jelo Travel </p>
+              <p class="text-xl/8 text-gray-600">Nous vous proposons un séjour de 5 jours / 4 nuits sur l’île, du mercredi 2 au dimanche 6 avril 2025 encadré par notre partenaire belge Jelo Travel </p>
               <h2 class="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl pt-10 pb-6">Qui?</h2>
               <p class="text-xl/8 text-gray-600">Une fois sur place, vous serez pris en charge par nos partenaires de Jelo Travel, société spécialisée dans ce genre de voyages.  Nous avons personnellement testé leurs produits et leur encadrement est top, d’autant que cette entreprise a été fondée par des Belges installés sur place depuis des années. </p>
             </div>
@@ -155,96 +155,13 @@
         </div>
         
       </div>
-     
-      <form class="bg-white max-w-2xl shadow-sm ring-1 ring-gray-900/5 sm:rounded-xl md:col-span-2 mx-auto my-10 px-5 py-4" wire:submit.prevent="validateCompany"  >
-        <h2 class="font-bold py-3">Compléter ici le formulaire d'inscription et payer le séjour pour un montant de 550€ HTVA</h2>
-        <div class="grid max-w-2xl grid-cols-1 gap-x-6 sm:gap-y-8  gap-y-2 sm:grid-cols-6">
-          <div class="sm:col-span-3">
-            <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">{{__('Firstname')}}</label>
-            <div class="mt-2">
-              <input type="text" wire:model="user.firstname" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6">
-              @error('user.firstname') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
-            </div>
-          </div>
+     <div class="w-full text-center pt-5">
 
-          <div class="sm:col-span-3">
-            <label for="last-name" class="block text-sm font-medium leading-6 text-gray-900">{{__('Lastname')}}</label>
-            <div class="mt-2">
-              <input type="text" wire:model="user.lastname" name="last-name" id="last-name" autocomplete="family-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6">
-              @error('user.lastname') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
-            </div>
-          </div>
-
-          <div class="sm:col-span-3">
-            <label for="email" class="block text-sm font-medium leading-6 text-gray-900">{{__('Email address')}}</label>
-            <div class="mt-2">
-              <input id="email" wire:model="user.email" name="email" type="email" autocomplete="email" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6">
-              @error('user.email') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
-            </div>
-          </div>
-          <div class="sm:col-span-3">
-            <label for="email" class="block text-sm font-medium leading-6 text-gray-900">{{__('Phone')}}</label>
-            <div class="mt-2">
-              <input id="phone" wire:model="user.phone" name="phone" type="text" autocomplete="phone" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6">
-              @error('user.phone') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
-            </div>
-          </div>
-
-          <div class="sm:col-span-3">
-              <label for="companyName" class="block text-sm font-medium leading-6 text-gray-900">{{__('Company name')}}</label>
-              <div class="mt-2">
-                <input type="text" wire:model="company.name" name="companyName" id="companyName" autocomplete="given-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6">
-                @error('company.name') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
-              </div>
-          </div>
-          <div class="sm:col-span-3">
-              <label for="companyVAT" class="block text-sm font-medium leading-6 text-gray-900">{{__('Company VAT')}}</label>
-              <div class="mt-2">
-                <input type="text" wire:model="company.vat" name="companyVAT" id="companyVAT" autocomplete="given-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                @error('company.vat') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
-              </div>
-          </div>
-          <div class="sm:col-span-3">
-            <label for="street-address" class="block text-sm font-medium leading-6 text-gray-900">{{__('Address')}}</label>
-            <div class="mt-2">
-              <input type="text" wire:model="company.address" name="street-address" id="street-address" autocomplete="street-address" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-              @error('company.address') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
-            </div>
-          </div>
-
-          <div class="sm:col-span-1">
-            <label for="postal-code" class="block text-sm font-medium leading-6 text-gray-900">{{__('Zip')}}</label>
-            <div class="mt-2">
-              <input type="text" wire:model="company.zip"  name="postal-code" id="postal-code" autocomplete="postal-code" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-              @error('company.zip') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
-              </div>
-          </div>
-          <div class="sm:col-span-2">
-              <label for="city" class="block text-sm font-medium leading-6 text-gray-900">{{__('City')}}</label>
-              <div class="mt-2">
-                  <input type="text" wire:model="company.city"  name="city" id="city" autocomplete="city" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                  @error('company.city') <div class="mt-1 text-red-500 text-xs">{{ $message }}</div> @enderror
-              </div>
-          </div>
-          
-        </div>
-          
-          <div class="sm:col-span-full pt-3">
-            <div class="relative flex items-center content-center justify-center">
-                <div class="flex h-6 items-center">
-                  <input  id="event"  name="withHotel" wire:model="withHotel"  type="checkbox" class="h-6 w-6 rounded-md border-gray-300 text-blue-600 focus:ring-blue-600">
-                </div>
-                <div class="ml-3 text-sm leading-6">
-                  <label for="event" class=" font-bold text-gray-900">{{__("Je souhaite rajouter le logement ")}}</label>
-                  <p id="event-description" class="text-gray-500">{!!__('110€ la nuit pour un total de 440 eur en plus (990€ HTVA)')!!}</p>
-                </div>
-              </div>
-        </div>
-
-        <div class="flex items-center justify-center gap-x-6  px-4 py-4 sm:px-8 ">
-          <button type="submit" class="fadinAnimation inline-block rounded-full border-blue-500 border px-3.5 py-3 text-center text-base font-semibold bg-blue-900 text-white hover:text-blue-400 hover:bg-transparent shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-800 animated animate-fadein">{{__("Je m'inscrits")}}</button>
-        </div>
-      </form>
+      <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}?session_id=27" class="fadinAnimation opacity-0 inline-block rounded-full border-blue-500 border  px-3.5 py-3 text-center text-base font-semibold bg-blue-900 text-white hover:text-blue-400 hover:bg-transparent shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-800">
+        {{__("Sign up now!")}}
+        <x-icon.right class="h-4"/>
+      </a>
+     </div>
      
   
      

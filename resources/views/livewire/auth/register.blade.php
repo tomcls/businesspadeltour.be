@@ -242,9 +242,18 @@
               </div>
               <div class=" flex-col flex">
                 @for ($i = 0; $i < $totalTeam; $i++)
-                  @livewire('team', ['teamNumber' => $i+1, 'sessions' => $sessions], key('team'.$i+1))
+                  @livewire('team', ['teamNumber' => $i+1, 'sessions' => $sessions,'sessionId' => $sessionId], key('team'.$i+1))
                 @endfor
               </div>
+              @if ($sessionId == 27)
+              <div class="sm:col-span-2   py-7">
+                    <label for="room" class=" font-bold text-gray-900 ">{{__("Je souhaite rajouter le logement ")}}</label>
+                    <p for="room" class="text-gray-500 my-5">{!!__('110€ la nuit/chambre double pour un total de 440€ le séjour ') !!}</p>
+                    <div class="flex h-6 items-center">
+                      <input wire:model="room" type="text" name="room" id="room" placeholder="Nombre de chambre" class="block w-48 rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500" />
+                    </div>
+                </div>
+              @endif
               {{-- <div class="flex-1 w-full pt-3">
                 <p class="text-slate-700 text-sm">{!!__('signup.funTeaser')!!}</p>
               </div>

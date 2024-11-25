@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Models\Team as ModelsTeam;
+use Carbon\Carbon;
 use Livewire\Component;
 
 class Team extends Component
@@ -10,7 +11,9 @@ class Team extends Component
     public $sessions;
 
     public $team;
-
+    public $sessionId;
+    public $session;
+    public $selectSessionString;
     protected function rules(){
         return [
             'team.session' => 'required',
@@ -27,16 +30,32 @@ class Team extends Component
         ];
     }
 
-    protected $listeners = ['onValidateTeam'];
+    protected $listeners = ['onValidateTeam','onSetSession'=>'setSession'];
 
-    public function mount($teamNumber, $sessions) {
+    public function mount($teamNumber, $sessions, $sessionId=null) {
+        $this->selectSessionString = __('signup.select');
         $this->team['number'] = $teamNumber;
         $this->sessions = $sessions;
+        if($sessionId) {
+            $this->sessionId = $sessionId;
+            $this->team['session'] = $sessionId;
+           foreach ($sessions as $key => $s) {
+            if($s->id == $sessionId) {
+                $this->session = $s;
+                $this->selectSessionString = $this->session->city.': '.Carbon::parse($this->session->startdate)->format('d-m-Y');
+                break;
+            }
+           }
+            
+        }
+        
+       
     }
 
     public function setSession($id)
     {
         $this->team['session'] = $id;
+        $this->emit('onSetParentSessionId',$id);
     }
 
     public function setCategory($name = "fun")

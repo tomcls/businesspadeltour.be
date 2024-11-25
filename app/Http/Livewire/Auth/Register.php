@@ -11,6 +11,7 @@ use Carbon\Carbon;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Hash;
 use Livewire\Component;
+use Illuminate\Http\Request;
 
 class Register extends Component
 {
@@ -19,10 +20,12 @@ class Register extends Component
     public $totalTeam = 1;
     public $sessions = [];
     public $totalTeamsValidated = [];
-    protected $listeners = ['onTeamValidated', 'onTotalTeamChanged'];
+    protected $listeners = ['onTeamValidated', 'onTotalTeamChanged','onSetParentSessionId'=>'setSession'];
     public $company;
     public $promo;
     public $invoice;
+    public $sessionId;
+    public $room;
     protected function rules()
     {
         return [
@@ -37,13 +40,17 @@ class Register extends Component
             'company.city' => 'required',
         ];
     }
-    public function mount()
+    public function mount(Request $request)
     {
-        $this->sessions = Session::where('startdate', '>=', '2025-01-01')->orderBy('startdate','asc')->get();
+        $this->sessions = Session::where('startdate', '>=', '2025-01-01')->orderBy('startdate', 'asc')->get();
         $this->company['vat'] = 'BE 0';
-        logger('aaaa');
+        $this->sessionId = $request['session_id'] ?? null;
     }
 
+    public function setSession($id)
+    {
+        $this->sessionId = $id;
+    }
     public function onTotalTeamChanged($total)
     {
         $this->totalTeam = $total;
@@ -56,7 +63,7 @@ class Register extends Component
     }
     public function onTeamValidated($team)
     {
-       
+
         $this->totalTeamsValidated[$team['number']] = $team;
         if (count($this->totalTeamsValidated) == $this->totalTeam) {
             // $this->saved = true;
@@ -66,7 +73,7 @@ class Register extends Component
             $company->name = $this->company['name'];
             $company->vat = $this->company['vat'];
             $company->email = $this->company['email'];
-            $company->address = $this->company['address'].", ".$this->company['city'];
+            $company->address = $this->company['address'] . ", " . $this->company['city'];
             $company->phone = $this->company['phone'];
             $company->zip = $this->company['zip'];
             try {
@@ -79,11 +86,11 @@ class Register extends Component
                 $company->name = $this->company['name'];
                 $company->vat = $this->company['vat'];
                 $company->email = $this->company['email'];
-                $company->address = $this->company['address'].", ".$this->company['city'];
+                $company->address = $this->company['address'] . ", " . $this->company['city'];
                 $company->phone = $this->company['phone'];
                 $company->zip = $this->company['zip'];
                 $company->update();
-            }   
+            }
             $user = new User();
             $user->firstname = $this->company['firstname'];
             $user->lastname = $this->company['lastname'];
@@ -106,31 +113,40 @@ class Register extends Component
                 $user->save();
             }
 
-            if($company) {
+            if ($company) {
                 $playersEmail = [];
                 $content = "";
                 $price = 0;
-                if($this->totalTeam>=10) {
-                    $price = 195 * $this->totalTeam;
-                } else if($this->totalTeam>=5) {
-                    $price = 215 * $this->totalTeam;
+                if($this->sessionId != 36) {
+
+                    if ($this->totalTeam >= 10) {
+                        $price = 195 * $this->totalTeam;
+                    } else if ($this->totalTeam >= 5) {
+                        $price = 215 * $this->totalTeam;
+                    } else {
+                        $price = 250 * $this->totalTeam;
+                    }
+                    if ($this->promo == "rosselpadel") {
+                        $price = 150 * $this->totalTeam;
+                    }
+    
+                    if ($this->promo == "vertuozatour24") {
+                        $price = 195 * $this->totalTeam;
+                    }
+    
+    
+                    if ($this->promo == "antwerp1705") {
+                        $price = 0 * $this->totalTeam;
+                    }
+    
+                    if (strtolower($this->promo) == strtolower("EARLYBIRD")) {
+                        $price = $price - ($price / 100 * 10);
+                    }
                 } else {
-                    $price = 250 * $this->totalTeam;
-                }
-                if($this->promo == "rosselpadel") {
-                    $price = 150 * $this->totalTeam;
-                }
-
-                if($this->promo == "vertuozatour24") {
-                    $price = 195 * $this->totalTeam;
-                }
-
-
-                if($this->promo == "antwerp1705") {
-                    $price = 0 * $this->totalTeam;
-                }
-                if(strtolower($this->promo) == strtolower("EARLYBIRD") ){
-                    $price = $price - ($price/100*10);
+                    $price = 550 * $this->totalTeam;
+                    if($this->room) {
+                        $price += ($this->room * 110);
+                    }
                 }
 
                 foreach ($this->totalTeamsValidated as $key => $value) {
@@ -170,37 +186,41 @@ class Register extends Component
                     } catch (\Throwable $th) {
                         //throw $th;
                     }
-                    
+
                     $this->saved = true;
-                    $playersEmail[$value['playerOneEmail']] = ["firstname"=>$value['playerOneFirstname'],"lastname"=>$value['playerOneLastname']];
-                    $playersEmail[$value['playerTwoEmail']] = ["firstname"=>$value['playerTwoFirstname'],"lastname"=>$value['playerTwoLastname']];
+                    $playersEmail[$value['playerOneEmail']] = ["firstname" => $value['playerOneFirstname'], "lastname" => $value['playerOneLastname']];
+                    $playersEmail[$value['playerTwoEmail']] = ["firstname" => $value['playerTwoFirstname'], "lastname" => $value['playerTwoLastname']];
 
 
-                    $content .="<br><b>Equipe ".$key."</b><br/>";
-                    $content .="<b>- ".__('signup.Player')." 1:</b> ".$value['playerOneFirstname']."  ".$value['playerOneLastname']." t-Shirt: ".$value['playerOneSize']."<br/>";
-                    $content .="<b>- ".__('signup.Player')." 2:</b> ".$value['playerTwoFirstname']."  ".$value['playerTwoLastname']." t-Shirt: ".$value['playerTwoSize']."<br/>";
-                    $content .="<b>".__('signup.Session').":</b><br/>";
+                    $content .= "<br><b>Equipe " . $key . "</b><br/>";
+                    $content .= "<b>- " . __('signup.Player') . " 1:</b> " . $value['playerOneFirstname'] . "  " . $value['playerOneLastname'] . " t-Shirt: " . $value['playerOneSize'] . "<br/>";
+                    $content .= "<b>- " . __('signup.Player') . " 2:</b> " . $value['playerTwoFirstname'] . "  " . $value['playerTwoLastname'] . " t-Shirt: " . $value['playerTwoSize'] . "<br/>";
+                    $content .= "<b>" . __('signup.Session') . ":</b><br/>";
                     $session = Session::whereId($value['session'])->first();
-                    
-                    $content .="<b>- ".__('signup.Place').":</b> ".$session->club."  ".$session->city."<br/>";
-                    $content .="<b>- ".__('signup.Date').":</b> ". Carbon::parse($session->startdate)->format('d-m-Y') ."<br/>";
-                    $content .="<b>".__('signup.Category').":</b> ".$value['category']."<br/>";
 
-                    if(strtolower($this->promo) == "rosselpadel") {
-                        $content .="<br/><b>".__('signup.Price')." Promo code ".$this->promo."</b>: ".$price." € +TVA";
-                    }
-    
-                    if(strtolower($this->promo) == "vertuozatour24") {
-                        $content .="<br/><b>".__('signup.Price')." Promo code ".$this->promo."</b>: ".$price." € + TVA";
-                    }
-                    if(strtolower($this->promo) == strtolower("antwerp1705")) {
-                        $content .="<br/><b>".__('signup.Price')." Promo code ".$this->promo."</b>: ".$price." € + TVA";
-                    }
-                    if(strtolower($this->promo) == strtolower("EARLYBIRD")) {
-                        $content .="<br/><b>".__('signup.Price')." Promo code ".$this->promo."</b>: ".$price." € + TVA";
+                    $content .= "<b>- " . __('signup.Place') . ":</b> " . $session->club . "  " . $session->city . "<br/>";
+                    $content .= "<b>- " . __('signup.Date') . ":</b> " . Carbon::parse($session->startdate)->format('d-m-Y') . "<br/>";
+                    $content .= "<b>" . __('signup.Category') . ":</b> " . $value['category'] . "<br/>";
+
+                    if (strtolower($this->promo) == "rosselpadel") {
+                        $content .= "<br/><b>" . __('signup.Price') . " Promo code " . $this->promo . "</b>: " . $price . " € +TVA";
                     }
 
-                    
+                    if (strtolower($this->promo) == "vertuozatour24") {
+                        $content .= "<br/><b>" . __('signup.Price') . " Promo code " . $this->promo . "</b>: " . $price . " € + TVA";
+                    }
+                    if (strtolower($this->promo) == strtolower("antwerp1705")) {
+                        $content .= "<br/><b>" . __('signup.Price') . " Promo code " . $this->promo . "</b>: " . $price . " € + TVA";
+                    }
+                    if (strtolower($this->promo) == strtolower("EARLYBIRD")) {
+                        $content .= "<br/><b>" . __('signup.Price') . " Promo code " . $this->promo . "</b>: " . $price . " € + TVA";
+                    }
+                    if($this->sessionId == 36 ) {
+                        $content .= "<br/><b> Inscription Séjour Ténérife</b>: " . $price . " € + TVA";
+                        if($this->room) {
+                            $content .= '<br/>'.$this->room." chambre(s) dbl, (".($this->room * 110) . "€)";
+                        }
+                    }
                 }
                 $mailchimp = new \MailchimpTransactional\ApiClient();
                 $mailchimp->setApiKey(env('MAILCHIMP_APIKEY'));
@@ -241,9 +261,10 @@ class Register extends Component
                     array(
                         'name' => 'content',
                         'content' => $content
-                    ));
+                    )
+                );
                 $to = [];
-                array_push($to,[
+                array_push($to, [
                     "email" =>  'info@businesspadeltour.be',
                     "type" => "to"
                 ]);
@@ -255,14 +276,14 @@ class Register extends Component
                     "headers" => ["Reply-To" => "info@businesspadeltour.be"],
                     'global_merge_vars' => $template_content
                 ];
-               // Log::alert('Player 1 email sent '.App::currentLocale());
+                // Log::alert('Player 1 email sent '.App::currentLocale());
                 $response = $mailchimp->messages->sendTemplate([
                     "template_name" => "bpt_signup_admin",
                     "template_content" => $template_content,
                     "message" => $message,
                 ]);
 
-               
+
                 $template_content = array(
                     array(
                         'name' => 'firstname',
@@ -287,9 +308,10 @@ class Register extends Component
                     array(
                         'name' => 'priceVAT',
                         'content' => $price * 1.21
-                    ));
+                    )
+                );
                 $to = [];
-                array_push($to,[
+                array_push($to, [
                     "email" =>  $company->email,
                     "type" => "to"
                 ]);
@@ -301,9 +323,9 @@ class Register extends Component
                     "headers" => ["Reply-To" => "info@businesspadeltour.be"],
                     'global_merge_vars' => $template_content
                 ];
-               // Log::alert('Player 1 email sent '.App::currentLocale());
+                // Log::alert('Player 1 email sent '.App::currentLocale());
                 $response = $mailchimp->messages->sendTemplate([
-                    "template_name" => "bpt_signup_mgr_".App::currentLocale(),
+                    "template_name" => "bpt_signup_mgr_" . App::currentLocale(),
                     "template_content" => $template_content,
                     "message" => $message,
                 ]);
@@ -332,9 +354,10 @@ class Register extends Component
                         array(
                             'name' => 'content',
                             'content' => $content
-                        ));
+                        )
+                    );
                     $to = [];
-                    array_push($to,[
+                    array_push($to, [
                         "email" =>  $key,
                         "type" => "to"
                     ]);
@@ -346,9 +369,9 @@ class Register extends Component
                         "headers" => ["Reply-To" => "info@businesspadeltour.be"],
                         'global_merge_vars' => $template_content
                     ];
-                   // Log::alert('Player 1 email sent '.App::currentLocale());
+                    // Log::alert('Player 1 email sent '.App::currentLocale());
                     $response = $mailchimp->messages->sendTemplate([
-                        "template_name" => "bpt_signup_".App::currentLocale(),
+                        "template_name" => "bpt_signup_" . App::currentLocale(),
                         "template_content" => $template_content,
                         "message" => $message,
                     ]);
@@ -357,7 +380,7 @@ class Register extends Component
                 $this->invoice->user_id = $user->id;
                 $this->invoice->invoice_num = Invoice::newInvoiceNumber();
                 $this->invoice->price = $price;
-                $this->invoice->description = "Padel Session subscription: (".(count($this->totalTeamsValidated)>1? (count($this->totalTeamsValidated).'teams'):'1 team').')';
+                $this->invoice->description = "Padel Session subscription: (" . (count($this->totalTeamsValidated) > 1 ? (count($this->totalTeamsValidated) . 'teams') : '1 team') . ')';
                 $this->invoice->intent = microtime();
                 $this->invoice->save();
                 redirect('/' . App::currentLocale() . '/upload?iid=' . $this->invoice->id);

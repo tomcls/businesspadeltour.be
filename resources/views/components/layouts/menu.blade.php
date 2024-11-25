@@ -124,6 +124,7 @@
         <div class="hidden items-center justify-end md:flex md:flex-1 lg:w-0 ">
           @if (App::currentLocale() == 'fr')
           <a href="{{url('/').'/'.App::currentLocale().'/vivaforlife'}}" class="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-full border border-transparent bg-dark-blue px-4 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-700">Padel 4 Life</a>
+          <a href="{{url('/').'/'.App::currentLocale().'/tenerife'}}" class="ml-2 inline-flex items-center justify-center whitespace-nowrap rounded-full border border-transparent bg-dark-blue px-4 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-700">Tenerife</a>
           @else
           <a  href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}" class="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-full border border-transparent bg-dark-blue px-4 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-700">{{__("Sign up now!")}}</a>   
           @endif
@@ -274,6 +275,10 @@
                 </svg>
                 
                 <span class="ml-3 text-base font-medium text-gray-900">{{__('Padel 4 Life')}}</span>
+              </a>
+              <a href="{{url('/').'/'.App::currentLocale().'/tenerife'}}?session_id=27" x-on:click="isMobileNavOpen=false" class="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50">
+                <x-icon.palm class="h-6 w-6 flex-shrink-0 text-pink-600" />
+                <span class="ml-3 text-base font-medium text-gray-900">{{__('Tenerife')}}</span>
               </a>
               @endif
             </nav>
