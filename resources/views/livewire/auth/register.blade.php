@@ -245,7 +245,7 @@
                   @livewire('team', ['teamNumber' => $i+1, 'sessions' => $sessions,'sessionId' => $sessionId], key('team'.$i+1))
                 @endfor
               </div>
-              @if ($sessionId == 27)
+              @if ($sessionId == 36)
               <div class="sm:col-span-2   py-7">
                     <label for="room" class=" font-bold text-gray-900 ">{{__("Je souhaite rajouter le logement ")}}</label>
                     <p for="room" class="text-gray-500 my-5">{!!__('110€ la nuit/chambre double pour un total de 440€ le séjour ') !!}</p>
