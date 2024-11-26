@@ -157,7 +157,7 @@
       </div>
      <div class="w-full text-center pt-5">
 
-      <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}?session_id=27" class="fadinAnimation opacity-0 inline-block rounded-full border-blue-500 border  px-3.5 py-3 text-center text-base font-semibold bg-blue-900 text-white hover:text-blue-400 hover:bg-transparent shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-800">
+      <a href="{{url('/').'/'.App::currentLocale().'/'.__('route.register')}}?session_id=36" class="fadinAnimation opacity-0 inline-block rounded-full border-blue-500 border  px-3.5 py-3 text-center text-base font-semibold bg-blue-900 text-white hover:text-blue-400 hover:bg-transparent shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-800">
         {{__("Sign up now!")}}
         <x-icon.right class="h-4"/>
       </a>
