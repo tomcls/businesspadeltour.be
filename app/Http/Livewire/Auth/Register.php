@@ -145,7 +145,7 @@ class Register extends Component
                 } else {
                     $price = 550 * $this->totalTeam;
                     if($this->room) {
-                        $price += ($this->room * 110);
+                        $price += ($this->room * 110 * 4);
                     }
                 }
 
