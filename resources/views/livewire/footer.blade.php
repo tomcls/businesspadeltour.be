@@ -29,7 +29,7 @@ Livewire.on('loadImages', () => {
             <h2 class="fadinAnimation opacity-0 text-pretty text-5xl font-medium tracking-tight  sm:text-6xl color-dark-blue pb-7">{{__('In partnership with')}}</h2>
           </div>
           <div class="flex flex-1 mt-10">
-            <ul role="list" class="sm:grid sm:grid-cols-5  sm:gap-4 sm:items-center justify-center  sm:border-t sm:border-gray-200 sm:py-5   sm:space-x-2 fadinAnimation opacity-0">
+            <ul role="list" class="sm:grid sm:grid-cols-5  sm:gap-4 sm:items-center justify-center  sm:border-t sm:border-gray-200 py-10 sm:py-5 space-y-24 sm:space-y-0  sm:space-x-2 fadinAnimation opacity-0">
               <li>
                 <a href="https://wilmeyer.com/" target="_blank"  ><img class="mx-auto items-center justify-center mt-7" src="{{url('/').'/images/sponsors/wilmeyer.png'}}" alt=""></a>
               </li>
@@ -43,35 +43,35 @@ Livewire.on('loadImages', () => {
                 <a href="https://www.cupra.be/fr" target="_blank" ><img class="mx-auto items-center justify-center mt-7 h-44 w-72" src="https://www.cupra.be/images/logo.svg" alt=""></a>
               </li>
               <li>
-                <a href="https://www.vandelanotte.be/" target="_blank"  ><img class="mx-auto items-center justify-center  h-10 mt-7" src="https://itcl.s3.eu-west-1.amazonaws.com/businesspadeltour/vandelanotte.png" alt=""></a>
+                <a href="https://www.vandelanotte.be/" target="_blank"  ><img class="mx-auto items-center justify-center h-14 sm:h-10 mt-7" src="https://itcl.s3.eu-west-1.amazonaws.com/businesspadeltour/vandelanotte.png" alt=""></a>
               </li>
             </ul>
           </div>
         </div>
       </div>
-      <div class="bg-white " id="sponsor">
+      <div class="pt-20 sm:pt-0 bg-white " id="sponsor">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
           <div class="mx-auto max-w-2xl lg:mx-0">
             <h2 class="fadinAnimation opacity-0 text-pretty text-5xl font-medium tracking-tight  sm:text-6xl color-dark-blue pb-7">{{__('The clubs')}}</h2>
           </div>
-          <div class="flex flex-1 mt-10">
-            <ul role="list" class="sm:grid sm:grid-cols-6  sm:gap-4 sm:items-center justify-center  sm:border-t sm:border-gray-200 sm:py-5   sm:space-x-12 fadinAnimation opacity-0">
-              <li>
-                <a href="https://tour-taxis.com/fr/event/world-padel-tour-2023-gare-maritime/" target="_blank"  ><img class="mx-auto items-center justify-center mt-7" src="{{url('/').'/images/clubs/padelclub.png'}}" alt=""></a>
+          <div class=" mt-10 w-full px-10 sm:px-0">
+            <ul role="list" class="sm:grid sm:grid-cols-6  sm:gap-4 sm:items-center justify-center  sm:border-t sm:border-gray-200  sm:py-5 space-y-24 sm:space-y-0  sm:space-x-12 fadinAnimation opacity-0">
+              <li class="mx-auto  items-center justify-center text-center">
+                <a href="https://tour-taxis.com/fr/event/world-padel-tour-2023-gare-maritime/" target="_blank"  ><img class="mx-auto items-center justify-center mt-7 text-center" src="{{url('/').'/images/clubs/padelclub.png'}}" alt=""></a>
               </li>
-              <li>
-                <a href="https://brugge.arenal.be/"  target="_blank" ><img class="mx-auto  items-center justify-center mt-7" src="https://brugge.arenal.be/themes/custom/arenal/logo-new.svg" alt=""></a>
+              <li class="w-full mx-auto  items-center justify-center text-center ">
+                <a href="https://brugge.arenal.be/"  target="_blank" ><img class="mx-auto  items-center justify-center mt-7 h-24 text-center" src="https://brugge.arenal.be/themes/custom/arenal/logo-new.svg" alt=""></a>
               </li>
-              <li>
-                <a href="https://planetpadel.be/" target="_blank"  ><img class="mx-auto items-center justify-center mt-7" src="{{url('/').'/images/clubs/planetpadel.png'}}" alt=""></a>
+              <li class="mx-auto  items-center justify-center text-center">
+                <a href="https://planetpadel.be/" target="_blank"  ><img class="mx-auto items-center justify-center mt-7 text-center" src="{{url('/').'/images/clubs/planetpadel.png'}}" alt=""></a>
               </li>
-              <li>
+              <li class="mx-auto  items-center justify-center text-center">
                 <a href="https://elevenpadel.be/" target="_blank" ><img class="mx-auto items-center justify-center mt-7" src="{{url('/').'/images/clubs/eleven.jpg'}}" alt=""></a>
               </li>
-              <li>
+              <li class="mx-auto  items-center justify-center text-center">
                 <a href="https://www.royalzoutetennisclub.be/" target="_blank" ><img class="mx-auto items-center justify-center mt-7" src="{{url('/').'/images/clubs/zoute.jpg'}}" alt=""></a>
               </li>
-              <li>
+              <li class="mx-auto  items-center justify-center text-center">
                 <a href="https://teropadelclub.be/fr" target="_blank"  ><img class=" max-h-20 mx-auto items-center justify-center mt-7" src="{{url('/').'/images/sponsors/tero.png'}}" alt=""></a>
               </li>
               <!-- More people... -->
