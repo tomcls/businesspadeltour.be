@@ -67,7 +67,7 @@
                                     @foreach ($sessions as $session)
                                         @if (\Carbon\Carbon::parse($session->startdate)->format('Y') == $y)
                                         <li>
-                                            <a href="{{route('photos',['session_id' => $session->id])}}" class="block rounded-md py-2 pl-9 pr-2 text-sm/6 text-gray-700 hover:bg-gray-50 {{$session->id == $this->sessionId ? 'font-bold': ''}}">{{$session->club_name}} {{\Carbon\Carbon::parse($session->startdate)->format('d-m-Y')}}</a>
+                                            <a href="{{env('APP_URL')}}/{{App::currentLocale()}}/photos?session_id={{$session->id}}" class="block rounded-md py-2 pl-9 pr-2 text-sm/6 text-gray-700 hover:bg-gray-50 {{$session->id == $this->sessionId ? 'font-bold': ''}}">{{$session->club_name}} {{\Carbon\Carbon::parse($session->startdate)->format('d-m-Y')}}</a>
                                         </li>
                                         @endif
                                     @endforeach
