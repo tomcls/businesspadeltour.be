@@ -29,7 +29,7 @@ Livewire.on('loadImages', () => {
             <h2 class="fadinAnimation opacity-0 text-pretty text-5xl font-medium tracking-tight  sm:text-6xl color-dark-blue pb-7">{{__('In partnership with')}}</h2>
           </div>
           <div class="flex flex-1 mt-10">
-            <ul role="list" class="sm:grid sm:grid-cols-5  sm:gap-4 sm:items-center justify-center  sm:border-t sm:border-gray-200 sm:py-5   sm:space-x-12 fadinAnimation opacity-0">
+            <ul role="list" class="sm:grid sm:grid-cols-5  sm:gap-4 sm:items-center justify-center  sm:border-t sm:border-gray-200 sm:py-5   sm:space-x-2 fadinAnimation opacity-0">
               <li>
                 <a href="https://wilmeyer.com/" target="_blank"  ><img class="mx-auto items-center justify-center mt-7" src="{{url('/').'/images/sponsors/wilmeyer.png'}}" alt=""></a>
               </li>
@@ -43,7 +43,7 @@ Livewire.on('loadImages', () => {
                 <a href="https://www.cupra.be/fr" target="_blank" ><img class="mx-auto items-center justify-center mt-7 h-44 w-72" src="https://www.cupra.be/images/logo.svg" alt=""></a>
               </li>
               <li>
-                <a href="https://www.vandelanotte.be/" target="_blank"  ><img class="mx-auto items-center justify-center  h-8 mt-7" src="https://itcl.s3.eu-west-1.amazonaws.com/businesspadeltour/vandelanotte.png" alt=""></a>
+                <a href="https://www.vandelanotte.be/" target="_blank"  ><img class="mx-auto items-center justify-center  h-10 mt-7" src="https://itcl.s3.eu-west-1.amazonaws.com/businesspadeltour/vandelanotte.png" alt=""></a>
               </li>
             </ul>
           </div>
