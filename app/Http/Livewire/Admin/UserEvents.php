@@ -12,7 +12,8 @@ use Livewire\Component;
 class UserEvents extends Component
 {
     use WithPerPagePagination, WithSorting, WithBulkActions, WithCachedRows;
-    
+    public $showDeleteModal = false;
+    public $deleteSelected;
     public function mount() {
 
     }
@@ -22,7 +23,15 @@ class UserEvents extends Component
         $query = EventUser::query();
         return $this->applySorting($query);
     }
-
+    public function showModal($id) {
+        $this->showDeleteModal = true;
+        $this->deleteSelected = $id;
+    }
+    public function delete() {
+        EventUser::whereId($this->deleteSelected)->delete();
+        $this->deleteSelected = null;
+        $this->showDeleteModal = false;
+    }
     public function getRowsProperty()
     {
         //return $this->applyPagination($this->rowsQuery);

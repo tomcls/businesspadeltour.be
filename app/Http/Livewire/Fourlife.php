@@ -5,6 +5,7 @@ namespace App\Http\Livewire;
 use App\Models\Company;
 use App\Models\Event;
 use App\Models\EventUser;
+use App\Models\Invoice;
 use App\Models\User;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Hash;
@@ -103,21 +104,11 @@ class Fourlife extends Component
                 $user->company_id = $company->id;
                 $user->save();
             }
-            $eventUser = new EventUser();
-            $eventUser->user_id = $user->id;
-            $eventUser->event_id = $this->eventId;
-    
-            $eventUser->teams = 1;
-            $eventUser->save();
-    
-            $mailchimp = new \MailchimpTransactional\ApiClient();
-            $mailchimp->setApiKey(env('MAILCHIMP_APIKEY'));
-            $subscriptionType = null;
-            $event = Event::whereId($this->eventId)->first();
             // player one
             $wh = '';
+            $subscriptionType = null;
             if ($this->priceAlone) {
-                $subscriptionType = '"<br/>'.  ($this->totalAlone ?? 1). " accompagant(s)";
+                $subscriptionType = '<br/>'.  ($this->totalAlone ?? 1). " accompagant(s)";
                 $this->totalAlone = $this->totalAlone ?? 1;
                 $this->customPrice = $this->totalAlone * 10;
                 $wh .= '&totalAlone='.$this->totalAlone;
@@ -125,7 +116,7 @@ class Fourlife extends Component
             if ($this->pricePlayer) {
                 $subscriptionType .=' <br/> '.  "- 1 joueur, level:".$this->levelPlayer;
                 $this->customPrice += 25;
-                $wh .= '&pricePlayer=25&levelPlayer='.$this->levelPlayer;;
+                $wh .= '&pricePlayer=25&levelPlayer='.$this->levelPlayer;
             } 
             if ($this->priceTeam) {
                 $this->totalTeam = $this->totalTeam ?? 1;
@@ -133,6 +124,31 @@ class Fourlife extends Component
                 $subscriptionType .=' <br/> - '. $this->totalTeam." team(s), level:".$this->levelTeam;
                 $wh .= '&totalTeam='.$this->totalTeam.'&levelTeam='.$this->levelTeam;
             }
+            $invoice = new Invoice();
+            $invoice->user_id = $user->id;
+            $invoice->invoice_num = Invoice::newInvoiceNumber();
+            $invoice->price = $this->customPrice;
+            $invoice->description = "Event PadelFourLife". ' '.$subscriptionType;
+            $invoice->intent = null;
+            $invoice->date_payed = null;
+
+            $invoice->vat = false;
+            $invoice->save();
+
+            $eventUser = new EventUser();
+            $eventUser->user_id = $user->id;
+            $eventUser->event_id = $this->eventId;
+    
+            $eventUser->teams = 1;
+            $eventUser->invoice_id = $invoice->id;
+            $eventUser->save();
+    
+            $mailchimp = new \MailchimpTransactional\ApiClient();
+            $mailchimp->setApiKey(env('MAILCHIMP_APIKEY'));
+            
+            $event = Event::whereId($this->eventId)->first();
+            
+
             $template_content = array(
                 array(
                     'name' => 'firstname',
@@ -195,8 +211,36 @@ class Fourlife extends Component
                 "message" => $message,
             ]);
             
+            $event = Event::whereId($eventUser->event_id)->first();
+                
+                $template_content = array(
+                    
+                    array(
+                        'name' => 'event_name',
+                        'content' => $event->name
+                    ));
+                $to = [];
+                array_push($to,[
+                    "email" =>  $user->email,
+                    "type" => "to"
+                ]);
+                $message = [
+                    "from_email" => "info@businesspadeltour.be",
+                    'from_name'  => 'Vertuoza padel tour',
+                    "subject" => __('Subscription event Vertuoza Padel Tour'),
+                    "to" => $to,
+                    "headers" => ["Reply-To" => "info@businesspadeltour.be"],
+                    'global_merge_vars' => $template_content
+                ];
+                $response = $mailchimp->messages->sendTemplate([
+                    "template_name" => "vertuoza_padel_event_thx_".(App::currentLocale()=='fr' || App::currentLocale()=='nl' ? App::currentLocale():'fr'),
+                    "template_content" => $template_content,
+                    "message" => $message,
+                ]);
+
+
             $wh .= '&customPrice=' . $this->customPrice;
-            redirect('/' . App::currentLocale() . '/charge?ueid=' . $eventUser->id . $wh);
+            redirect('/' . App::currentLocale() . '/charge?iid=' . $invoice->id);
         }
     }
     public function render()

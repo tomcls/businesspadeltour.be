@@ -34,8 +34,14 @@ class Charge extends Component
        
         if (!empty($request['iid'])) {
             $this->invoice = Invoice::whereId($request['iid'])->first();
-            $this->price = $this->invoice->price * 1.21;
+            if($this->invoice->vat) {
+                $this->price = $this->invoice->price * 1.21;
+            } else {
+                $this->price = $this->invoice->price;
+            }
+            
         }
+        logger($this->price);
         $this->returnUrl = route('charge.success',[
             'ueid'=> $this->eventUser->id ?? null,
             'iid'=> $this->invoice->id ?? null,

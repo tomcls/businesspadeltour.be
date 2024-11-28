@@ -385,6 +385,7 @@ class Register extends Component
                 $this->invoice->price = $price;
                 $this->invoice->description = "Padel Session subscription: (" . (count($this->totalTeamsValidated) > 1 ? (count($this->totalTeamsValidated) . 'teams') : '1 team') . ')';
                 $this->invoice->intent = microtime();
+                $this->invoice->vat = true;
                 $this->invoice->save();
                 redirect('/' . App::currentLocale() . '/upload?iid=' . $this->invoice->id);
             } else {
