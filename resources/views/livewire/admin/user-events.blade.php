@@ -18,7 +18,7 @@
                 
     
                 @forelse ($rows as $row)
-                <x-table.row wire:loading.class.delay="opacity-70" wire:key="row-{{ $row->id }}" class="{{(empty($row->invoice->intent)) ? 'bg-pink-200' : ''}}">
+                <x-table.row wire:loading.class.delay="opacity-70" wire:key="row-{{ $row->id }}" class="{{(empty($row->invoice->intent)) ? 'bg-pink-100' : ''}}">
                    
                     <x-table.cell >
                         {{ $row->id }}
