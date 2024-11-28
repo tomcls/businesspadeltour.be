@@ -115,7 +115,7 @@
   </div>
 
   <div  wire:ignore>
-    <x-modal.dialog wire:model.defer="showEditModal">
+    <x-modal.dialog wire:model.defer="showEditModal" maxWidth="full">
         <x-slot name="title"></x-slot>
         <x-slot name="content">
             <div  class="relative w-full " >

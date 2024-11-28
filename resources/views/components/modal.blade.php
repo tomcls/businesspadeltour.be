@@ -26,6 +26,9 @@ switch ($maxWidth ?? '2xl') {
     case 'xl':
         $maxWidth = 'sm:max-w-xl';
         break;
+    case 'full':
+        $maxWidth = 'sm:max-w-full';
+        break;
     case '2xl':
     default:
         $maxWidth = 'sm:max-w-2xl';
