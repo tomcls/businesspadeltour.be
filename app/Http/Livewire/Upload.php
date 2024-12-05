@@ -32,8 +32,6 @@ class Upload extends Component
             $this->invoice = Invoice::whereId($request['iid'])->first();
             $this->user = User::whereId($this->invoice->user_id)->first();
             $this->company = Company::whereId($this->user->company_id)->first();
-            logger('zzzzz');
-            logger($this->user);
         }
     }
 

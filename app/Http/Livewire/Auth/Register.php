@@ -142,11 +142,28 @@ class Register extends Component
                     if (strtolower($this->promo) == strtolower("EARLYBIRD")) {
                         $price = $price - ($price / 100 * 10);
                     }
+                    if (strtolower($this->promo) == strtolower("ARENA GROUP")) {
+                        $price = $price - ($price / 100 * 10);
+                    }
+                    if (strtolower($this->promo) == strtolower("CHEZ NOUS CANNES")) {
+                        $price = $price - ($price / 100 * 10);
+                    }
+
+                    if (strtolower($this->promo) == strtolower("CUPRA PADEL")) {
+                        $price = 0;
+                    }
                 } else {
                     $price = 550 * $this->totalTeam;
                     if (strtolower($this->promo) == strtolower("EARLYBIRD")) {
                         $price = $price - ($price / 100 * 10);
                     }
+                    if (strtolower($this->promo) == strtolower("ARENA GROUP")) {
+                        $price = $price - ($price / 100 * 10);
+                    }
+                    if (strtolower($this->promo) == strtolower("CHEZ NOUS CANNES")) {
+                        $price = $price - ($price / 100 * 10);
+                    }
+                    
                     if($this->room) {
                         $price += ($this->room * 110 * 4);
                     }
@@ -386,6 +403,11 @@ class Register extends Component
                 $this->invoice->description = "Padel Session subscription: (" . (count($this->totalTeamsValidated) > 1 ? (count($this->totalTeamsValidated) . 'teams') : '1 team') . ')';
                 $this->invoice->intent = microtime();
                 $this->invoice->vat = true;
+                if($price == 0) {
+                    $this->invoice->date_payed = now();
+                    $this->invoice->intent = 'FREE';
+                    $this->invoice->description .= ' FREE';
+                }
                 $this->invoice->save();
                 redirect('/' . App::currentLocale() . '/upload?iid=' . $this->invoice->id);
             } else {
