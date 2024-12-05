@@ -120,7 +120,7 @@ class Fourlife extends Component
             } 
             if ($this->priceTeam) {
                 $this->totalTeam = $this->totalTeam ?? 1;
-                $this->customPrice += $this->totalTeam * 50;
+                $this->customPrice += ($this->totalTeam??1) * 50;
                 $subscriptionType .=' <br/> - '. $this->totalTeam." team(s), level:".$this->levelTeam;
                 $wh .= '&totalTeam='.$this->totalTeam.'&levelTeam='.$this->levelTeam;
             }
