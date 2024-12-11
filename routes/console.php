@@ -2,7 +2,6 @@
 
 use App\Jobs\CampaignJob;
 use App\Jobs\WelcomeEvent2025Job;
-use Illuminate\Foundation\Inspiring;
 use Illuminate\Support\Facades\Artisan;
 
 /*

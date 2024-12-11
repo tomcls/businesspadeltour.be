@@ -41,9 +41,8 @@ class WelcomeEvent2025Job implements ShouldQueue
        // logger($users);
         foreach ($users as $key => $user) {
 
-            $eventuser = EventUser::whereUserId($user->id)->first();
-            logger($eventuser);
-            if ($eventuser && ($eventuser->event_id == 2 || $eventuser->event_id == 4) ) {
+            $eventuser = EventUser::whereUserId($user->id)->get()->pluck('event_id')->toArray();
+            if (count($eventuser) == 0 || (count($eventuser) && !in_array(6, $eventuser) )) {
 
                 // player one
                 $template_content = array(
@@ -62,7 +61,7 @@ class WelcomeEvent2025Job implements ShouldQueue
                 $message = [
                     "from_email" => "info@businesspadeltour.be",
                     'from_name'  => 'Vertuoza padel tour',
-                    "subject" => 'Kick off Vertuoza Padel Tour 2025',
+                    "subject" => 'Businesspadeltour: Jouer au padel pour la bonne cause',
                     "to" => $to,
                     "headers" => ["Reply-To" => "info@businesspadeltour.be"],
                     'global_merge_vars' => $template_content
@@ -72,7 +71,7 @@ class WelcomeEvent2025Job implements ShouldQueue
                     logger('mail sent to ' . $email . " total = " . $cpt);
                     // Log::alert('Player 1 email sent '.App::currentLocale());
                     $mailchimp->messages->sendTemplate([
-                        "template_name" => "vertuoza_padel_event_beready_" . $user->lang,
+                        "template_name" => "padel_for_life_fr",
                         "template_content" => $template_content,
                         "message" => $message,
                     ]);
