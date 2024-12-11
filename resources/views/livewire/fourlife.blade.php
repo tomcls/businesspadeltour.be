@@ -202,7 +202,7 @@
         <div class="flex flex-col sm:flex-row space-x-2 pl-10 pt-2 pb-3">
           <div>
             <label for="totalAlone" class="text-xs font-bold ">Nombre d'équipe</label>
-            <input type="text" wire:model="totalTeam"  name="totalTeam" id="totalTeam" autocomplete="totalTeam" class="block w-36 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            <input type="number" wire:model="totalTeam"  name="totalTeam" id="totalTeam" autocomplete="totalTeam" class="block w-36 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
           </div>
           <!--Team Level -->
           <div>
@@ -295,7 +295,7 @@
       <div class="flex flex-row space-x-2 pt-2 pl-10 pb-4">
         <div>
           <label for="totalAlone" class="text-xs font-bold ">Nombre d'accompagnant</label>
-          <input type="text" wire:model="totalAlone"  name="totalAlone" id="totalAlone" autocomplete="totalAlone" class="block w-36 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+          <input type="number" wire:model="totalAlone"  name="totalAlone" id="totalAlone" autocomplete="totalAlone" class="block w-36 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
         </div>
       </div>
      

@@ -87,9 +87,13 @@ class ChargeSuccess extends Component
         if (!empty($request['iid'])) {
             $this->invoice = Invoice::whereId($request['iid'])->first();
             //$this->invoice->price = $this->invoice->price;
-            $this->invoice->intent = $request['payment_intent'];
-            $this->invoice->date_payed = now();
-            $this->invoice->save();
+            if($this->invoice->price) {
+                $this->invoice->intent = $request['payment_intent'];
+                $this->invoice->date_payed = now();
+                $this->invoice->save();
+            }
+           
+            
         }
 
     }
