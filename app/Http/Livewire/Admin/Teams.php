@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Admin;
 
+use App\Models\Session;
 use App\Models\Team;
 use App\Traits\DataTable\WithBulkActions;
 use App\Traits\DataTable\WithCachedRows;
@@ -13,17 +14,69 @@ use Livewire\WithFileUploads;
 class Teams extends Component
 {
     use WithPerPagePagination, WithSorting, WithBulkActions, WithCachedRows, WithFileUploads;
-    
-    public function mount() {
+    public $showDeleteModal = false;
+    public $deleteSelected; 
+    public $sessions = [];
+    public $filters = [
+        'id' => null,
+        'firstname' => null,
+        'lastname' => null,
+        'email' => null,
+        'session_id' => null,
+    ];
 
+    public function mount() {
+        $this->sessions = Session::whereVisible(true)->orderBy('startdate','desc')->get();
     }
     public function getRowsQueryProperty()
     {
         // $query = Team::whereCompanyId(auth()->user()->company_id);
-        $query = Team::query();
+        $query = Team::query()
+        ->when($this->filters['session_id'], fn ($query, $id) => $query->where('session_id', $id))
+        ->when($this->filters['firstname'], fn ($query, $fn) =>
+            $query->orWhere(function ($sq) use($fn) {
+                $sq->WhereHas('playerOne',  fn  ($subquery) =>
+                    $subquery->where('firstname', 'like','%'.$fn.'%'));
+            
+            })->orWhere(function ($sq) use($fn) {
+                $sq->WhereHas('playerTwo',  fn  ($subquery) =>
+                    $subquery->where('firstname', 'like','%'.$fn.'%'));
+            
+            }))
+        ->when($this->filters['lastname'], fn ($query, $fn) =>
+            $query->orWhere(function ($sq) use($fn) {
+                $sq->WhereHas('playerOne',  fn  ($subquery) =>
+                    $subquery->where('lastname', 'like','%'.$fn.'%'));
+            
+            })->orWhere(function ($sq) use($fn) {
+                $sq->WhereHas('playerTwo',  fn  ($subquery) =>
+                    $subquery->where('lastname', 'like','%'.$fn.'%'));
+            
+            }))
+            ->when($this->filters['email'], fn ($query, $fn) =>
+            $query->orWhere(function ($sq) use($fn) {
+                $sq->WhereHas('playerOne',  fn  ($subquery) =>
+                    $subquery->where('email', 'like','%'.$fn.'%'));
+            
+            })->orWhere(function ($sq) use($fn) {
+                $sq->WhereHas('playerTwo',  fn  ($subquery) =>
+                    $subquery->where('email', 'like','%'.$fn.'%'));
+            
+            }));
+        
+        logger($query->toSql());
         return $this->applySorting($query);
     }
 
+    public function showModal($id) {
+        $this->showDeleteModal = true;
+        $this->deleteSelected = $id;
+    }
+    public function delete() {
+        Team::whereId($this->deleteSelected)->delete();
+        $this->deleteSelected = null;
+        $this->showDeleteModal = false;
+    }
     public function getRowsProperty()
     {
         //return $this->applyPagination($this->rowsQuery);
