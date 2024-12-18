@@ -62,7 +62,6 @@ class Teams extends Component
             
             }));
         
-        logger($query->toSql());
         return $this->applySorting($query);
     }
 
