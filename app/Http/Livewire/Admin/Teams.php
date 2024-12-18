@@ -28,6 +28,10 @@ class Teams extends Component
     public function mount() {
         $this->sessions = Session::whereVisible(true)->orderBy('startdate','desc')->get();
     }
+    public function updatedFilters()
+    {
+        $this->resetPage();
+    }
     public function getRowsQueryProperty()
     {
         // $query = Team::whereCompanyId(auth()->user()->company_id);

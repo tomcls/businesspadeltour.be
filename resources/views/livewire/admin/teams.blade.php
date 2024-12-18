@@ -78,8 +78,10 @@
                     </x-table.cell>
     
                     <x-table.cell >
+                        @if ($row->session)
                         {{ $row->session->club_name }} <br>
                         {{\Carbon\Carbon::parse($row->session->startdate)->format('d-m-Y')}}
+                        @endif
                     </x-table.cell>
                     <x-table.cell >
                         {{ $row->category }}
@@ -93,7 +95,7 @@
                     <x-table.cell colspan="12">
                         <div class="flex justify-center items-center space-x-2">
                             <x-icon.user class="h-8 w-8 text-cool-gray-400" />
-                            <span class="font-medium py-8 text-cool-gray-400 text-xl">{{__('No logo found')}}...</span>
+                            <span class="font-medium py-8 text-cool-gray-400 text-xl">{{__('No team found')}}...</span>
                         </div>
                     </x-table.cell>
                 </x-table.row>
