@@ -38,6 +38,12 @@ class Invoices extends Component
         $this->events = Event::orderBy('date','desc')->get();
         $this->prices = Invoice::orderBy('price','desc')->get()->unique('price');
     }
+
+    public function updatedFilters()
+    {
+        $this->resetPage();
+    }
+    
     public function getRowsQueryProperty()
     {
         $query = Invoice::query()
