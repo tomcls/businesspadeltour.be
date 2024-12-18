@@ -25,7 +25,14 @@ class Invoice extends Model
     {
         return $this->belongsTo(User::class, 'user_id');
     }
-
+    public function eventUser(): BelongsTo
+    {
+        return $this->belongsTo(EventUser::class, 'event_user_id');
+    }
+    public function team(): BelongsTo
+    {
+        return $this->belongsTo(Team::class, 'team_id');
+    }
     public function getDatePayedForEditingAttribute()
     {
         return $this->date_payed ? $this->date_payed->format('d-m-Y') : null;

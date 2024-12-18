@@ -1,6 +1,7 @@
 <?php
 
 use App\Jobs\CampaignJob;
+use App\Jobs\SeedInvoiceJob;
 use App\Jobs\WelcomeEvent2025Job;
 use Illuminate\Support\Facades\Artisan;
 
@@ -22,3 +23,7 @@ Artisan::command('campaign', function () {
 Artisan::command('welcome-event', function () {
     WelcomeEvent2025Job::dispatch()->onQueue('default');
 })->purpose('welcome-event');
+
+Artisan::command('seed-invoicet', function () {
+    SeedInvoiceJob::dispatch()->onQueue('default');
+})->purpose('seed-invoicet');

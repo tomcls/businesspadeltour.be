@@ -2,12 +2,12 @@
 
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\CSVController;
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\SitemapXmlController;
 use App\Http\Controllers\StripeController;
 use App\Http\Livewire\AboutUs;
 use App\Http\Livewire\Admin\Companies;
+use App\Http\Livewire\Admin\Invoices;
 use App\Http\Livewire\Admin\Logos;
 use App\Http\Livewire\Admin\Photos as AdminPhotos;
 use App\Http\Livewire\Admin\Sessions;
@@ -75,7 +75,7 @@ Route::get('/companies/download', [CSVController::class,'companies'])->name('com
 Route::post('/stripe/create', [StripeController::class, 'create'])->name('stripe.create');
 
 Route::get('/invoice/{id?}', [InvoiceController::class, 'download'])->name('invoice');
-
+Route::get('/login', Login::class)->name('login');
 Route::middleware('auth')->group(function () {
     Route::get('/me/profile', Profile::class)->name('me.profile');
     Route::get('/me/invoices', Invoice::class)->name('me.invoices');
@@ -168,6 +168,7 @@ Route::group(['middleware' => ['auth', 'can:admin']], function () {
     Route::get('/admin/sessions', Sessions::class)->name('admin.sessions');
     Route::get('/admin/logos', Logos::class)->name('admin.logos');
     Route::get('/admin/event-users', UserEvents::class)->name('admin.event.users');
+    Route::get('/admin/invoices', Invoices::class)->name('admin.invoices');
 });
 
 Route::get('users/logout', function () {

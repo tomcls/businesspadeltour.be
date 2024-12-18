@@ -4,7 +4,7 @@
         
 
         
-        <title>{{ $title ?? 'Verutoza admin' }}</title>
+        <title>{{ $title ?? 'Business Padel Tour' }}</title>
 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
@@ -134,6 +134,12 @@
                                     <a href="{{route('admin.logos')}}" :class="{ 'text-white  bg-gray-800': current=='admin.logos', 'text-gray-400 ': current!='admin.logos' }"class="hover:bg-gray-800  group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold text-gray-400 hover:text-white">
                                         <x-icon.image class=" h-6 w-6 text-sky-500 group-focus:text-sky-300 transition ease-in-out duration-150"/>
                                       Logos
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{route('admin.invoices')}}" :class="{ 'text-white  bg-gray-800': current=='admin.invoices', 'text-gray-400 ': current!='admin.invoices' }"class="hover:bg-gray-800  group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold text-gray-400 hover:text-white">
+                                        <x-icon.list class=" h-6 w-6 text-sky-500 group-focus:text-sky-300 transition ease-in-out duration-150"/>
+                                      Subscriptions
                                     </a>
                                 </li>
                                 <li>

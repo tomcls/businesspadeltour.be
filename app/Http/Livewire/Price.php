@@ -7,7 +7,7 @@ use Livewire\Component;
 class Price extends Component
 {
     public function mount() {
-        logger('price');
+        
     }
     public function render()
     {

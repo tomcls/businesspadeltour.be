@@ -20,7 +20,7 @@ class Register extends Component
     public $totalTeam = 1;
     public $sessions = [];
     public $totalTeamsValidated = [];
-    protected $listeners = ['onTeamValidated', 'onTotalTeamChanged','onSetParentSessionId'=>'setSession'];
+    protected $listeners = ['onTeamValidated', 'onTotalTeamChanged', 'onSetParentSessionId' => 'setSession'];
     public $company;
     public $promo;
     public $invoice;
@@ -117,7 +117,7 @@ class Register extends Component
                 $playersEmail = [];
                 $content = "";
                 $price = 0;
-                if($this->sessionId != 36) {
+                if ($this->sessionId != 36) {
 
                     if ($this->totalTeam >= 10) {
                         $price = 195 * $this->totalTeam;
@@ -129,16 +129,16 @@ class Register extends Component
                     if ($this->promo == "rosselpadel") {
                         $price = 150 * $this->totalTeam;
                     }
-    
+
                     if ($this->promo == "vertuozatour24") {
                         $price = 195 * $this->totalTeam;
                     }
-    
-    
+
+
                     if ($this->promo == "antwerp1705") {
                         $price = 0 * $this->totalTeam;
                     }
-    
+
                     if (strtolower($this->promo) == strtolower("EARLYBIRD")) {
                         $price = $price - ($price / 100 * 10);
                     }
@@ -163,12 +163,27 @@ class Register extends Component
                     if (strtolower($this->promo) == strtolower("CHEZ NOUS CANNES")) {
                         $price = $price - ($price / 100 * 10);
                     }
-                    
-                    if($this->room) {
+
+                    if ($this->room) {
                         $price += ($this->room * 110 * 4);
                     }
                 }
 
+                $this->invoice = new Invoice();
+                $this->invoice->user_id = $user->id;
+                $this->invoice->invoice_num = Invoice::newInvoiceNumber();
+                $this->invoice->price = $price;
+                $this->invoice->description = "Padel Session subscription: (" . (count($this->totalTeamsValidated) > 1 ? (count($this->totalTeamsValidated) . 'teams') : '1 team') . ')';
+                $this->invoice->intent = null;
+                $this->invoice->vat = true;
+                // $this->invoice->team_id = $t
+                if ($price == 0) {
+                    $this->invoice->date_payed = now();
+                    $this->invoice->intent = 'FREE';
+                    $this->invoice->description .= ' FREE';
+                }
+                $this->invoice->save();
+                logger('bbbbb '  . $this->invoice->id);
                 foreach ($this->totalTeamsValidated as $key => $value) {
                     $userOne = new User();
                     $userOne->firstname = $value['playerOneFirstname'];
@@ -201,8 +216,13 @@ class Register extends Component
                     $team->session_id = $value['session'];
                     $team->category = $value['category'];
                     $team->company_id = $company->id;
+                    $team->invoice_id = $this->invoice->id;
                     try {
                         $team->save();
+                        $i = Invoice::whereId($this->invoice->id)->first();
+                        $i->team_id = $team->id;
+                        $i->save();
+                        logger('aaaaa' . $i->id);
                     } catch (\Throwable $th) {
                         //throw $th;
                     }
@@ -235,10 +255,10 @@ class Register extends Component
                     if (strtolower($this->promo) == strtolower("EARLYBIRD")) {
                         $content .= "<br/><b>" . __('signup.Price') . " Promo code " . $this->promo . "</b>: " . $price . " € + TVA";
                     }
-                    if($this->sessionId == 36 ) {
+                    if ($this->sessionId == 36) {
                         $content .= "<br/><b> Inscription Séjour Ténérife</b>: " . $price . " € + TVA";
-                        if($this->room) {
-                            $content .= '<br/>'.$this->room." chambre(s) dbl, (".($this->room * 110) . "€)";
+                        if ($this->room) {
+                            $content .= '<br/>' . $this->room . " chambre(s) dbl, (" . ($this->room * 110) . "€)";
                         }
                     }
                 }
@@ -396,19 +416,6 @@ class Register extends Component
                         "message" => $message,
                     ]);
                 }
-                $this->invoice = new Invoice();
-                $this->invoice->user_id = $user->id;
-                $this->invoice->invoice_num = Invoice::newInvoiceNumber();
-                $this->invoice->price = $price;
-                $this->invoice->description = "Padel Session subscription: (" . (count($this->totalTeamsValidated) > 1 ? (count($this->totalTeamsValidated) . 'teams') : '1 team') . ')';
-                $this->invoice->intent = microtime();
-                $this->invoice->vat = true;
-                if($price == 0) {
-                    $this->invoice->date_payed = now();
-                    $this->invoice->intent = 'FREE';
-                    $this->invoice->description .= ' FREE';
-                }
-                $this->invoice->save();
                 redirect('/' . App::currentLocale() . '/upload?iid=' . $this->invoice->id);
             } else {
                 logger('no company');
