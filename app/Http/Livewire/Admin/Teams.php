@@ -38,32 +38,26 @@ class Teams extends Component
         $query = Team::query()
         ->when($this->filters['session_id'], fn ($query, $id) => $query->where('session_id', $id))
         ->when($this->filters['firstname'], fn ($query, $fn) =>
-            $query->orWhere(function ($sq) use($fn) {
-                $sq->WhereHas('playerOne',  fn  ($subquery) =>
-                    $subquery->where('firstname', 'like','%'.$fn.'%'));
-            
-            })->orWhere(function ($sq) use($fn) {
-                $sq->WhereHas('playerTwo',  fn  ($subquery) =>
-                    $subquery->where('firstname', 'like','%'.$fn.'%'));
-            
-            }))
+        $query->where(function ($sq) use($fn) {
+            $sq->orWhereHas('playerOne',  fn  ($subquery) =>
+                $subquery->where('firstname', 'like','%'.$fn.'%'))
+                ->orWhereHas('playerTwo',  fn  ($subquery) =>
+                $subquery->where('firstname', 'like','%'.$fn.'%'));
+        
+        }))
         ->when($this->filters['lastname'], fn ($query, $fn) =>
-            $query->orWhere(function ($sq) use($fn) {
-                $sq->WhereHas('playerOne',  fn  ($subquery) =>
-                    $subquery->where('lastname', 'like','%'.$fn.'%'));
-            
-            })->orWhere(function ($sq) use($fn) {
-                $sq->WhereHas('playerTwo',  fn  ($subquery) =>
+            $query->where(function ($sq) use($fn) {
+                $sq->orWhereHas('playerOne',  fn  ($subquery) =>
+                    $subquery->where('lastname', 'like','%'.$fn.'%'))
+                    ->orWhereHas('playerTwo',  fn  ($subquery) =>
                     $subquery->where('lastname', 'like','%'.$fn.'%'));
             
             }))
             ->when($this->filters['email'], fn ($query, $fn) =>
-            $query->orWhere(function ($sq) use($fn) {
-                $sq->WhereHas('playerOne',  fn  ($subquery) =>
-                    $subquery->where('email', 'like','%'.$fn.'%'));
-            
-            })->orWhere(function ($sq) use($fn) {
-                $sq->WhereHas('playerTwo',  fn  ($subquery) =>
+            $query->where(function ($sq) use($fn) {
+                $sq->orWhereHas('playerOne',  fn  ($subquery) =>
+                    $subquery->where('email', 'like','%'.$fn.'%'))
+                    ->orWhereHas('playerTwo',  fn  ($subquery) =>
                     $subquery->where('email', 'like','%'.$fn.'%'));
             
             }));

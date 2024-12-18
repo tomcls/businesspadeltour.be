@@ -79,7 +79,7 @@
     
                     <x-table.cell >
                         @if ($row->session)
-                        {{ $row->session->club_name }} <br>
+                        {{ $row->session->id }}# {{ $row->session->club_name }} <br>
                         {{\Carbon\Carbon::parse($row->session->startdate)->format('d-m-Y')}}
                         @endif
                     </x-table.cell>
