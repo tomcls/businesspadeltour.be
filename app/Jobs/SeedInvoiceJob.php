@@ -40,13 +40,5 @@ class SeedInvoiceJob implements ShouldQueue
                 $invoice->save();
             }
         }
-        $userSessions = UserSession::get();
-        foreach ($userSessions as $key => $e) {
-            if(!empty($e->invoice_id)) {
-                $invoice = Invoice::whereId($e->invoice_id)->first();
-                $invoice->user_session_id = $e->id;
-                $invoice->save();
-            }
-        }
     }
 }
