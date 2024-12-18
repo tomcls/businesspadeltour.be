@@ -230,7 +230,6 @@
                             <x-slot name="head">
                                 <x-table.heading >{{__('Player one')}}</x-table.heading>
                                 <x-table.heading >{{__('Player two')}}</x-table.heading>
-                                <x-table.heading >{{__('Size')}}</x-table.heading>
                                 <x-table.heading >{{__('Session')}}</x-table.heading>
                                 <x-table.heading >{{__('Level')}}</x-table.heading>
                             </x-slot>
@@ -242,13 +241,12 @@
                                 <x-table.row wire:loading.class.delay="opacity-70" wire:key="row-{{ $row->id }}">
                                    
                                     <x-table.cell class=" font-bold text-xs" >
-                                        {{ucfirst($row->playerone->firstname).' '.ucfirst($row->playerone->lastname)}}<br>{{$row->playerone->email}}
+                                        {{ucfirst($row->playerone->firstname).' '.ucfirst($row->playerone->lastname)}}<br>{{$row->playerone->email}} <br/>
+                                        Tshirt: {{ $row->playerone->size }} 
                                     </x-table.cell>
                                     <x-table.cell class=" font-bold text-xs" >
-                                        {{ucfirst($row->playertwo->firstname).' '.ucfirst($row->playertwo->lastname)}}<br>{{$row->playertwo->email}}
-                                    </x-table.cell>
-                                    <x-table.cell class=" font-bold text-xs">
-                                        {{ $row->playerone->size }} 
+                                        {{ucfirst($row->playertwo->firstname).' '.ucfirst($row->playertwo->lastname)}}<br>{{$row->playertwo->email}} <br/>
+                                        Tshirt: {{ $row->playertwo->size }} 
                                     </x-table.cell>
                                     <x-table.cell class=" font-bold text-xs">
                                         {{ ucfirst($row->session->club_name) }}<br>
@@ -263,7 +261,7 @@
                                     <x-table.cell colspan="12">
                                         <div class="flex justify-center items-center space-x-2">
                                             <x-icon.user class="h-8 w-8 text-cool-gray-400" />
-                                            <span class="font-medium py-8 text-cool-gray-400 text-xl">{{__('No logo found')}}...</span>
+                                            <span class="font-medium py-8 text-cool-gray-400 text-xl">{{__('No transactions found')}}...</span>
                                         </div>
                                     </x-table.cell>
                                 </x-table.row>
